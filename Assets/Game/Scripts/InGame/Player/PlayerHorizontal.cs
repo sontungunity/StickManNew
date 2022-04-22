@@ -97,6 +97,7 @@ public class PlayerHorizontal : MonoBehaviour {
             playAnim.SetPlayerAnim(EnumPlayerAnim.DASH);
         } else {
             if(Mathf.Abs(xDirectionalInput)>0 && playerMovement.PlayerTourch == PlayerTourch.GROUND ) {
+                Flip(xDirectionalInput > 0 ? DirHorizontal.RIGHT : DirHorizontal.LEFT);
                 playAnim.SetPlayerAnim(EnumPlayerAnim.RUN);
             } else {
                 playAnim.SetPlayerAnim(EnumPlayerAnim.IDLE);
@@ -109,7 +110,6 @@ public class PlayerHorizontal : MonoBehaviour {
             if(MoveTurn.Time <= 0) {
                 if(MoveTurn.TypeMove == TypeMove.DASH) {
                     playAnim.DOAnimIdle();
-
                 }
                 MoveTurn.TypeMove = TypeMove.NORMAL;
             }
@@ -172,3 +172,4 @@ public enum TypeMove {
     NORMAL,
     DASH
 }
+

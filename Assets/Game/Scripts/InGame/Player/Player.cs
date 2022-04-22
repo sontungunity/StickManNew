@@ -9,6 +9,24 @@ using UnityEngine;
 [RequireComponent(typeof(PlayerAnim))]
 [RequireComponent(typeof(PlayerAttack))]
 public class Player : MonoBehaviour {
-    public int Damage => 1;
-    public int Hearth => 20;
+    private const int ROOT_HEART = 150;
+    private const int ROOT_DAMAGE = 20;
+    private PlayerData playerData => DataManager.Instance.PlayerData;
+    public int m_Heart;
+    public int m_Damage;
+
+    public void SetUpPlayer() {
+        SetUpHeartDame();
+    }
+
+    private void SetUpHeartDame() {
+        m_Heart = 150;
+        m_Damage = 20;
+
+        for(int i = 0; i <= playerData.levelPlayer;i++ ) {
+            DataManager.Instance.GetDameHeartByLevel(i,out int heart,out int damage,out int coin);
+            m_Heart += heart;
+            m_Damage += damage;
+        }     
+    }
 }

@@ -93,7 +93,7 @@ public class PlayerAttack : MonoBehaviour
                 EnemyBase enemyBase = col.GetComponent<EnemyBase>();
                 if(enemyBase != null) {
                     Debug.Log("Detech Enemy");
-                    enemyBase.GetDame(player.Damage);
+                    enemyBase.GetDame(2);
                 }
             }
         }
