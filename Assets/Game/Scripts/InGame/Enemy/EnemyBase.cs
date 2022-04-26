@@ -8,6 +8,7 @@ public class EnemyBase : CharacterBase
     [SerializeField] private EnemyAnim enemyAnim;
     [SerializeField] private BeamRayCast eye_Befor,eye_After,distan_attack;
     [SerializeField] private EnemyStatus curStatus;
+    [SerializeField] private EnemyHeartBar enemyBar;
     public EnemyStatus CurStatus => curStatus;
     private EnemyStatus afterUpdateStatus;
     public DirHorizontal dirFace {
@@ -19,23 +20,13 @@ public class EnemyBase : CharacterBase
             }
         }
     }
-    public override void GetDame(int dame) {
-        if(curStatus == EnemyStatus.DIE) {
-            return;
-        }
-        base.GetDame(dame);
-        if(heart<=0) {
-            curStatus = EnemyStatus.DIE;
-            enemyAnim.SetAnimDie(() => {
-               transform.gameObject.SetActive(false);
-            });
-        } else {
-            curStatus = EnemyStatus.GET_DAME;
-            enemyAnim.SetAnimGetDame(() => {
-                SetStatus(EnemyStatus.MOVE);
-            });
-        }
+    
+
+    private void Start() {
+        enemyBar.Init();
     }
+
+
 
     private void Update() {
         if(curStatus != EnemyStatus.DIE && curStatus != EnemyStatus.GET_DAME ) {
@@ -45,6 +36,24 @@ public class EnemyBase : CharacterBase
         }
     }
 
+    public override void GetDame(int dame) {
+        if(curStatus == EnemyStatus.DIE) {
+            return;
+        }
+        base.GetDame(dame);
+        if(curHeart <= 0) {
+            curStatus = EnemyStatus.DIE;
+            enemyAnim.SetAnimDie(() => {
+                transform.gameObject.SetActive(false);
+            });
+        } else {
+            curStatus = EnemyStatus.GET_DAME;
+            enemyAnim.SetAnimGetDame(() => {
+                SetStatus(EnemyStatus.MOVE);
+            });
+            enemyBar.UpdateHeart(curHeart / (float)originHeart);
+        }
+    }
     private void SetupStatus() {
         foreach(var col in eye_Befor.ArrayCollider2D) {
             if(col != null && col.GetComponent<Player>()) {
@@ -91,7 +100,7 @@ public class EnemyBase : CharacterBase
             enemyAnim.SetAnimAttack(() => {
                 curStatus = EnemyStatus.MOVE;
             });
-        } else if(curStatus == EnemyStatus.DETECH && curStatus == EnemyStatus.MOVE) {
+        } else if(curStatus == EnemyStatus.DETECH || curStatus == EnemyStatus.MOVE) {
             enemyAnim.SetAnimWalk();
         } else {
             enemyAnim.SetAnimWalk();

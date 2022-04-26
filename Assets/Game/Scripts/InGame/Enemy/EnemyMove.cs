@@ -12,6 +12,8 @@ public class EnemyMove : MonoBehaviour
     private void Update() {
         if(enemyBase.CurStatus == EnemyStatus.MOVE) {
             checkFace();
+        } else {
+            rb2D.velocity = new Vector2(0, rb2D.velocity.y);
         }
     }
 
@@ -19,7 +21,7 @@ public class EnemyMove : MonoBehaviour
         if(enemyBase.CurStatus == EnemyStatus.MOVE) {
             rb2D.velocity = new Vector2((int)transform.right.x * speed, rb2D.velocity.y);
         }else if(enemyBase.CurStatus == EnemyStatus.DETECH) {
-            rb2D.velocity = new Vector2((int)transform.right.x * speed, rb2D.velocity.y);
+            rb2D.velocity = new Vector2((int)transform.right.x * speed * 4, rb2D.velocity.y);
         }
         
     }

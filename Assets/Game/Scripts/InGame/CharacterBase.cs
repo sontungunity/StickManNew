@@ -4,10 +4,20 @@ using UnityEngine;
 
 public class CharacterBase : MonoBehaviour
 {
-    public int heart;    
-    public int dame;
- 
+    [SerializeField] protected int originHeart;    
+    [SerializeField] protected int originDame;
+    public int curHeart;
+    public int curDame;
+
+    protected virtual void Awake() {
+        curHeart = originHeart;
+        curDame = originDame;
+    }
+
     public virtual void GetDame(int dame) {
-        heart -= dame;
+        if(curHeart<=0) {
+            return;
+        }
+        curHeart -= dame;
     }
 }

@@ -9,9 +9,11 @@ public class InGameManager : Singleton<InGameManager>
     [Header("GetByCode")]
     public bool Edit;
     public LevelMap LevelMap;
+    public int enemyKilled;
     private void Start() {
         SetUpMap();
         player.SetUpPlayer();
+        enemyKilled = 0;
     }
 
     private void SetUpMap() {

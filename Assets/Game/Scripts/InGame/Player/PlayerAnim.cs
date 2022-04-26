@@ -12,6 +12,8 @@ public class PlayerAnim : SpineBase {
     [SerializeField, SpineAnimation] private string animClimb;
     [SerializeField, SpineAnimation] private string animDash;
     [SerializeField, SpineAnimation] private string attack1,attack2,attack3;
+    [SerializeField, SpineAnimation] private string animDie;
+    [SerializeField, SpineAnimation] private string animGetDame;
     private SortAnime cur_Anime;
     protected override void Awake() {
         base.Awake();
@@ -60,6 +62,12 @@ public class PlayerAnim : SpineBase {
                 break;
             case EnumPlayerAnim.CLIMB:
                 SetAnim(0, animClimb, false, callback);
+                break;
+            case EnumPlayerAnim.DIE:
+                SetAnim(0, animDie, false, callback);
+                break;
+            case EnumPlayerAnim.GETDAME:
+                SetAnim(0, animGetDame, false, callback);
                 break;
             default:
                 DOAnimIdle();
@@ -115,4 +123,6 @@ public enum EnumPlayerAnim {
     ATTACK2,
     ATTACK3,
     CLIMB,
+    DIE,
+    GETDAME,
 }
