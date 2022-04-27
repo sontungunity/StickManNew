@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 1736778308808442433}
   - component: {fileID: 1736778308808442432}
   - component: {fileID: 1736778308808442435}
+  - component: {fileID: 612685795738207957}
   m_Layer: 10
   m_Name: Enderman
   m_TagString: Untagged
@@ -33,10 +34,6 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1736778309435271159}
-  - {fileID: 1736778309269724753}
-  - {fileID: 1736778310285462520}
-  - {fileID: 1736778310567656240}
-  - {fileID: 1736778310723465362}
   - {fileID: 1736778310522211029}
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -94,12 +91,14 @@ MonoBehaviour:
   originDame: 2
   curHeart: 0
   curDame: 0
+  display: {fileID: 1736778309435271159}
   enemyAnim: {fileID: 1736778308808442435}
   eye_Befor: {fileID: 1736778309269724752}
   eye_After: {fileID: 1736778310285462523}
   distan_attack: {fileID: 1736778310567656243}
   curStatus: 0
-  enemyBar: {fileID: 0}
+  enemyBar: {fileID: 7502765038574327899}
+  enemyAttack: {fileID: 612685795738207957}
 --- !u!114 &1736778308808442432
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -134,6 +133,25 @@ MonoBehaviour:
   anim_GetDame: get damage
   anim_Attack: attack1
   anim_Walk: walk
+--- !u!114 &612685795738207957
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1736778308808442458}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d752f15871e100a48b0246d11b765db7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  enemyAnim: {fileID: 1736778308808442435}
+  eventATK: dmg
+  lstStrAttack:
+  - attack1
+  - attack2
+  circleAttackInfo: {fileID: 391022787585108720}
+  enemyBase: {fileID: 1736778308808442433}
 --- !u!1 &1736778309269724782
 GameObject:
   m_ObjectHideFlags: 0
@@ -159,11 +177,11 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1736778309269724782}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 2.38, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 1736778308808442461}
-  m_RootOrder: 1
+  m_Father: {fileID: 1736778309435271159}
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1736778309269724752
 MonoBehaviour:
@@ -295,7 +313,12 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: -2.38, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
+  m_Children:
+  - {fileID: 1736778309269724753}
+  - {fileID: 1736778310285462520}
+  - {fileID: 1736778310567656240}
+  - {fileID: 1736778310723465362}
+  - {fileID: 2651442746387855819}
   m_Father: {fileID: 1736778308808442461}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -493,12 +516,12 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1736778310285462521}
-  m_LocalRotation: {x: 0, y: 1, z: 0, w: 0}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalRotation: {x: -0, y: 1, z: -0, w: 0}
+  m_LocalPosition: {x: 0, y: 2.38, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 1736778308808442461}
-  m_RootOrder: 2
+  m_Father: {fileID: 1736778309435271159}
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 180, z: 0}
 --- !u!114 &1736778310285462523
 MonoBehaviour:
@@ -549,7 +572,7 @@ Transform:
   m_Children:
   - {fileID: 1736778309716939619}
   m_Father: {fileID: 1736778308808442461}
-  m_RootOrder: 5
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &7502765038574327899
 MonoBehaviour:
@@ -590,12 +613,12 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1736778310567656241}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 2.38, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 1736778308808442461}
-  m_RootOrder: 3
+  m_Father: {fileID: 1736778309435271159}
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1736778310567656243
 MonoBehaviour:
@@ -641,11 +664,11 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1736778310723465363}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 2.38, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 1736778308808442461}
-  m_RootOrder: 4
+  m_Father: {fileID: 1736778309435271159}
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1736778310723465365
 MonoBehaviour:
@@ -666,3 +689,50 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 256
   color: 3
+--- !u!1 &2023591065582622009
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2651442746387855819}
+  - component: {fileID: 391022787585108720}
+  m_Layer: 10
+  m_Name: CirlcleAttack
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2651442746387855819
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2023591065582622009}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0.67, y: 2.52, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1736778309435271159}
+  m_RootOrder: 4
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &391022787585108720
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2023591065582622009}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5e682a2c5f86fe043b32a41f9191b467, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  lookRadius: 1.5
+  layerMask:
+    serializedVersion: 2
+    m_Bits: 64

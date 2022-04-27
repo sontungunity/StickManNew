@@ -13,8 +13,7 @@ public class EnemyAttack : MonoBehaviour
     [SerializeField] private OverlapCircleAll circleAttackInfo;
     [SerializeField] private EnemyBase enemyBase;
     private void Awake() {
-        enemyAnim.Anim.AnimationState.Event += EventDamege;
-    }
+        enemyAnim.Anim.AnimationState.Event += EventDamege;    }
 
     public void Attack(Action callback = null ) {
         int index = UnityEngine.Random.Range(0,lstStrAttack.Count);

@@ -14,13 +14,14 @@ public class PlayerVertical : MonoBehaviour
     //[SerializeField] private float gravityNormal = 18f;
     [SerializeField] private float fallForAir = 18f;
     [SerializeField] private float fallForceWall =3f;
-    [SerializeField] private PlayerAnim playerAnim;
     [SerializeField] private PlayerHorizontal playerHorizontal;
     [SerializeField] private PlayerAttack playerAttack;
+    [SerializeField] private Player player;
+    [Header("ListAnim")]
+    [SerializeField] private List<EnumPlayerStatus> lstStatusIdle;
     private TurnJump turnJump;
     public TurnJump JumpInfo => turnJump;
     private bool doJump;
-    private bool OnTurnJump;
 
     private PlayerMovement playerMovement;
     private Rigidbody2D rb2D => playerMovement.Rb2D;
@@ -44,7 +45,6 @@ public class PlayerVertical : MonoBehaviour
     private void FixedUpdate() {
         //Hanlder Input
         if(doJump) {
-            OnTurnJump = true;
             if(playerMovement.PlayerTourch == PlayerTourch.GROUND) {
                 turnJump.Set(EnumJumpType.JUMP_I,jumpForceGround, timeForOneJump);
             } else if(playerMovement.PlayerTourch == PlayerTourch.WALL) { 
@@ -52,7 +52,7 @@ public class PlayerVertical : MonoBehaviour
                 if(playerMovement.PlayerFace == DirHorizontal.RIGHT) {
                     bounce.x = -bounce.x;
                 }
-                turnJump.Set(EnumJumpType.JUMP_I, bounce, timeForOneJump);
+                turnJump.Set(EnumJumpType.JUMP_II, bounce, timeForOneJump);
             } else if(playerMovement.PlayerTourch == PlayerTourch.AIR) {
                 if(turnJump.TypeJump == EnumJumpType.JUMP_I) {
                     turnJump.Set(EnumJumpType.JUMP_II,jumpForceGround, timeForOneJump);
@@ -70,10 +70,8 @@ public class PlayerVertical : MonoBehaviour
             }
         } else {
             if(playerMovement.PlayerTourch == PlayerTourch.AIR) {
-                OnTurnJump = true;
                 rb2D.velocity = new Vector2(rb2D.velocity.x, -fallForAir);
             } else if(playerMovement.PlayerTourch == PlayerTourch.WALL) {
-                OnTurnJump = true;
                 if(playerHorizontal.XDirectionalInput ==0  ) {
                     rb2D.velocity = new Vector2(rb2D.velocity.x, -fallForceWall);
                 } else {
@@ -85,21 +83,15 @@ public class PlayerVertical : MonoBehaviour
         }
 
         //Hanlder Anim
-        if(playerAttack.StatusAttack == EnumPlayerAttack.NONE) {
-            if(turnJump.TimeJump > 0) {
-                playerAnim.SetPlayerAnim(EnumPlayerAnim.JUMP);
-            } else {
-                if(playerMovement.PlayerTourch == PlayerTourch.AIR) {
-                    playerAnim.SetPlayerAnim(EnumPlayerAnim.JUMPFALL);
-                } else if(playerMovement.PlayerTourch == PlayerTourch.WALL) {
-                    playerAnim.SetPlayerAnim(EnumPlayerAnim.CLIMB);
-                } else if(playerMovement.PlayerTourch == PlayerTourch.GROUND) {
-                    if(OnTurnJump) {
-                        playerAnim.DOAnimIdle();
-                        OnTurnJump = false;
-                    }
-                }
-
+        if(turnJump.TimeJump > 0) {
+            player.SetPlayerStatusCheckRank(EnumPlayerStatus.JUMP);
+        } else {
+            if(playerMovement.PlayerTourch == PlayerTourch.AIR) {
+                player.SetPlayerStatusCheckRank(EnumPlayerStatus.JUMPFALL);
+            } else if(playerMovement.PlayerTourch == PlayerTourch.WALL) {
+                player.SetPlayerStatusCheckRank(EnumPlayerStatus.CLIMB);
+            } else if(playerMovement.PlayerTourch == PlayerTourch.GROUND) {
+                player.SetIdleCheckStatus(lstStatusIdle);
             }
         }
 
@@ -107,6 +99,11 @@ public class PlayerVertical : MonoBehaviour
         if(turnJump.TimeJump > 0) {  
             turnJump.TimeJump -= Time.fixedDeltaTime;
         } 
+    }
+
+    public void SetUpNoVertical() {
+        turnJump.Defaul();
+        player.SetIdleCheckStatus(lstStatusIdle);
     }
 
     public class TurnJump {
@@ -142,7 +139,6 @@ public class PlayerVertical : MonoBehaviour
     #region Setup
     [ContextMenu("Setup")]
     public void Setup() {
-        playerAnim = GetComponent<PlayerAnim>();
         playerHorizontal = GetComponent<PlayerHorizontal>();
     }
     #endregion

@@ -13,8 +13,10 @@ public class PlayerHorizontal : MonoBehaviour {
     [SerializeField] private float speedDash = 36f;
     [Header("Display")]
     [SerializeField] private Transform display;
-    [SerializeField] private PlayerAnim playAnim;
     [SerializeField] private PlayerAttack playerAttack;
+    [SerializeField] private Player player;
+    [Header("ListAnim")]
+    [SerializeField] private List<EnumPlayerStatus> lstStatusIdle;
     private TurnMove MoveTurn;
     private float xDirectionalInput;
     private DirHorizontal direction;
@@ -59,7 +61,6 @@ public class PlayerHorizontal : MonoBehaviour {
                     if(MoveTurn.Time > 0 && MoveTurn.Direc == direction) {
                         MoveTurn.Set(direction, timeDash, TypeMove.DASH);
                         Flip(direction);
-                        playerAttack.SetUpNoneAttack(false);
                     } else {
                         MoveTurn.Set(direction, PlayerMovement.TIME_DELAY_KEY, TypeMove.NORMAL);
                         Flip(direction);
@@ -79,7 +80,7 @@ public class PlayerHorizontal : MonoBehaviour {
             if(playerMovement.PlayerTourch == PlayerTourch.AIR) {
                 rb2D.velocity = new Vector2(xDirectionalInput * speedAir, rb2D.velocity.y);
             } else {
-                if(playerAttack.StatusAttack != EnumPlayerAttack.NONE) {
+                if(playerAttack.IsAttacking) {
                     rb2D.velocity = new Vector2(xDirectionalInput * speedAttack, rb2D.velocity.y);
                     return;
                 }
@@ -94,13 +95,13 @@ public class PlayerHorizontal : MonoBehaviour {
 
         //Anim
         if(MoveTurn.TypeMove == TypeMove.DASH) {
-            playAnim.SetPlayerAnim(EnumPlayerAnim.DASH);
+            player.SetPlayerStatusCheckRank(EnumPlayerStatus.DASH);
         } else {
             if(Mathf.Abs(xDirectionalInput)>0 && playerMovement.PlayerTourch == PlayerTourch.GROUND ) {
                 Flip(xDirectionalInput > 0 ? DirHorizontal.RIGHT : DirHorizontal.LEFT);
-                playAnim.SetPlayerAnim(EnumPlayerAnim.RUN);
+                player.SetPlayerStatusCheckRank(EnumPlayerStatus.RUN);
             } else {
-                playAnim.SetPlayerAnim(EnumPlayerAnim.IDLE);
+                player.SetIdleCheckStatus(lstStatusIdle);
             }
         }
 
@@ -109,7 +110,7 @@ public class PlayerHorizontal : MonoBehaviour {
             MoveTurn.Time -= Time.fixedDeltaTime;
             if(MoveTurn.Time <= 0) {
                 if(MoveTurn.TypeMove == TypeMove.DASH) {
-                    playAnim.DOAnimIdle();
+                    player.SetIdleCheckStatus(lstStatusIdle);
                 }
                 MoveTurn.TypeMove = TypeMove.NORMAL;
             }
@@ -122,6 +123,11 @@ public class PlayerHorizontal : MonoBehaviour {
         }else if(dir == DirHorizontal.LEFT) {
             display.localScale = new Vector3(-1, 1, 1);
         }
+    }
+
+    public void SetUpNoMove() {
+        MoveTurn.Defaul();
+        player.SetIdleCheckStatus(lstStatusIdle);
     }
 
     public class TurnMove {
@@ -153,7 +159,6 @@ public class PlayerHorizontal : MonoBehaviour {
     public void Setup() {
         rb2D = GetComponent<Rigidbody2D>();
         display = transform;
-        playAnim = GetComponent<PlayerAnim>();
         playerAttack = GetComponent<PlayerAttack>();
     }
     #endregion

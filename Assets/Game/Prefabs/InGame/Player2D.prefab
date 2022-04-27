@@ -32,7 +32,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5886882179965856175}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0.8, z: 0}
+  m_LocalPosition: {x: 19.2, y: 5.23, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 5886882180011657170}
@@ -118,8 +118,9 @@ MonoBehaviour:
   timeDash: 0.2
   speedDash: 36
   display: {fileID: 5886882179965856172}
-  playAnim: {fileID: 5886882179965856179}
   playerAttack: {fileID: 5886882179965856178}
+  player: {fileID: 5886882179965856173}
+  lstStatusIdle: 0200000005000000
 --- !u!114 &5886882179965856176
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -132,14 +133,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 52e66754aa37e7541bfc041c9a7b7b91, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  jumpForceGround: {x: 0, y: 19}
-  jumpForceWall: {x: 12, y: 12}
-  timeForOneJump: 0.25
-  fallForAir: 9
+  jumpForceGround: {x: 0, y: 15}
+  jumpForceWall: {x: 5, y: 15}
+  timeForOneJump: 0.3
+  fallForAir: 15
   fallForceWall: 9
-  playerAnim: {fileID: 5886882179965856179}
   playerHorizontal: {fileID: 5886882179965856177}
   playerAttack: {fileID: 5886882179965856178}
+  player: {fileID: 5886882179965856173}
+  lstStatusIdle: 030000000400000009000000
 --- !u!114 &5886882179965856179
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -154,25 +156,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   animmation: {fileID: 5886882180011657171}
   animIdle: idle
-  lstAnime:
-  - TypeAnim: 1
-    Rank: 0
-  - TypeAnim: 2
-    Rank: 0
-  - TypeAnim: 3
-    Rank: 5
-  - TypeAnim: 4
-    Rank: 5
-  - TypeAnim: 9
-    Rank: 5
-  - TypeAnim: 6
-    Rank: 10
-  - TypeAnim: 7
-    Rank: 10
-  - TypeAnim: 8
-    Rank: 10
-  - TypeAnim: 5
-    Rank: 20
   animRun: run
   animJump: jump_start
   animJumpFall: jump_fall
@@ -181,6 +164,8 @@ MonoBehaviour:
   attack1: weapon_1_attack1
   attack2: weapon_1_attack2
   attack3: weapon_1_attack3
+  animDie: dead
+  animGetDame: get_damage
 --- !u!114 &5886882179965856178
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -197,6 +182,7 @@ MonoBehaviour:
   playerAnim: {fileID: 5886882179965856179}
   circleAttackInfo: {fileID: 5886882181405898596}
   player: {fileID: 5886882179965856173}
+  lstStatusIdle: 060000000700000008000000
 --- !u!114 &5886882179965856173
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -209,6 +195,40 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 88a3fd27980ee0446a3ffa70f08751f0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  originHeart: 0
+  originDame: 0
+  curHeart: 0
+  curDame: 0
+  lstSortStatus:
+  - TypeStatus: 1
+    Rank: 0
+  - TypeStatus: 2
+    Rank: 0
+  - TypeStatus: 3
+    Rank: 5
+  - TypeStatus: 4
+    Rank: 5
+  - TypeStatus: 9
+    Rank: 5
+  - TypeStatus: 6
+    Rank: 10
+  - TypeStatus: 7
+    Rank: 10
+  - TypeStatus: 8
+    Rank: 10
+  - TypeStatus: 5
+    Rank: 20
+  - TypeStatus: 11
+    Rank: 30
+  - TypeStatus: 1
+    Rank: 40
+  playerAnim: {fileID: 5886882179965856179}
+  playerAttack: {fileID: 5886882179965856178}
+  playerVertical: {fileID: 5886882179965856176}
+  playerHorizontal: {fileID: 5886882179965856177}
+  curStatus:
+    TypeStatus: 1
+    Rank: 0
 --- !u!1 &5886882180011657165
 GameObject:
   m_ObjectHideFlags: 0
@@ -326,7 +346,7 @@ MonoBehaviour:
     materialsInsideMask: []
     materialsOutsideMask: []
   disableRenderingOnOverride: 1
-  _animationName: 
+  _animationName: idle
   loop: 1
   timeScale: 1
 --- !u!1 &5886882180446075085

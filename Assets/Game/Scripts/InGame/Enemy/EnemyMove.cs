@@ -19,9 +19,9 @@ public class EnemyMove : MonoBehaviour
 
     private void FixedUpdate() {
         if(enemyBase.CurStatus == EnemyStatus.MOVE) {
-            rb2D.velocity = new Vector2((int)transform.right.x * speed, rb2D.velocity.y);
+            rb2D.velocity = new Vector2((int)enemyBase.Display.right.x * speed, rb2D.velocity.y);
         }else if(enemyBase.CurStatus == EnemyStatus.DETECH) {
-            rb2D.velocity = new Vector2((int)transform.right.x * speed * 4, rb2D.velocity.y);
+            rb2D.velocity = new Vector2((int)enemyBase.Display.right.x * speed * 4, rb2D.velocity.y);
         }
         
     }

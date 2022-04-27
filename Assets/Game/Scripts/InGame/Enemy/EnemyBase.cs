@@ -5,15 +5,18 @@ using UnityEngine;
 
 public class EnemyBase : CharacterBase
 {
+    [SerializeField] private Transform display;
     [SerializeField] private EnemyAnim enemyAnim;
     [SerializeField] private BeamRayCast eye_Befor,eye_After,distan_attack;
     [SerializeField] private EnemyStatus curStatus;
     [SerializeField] private EnemyHeartBar enemyBar;
+    [SerializeField] private EnemyAttack enemyAttack;
+    public Transform Display => display;
     public EnemyStatus CurStatus => curStatus;
     private EnemyStatus afterUpdateStatus;
     public DirHorizontal dirFace {
         get {
-            if(transform.localEulerAngles.y == 0) {
+            if(display.localEulerAngles.y == 0) {
                 return DirHorizontal.RIGHT;
             } else {
                 return DirHorizontal.LEFT;
@@ -85,9 +88,9 @@ public class EnemyBase : CharacterBase
 
     public void Flip() {
         if(dirFace == DirHorizontal.RIGHT) {
-            transform.localEulerAngles = new Vector3(0, 180, 0);
+            display.localEulerAngles = new Vector3(0, 180, 0);
         } else if(dirFace == DirHorizontal.LEFT) {
-            transform.localEulerAngles = new Vector3(0, 0, 0);
+            display.localEulerAngles = new Vector3(0, 0, 0);
         }
     }
     
@@ -97,9 +100,7 @@ public class EnemyBase : CharacterBase
         }
         curStatus = status;
         if(curStatus == EnemyStatus.ATTACK) {
-            enemyAnim.SetAnimAttack(() => {
-                curStatus = EnemyStatus.MOVE;
-            });
+            enemyAttack.Attack(()=> { SetStatus(EnemyStatus.MOVE); });
         } else if(curStatus == EnemyStatus.DETECH || curStatus == EnemyStatus.MOVE) {
             enemyAnim.SetAnimWalk();
         } else {
