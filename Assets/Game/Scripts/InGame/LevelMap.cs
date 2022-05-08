@@ -5,7 +5,7 @@ using UnityEngine;
 public class LevelMap : MonoBehaviour
 {
     [SerializeField] private int level;
-    [SerializeField] private int amountEnemy;
+    [SerializeField] private int numberEnemy;
     public int Level => level;
-    public int AmountEnemy => amountEnemy;
+    public int NumberEnemy => numberEnemy;
 }

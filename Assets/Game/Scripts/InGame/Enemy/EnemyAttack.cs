@@ -16,6 +16,7 @@ public class EnemyAttack : MonoBehaviour
         enemyAnim.Anim.AnimationState.Event += EventDamege;    }
 
     public void Attack(Action callback = null ) {
+        enemyBase.Rg2D.velocity = Vector2.zero;
         int index = UnityEngine.Random.Range(0,lstStrAttack.Count);
         enemyAnim.SetAnim(0, lstStrAttack[index], false, callback);
     }

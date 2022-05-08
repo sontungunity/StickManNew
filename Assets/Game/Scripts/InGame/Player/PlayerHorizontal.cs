@@ -17,7 +17,8 @@ public class PlayerHorizontal : MonoBehaviour {
     [SerializeField] private Player player;
     [Header("ListAnim")]
     [SerializeField] private List<EnumPlayerStatus> lstStatusIdle;
-    private TurnMove MoveTurn;
+    public DirHorizontal PlayerFace => display.localScale.x == 1 ? DirHorizontal.RIGHT : DirHorizontal.LEFT;
+    public TurnMove MoveTurn;
     private float xDirectionalInput;
     private DirHorizontal direction;
     private PlayerMovement playerMovement;
@@ -76,6 +77,7 @@ public class PlayerHorizontal : MonoBehaviour {
         //Move
         if(MoveTurn.TypeMove == TypeMove.DASH) {
             rb2D.velocity = new Vector2(speedDash * (int)MoveTurn.Direc, 0);
+            //rb2D.AddForce(new Vector2(speedDash,0f),ForceMode2D.Impulse);
         } else {
             if(playerMovement.PlayerTourch == PlayerTourch.AIR) {
                 rb2D.velocity = new Vector2(xDirectionalInput * speedAir, rb2D.velocity.y);
@@ -85,10 +87,9 @@ public class PlayerHorizontal : MonoBehaviour {
                     return;
                 }
 
-                if(playerMovement.PlayerTourch == PlayerTourch.WALL && xDirectionalInput * (int)playerMovement.PlayerFace > 0) {
+                if(playerMovement.PlayerTourch == PlayerTourch.WALL && xDirectionalInput * (int)PlayerFace > 0) {
                     return;
                 }
-
                 rb2D.velocity = new Vector2(xDirectionalInput * speedGround, rb2D.velocity.y);
             }
         }
@@ -99,7 +100,7 @@ public class PlayerHorizontal : MonoBehaviour {
         } else {
             if(Mathf.Abs(xDirectionalInput)>0 && playerMovement.PlayerTourch == PlayerTourch.GROUND ) {
                 Flip(xDirectionalInput > 0 ? DirHorizontal.RIGHT : DirHorizontal.LEFT);
-                player.SetPlayerStatusCheckRank(EnumPlayerStatus.RUN);
+                var result = player.SetPlayerStatusCheckRank(EnumPlayerStatus.RUN);
             } else {
                 player.SetIdleCheckStatus(lstStatusIdle);
             }

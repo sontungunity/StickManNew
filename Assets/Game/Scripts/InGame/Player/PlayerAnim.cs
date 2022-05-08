@@ -13,6 +13,7 @@ public class PlayerAnim : SpineBase {
     [SerializeField, SpineAnimation] private string attack1,attack2,attack3;
     [SerializeField, SpineAnimation] private string animDie;
     [SerializeField, SpineAnimation] private string animGetDame;
+    [SerializeField, SpineAnimation] private string animWin;
 
     protected override void Awake() {
         base.Awake();
@@ -33,7 +34,6 @@ public class PlayerAnim : SpineBase {
                 SetAnim(0, animDash, true, callback);
                 break;
             case EnumPlayerStatus.JUMP:
-                Debug.Log("Jump");
                 SetAnim(0, animJump, true, callback);
                 break;
             case EnumPlayerStatus.JUMPFALL:
@@ -56,6 +56,9 @@ public class PlayerAnim : SpineBase {
                 break;
             case EnumPlayerStatus.GETDAME:
                 SetAnim(0, animGetDame, false, callback);
+                break;
+            case EnumPlayerStatus.WIN:
+                SetAnim(0, animWin, false, callback);
                 break;
             default:
                 SetAnim(0, animIdle, true, callback);

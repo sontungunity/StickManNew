@@ -14,13 +14,10 @@ public class PlayerMovement : MonoBehaviour {
     [SerializeField] private OverlapBoxInfo boxGroundInfo;
     [SerializeField] private OverlapBoxInfo boxWallInfo;
     public PlayerTourch PlayerTourch => playerTourch;
-    public DirHorizontal PlayerFace => transform.localScale.x == 1 ? DirHorizontal.RIGHT : DirHorizontal.LEFT;
     [Header("PartMove")]
     [SerializeField] private PlayerHorizontal playerHorizontal;
     [SerializeField] private PlayerVertical playerVertical;
-    [Header("Anim")]
-    [SerializeField] private PlayerAnim playerAnim;
-
+    public PlayerHorizontal PlayerHor => playerHorizontal;
 
     private void Awake() {
         playerHorizontal.Init(this);
@@ -67,7 +64,6 @@ public class PlayerMovement : MonoBehaviour {
 
         playerHorizontal = GetComponent<PlayerHorizontal>();
         playerVertical = GetComponent<PlayerVertical>();
-        playerAnim = GetComponent<PlayerAnim>();
     }
     #endregion
 }

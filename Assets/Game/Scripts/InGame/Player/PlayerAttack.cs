@@ -21,7 +21,7 @@ public class PlayerAttack : MonoBehaviour
         get {
             bool isAttacking = false;
             foreach(var status in lstStatusIdle) {
-                if(status == player.curStatus.TypeStatus) {
+                if(status == player.CurStatus.TypeStatus) {
                     isAttacking = true;
                     break;
                 }
@@ -54,22 +54,7 @@ public class PlayerAttack : MonoBehaviour
                 TurnAttack.input++;
                 TurnAttack.timeCountDown = TIME_DELAY_KEY;
             }
-            //if(turnAttack.input < 3) {
-            //    if(turnAttack.curAttack == EnumPlayerAttack.NONE) {
-            //        turnAttack.input++;
-            //        turnAttack.timeCountDown = PlayerMovement.TIME_DELAY_KEY;
-            //    } else if(turnAttack.timeCountDown > 0) {
-            //        turnAttack.input++;
-            //        turnAttack.timeCountDown = PlayerMovement.TIME_DELAY_KEY;
-            //    }
-            //}
-
         }
-
-        ////Halder Attack Anime
-        //if(turnAttack.curAttack == EnumPlayerAttack.NONE && turnAttack.input > 0) {
-        //    DoAttack();
-        //}
 
         //Halder time
         if(TurnAttack.timeCountDown > 0) {
@@ -78,11 +63,11 @@ public class PlayerAttack : MonoBehaviour
     }
 
     private void DoAttack() {
-        if(player.curStatus.TypeStatus == EnumPlayerStatus.ATTACK1 && TurnAttack.input > 1) {
+        if(player.CurStatus.TypeStatus == EnumPlayerStatus.ATTACK1 && TurnAttack.input > 1) {
             if(!player.SetPlayerStatusCheckRank(EnumPlayerStatus.ATTACK2, DoAttack)) {
                 SetUpNoneAttack();
             } 
-        }else if(player.curStatus.TypeStatus == EnumPlayerStatus.ATTACK2 && TurnAttack.input > 2) {
+        }else if(player.CurStatus.TypeStatus == EnumPlayerStatus.ATTACK2 && TurnAttack.input > 2) {
             if(!player.SetPlayerStatusCheckRank(EnumPlayerStatus.ATTACK3, DoAttack)) {
                 SetUpNoneAttack();
             }
@@ -103,8 +88,8 @@ public class PlayerAttack : MonoBehaviour
             foreach(var col in listCol) {
                 EnemyBase enemyBase = col.GetComponent<EnemyBase>();
                 if(enemyBase != null) {
-                    Debug.Log("Detech Enemy");
-                    enemyBase.GetDame(2);
+                    enemyBase.GetDame(player.curDame,gameObject);
+                    SpawnerTextDame.Instance.Spawner(enemyBase.transform.position,player.curDame.ToString());
                 }
             }
         }

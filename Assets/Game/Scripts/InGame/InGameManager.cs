@@ -6,14 +6,24 @@ using UnityEngine;
 public class InGameManager : Singleton<InGameManager>
 {
     [SerializeField] private Player player;
-    [Header("GetByCode")]
+    public Player Player => player;
+    [Header("Edit")]
     public bool Edit;
+    [Header("GetByCode")]
     public LevelMap LevelMap;
-    public int enemyKilled;
+    public int EnemyKilled;
+    public Vector3 PositionRevive;
+    public int CoinInGame = 0;
+    public bool KillAllEnemy => EnemyKilled >= LevelMap.NumberEnemy;
+
     private void Start() {
         SetUpMap();
         player.SetUpPlayer();
-        enemyKilled = 0;
+
+        //Setup data for turnPlay
+        PositionRevive = Vector3.zero;
+        EnemyKilled = 0;
+        CoinInGame = 0;
     }
 
     private void SetUpMap() {
@@ -23,5 +33,21 @@ public class InGameManager : Singleton<InGameManager>
         var mapPref = DataManager.Instance.GetlevelMapByLevel(0);
         LevelMap = Instantiate(mapPref, transform);
         LevelMap.transform.localPosition = Vector3.zero;
+        EventDispatcher.Dispatch<EventKey.EnemyDie>(new EventKey.EnemyDie());
+    }
+
+    public void AddEnemyDie(int amount = 1) {
+        EnemyKilled += amount;
+        EventDispatcher.Dispatch<EventKey.EnemyDie>(new EventKey.EnemyDie());
+    }
+
+    public void FinishMap() {
+        DataManager.Instance.PlayerData.GetLevelPass(LevelMap.Level);
+        SceneManager.Instance.LoadSceneAsyn(SceneManager.SCENE_HOME);
+    }
+
+    public void Revived() {
+        player.transform.position = PositionRevive;
+        player.SetUpPlayer();
     }
 }

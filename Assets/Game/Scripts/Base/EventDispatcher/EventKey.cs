@@ -13,4 +13,24 @@ public static class EventKey {
             this.nameScene = nameScene;
         }
     }
+
+    public struct IteamChange : IEventArgs {
+        public ItemID itemID;
+        public int curAmount;
+        public int changeAmount;
+
+        public IteamChange(ItemID itemID, int curAmount, int changeAmount) {
+            this.itemID = itemID;
+            this.curAmount = curAmount;
+            this.changeAmount = changeAmount;
+        }
+    }
+
+    public struct EnemyDie : IEventArgs {
+
+    }
+
+    public struct PlayerChange : IEventArgs {
+
+    }
 }

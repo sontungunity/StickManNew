@@ -1,3 +1,4 @@
+using STU;
 using System;
 using System.Collections;
 using System.Collections.Generic;
@@ -10,41 +11,58 @@ using UnityEngine;
 [RequireComponent(typeof(PlayerAnim))]
 [RequireComponent(typeof(PlayerAttack))]
 public class Player : CharacterBase {
-    private const int ROOT_HEART = 150;
-    private const int ROOT_DAMAGE = 20;
     [SerializeField] private List<SortStatus> lstSortStatus;
     [SerializeField] private PlayerAnim playerAnim;
     [SerializeField] private PlayerAttack playerAttack;
     [SerializeField] private PlayerVertical playerVertical;
     [SerializeField] private PlayerHorizontal playerHorizontal;
+    [Header("Blood")] 
+    [SerializeField] private ParticleSystem par_Blood;
     private PlayerData playerData => DataManager.Instance.PlayerData;
-    public SortStatus curStatus;
+    private SortStatus curStatus;
+    public SortStatus CurStatus => curStatus;
+
+    protected override void Awake() {
+        base.Awake();
+        curStatus = new SortStatus();
+    }
 
     public void SetUpPlayer() {
-        curStatus = new SortStatus();
         SetUpHeartDame();
+        SetPlayerStatus(EnumPlayerStatus.IDLE, 0);
     }
 
     private void SetUpHeartDame() {
-        curHeart = 150;
-        curDame = 20;
+        originHeart = RuleDameAndHeart.Heart_Base_Player;
+        originDame = RuleDameAndHeart.Dame_Base_Player;
 
         for(int i = 0; i <= playerData.levelPlayer;i++ ) {
-            DataManager.Instance.GetDameHeartByLevel(i,out int heart,out int damage,out int coin);
-            curHeart += heart;
-            curDame += damage;
-        }     
+            RuleDameAndHeart.GetDameHeartByLevel(i,out int heart,out int damage,out int coin);
+            originHeart += heart;
+            originDame += damage;
+        }
+
+        curHeart = originHeart;
+        curDame = originDame;
+        EventDispatcher.Dispatch<EventKey.PlayerChange>(new EventKey.PlayerChange());
     }
 
-    public override void GetDame(int dame) {
-        base.GetDame(dame);
-        if(curHeart<=0) {
-            playerAnim.HalderAnim(EnumPlayerStatus.DIE);
-        } else {
-            playerAnim.HalderAnim(EnumPlayerStatus.GETDAME,()=> {
-                playerAnim.HalderAnim(EnumPlayerStatus.IDLE);
-            });
+    public override void GetDame(int dame, GameObject objMakeDame = null) {
+        if(curHeart <= 0) {
+            return;
         }
+        curHeart -= dame;
+        if(curHeart<=0) {
+            SetPlayerStatus(EnumPlayerStatus.DIE,40,()=> {
+                FrameManager.Instance.Push<ReviveFrame>();
+            });
+        } else {
+            SetPlayerStatus(EnumPlayerStatus.GETDAME,30,()=> {
+                SetPlayerStatus(EnumPlayerStatus.IDLE,0);
+            });
+            par_Blood.Play();
+        }
+        EventDispatcher.Dispatch<EventKey.PlayerChange>(new EventKey.PlayerChange());
     }
 
     public bool SetPlayerStatusCheckRank(EnumPlayerStatus typeAnim, Action callback = null) {
@@ -61,15 +79,18 @@ public class Player : CharacterBase {
 
     private void SetPlayerStatus(EnumPlayerStatus statusplayer,int rank, Action callback = null) {
         curStatus.Set(statusplayer,rank);
-        playerAnim.HalderAnim(curStatus.TypeStatus, callback);
+
+        //set up 
         if(curStatus.TypeStatus == EnumPlayerStatus.DASH) {
             playerAttack.SetUpNoneAttack();
             playerVertical.SetUpNoVertical();
-        } else if(curStatus.TypeStatus == EnumPlayerStatus.GETDAME || curStatus.TypeStatus == EnumPlayerStatus.DIE) {
+        } else if(curStatus.TypeStatus == EnumPlayerStatus.GETDAME || curStatus.TypeStatus == EnumPlayerStatus.DIE || curStatus.TypeStatus == EnumPlayerStatus.WIN) {
             playerAttack.SetUpNoneAttack();
             playerVertical.SetUpNoVertical();
             playerHorizontal.SetUpNoMove();
         }
+
+        playerAnim.HalderAnim(curStatus.TypeStatus, callback);
     }
 
     public void SetIdleCheckStatus(List<EnumPlayerStatus> lstStatus,Action callback = null) {
@@ -88,7 +109,6 @@ public class Player : CharacterBase {
             SetPlayerStatus(EnumPlayerStatus.IDLE,0,callback);
         }
     }
-
 }
 
 [System.Serializable]
@@ -135,4 +155,5 @@ public enum EnumPlayerStatus {
     CLIMB,
     DIE,
     GETDAME,
+    WIN,
 }

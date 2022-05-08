@@ -28,7 +28,7 @@ public class DataManager : Singleton<DataManager> {
     
     private const string LEVELMAPS_PATH = "Maps";
     [SerializeField] private List<LevelMap> lstMap = new List<LevelMap>();
-
+    public int LevelMapMax => lstMap.Count - 1;
     #endregion
 
     private void Start() {
@@ -117,25 +117,6 @@ public class DataManager : Singleton<DataManager> {
 
     public LevelMap GetlevelMapByLevel(int level) {
         return lstMap.Find(x=>x.Level == level);
-    }
-    #endregion
-
-
-    #region Sp HeartvsDamage
-    public void GetDameHeartByLevel(int level,out int heart,out int damage ,out int coin) {
-        if(level == 0) {
-            damage = 0;
-            heart = 0;
-            coin = 0;
-        }else if(level > 0 && level < 6) {
-            damage = level;
-            heart = 10 + 10 * level;
-            coin = 2^(level-1)* 300;
-        } else {
-            damage = 6;
-            heart = 60;
-            coin = 2^(level - 1) * 300;
-        }
     }
     #endregion
 }
