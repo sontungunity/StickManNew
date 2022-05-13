@@ -5,7 +5,9 @@ using UnityEngine;
 
 public class InGameManager : Singleton<InGameManager>
 {
+    [SerializeField] private Camera camera;
     [SerializeField] private Player player;
+    public Camera Camera => camera;
     public Player Player => player;
     [Header("Edit")]
     public bool Edit;
@@ -17,20 +19,26 @@ public class InGameManager : Singleton<InGameManager>
     public bool KillAllEnemy => EnemyKilled >= LevelMap.NumberEnemy;
 
     private void Start() {
-        SetUpMap();
-        player.SetUpPlayer();
+        SetupNewGame();
+    }
 
-        //Setup data for turnPlay
+    public void SetupNewGame() {
         PositionRevive = Vector3.zero;
         EnemyKilled = 0;
         CoinInGame = 0;
+        player.transform.position = PositionRevive;
+        player.SetUpPlayer();
+        if(LevelMap != null && !Edit) {
+            Destroy(LevelMap.gameObject);
+        }
+        SetUpMap();
     }
 
     private void SetUpMap() {
         if(Edit) {
             return;
         }
-        var mapPref = DataManager.Instance.GetlevelMapByLevel(0);
+        var mapPref = DataManager.Instance.GetlevelMapByLevel(DataManager.Instance.PlayerData.levelMap);
         LevelMap = Instantiate(mapPref, transform);
         LevelMap.transform.localPosition = Vector3.zero;
         EventDispatcher.Dispatch<EventKey.EnemyDie>(new EventKey.EnemyDie());

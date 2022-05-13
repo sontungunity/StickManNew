@@ -191,6 +191,7 @@ GameObject:
   - component: {fileID: 6697500073735413553}
   - component: {fileID: 6697500073735413552}
   - component: {fileID: 6697500073735413567}
+  - component: {fileID: 4492985602552981685}
   m_Layer: 10
   m_Name: Spine GameObject (enderman)
   m_TagString: Untagged
@@ -306,6 +307,22 @@ MonoBehaviour:
   _animationName: walk
   loop: 1
   timeScale: 1
+--- !u!70 &4492985602552981685
+CapsuleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6697500073735413565}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0.58}
+  m_Size: {x: 1.7832174, y: 1.1910759}
+  m_Direction: 1
 --- !u!1 &6697500074052742057
 GameObject:
   m_ObjectHideFlags: 0
@@ -398,12 +415,11 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6697500074227366548}
-  - component: {fileID: 6697500074227366549}
-  - component: {fileID: 6697500074227366550}
   - component: {fileID: 6697500074227366536}
   - component: {fileID: 6697500074227366537}
   - component: {fileID: 6697500074227366538}
   - component: {fileID: 5505852865551253020}
+  - component: {fileID: 7949312967967226578}
   m_Layer: 10
   m_Name: Pig
   m_TagString: Untagged
@@ -427,43 +443,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!70 &6697500074227366549
-CapsuleCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6697500074227366547}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
-  m_Size: {x: 1.7832174, y: 1.1910759}
-  m_Direction: 1
---- !u!50 &6697500074227366550
-Rigidbody2D:
-  serializedVersion: 4
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6697500074227366547}
-  m_BodyType: 0
-  m_Simulated: 1
-  m_UseFullKinematicContacts: 0
-  m_UseAutoMass: 0
-  m_Mass: 1
-  m_LinearDrag: 0
-  m_AngularDrag: 0.05
-  m_GravityScale: 1
-  m_Material: {fileID: 0}
-  m_Interpolate: 0
-  m_SleepingMode: 1
-  m_CollisionDetection: 0
-  m_Constraints: 4
 --- !u!114 &6697500074227366536
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -488,8 +467,8 @@ MonoBehaviour:
   curStatus: 0
   enemyBar: {fileID: 3240101834947928210}
   enemyAttack: {fileID: 5505852865551253020}
-  collider2D: {fileID: 6697500074227366549}
-  rg2D: {fileID: 6697500074227366550}
+  collider2D: {fileID: 4492985602552981685}
+  rg2D: {fileID: 7949312967967226578}
   forceDie: {x: 20, y: 5}
   particleBlood: {fileID: 4335303442995092700}
 --- !u!114 &6697500074227366537
@@ -505,7 +484,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   enemyBase: {fileID: 6697500074227366536}
-  rb2D: {fileID: 6697500074227366550}
+  rb2D: {fileID: 7949312967967226578}
   speed: 1
   speedTarget: 2
   beamFace: {fileID: 6697500075060267100}
@@ -526,7 +505,8 @@ MonoBehaviour:
   animIdle: move
   anim_Die: die
   anim_GetDame: die
-  anim_Attack: attack
+  lstStrAttack:
+  - attack
   anim_Walk: move
 --- !u!114 &5505852865551253020
 MonoBehaviour:
@@ -542,10 +522,29 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   enemyAnim: {fileID: 6697500074227366538}
   eventATK: dmg
-  lstStrAttack:
-  - attack
   circleAttackInfo: {fileID: 4721245041837675065}
   enemyBase: {fileID: 6697500074227366536}
+--- !u!50 &7949312967967226578
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6697500074227366547}
+  m_BodyType: 0
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 1
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 4
 --- !u!1 &6697500074859000347
 GameObject:
   m_ObjectHideFlags: 0

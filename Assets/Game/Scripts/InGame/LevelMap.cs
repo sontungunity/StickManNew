@@ -8,4 +8,9 @@ public class LevelMap : MonoBehaviour
     [SerializeField] private int numberEnemy;
     public int Level => level;
     public int NumberEnemy => numberEnemy;
+
+    [ContextMenu("SetUpInfoMap")]
+    public void SetUpInFoMap() {
+        numberEnemy = transform.GetComponentsInChildren<EnemyBase>().Length;
+    }
 }

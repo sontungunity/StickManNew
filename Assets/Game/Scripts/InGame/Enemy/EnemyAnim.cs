@@ -8,7 +8,7 @@ public class EnemyAnim : SpineBase
 {
     [SerializeField, SpineAnimation] private string anim_Die;
     [SerializeField, SpineAnimation] private string anim_GetDame;
-    [SerializeField, SpineAnimation] private string anim_Attack;
+    [SerializeField, SpineAnimation] private List<string> lstStrAttack;
     [SerializeField, SpineAnimation] private string anim_Walk;
 
     public void SetAnimDie(Action callBack = null) {
@@ -19,7 +19,8 @@ public class EnemyAnim : SpineBase
         SetAnim(0, anim_GetDame, false, callBack);
     }
     public void SetAnimAttack(Action callBack = null) {
-        SetAnim(0, anim_Attack, false, callBack);
+        int index = UnityEngine.Random.Range(0,lstStrAttack.Count);
+        SetAnim(0, lstStrAttack[index], false, callBack);
     }
 
     public void SetAnimWalk(Action callBack = null) {

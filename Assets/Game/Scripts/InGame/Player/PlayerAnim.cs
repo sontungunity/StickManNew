@@ -5,19 +5,23 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class PlayerAnim : SpineBase {
+    [Header("Player")]
+    [SerializeField] private Player player;
     [Header("NameAnime")]
     [SerializeField, SpineAnimation] private string animRun;
     [SerializeField, SpineAnimation] private string animJump,animJumpFall;
     [SerializeField, SpineAnimation] private string animClimb;
     [SerializeField, SpineAnimation] private string animDash;
-    [SerializeField, SpineAnimation] private string attack1,attack2,attack3;
     [SerializeField, SpineAnimation] private string animDie;
     [SerializeField, SpineAnimation] private string animGetDame;
     [SerializeField, SpineAnimation] private string animWin;
+    [SerializeField, SpineAnimation] private string animStun;
+    [Header("NameAnime Attack")] 
+    [SerializeField, SpineAnimation] private List<string> lstAttackNone;
+    [SerializeField, SpineAnimation] private List<string> lstAttackWeapon;
 
     protected override void Awake() {
         base.Awake();
-
     }
 
 
@@ -40,13 +44,13 @@ public class PlayerAnim : SpineBase {
                 SetAnim(0, animJumpFall, true, callback);
                 break;
             case EnumPlayerStatus.ATTACK1:
-                SetAnim(0, attack1, false, callback);
+                SetAnim(0, GetStringAnimByWeapon(player.WeaponID, 0), false, callback);
                 break;
             case EnumPlayerStatus.ATTACK2:
-                SetAnim(0, attack2, false, callback);
+                SetAnim(0, GetStringAnimByWeapon(player.WeaponID, 1), false, callback);
                 break;
             case EnumPlayerStatus.ATTACK3:
-                SetAnim(0, attack3, false, callback);
+                SetAnim(0, GetStringAnimByWeapon(player.WeaponID,2), false, callback);
                 break;
             case EnumPlayerStatus.CLIMB:
                 SetAnim(0, animClimb, false, callback);
@@ -60,12 +64,22 @@ public class PlayerAnim : SpineBase {
             case EnumPlayerStatus.WIN:
                 SetAnim(0, animWin, false, callback);
                 break;
+            case EnumPlayerStatus.STUN:
+                SetAnim(0, animStun, false, callback);
+                break;
             default:
                 SetAnim(0, animIdle, true, callback);
                 break;
         }
     }
 
+    public string GetStringAnimByWeapon(WeaponID id, int index) {
+        if(player.WeaponID == WeaponID.SWORD) {
+            return lstAttackWeapon[index];
+        } else {
+            return lstAttackNone[index];
+        }
+    }
     //public void DOAnimIdle(int trackIndex = 0, bool loop = true, Action callBack = null) {
     //    cur_Anime.Set(EnumPlayerStatus.IDLE, 0);
     //    SetAnim(trackIndex, animIdle, loop, callBack);

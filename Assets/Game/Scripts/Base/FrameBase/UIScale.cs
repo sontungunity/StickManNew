@@ -26,6 +26,7 @@ public class UIScale : UITransition {
         ResetState();
         if(target) {
             Tween = target.DOScale(to, Duration)
+                          .SetUpdate(true)
                           .SetEase(Ease)
                           .SetDelay(Delay)
                           .OnComplete(() => onCompleted?.Invoke());

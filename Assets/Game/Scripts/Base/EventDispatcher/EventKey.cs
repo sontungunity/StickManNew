@@ -33,4 +33,12 @@ public static class EventKey {
     public struct PlayerChange : IEventArgs {
 
     }
+
+    public struct EnterBossArea : IEventArgs {
+
+    }
+
+    public struct BossGetDame : IEventArgs {
+
+    }
 }

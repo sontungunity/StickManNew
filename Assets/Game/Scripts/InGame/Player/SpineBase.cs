@@ -4,14 +4,14 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-//using DG.Tweening;
+using DG.Tweening;
 
 public class SpineBase : MonoBehaviour {
     [SerializeField] private SkeletonAnimation animmation;
     [SerializeField] private Action evtComplate;
     [SerializeField, SpineAnimation] protected string animIdle;
     public SkeletonAnimation Anim => animmation;
-    //private Tween tween;
+    private Tween tween;
     protected virtual void Awake() {
         animmation.AnimationState.Complete += HandleEventComplete;
     }
@@ -27,6 +27,22 @@ public class SpineBase : MonoBehaviour {
         }
         animmation.AnimationState.SetAnimation(trackIndex, animationName, loop);
         evtComplate = callBack;
+    }
+
+    public void SetAnimByTime(int trackIndex, string animationName, float timeDelay, Action callBack) {
+        if(animmation == null) {
+            tween.CheckKillTween();
+            tween = DOVirtual.DelayedCall(timeDelay, () => {
+                callBack?.Invoke();
+            });
+            return;
+        }
+        tween.CheckKillTween();
+        tween = DOVirtual.DelayedCall(timeDelay, () => {
+            animmation.AnimationState.SetAnimation(trackIndex, animationName, false);
+            evtComplate = callBack;
+        });
+        animmation.AnimationState.SetAnimation(trackIndex, animationName, true);
     }
 
     public void AnimIdle(int trackIndex = 0, bool loop = true, Action callBack = null) {

@@ -14,9 +14,9 @@ public class EnemyBase : CharacterBase {
     [SerializeField] private Collider2D collider2D;
     [SerializeField] protected Rigidbody2D rg2D;
     [Header("ForceDie")]
-    [SerializeField] private Vector2 forceDie = new Vector2(20,5);
+    [SerializeField] protected Vector2 forceDie = new Vector2(20,5);
     [Header("Effect")]
-    [SerializeField] private ParticleSystem particleBlood;
+    [SerializeField] protected ParticleSystem particleBlood;
     public Rigidbody2D Rg2D => rg2D;
     public Transform Display => display;
     public EnemyStatus CurStatus => curStatus;
@@ -30,7 +30,13 @@ public class EnemyBase : CharacterBase {
             }
         }
     }
-    private Tween tween;
+    public float PercentHeart {
+        get {
+            return curHeart / (float)originHeart;
+        }
+    }
+
+    protected Tween tween;
 
     protected virtual void Start() {
         enemyBar.Init();
@@ -39,12 +45,11 @@ public class EnemyBase : CharacterBase {
 
 
     protected virtual void Update() {
-        if(curStatus != EnemyStatus.DIE && curStatus != EnemyStatus.GET_DAME) {
+        if(curStatus == EnemyStatus.IDLE || curStatus == EnemyStatus.MOVE || curStatus == EnemyStatus.NONE || curStatus == EnemyStatus.DETECH) {
             afterUpdateStatus = EnemyStatus.MOVE;
             SetupStatus();
             SetStatus(afterUpdateStatus);
         }
-
         //if(Input.GetKeyDown(KeyCode.D)) {
         //    Die(InGameManager.Instance.Player.gameObject);
         //}
@@ -61,15 +66,18 @@ public class EnemyBase : CharacterBase {
             curStatus = EnemyStatus.GET_DAME;
             rg2D.velocity = Vector2.zero;
             enemyAnim.SetAnimGetDame(() => {
-                SetStatus(EnemyStatus.MOVE);
+                SetStatus(EnemyStatus.IDLE);
             });
-            enemyBar.UpdateHeart(curHeart / (float)originHeart);
+            enemyBar.UpdateHeart(PercentHeart);
             particleBlood?.Play();
         }
     }
     protected virtual void SetupStatus() {
-        if(InGameManager.Instance.Player.CurStatus.TypeStatus == EnumPlayerStatus.DIE) {
-            return;
+        foreach(var col in distan_attack.ArrayCollider2D) {
+            if(col != null && col.GetComponent<Player>() != null) {
+                afterUpdateStatus = EnemyStatus.ATTACK;
+                return;
+            }
         }
 
         foreach(var col in eye_Befor.ArrayCollider2D) {
@@ -88,15 +96,6 @@ public class EnemyBase : CharacterBase {
                 }
             }
         }
-
-        if(afterUpdateStatus == EnemyStatus.DETECH) {
-            foreach(var col in distan_attack.ArrayCollider2D) {
-                if(col != null && col.GetComponent<Player>() != null) {
-                    afterUpdateStatus = EnemyStatus.ATTACK;
-                    break;
-                }
-            }
-        }
     }
 
 
@@ -109,13 +108,13 @@ public class EnemyBase : CharacterBase {
     }
 
     protected virtual bool SetStatus(EnemyStatus status) {
-        if(curStatus == EnemyStatus.DIE || curStatus == status) {
-            return false;
+        if(curStatus == status) {
+            return true;
         }
         curStatus = status;
         if(curStatus == EnemyStatus.ATTACK) {
             rg2D.velocity = Vector2.zero;
-            enemyAttack.Attack(() => { SetStatus(EnemyStatus.MOVE); });
+            enemyAttack.Attack(() => { SetStatus(EnemyStatus.IDLE); });
         } else if(curStatus == EnemyStatus.DETECH || curStatus == EnemyStatus.MOVE) {
             enemyAnim.SetAnimWalk();
         } else {
@@ -124,7 +123,7 @@ public class EnemyBase : CharacterBase {
         return true;
     }
 
-    protected void Die(GameObject objMakeDame = null) {
+    protected virtual void Die(GameObject objMakeDame = null) {
         curStatus = EnemyStatus.DIE;
         enemyAnim.SetAnimDie();
         tween = DOVirtual.DelayedCall(2f, () => {
@@ -143,11 +142,12 @@ public class EnemyBase : CharacterBase {
 
 public enum EnemyStatus {
     NONE = 0,
-    MOVE = 1,
-    DETECH = 2,
-    ATTACK = 3,
-    GET_DAME = 4,
-    WIN = 6,
-    DIE = 5,
+    IDLE = 1,
+    MOVE = 2,
+    DETECH = 3,
+    ATTACK = 4,
+    GET_DAME = 5,
+    DIE = 6,
+    WIN = 7,
 }
 

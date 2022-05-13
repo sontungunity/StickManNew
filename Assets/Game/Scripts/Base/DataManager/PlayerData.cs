@@ -31,8 +31,8 @@ public class PlayerData {
             return false;
         }
 
-        if(level >= levelMap) {
-            levelMap = level;
+        if(level+1 > levelMap) {
+            levelMap = level+1;
             return true;
         }
 

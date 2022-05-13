@@ -9,12 +9,11 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1736778308808442461}
-  - component: {fileID: 1736778308808442460}
-  - component: {fileID: 1736778308808442463}
   - component: {fileID: 1736778308808442433}
   - component: {fileID: 1736778308808442432}
   - component: {fileID: 1736778308808442435}
   - component: {fileID: 612685795738207957}
+  - component: {fileID: 9051794903260557747}
   m_Layer: 10
   m_Name: Enderman
   m_TagString: Untagged
@@ -38,43 +37,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!70 &1736778308808442460
-CapsuleCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1736778308808442458}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
-  m_Size: {x: 0.607388, y: 2.6358957}
-  m_Direction: 0
---- !u!50 &1736778308808442463
-Rigidbody2D:
-  serializedVersion: 4
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1736778308808442458}
-  m_BodyType: 0
-  m_Simulated: 1
-  m_UseFullKinematicContacts: 0
-  m_UseAutoMass: 0
-  m_Mass: 1
-  m_LinearDrag: 0
-  m_AngularDrag: 0.05
-  m_GravityScale: 1
-  m_Material: {fileID: 0}
-  m_Interpolate: 0
-  m_SleepingMode: 1
-  m_CollisionDetection: 0
-  m_Constraints: 4
 --- !u!114 &1736778308808442433
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -99,8 +61,8 @@ MonoBehaviour:
   curStatus: 0
   enemyBar: {fileID: 7502765038574327899}
   enemyAttack: {fileID: 612685795738207957}
-  collider2D: {fileID: 1736778308808442460}
-  rg2D: {fileID: 1736778308808442463}
+  collider2D: {fileID: 1891793559665396676}
+  rg2D: {fileID: 9051794903260557747}
   forceDie: {x: 20, y: 5}
   particleBlood: {fileID: 2256404360605131883}
 --- !u!114 &1736778308808442432
@@ -116,7 +78,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   enemyBase: {fileID: 1736778308808442433}
-  rb2D: {fileID: 1736778308808442463}
+  rb2D: {fileID: 9051794903260557747}
   speed: 2
   speedTarget: 4
   beamFace: {fileID: 1736778310723465365}
@@ -137,7 +99,9 @@ MonoBehaviour:
   animIdle: walk
   anim_Die: dead
   anim_GetDame: get damage
-  anim_Attack: attack1
+  lstStrAttack:
+  - attack1
+  - attack2
   anim_Walk: walk
 --- !u!114 &612685795738207957
 MonoBehaviour:
@@ -153,11 +117,29 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   enemyAnim: {fileID: 1736778308808442435}
   eventATK: dmg
-  lstStrAttack:
-  - attack1
-  - attack2
   circleAttackInfo: {fileID: 391022787585108720}
   enemyBase: {fileID: 1736778308808442433}
+--- !u!50 &9051794903260557747
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1736778308808442458}
+  m_BodyType: 0
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 1
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 4
 --- !u!1 &1736778309269724782
 GameObject:
   m_ObjectHideFlags: 0
@@ -302,6 +284,7 @@ GameObject:
   - component: {fileID: 1736778309435271160}
   - component: {fileID: 1736778309435271161}
   - component: {fileID: 1736778309435271158}
+  - component: {fileID: 1891793559665396676}
   m_Layer: 10
   m_Name: Spine GameObject (enderman)
   m_TagString: Untagged
@@ -417,6 +400,22 @@ MonoBehaviour:
   _animationName: walk
   loop: 1
   timeScale: 1
+--- !u!70 &1891793559665396676
+CapsuleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1736778309435271156}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 1.32}
+  m_Size: {x: 0.607388, y: 2.6358957}
+  m_Direction: 0
 --- !u!1 &1736778309716939616
 GameObject:
   m_ObjectHideFlags: 0

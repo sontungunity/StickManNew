@@ -5,7 +5,7 @@ using UnityEngine;
 
 
 public class PlayerMovement : MonoBehaviour {
-    public static float TIME_DELAY_KEY = 0.5f;
+    public static float TIME_DELAY_KEY = 0.2f;
     [SerializeField] private Rigidbody2D rb2D;
     [SerializeField] private BoxCollider2D col2D;
     public Rigidbody2D Rb2D => rb2D;

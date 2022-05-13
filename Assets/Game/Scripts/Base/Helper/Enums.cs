@@ -12,3 +12,8 @@ public enum ItemID {
     REMOVEADS = 10,
     #endregion
 }
+
+public enum WeaponID {
+    NONE = 0,
+    SWORD = 1,
+}

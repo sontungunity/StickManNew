@@ -86,10 +86,10 @@ public class PlayerAttack : MonoBehaviour
         if(e.Data.Name == eventATK) {
             Collider2D[] listCol = Physics2D.OverlapCircleAll(circleAttackInfo.transform.position, circleAttackInfo.lookRadius, circleAttackInfo.layerMask);
             foreach(var col in listCol) {
-                EnemyBase enemyBase = col.GetComponent<EnemyBase>();
+                EnemyBase enemyBase = col.transform.parent.GetComponent<EnemyBase>();
                 if(enemyBase != null) {
                     enemyBase.GetDame(player.curDame,gameObject);
-                    SpawnerTextDame.Instance.Spawner(enemyBase.transform.position,player.curDame.ToString());
+                    SpawnerTextDame.Instance.Spawner(circleAttackInfo.transform.position, player.curDame.ToString());
                 }
             }
         }

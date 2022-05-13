@@ -129,8 +129,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 52e66754aa37e7541bfc041c9a7b7b91, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  jumpForceGround: {x: 0, y: 10}
-  jumpForceWall: {x: 5, y: 10}
+  jumpForceGround: {x: 0, y: 8}
+  jumpForceWall: {x: 5, y: 8}
   timeForOneJump: 0.2
   playerAttack: {fileID: 5886882179965856178}
   player: {fileID: 5886882179965856173}
@@ -149,17 +149,24 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   animmation: {fileID: 5886882180011657171}
   animIdle: idle
+  player: {fileID: 5886882179965856173}
   animRun: run
   animJump: jump_start
   animJumpFall: jump_fall
   animClimb: climb
   animDash: dash
-  attack1: attack1
-  attack2: attack2
-  attack3: attack3
   animDie: dead
   animGetDame: get_damage
   animWin: full_attack
+  animStun: full_attack_sword
+  lstAttackNone:
+  - attack1
+  - attack2
+  - attack3
+  lstAttackWeapon:
+  - weapon_1_attack1
+  - weapon_1_attack2
+  - weapon_1_attack3
 --- !u!114 &5886882179965856178
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -214,6 +221,8 @@ MonoBehaviour:
     Rank: 20
   - TypeStatus: 11
     Rank: 30
+  - TypeStatus: 13
+    Rank: 30
   - TypeStatus: 10
     Rank: 40
   - TypeStatus: 12
@@ -223,6 +232,7 @@ MonoBehaviour:
   playerVertical: {fileID: 5886882179965856176}
   playerHorizontal: {fileID: 5886882179965856177}
   par_Blood: {fileID: 5112590819138126634}
+  timeProtect: 5
 --- !u!1 &5886882180011657165
 GameObject:
   m_ObjectHideFlags: 0
@@ -249,7 +259,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5886882180011657165}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: -1.2, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:

@@ -154,11 +154,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ba3e967c1240ba24d9c4e015c9db22e9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  camera: {fileID: 4701280679932496778}
   player: {fileID: 1192369756302267882}
   Edit: 0
   LevelMap: {fileID: 0}
   EnemyKilled: 0
-  PositionRevival: {x: 0, y: 0, z: 0}
+  PositionRevive: {x: 0, y: 0, z: 0}
   CoinInGame: 0
 --- !u!4 &322030693
 Transform:
@@ -187,7 +188,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8291f1e4cc414ce4b8385d87da8ef802, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  force: {x: 10, y: 10}
+  force: {x: 3, y: 7}
   coinPref: {fileID: 1641214059803572719, guid: d71505dde2d63da4482d431318df8a53, type: 3}
 --- !u!114 &322030695
 MonoBehaviour:
@@ -417,11 +418,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0cd44c1031e13a943bb63640046fad76, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_UiScaleMode: 0
+  m_UiScaleMode: 1
   m_ReferencePixelsPerUnit: 100
   m_ScaleFactor: 1
-  m_ReferenceResolution: {x: 800, y: 600}
-  m_ScreenMatchMode: 0
+  m_ReferenceResolution: {x: 1920, y: 1080}
+  m_ScreenMatchMode: 1
   m_MatchWidthOrHeight: 0
   m_PhysicalUnit: 3
   m_FallbackScreenDPI: 96
@@ -483,6 +484,7 @@ MonoBehaviour:
   firstFrame: {fileID: 5320294861482648896, guid: c45d28ea7132a954a9f76f79c13d8114, type: 3}
   lstFrameCollectes:
   - {fileID: 7471886358519188104, guid: 3e2d2f5d98416a84cad93e929f45197b, type: 3}
+  - {fileID: 9213719476846276638, guid: 97a325052905040418b35ec462f1795f, type: 3}
 --- !u!1 &2095870166
 GameObject:
   m_ObjectHideFlags: 0
@@ -635,63 +637,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 88a3fd27980ee0446a3ffa70f08751f0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &4701280679932496776
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4701280679932496820}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8b8c96e2cdc154e848a3d9fe62464d42, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  CameraTargets:
-  - TargetTransform: {fileID: 1192369756302267881}
-    TargetInfluenceH: 1
-    TargetInfluenceV: 1
-    TargetOffset: {x: 2, y: 2}
-  CenterTargetOnStart: 1
-  Axis: 0
-  UpdateType: 1
-  FollowHorizontal: 1
-  HorizontalFollowSmoothness: 0.15
-  FollowVertical: 1
-  VerticalFollowSmoothness: 0.15
-  OffsetX: 0
-  OffsetY: 0
-  IsRelativeOffset: 1
-  ZoomWithFOV: 0
-  IgnoreTimeScale: 0
-  CurrentZoomTriggerID: 0
-  IsCameraPositionLeftBounded: 0
-  IsCameraPositionRightBounded: 0
-  IsCameraPositionTopBounded: 0
-  IsCameraPositionBottomBounded: 0
-  GameCamera: {fileID: 4701280679932496778}
---- !u!114 &4701280679932496777
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4701280679932496820}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c17020d0b9b514c5ea3b8251d0c4ee6a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _pc2D: {fileID: 4701280679932496776}
-  Progressive: 1
-  SpeedMultiplier: 1
-  TransitionSmoothness: 0.5
-  MaintainInfluenceOnStop: 1
-  MovementThreshold: {x: 0, y: 0}
-  LeftFocus: 0.25
-  RightFocus: 0.25
-  TopFocus: 0.25
-  BottomFocus: 0.25
 --- !u!20 &4701280679932496778
 Camera:
   m_ObjectHideFlags: 0
@@ -719,7 +664,7 @@ Camera:
   far clip plane: 1000
   field of view: 60
   orthographic: 1
-  orthographic size: 7
+  orthographic size: 5
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -749,105 +694,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &4701280679932496780
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4701280679932496820}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d7b9c22c96ab04d479afeb29c7b9bfc4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _pc2D: {fileID: 4701280679932496776}
-  CameraWindowRect:
-    serializedVersion: 2
-    x: 0
-    y: 0
-    width: 0.3
-    height: 0.3
-  IsRelativeSizeAndPosition: 1
---- !u!114 &4701280679932496782
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4701280679932496820}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6903f12ac8ae44a41ba2a44700ec60ed, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _pc2D: {fileID: 4701280679932496776}
-  UseNumericBoundaries: 1
-  UseTopBoundary: 0
-  TopBoundary: 10
-  TargetTopBoundary: 0
-  UseBottomBoundary: 1
-  BottomBoundary: -10
-  TargetBottomBoundary: 0
-  UseLeftBoundary: 0
-  LeftBoundary: -10
-  TargetLeftBoundary: 0
-  UseRightBoundary: 0
-  RightBoundary: 10
-  TargetRightBoundary: 0
-  IsCameraPositionHorizontallyBounded: 0
-  IsCameraPositionVerticallyBounded: 0
-  CurrentBoundariesTrigger: {fileID: 0}
-  HasFiredTransitionStarted: 0
-  HasFiredTransitionFinished: 0
-  UseSoftBoundaries: 1
-  Softness: 0.5
-  SoftAreaSize: 0.1
---- !u!114 &4701280679932496783
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4701280679932496820}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 30112d3b8decd43b5bf051e67694b027, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _pc2D: {fileID: 4701280679932496776}
-  Rooms:
-  - ID: 
-    Dimensions:
-      serializedVersion: 2
-      x: 25.67
-      y: 11
-      width: 73.70001
-      height: 35.899998
-    TransitionDuration: 1
-    TransitionEaseType: 0
-    ScaleCameraToFit: 0
-    Zoom: 0
-    ZoomScale: 1.5
-    InternalID: 0
-  UpdateInterval: 0.1
-  UseTargetsMidPoint: 1
-  TriggerTarget: {fileID: 0}
-  TransitionInstanlyOnStart: 1
-  RestoreOnRoomExit: 0
-  RestoreDuration: 1
-  RestoreEaseType: 0
-  AutomaticRoomActivation: 1
-  UseRelativePosition: 0
-  OnStartedTransition:
-    m_PersistentCalls:
-      m_Calls: []
-  OnFinishedTransition:
-    m_PersistentCalls:
-      m_Calls: []
-  OnExitedAllRooms:
-    m_PersistentCalls:
-      m_Calls: []
 --- !u!1 &4701280679932496820
 GameObject:
   m_ObjectHideFlags: 0
@@ -859,11 +705,9 @@ GameObject:
   - component: {fileID: 4701280679932496779}
   - component: {fileID: 4701280679932496778}
   - component: {fileID: 4701280679932496821}
-  - component: {fileID: 4701280679932496776}
-  - component: {fileID: 4701280679932496777}
-  - component: {fileID: 4701280679932496783}
-  - component: {fileID: 4701280679932496782}
-  - component: {fileID: 4701280679932496780}
+  - component: {fileID: 4701280679932496824}
+  - component: {fileID: 4701280679932496823}
+  - component: {fileID: 4701280679932496822}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -879,3 +723,80 @@ AudioListener:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4701280679932496820}
   m_Enabled: 1
+--- !u!114 &4701280679932496822
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4701280679932496820}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c17020d0b9b514c5ea3b8251d0c4ee6a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _pc2D: {fileID: 4701280679932496824}
+  Progressive: 1
+  SpeedMultiplier: 1
+  TransitionSmoothness: 0.5
+  MaintainInfluenceOnStop: 1
+  MovementThreshold: {x: 0, y: 0}
+  LeftFocus: 0.25
+  RightFocus: 0.25
+  TopFocus: 0.25
+  BottomFocus: 0.25
+--- !u!114 &4701280679932496823
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4701280679932496820}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d7b9c22c96ab04d479afeb29c7b9bfc4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _pc2D: {fileID: 4701280679932496824}
+  CameraWindowRect:
+    serializedVersion: 2
+    x: 0
+    y: 0
+    width: 0.3
+    height: 0.3
+  IsRelativeSizeAndPosition: 1
+--- !u!114 &4701280679932496824
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4701280679932496820}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8b8c96e2cdc154e848a3d9fe62464d42, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CameraTargets:
+  - TargetTransform: {fileID: 1192369756302267881}
+    TargetInfluenceH: 1
+    TargetInfluenceV: 1
+    TargetOffset: {x: 0, y: 0}
+  CenterTargetOnStart: 0
+  Axis: 0
+  UpdateType: 0
+  FollowHorizontal: 1
+  HorizontalFollowSmoothness: 0.15
+  FollowVertical: 1
+  VerticalFollowSmoothness: 0.15
+  OffsetX: 0
+  OffsetY: 0
+  IsRelativeOffset: 1
+  ZoomWithFOV: 0
+  IgnoreTimeScale: 0
+  CurrentZoomTriggerID: 0
+  IsCameraPositionLeftBounded: 0
+  IsCameraPositionRightBounded: 0
+  IsCameraPositionTopBounded: 0
+  IsCameraPositionBottomBounded: 0
+  GameCamera: {fileID: 4701280679932496778}

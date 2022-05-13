@@ -11,12 +11,17 @@ public class BeamRayCast : MonoBehaviour {
     [SerializeField] private int color; //1.green, 2.red, 3.yellow, 4.blue
 
     Collider2D[] arrayCollider2D;
-    public Collider2D[] ArrayCollider2D => arrayCollider2D;
+    public Collider2D[] ArrayCollider2D {
+        get {
+            SetRayCast();
+            return arrayCollider2D;
+        }
+    }
     private void Awake() {
         arrayCollider2D = new Collider2D[amountRaycast];
     }
 
-    private void Update() {
+    public void SetRayCast() {
         float centerY = (amountRaycast-1)/2f;
         for(int i = 0; i < amountRaycast; i++) {
             Vector2 origin = (Vector2)transform.position + (centerY-i)*space*(Vector2)transform.up;
