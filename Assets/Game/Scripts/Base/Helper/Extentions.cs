@@ -1,4 +1,5 @@
 using DG.Tweening;
+using TMPro;
 using UnityEngine;
 
 public static class Extentions {
@@ -20,5 +21,25 @@ public static class Extentions {
         }else{
             return Color.white;
         }
+    }
+
+    public static ItemData GetDataByID(this ItemID id) {
+        return DataManager.Instance.GetItemDataByID(id);
+    }
+
+    public static string GetHoursBySeconds(this int secs) {
+        int hours = secs / 3600;
+        int mins = (secs % 3600) / 60;
+        secs = secs % 60;
+        return string.Format("{0:D2} : {1:D2} : {2:D2}", hours, mins, secs);
+    }
+
+    public static bool CheckSetString(this TextMeshProUGUI text, string content) {
+        if(text == null || string.IsNullOrEmpty(content)) {
+            Debug.Log("Fall: text or content == null");
+            return false;
+        }
+        text.text = content;
+        return true;
     }
 }

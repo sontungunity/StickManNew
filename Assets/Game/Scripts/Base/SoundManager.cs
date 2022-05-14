@@ -7,7 +7,8 @@ public class SoundManager : Singleton<SoundManager> {
     public const string SETTING_SAVE = "SETTING";
     [SerializeField] private AudioSource musicAudioSource;
     [SerializeField] private AudioSource soundAudioSource;
-
+    [Header("Customer")]
+    [SerializeField] private AudioClip audioButton;
     private Coroutine fadeCoroutine;
     private SettingSave settingS;
     public SettingSave SettingS {
@@ -115,6 +116,10 @@ public class SoundManager : Singleton<SoundManager> {
         if(soundAudioSource == null || audioClip == null || !SoundEnabled)
             return;
         soundAudioSource.PlayOneShot(audioClip, volumeScale);
+    }
+
+    public void PlaySoundButton() {
+        PlaySound(audioButton);
     }
     #endregion
     #region Vibrate

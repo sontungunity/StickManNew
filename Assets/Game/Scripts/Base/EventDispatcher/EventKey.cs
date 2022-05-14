@@ -41,4 +41,12 @@ public static class EventKey {
     public struct BossGetDame : IEventArgs {
 
     }
+
+    public struct SpinChange : IEventArgs {
+        public bool GetNew;
+
+        public SpinChange(bool getNew) {
+            this.GetNew = getNew;
+        }
+    }
 }

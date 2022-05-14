@@ -9,6 +9,7 @@ public class PlayerData {
     public int life = 5;
     public int levelMap = 0;
     public List<ItemStack> eventory = new List<ItemStack>(){new ItemStack(ItemID.COIN,10)};
+    public SpinSave SpinSave = new SpinSave();
 
     public void AddItem(ItemStack itemStack) {
         ItemStack result = GetItemSaveByItemId(itemStack.ItemID);

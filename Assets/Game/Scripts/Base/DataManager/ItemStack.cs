@@ -33,4 +33,10 @@ public class ItemStack {
         ItemStack c = new ItemStack(a.itemID,amoutN);
         return c;
     }
+
+    public ItemData Data {
+        get {
+            return DataManager.Instance.GetItemDataByID(itemID);
+        }
+    }
 }
