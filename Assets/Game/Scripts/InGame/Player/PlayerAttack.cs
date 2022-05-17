@@ -47,7 +47,7 @@ public class PlayerAttack : MonoBehaviour
             }
             if(TurnAttack.input == 0) {
                 if(player.SetPlayerStatusCheckRank(EnumPlayerStatus.ATTACK1,DoAttack)) {
-                    TurnAttack.input++;
+                    TurnAttack.input = 3;
                     TurnAttack.timeCountDown = TIME_DELAY_KEY;
                 }
             } else if(TurnAttack.timeCountDown > 0) {
@@ -96,6 +96,7 @@ public class PlayerAttack : MonoBehaviour
     }
 }
 
+[System.Serializable]
 public class TurnAttack {
     public int input = 0;
     public float timeCountDown = 0f;

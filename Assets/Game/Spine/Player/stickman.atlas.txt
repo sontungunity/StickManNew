@@ -1,50 +1,141 @@
 stickman.png
-size:1588,628
+size:1288,1032
 filter:Linear,Linear
 pma:true
+Weapon/weapon_01
+bounds:2,279,164,455
+offsets:0,11,164,466
+rotate:90
+Weapon/weapon_02
+bounds:2,445,582,582
+offsets:0,38,620,620
+Weapon/weapon_03
+bounds:912,359,74,107
+rotate:90
+Weapon/weapon_04
+bounds:1213,747,70,280
 effect/ef1
-bounds:926,250,210,314
+bounds:2,67,210,314
 offsets:0,1,236,315
 rotate:90
 effect/ef2
-bounds:1046,62,186,315
+bounds:318,37,186,315
 offsets:21,0,212,315
 rotate:90
 effect/ef3
-bounds:1242,250,185,210
+bounds:635,38,185,210
 offsets:16,0,212,316
+rotate:90
 effect/eff1
-bounds:331,34,592,296
+bounds:915,435,592,296
 offsets:16,28,636,339
 rotate:90
 effect/eff2
-bounds:2,35,591,327
+bounds:586,436,591,327
 offsets:0,0,636,339
 rotate:90
 effect/eff3
-bounds:629,217,409,295
+bounds:876,2,409,295
 offsets:68,44,636,339
-rotate:90
 effect/eff4
-bounds:629,6,415,209
+bounds:459,225,415,209
 offsets:83,54,636,339
-skin/PhongKiem
-bounds:926,462,164,455
-offsets:0,11,164,466
+skin/skin_01/L arm
+bounds:847,137,86,16
 rotate:90
-skin/arm_l
-bounds:1429,297,80,178
-skin/arm_r
-bounds:1363,79,101,169
-skin/body
-bounds:2,2,31,162
+skin/skin_02/L arm
+bounds:847,137,86,16
 rotate:90
-skin/head
-bounds:1383,477,176,149
-offsets:1,3,178,153
-skin/leg_l
-bounds:1046,7,53,225
+skin/skin_01/L calf
+bounds:318,238,39,59
 rotate:90
-skin/leg_r
-bounds:1363,3,74,222
+skin/skin_02/L calf
+bounds:318,238,39,59
+rotate:90
+skin/skin_01/L foot
+bounds:992,337,20,16
+rotate:90
+skin/skin_02/L foot
+bounds:992,337,20,16
+rotate:90
+skin/skin_01/L hand
+bounds:1213,558,65,16
+rotate:90
+skin/skin_01/R hand
+bounds:1213,558,65,16
+rotate:90
+skin/skin_02/L hand
+bounds:1213,558,65,16
+rotate:90
+skin/skin_02/R hand
+bounds:1213,558,65,16
+rotate:90
+skin/skin_01/L thigh
+bounds:1021,311,49,78
+rotate:90
+skin/skin_02/L thigh
+bounds:1021,311,49,78
+rotate:90
+skin/skin_01/R arm
+bounds:847,49,86,16
+rotate:90
+skin/skin_02/R arm
+bounds:847,49,86,16
+rotate:90
+skin/skin_01/R calf
+bounds:379,238,39,59
+rotate:90
+skin/skin_02/R calf
+bounds:379,238,39,59
+rotate:90
+skin/skin_01/R foot
+bounds:992,315,20,16
+rotate:90
+skin/skin_02/R foot
+bounds:992,315,20,16
+rotate:90
+skin/skin_01/R thigh
+bounds:912,308,49,78
+rotate:90
+skin/skin_02/R thigh
+bounds:912,308,49,78
+rotate:90
+skin/skin_01/body
+bounds:876,299,16,135
+skin/skin_02/body
+bounds:876,299,16,135
+skin/skin_01/head
+bounds:1187,362,71,71
+skin/skin_02/head
+bounds:1105,362,80,71
+skin/skin_03/L arm
+bounds:635,20,86,16
+skin/skin_03/L calf
+bounds:1213,686,39,59
+skin/skin_03/L foot
+bounds:440,257,20,16
+rotate:90
+skin/skin_03/L hand
+bounds:1213,491,65,16
+rotate:90
+skin/skin_03/R hand
+bounds:1213,491,65,16
+rotate:90
+skin/skin_03/L thigh
+bounds:1101,311,49,78
+rotate:90
+skin/skin_03/R arm
+bounds:723,20,86,16
+skin/skin_03/R calf
+bounds:1213,625,39,59
+skin/skin_03/R foot
+bounds:440,235,20,16
+rotate:90
+skin/skin_03/R thigh
+bounds:1181,311,49,78
+rotate:90
+skin/skin_03/body
+bounds:894,299,16,135
+skin/skin_03/head
+bounds:1021,362,71,82
 rotate:90

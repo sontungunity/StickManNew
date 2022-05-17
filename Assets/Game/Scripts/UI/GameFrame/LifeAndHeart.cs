@@ -14,7 +14,7 @@ public class LifeAndHeart : MonoBehaviour
     private LevelMap levelMap => InGameManager.Instance.LevelMap;
 
     private void Start() {
-        txt_NumberLife.text = playerdata.life.ToString();
+        txt_NumberLife.text = playerdata.Life.ToString();
     }
 
     private void OnEnable() {

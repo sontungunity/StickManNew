@@ -27,6 +27,10 @@ public static class Extentions {
         return DataManager.Instance.GetItemDataByID(id);
     }
 
+    public static ItemStack GetSaveByID(this ItemID id) {
+        return DataManager.Instance.PlayerData.GetItemSaveByItemId(id);
+    }
+
     public static string GetHoursBySeconds(this int secs) {
         int hours = secs / 3600;
         int mins = (secs % 3600) / 60;

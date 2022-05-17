@@ -134,7 +134,7 @@ MonoBehaviour:
   timeForOneJump: 0.2
   playerAttack: {fileID: 5886882179965856178}
   player: {fileID: 5886882179965856173}
-  lstStatusIdle: 030000000400000009000000
+  lstStatusIdle: 0300000004000000090000000e000000
 --- !u!114 &5886882179965856179
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -151,8 +151,9 @@ MonoBehaviour:
   animIdle: idle
   player: {fileID: 5886882179965856173}
   animRun: run
-  animJump: jump_start
-  animJumpFall: jump_fall
+  animJump: jump_being
+  animJumpFall: jump_being
+  animJumpBefor: jump_before
   animClimb: climb
   animDash: dash
   animDie: dead
@@ -184,6 +185,9 @@ MonoBehaviour:
   circleAttackInfo: {fileID: 5886882181405898596}
   player: {fileID: 5886882179965856173}
   lstStatusIdle: 060000000700000008000000
+  TurnAttack:
+    input: 0
+    timeCountDown: 0
 --- !u!114 &5886882179965856173
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -211,6 +215,8 @@ MonoBehaviour:
     Rank: 5
   - TypeStatus: 9
     Rank: 5
+  - TypeStatus: 14
+    Rank: 8
   - TypeStatus: 6
     Rank: 10
   - TypeStatus: 7
@@ -333,7 +339,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   skeletonDataAsset: {fileID: 11400000, guid: 4e95ec2ce7314cf4db929a3f83b95250, type: 2}
-  initialSkinName: 
+  initialSkinName: skin/skin_01
   fixPrefabOverrideViaMeshFilter: 0
   initialFlipX: 0
   initialFlipY: 0

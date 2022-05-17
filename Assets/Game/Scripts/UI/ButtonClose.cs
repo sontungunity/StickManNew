@@ -22,6 +22,5 @@ public class ButtonClose : MonoBehaviour {
         if(btn_Close == null) {
             btn_Close = gameObject.AddComponent<Button>();
         }
-        frame = transform.parent.GetComponent<FrameBase>();
     }
 }

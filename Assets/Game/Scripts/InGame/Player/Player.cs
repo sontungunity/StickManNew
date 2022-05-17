@@ -22,6 +22,7 @@ public class Player : CharacterBase {
     [Header("Custom")]
     [SerializeField] private float timeProtect;
     private PlayerData playerData => DataManager.Instance.PlayerData;
+    private ItemID skinID = ItemID.SKIN_00;
     private SortStatus curStatus;
     public SortStatus CurStatus => curStatus;
     private WeaponID weaponID = WeaponID.NONE;
@@ -31,12 +32,16 @@ public class Player : CharacterBase {
     protected override void Awake() {
         base.Awake();
         curStatus = new SortStatus();
+        skinID = playerData.SkinID;
     }
 
     public void SetUpPlayer() {
         weaponID = WeaponID.NONE;
+        skinID = playerData.SkinID;
+        var skinData = skinID.GetDataByID() as SkinItemData;
+        playerAnim.SetSkin(skinData.NameSpine);
         SetUpHeartDame();
-        SetPlayerStatus(EnumPlayerStatus.IDLE, 0);
+        SetPlayerStatus(EnumPlayerStatus.IDLE);
         isProtect = false;
     }
 
@@ -44,7 +49,7 @@ public class Player : CharacterBase {
         originHeart = RuleDameAndHeart.Heart_Base_Player;
         originDame = RuleDameAndHeart.Dame_Base_Player;
 
-        for(int i = 0; i <= playerData.levelPlayer; i++) {
+        for(int i = 0; i <= playerData.LevelPlayer; i++) {
             RuleDameAndHeart.GetDameHeartByLevel(i, out int heart, out int damage, out int coin);
             originHeart += heart;
             originDame += damage;
@@ -61,12 +66,12 @@ public class Player : CharacterBase {
         }
         curHeart -= dame;
         if(curHeart <= 0) {
-            SetPlayerStatus(EnumPlayerStatus.DIE, 40, () => {
+            SetPlayerStatus(EnumPlayerStatus.DIE, () => {
                 FrameManager.Instance.Push<ReviveFrame>();
             });
         } else {
-            SetPlayerStatus(EnumPlayerStatus.GETDAME, 30, () => {
-                SetPlayerStatus(EnumPlayerStatus.IDLE, 0);
+            SetPlayerStatus(EnumPlayerStatus.GETDAME, () => {
+                SetPlayerStatus(EnumPlayerStatus.IDLE);
             });
             par_Blood.Play();
         }
@@ -79,12 +84,12 @@ public class Player : CharacterBase {
         }
         curHeart -= dame;
         if(curHeart <= 0) {
-            SetPlayerStatus(EnumPlayerStatus.DIE, 40, () => {
+            SetPlayerStatus(EnumPlayerStatus.DIE, () => {
                 FrameManager.Instance.Push<ReviveFrame>();
             });
         } else {
-            SetPlayerStatus(EnumPlayerStatus.STUN, 30,() => {
-                SetPlayerStatus(EnumPlayerStatus.IDLE, 0);
+            SetPlayerStatus(EnumPlayerStatus.STUN,() => {
+                SetPlayerStatus(EnumPlayerStatus.IDLE);
             });
             isProtect = true;
             tween.CheckKillTween();
@@ -105,14 +110,15 @@ public class Player : CharacterBase {
             return false;
         }
         if(sortStatus.TypeStatus != curStatus.TypeStatus && sortStatus.Rank >= curStatus.Rank) {
-            SetPlayerStatus(sortStatus.TypeStatus, sortStatus.Rank, callback);
+            SetPlayerStatus(typeAnim, callback);
             return true;
         }
         return false;
     }
 
-    private void SetPlayerStatus(EnumPlayerStatus statusplayer, int rank, Action callback = null) {
-        curStatus.Set(statusplayer, rank);
+    private void SetPlayerStatus(EnumPlayerStatus status, Action callback = null) {
+        SortStatus sortstatus = lstSortStatus.Find(x=>x.TypeStatus == status);
+        curStatus.Set(sortstatus);
         //set up 
         if(curStatus.TypeStatus == EnumPlayerStatus.DASH) {
             playerAttack.SetUpNoneAttack();
@@ -122,12 +128,7 @@ public class Player : CharacterBase {
             playerVertical.SetUpNoVertical();
             playerHorizontal.SetUpNoMove();
         }
-
-        if(curStatus.TypeStatus == EnumPlayerStatus.STUN) {
-            playerAnim.HalderAnim(curStatus.TypeStatus, callback);
-        } else {
-            playerAnim.HalderAnim(curStatus.TypeStatus, callback);
-        }
+        playerAnim.HalderAnim(curStatus.TypeStatus, callback);
     }
 
     public void SetIdleCheckStatus(List<EnumPlayerStatus> lstStatus, Action callback = null) {
@@ -143,7 +144,24 @@ public class Player : CharacterBase {
         }
 
         if(canSet) {
-            SetPlayerStatus(EnumPlayerStatus.IDLE, 0, callback);
+            SetPlayerStatus(EnumPlayerStatus.IDLE, callback);
+        }
+    }
+
+    public void SetAnimCheckStatus(EnumPlayerStatus typeStatus, List<EnumPlayerStatus> lstStatus, Action callback = null) {
+        if(curStatus.TypeStatus == typeStatus) {
+            return;
+        }
+        bool canSet = false;
+        foreach(var status in lstStatus) {
+            if(status == curStatus.TypeStatus) {
+                canSet = true;
+                break;
+            }
+        }
+
+        if(canSet) {
+            SetPlayerStatus(typeStatus, callback);
         }
     }
 
@@ -179,7 +197,7 @@ public class SortStatus {
         this.Rank = rank;
     }
 
-    public void Coppy(SortStatus sortAnime) {
+    public void Set(SortStatus sortAnime) {
         this.TypeStatus = sortAnime.TypeStatus;
         this.Rank = sortAnime.Rank;
     }
@@ -204,5 +222,6 @@ public enum EnumPlayerStatus {
     DIE,
     GETDAME,
     WIN,
-    STUN
+    STUN,
+    JUMPBEFOR,
 }

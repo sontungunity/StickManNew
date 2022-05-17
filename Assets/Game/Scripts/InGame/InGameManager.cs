@@ -38,7 +38,7 @@ public class InGameManager : Singleton<InGameManager>
         if(Edit) {
             return;
         }
-        var mapPref = DataManager.Instance.GetlevelMapByLevel(DataManager.Instance.PlayerData.levelMap);
+        var mapPref = DataManager.Instance.GetlevelMapByLevel(DataManager.Instance.PlayerData.LevelMap);
         LevelMap = Instantiate(mapPref, transform);
         LevelMap.transform.localPosition = Vector3.zero;
         EventDispatcher.Dispatch<EventKey.EnemyDie>(new EventKey.EnemyDie());

@@ -42,15 +42,24 @@ public class PlayerVertical : MonoBehaviour
          if(doJump) {
             if(playerMovement.PlayerTourch == PlayerTourch.GROUND) {
                 turnJump.Set(EnumJumpType.JUMP_I,jumpForceGround, timeForOneJump);
+                player.SetPlayerStatusCheckRank(EnumPlayerStatus.JUMPBEFOR,()=> {
+                    player.SetAnimCheckStatus(EnumPlayerStatus.JUMP,lstStatusIdle);
+                });
             } else if(playerMovement.PlayerTourch == PlayerTourch.WALL) { 
                 Vector2 bounce = jumpForceWall;
                 if(playerMovement.PlayerHor.PlayerFace == DirHorizontal.RIGHT) {
                     bounce.x = -bounce.x;
                 }
                 turnJump.Set(EnumJumpType.JUMP_I, bounce, timeForOneJump);
+                player.SetPlayerStatusCheckRank(EnumPlayerStatus.JUMPBEFOR, () => {
+                    player.SetAnimCheckStatus(EnumPlayerStatus.JUMP, lstStatusIdle);
+                });
             } else if(playerMovement.PlayerTourch == PlayerTourch.AIR) {
                 if(turnJump.TypeJump == EnumJumpType.JUMP_I) {
                     turnJump.Set(EnumJumpType.JUMP_II,jumpForceGround, timeForOneJump);
+                    player.SetPlayerStatusCheckRank(EnumPlayerStatus.JUMPBEFOR, () => {
+                        player.SetAnimCheckStatus(EnumPlayerStatus.JUMP, lstStatusIdle);
+                    });
                 }
             }
             doJump = false;

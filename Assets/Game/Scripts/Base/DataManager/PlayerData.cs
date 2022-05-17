@@ -5,16 +5,28 @@ using UnityEngine;
 
 [System.Serializable]
 public class PlayerData {
-    public int levelPlayer = 0;
-    public int life = 5;
-    public int levelMap = 0;
+    public int LevelPlayer = 0;
+    public int Life = 5;
+    public int LevelMap = 0;
     public List<ItemStack> eventory = new List<ItemStack>(){new ItemStack(ItemID.COIN,10)};
     public SpinSave SpinSave = new SpinSave();
+    public DailySave DailySave = new DailySave();
+    public ItemID SkinID = ItemID.SKIN_00;
 
     public void AddItem(ItemStack itemStack) {
         ItemStack result = GetItemSaveByItemId(itemStack.ItemID);
         result.Add(itemStack.Amount);
         EventDispatcher.Dispatch<EventKey.IteamChange>(new EventKey.IteamChange(itemStack.ItemID, result.Amount, itemStack.Amount));
+    }
+
+    public bool RemoveItem(ItemStack itemStack) {
+        ItemStack result = GetItemSaveByItemId(itemStack.ItemID);
+        if(result.Amount < itemStack.Amount) {
+            return false;
+        }
+        result.Add(-itemStack.Amount);
+        EventDispatcher.Dispatch<EventKey.IteamChange>(new EventKey.IteamChange(itemStack.ItemID, result.Amount, itemStack.Amount));
+        return true;
     }
 
     public ItemStack GetItemSaveByItemId(ItemID itemID) {
@@ -27,16 +39,24 @@ public class PlayerData {
     }
 
     public bool GetLevelPass(int level) {
-        if(levelMap>= DataManager.Instance.LevelMapMax) {
-            levelMap = DataManager.Instance.LevelMapMax;
+        if(LevelMap>= DataManager.Instance.LevelMapMax) {
+            LevelMap = DataManager.Instance.LevelMapMax;
             return false;
         }
 
-        if(level+1 > levelMap) {
-            levelMap = level+1;
+        if(level+1 > LevelMap) {
+            LevelMap = level+1;
             return true;
         }
 
         return false;
+    }
+
+    public bool Enought(ItemID itemID,int amout = 1) {
+        ItemStack item = eventory.Find(x=>x.ItemID == itemID);
+        if(item == null) {
+            return false;
+        }
+        return item.Amount >= 1;
     }
 }

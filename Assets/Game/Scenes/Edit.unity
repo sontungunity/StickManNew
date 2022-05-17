@@ -834,6 +834,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: Player2D
       objectReference: {fileID: 0}
+    - target: {fileID: 5886882180011657168, guid: bf6ec8ca3725b85468c55d2318f6d928, type: 3}
+      propertyPath: m_SortingLayer
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 5886882180011657168, guid: bf6ec8ca3725b85468c55d2318f6d928, type: 3}
+      propertyPath: m_SortingLayerID
+      value: -993020567
+      objectReference: {fileID: 0}
     - target: {fileID: 5886882180011657169, guid: bf6ec8ca3725b85468c55d2318f6d928, type: 3}
       propertyPath: m_Mesh
       value: 

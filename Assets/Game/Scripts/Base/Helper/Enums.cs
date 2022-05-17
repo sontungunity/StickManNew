@@ -4,12 +4,15 @@ using UnityEngine;
 
 public enum ItemID {
     NONE = 0,
-    #region noncosume
     COIN = 1,
-    #endregion
+    REMOVEADS =2,
+    UNLOCKSKINS =3,
 
-    #region cosume
-    REMOVEADS = 10,
+
+    #region skin
+    SKIN_00 = 10,
+    SKIN_01 = 11,
+    SKIN_02 = 12
     #endregion
 }
 

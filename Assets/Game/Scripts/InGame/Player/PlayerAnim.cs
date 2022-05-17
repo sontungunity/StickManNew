@@ -1,3 +1,4 @@
+using Spine;
 using Spine.Unity;
 using System;
 using System.Collections;
@@ -9,7 +10,7 @@ public class PlayerAnim : SpineBase {
     [SerializeField] private Player player;
     [Header("NameAnime")]
     [SerializeField, SpineAnimation] private string animRun;
-    [SerializeField, SpineAnimation] private string animJump,animJumpFall;
+    [SerializeField, SpineAnimation] private string animJump,animJumpFall,animJumpBefor;
     [SerializeField, SpineAnimation] private string animClimb;
     [SerializeField, SpineAnimation] private string animDash;
     [SerializeField, SpineAnimation] private string animDie;
@@ -67,6 +68,9 @@ public class PlayerAnim : SpineBase {
             case EnumPlayerStatus.STUN:
                 SetAnim(0, animStun, false, callback);
                 break;
+            case EnumPlayerStatus.JUMPBEFOR:
+                SetAnim(0, animJumpBefor, false, callback);
+                break;
             default:
                 SetAnim(0, animIdle, true, callback);
                 break;
@@ -80,10 +84,23 @@ public class PlayerAnim : SpineBase {
             return lstAttackNone[index];
         }
     }
-    //public void DOAnimIdle(int trackIndex = 0, bool loop = true, Action callBack = null) {
-    //    cur_Anime.Set(EnumPlayerStatus.IDLE, 0);
-    //    SetAnim(trackIndex, animIdle, loop, callBack);
-    //}
+
+    public void SetSkin(params string[] lstSkin) {
+        Skin skin = new Skin("Skin");
+        foreach(string nameSkin in lstSkin) {
+            skin.AddSkin(Anim.Skeleton.Data.FindSkin(nameSkin));
+        }
+        Anim.Skeleton.SetSkin(skin);
+        Anim.Skeleton.SetSlotsToSetupPose();
+    }
+
+    public void AddSkin(string skinAdd) {
+        Skin skin = Anim.Skeleton.Skin;
+        skin.AddSkin(Anim.Skeleton.Data.FindSkin(skinAdd));
+        Anim.Skeleton.SetSkin(skin);
+        Anim.Skeleton.SetSlotsToSetupPose();
+        //Anim.Skeleton.Skin.AddSkin(Anim.Skeleton.Data.FindSkin(skinAdd));
+    }
 }
 
 

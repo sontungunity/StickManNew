@@ -49,4 +49,14 @@ public static class EventKey {
             this.GetNew = getNew;
         }
     }
+
+    public struct EventSkinChange : IEventArgs {
+        public ItemID IDBefor;
+        public ItemID IDAfter;
+
+        public EventSkinChange(ItemID idBefor, ItemID idAfter) {
+            this.IDBefor = idBefor;
+            this.IDAfter = idAfter;
+        }
+    }
 }

@@ -18,7 +18,6 @@ public class SpineBase : MonoBehaviour {
     
     private void HandleEventComplete(TrackEntry trackEntry) {
         evtComplate?.Invoke();
-        evtComplate = null;
     }
 
     public void SetAnim(int trackIndex, string animationName, bool loop,Action callBack = null ) {

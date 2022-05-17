@@ -859,7 +859,6 @@ GameObject:
   - component: {fileID: 8816926514271287923}
   - component: {fileID: 786188400029753495}
   - component: {fileID: 3177217203797939877}
-  - component: {fileID: 7460902356053412036}
   m_Layer: 5
   m_Name: Ground
   m_TagString: Untagged
@@ -925,25 +924,6 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
---- !u!114 &7460902356053412036
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4336256080458799253}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 030de6c2be75e87478a9496c5648c2d3, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  btn_Player: {fileID: 3538376886402940248}
-  skeleton: {fileID: 995057451112914320}
-  animIdle: idle
-  lstAnim:
-  - full_attack
-  - full_attack_sword
-  - get_damage
 --- !u!1 &4354742799617776564
 GameObject:
   m_ObjectHideFlags: 0
@@ -3805,6 +3785,7 @@ GameObject:
   - component: {fileID: 6067198597686398025}
   - component: {fileID: 995057451112914320}
   - component: {fileID: 3538376886402940248}
+  - component: {fileID: 4388567070581344722}
   m_Layer: 0
   m_Name: SkeletonGraphic (stickman)
   m_TagString: Untagged
@@ -3863,7 +3844,7 @@ MonoBehaviour:
   additiveMaterial: {fileID: 2100000, guid: 2e8245019faeb8c43b75f9ca3ac8ee34, type: 2}
   multiplyMaterial: {fileID: 2100000, guid: e74a1f8978a7da348a721508d0d58834, type: 2}
   screenMaterial: {fileID: 2100000, guid: bab24c479f34eec45be6ea8595891569, type: 2}
-  initialSkinName: 
+  initialSkinName: skin/skin_01
   initialFlipX: 0
   initialFlipY: 0
   startingAnimation: idle
@@ -3932,6 +3913,25 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls: []
+--- !u!114 &4388567070581344722
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7576766313890750772}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 713975cd3beab864cb1eedbd67488a1e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  btn_Player: {fileID: 3538376886402940248}
+  skeleton: {fileID: 995057451112914320}
+  animIdle: idle
+  lstAnim:
+  - full_attack
+  - full_attack_sword
+  - get_damage
 --- !u!1 &7593024426702742847
 GameObject:
   m_ObjectHideFlags: 0
