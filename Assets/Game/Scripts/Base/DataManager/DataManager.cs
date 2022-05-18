@@ -35,6 +35,7 @@ public class DataManager : Singleton<DataManager> {
         LoadData();
         LoadItemData();
         LoadLevelMap();
+        playerData.Update();
     }
 
     #region SaveAndLoadPlayer

@@ -1,141 +1,1041 @@
 stickman.png
-size:1288,1032
+size:2036,1368
 filter:Linear,Linear
 pma:true
 Weapon/weapon_01
-bounds:2,279,164,455
+bounds:1189,537,164,455
 offsets:0,11,164,466
-rotate:90
 Weapon/weapon_02
-bounds:2,445,582,582
-offsets:0,38,620,620
+bounds:1393,1018,360,348
 Weapon/weapon_03
-bounds:912,359,74,107
-rotate:90
+bounds:511,607,337,336
 Weapon/weapon_04
-bounds:1213,747,70,280
+bounds:814,292,312,312
+Weapon/weapon_05
+bounds:1018,994,373,372
+offsets:0,25,397,397
+Weapon/weapon_06
+bounds:488,281,324,324
+Weapon/weapon_07
+bounds:595,945,421,421
+Weapon/weapon_08
+bounds:850,606,337,337
 effect/ef1
-bounds:2,67,210,314
+bounds:1755,1052,210,314
 offsets:0,1,236,315
-rotate:90
 effect/ef2
-bounds:318,37,186,315
+bounds:300,305,186,315
 offsets:21,0,212,315
-rotate:90
 effect/ef3
-bounds:635,38,185,210
+bounds:299,93,185,210
 offsets:16,0,212,316
-rotate:90
 effect/eff1
-bounds:915,435,592,296
+bounds:2,445,592,296
 offsets:16,28,636,339
 rotate:90
 effect/eff2
-bounds:586,436,591,327
+bounds:2,1039,591,327
 offsets:0,0,636,339
-rotate:90
 effect/eff3
-bounds:876,2,409,295
+bounds:2,34,409,295
 offsets:68,44,636,339
+rotate:90
 effect/eff4
-bounds:459,225,415,209
+bounds:300,622,415,209
 offsets:83,54,636,339
+rotate:90
 skin/skin_01/L arm
-bounds:847,137,86,16
-rotate:90
-skin/skin_02/L arm
-bounds:847,137,86,16
-rotate:90
+bounds:959,180,86,16
+skin/skin_17/L arm
+bounds:959,180,86,16
 skin/skin_01/L calf
-bounds:318,238,39,59
-rotate:90
-skin/skin_02/L calf
-bounds:318,238,39,59
+bounds:593,2,39,59
 rotate:90
 skin/skin_01/L foot
-bounds:992,337,20,16
+bounds:1967,1072,20,16
 rotate:90
-skin/skin_02/L foot
-bounds:992,337,20,16
+skin/skin_05/L foot
+bounds:1967,1072,20,16
+rotate:90
+skin/skin_17/L foot
+bounds:1967,1072,20,16
 rotate:90
 skin/skin_01/L hand
-bounds:1213,558,65,16
-rotate:90
+bounds:1957,834,65,16
 skin/skin_01/R hand
-bounds:1213,558,65,16
-rotate:90
-skin/skin_02/L hand
-bounds:1213,558,65,16
-rotate:90
-skin/skin_02/R hand
-bounds:1213,558,65,16
-rotate:90
-skin/skin_01/L thigh
-bounds:1021,311,49,78
-rotate:90
-skin/skin_02/L thigh
-bounds:1021,311,49,78
-rotate:90
+bounds:1957,834,65,16
+skin/skin_17/L hand
+bounds:1957,834,65,16
+skin/skin_01/L thing
+bounds:1985,1288,49,78
+skin/skin_16/L thing
+bounds:1985,1288,49,78
+skin/skin_17/L thing
+bounds:1985,1288,49,78
 skin/skin_01/R arm
-bounds:847,49,86,16
-rotate:90
-skin/skin_02/R arm
-bounds:847,49,86,16
-rotate:90
+bounds:1667,1000,86,16
+skin/skin_17/R arm
+bounds:1667,1000,86,16
 skin/skin_01/R calf
-bounds:379,238,39,59
+bounds:654,2,39,59
 rotate:90
-skin/skin_02/R calf
-bounds:379,238,39,59
+skin/skin_17/R calf
+bounds:654,2,39,59
 rotate:90
 skin/skin_01/R foot
-bounds:992,315,20,16
+bounds:1323,267,20,16
+rotate:90
+skin/skin_05/R foot
+bounds:1323,267,20,16
+rotate:90
+skin/skin_17/R foot
+bounds:1323,267,20,16
+rotate:90
+skin/skin_01/R thing
+bounds:1985,1208,49,78
+skin/skin_16/R thing
+bounds:1985,1208,49,78
+skin/skin_17/R thing
+bounds:1985,1208,49,78
+skin/skin_01/body
+bounds:1755,1034,16,135
+rotate:90
+skin/skin_17/body
+bounds:1755,1034,16,135
+rotate:90
+skin/skin_01/head
+bounds:1418,378,71,71
+skin/skin_02/L arm
+bounds:1146,333,86,16
+skin/skin_02/L calf
+bounds:1013,2,39,59
+rotate:90
+skin/skin_02/L foot
+bounds:1542,373,20,16
+skin/skin_02/L hand
+bounds:1956,396,65,16
+skin/skin_02/L thing
+bounds:1985,1128,49,78
+skin/skin_02/R arm
+bounds:494,17,86,16
+skin/skin_02/R calf
+bounds:1972,1007,39,59
 rotate:90
 skin/skin_02/R foot
-bounds:992,315,20,16
-rotate:90
-skin/skin_01/R thigh
-bounds:912,308,49,78
-rotate:90
-skin/skin_02/R thigh
-bounds:912,308,49,78
-rotate:90
-skin/skin_01/body
-bounds:876,299,16,135
+bounds:1916,533,20,16
+skin/skin_02/R hand
+bounds:1345,366,65,16
+skin/skin_02/R thing
+bounds:1985,1048,49,78
 skin/skin_02/body
-bounds:876,299,16,135
-skin/skin_01/head
-bounds:1187,362,71,71
+bounds:1967,1231,16,135
 skin/skin_02/head
-bounds:1105,362,80,71
+bounds:401,3,91,88
 skin/skin_03/L arm
-bounds:635,20,86,16
+bounds:1673,902,86,16
 skin/skin_03/L calf
-bounds:1213,686,39,59
+bounds:1995,624,39,59
 skin/skin_03/L foot
-bounds:440,257,20,16
+bounds:1263,20,20,16
 rotate:90
 skin/skin_03/L hand
-bounds:1213,491,65,16
+bounds:2005,698,65,16
+rotate:90
+skin/skin_03/L thing
+bounds:1285,457,49,78
+skin/skin_03/R arm
+bounds:1775,918,86,16
+skin/skin_03/R calf
+bounds:1995,563,39,59
+skin/skin_03/R foot
+bounds:1281,20,20,16
 rotate:90
 skin/skin_03/R hand
-bounds:1213,491,65,16
-rotate:90
-skin/skin_03/L thigh
-bounds:1101,311,49,78
-rotate:90
-skin/skin_03/R arm
-bounds:723,20,86,16
-skin/skin_03/R calf
-bounds:1213,625,39,59
-skin/skin_03/R foot
-bounds:440,235,20,16
-rotate:90
-skin/skin_03/R thigh
-bounds:1181,311,49,78
-rotate:90
+bounds:1412,360,65,16
+skin/skin_03/R thing
+bounds:1622,902,49,78
 skin/skin_03/body
-bounds:894,299,16,135
+bounds:1967,1094,16,135
 skin/skin_03/head
-bounds:1021,362,71,82
+bounds:1535,612,75,91
+skin/skin_04/L arm
+bounds:1535,507,86,16
+skin/skin_04/L calf
+bounds:1995,502,39,59
+skin/skin_04/L foot
+bounds:1234,333,20,16
+skin/skin_04/L hand
+bounds:1243,352,65,16
+skin/skin_04/L thing
+bounds:1243,370,49,78
+skin/skin_04/R arm
+bounds:1622,884,86,16
+skin/skin_04/R calf
+bounds:1880,492,39,59
 rotate:90
+skin/skin_04/R foot
+bounds:1863,235,20,16
+skin/skin_28/R foot
+bounds:1863,235,20,16
+skin/skin_04/R hand
+bounds:1382,299,65,16
+rotate:90
+skin/skin_04/R thing
+bounds:1443,451,49,78
+rotate:90
+skin/skin_04/body
+bounds:1018,976,16,135
+rotate:90
+skin/skin_04/head
+bounds:494,35,97,98
+skin/skin_05/L arm
+bounds:1767,820,86,16
+skin/skin_05/L calf
+bounds:1341,305,39,59
+skin/skin_05/L hand
+bounds:1564,324,65,16
+rotate:90
+skin/skin_05/L thing
+bounds:1294,377,49,78
+skin/skin_18/L thing
+bounds:1294,377,49,78
+skin/skin_05/R arm
+bounds:1877,932,86,16
+skin/skin_05/R calf
+bounds:1400,299,39,59
+skin/skin_05/R hand
+bounds:1876,317,65,16
+rotate:90
+skin/skin_05/R thing
+bounds:760,28,49,78
+rotate:90
+skin/skin_18/R thing
+bounds:760,28,49,78
+rotate:90
+skin/skin_05/body
+bounds:1128,469,16,135
+skin/skin_05/head
+bounds:1103,122,71,71
+skin/skin_06/L arm
+bounds:1869,834,86,16
+skin/skin_06/L calf
+bounds:1441,299,39,59
+skin/skin_06/L foot
+bounds:2014,378,20,16
+skin/skin_06/L hand
+bounds:1953,337,65,16
+skin/skin_06/L thing
+bounds:1892,1001,49,78
+rotate:90
+skin/skin_06/R arm
+bounds:1535,489,86,16
+skin/skin_06/R calf
+bounds:1482,310,39,59
+skin/skin_06/R foot
+bounds:2014,360,20,16
+skin/skin_06/R hand
+bounds:1953,278,65,16
+skin/skin_06/R thing
+bounds:1673,920,49,78
+skin/skin_06/body
+bounds:2,16,16,135
+rotate:90
+skin/skin_06/head
+bounds:1528,705,88,82
+rotate:90
+skin/skin_07/L arm
+bounds:1523,471,86,16
+skin/skin_07/L calf
+bounds:1523,310,39,59
+skin/skin_07/L foot
+bounds:1162,20,20,16
+rotate:90
+skin/skin_07/L hand
+bounds:1373,136,65,16
+rotate:90
+skin/skin_07/L thing
+bounds:1724,920,49,78
+skin/skin_07/R arm
+bounds:1593,383,86,16
+rotate:90
+skin/skin_07/R calf
+bounds:1972,966,39,59
+rotate:90
+skin/skin_07/R foot
+bounds:1180,20,20,16
+rotate:90
+skin/skin_07/R hand
+bounds:1373,69,65,16
+rotate:90
+skin/skin_07/R thing
+bounds:1775,936,49,78
+skin/skin_07/body
+bounds:1530,1000,16,135
+rotate:90
+skin/skin_07/head
+bounds:680,46,80,78
+rotate:90
+skin/skin_08/L arm
+bounds:1611,401,86,16
+rotate:90
+skin/skin_08/L calf
+bounds:1670,318,39,59
+skin/skin_08/L foot
+bounds:1198,20,20,16
+rotate:90
+skin/skin_08/L hand
+bounds:1373,2,65,16
+rotate:90
+skin/skin_08/L thing
+bounds:1826,936,49,78
+skin/skin_08/R arm
+bounds:1227,114,86,16
+rotate:90
+skin/skin_08/R calf
+bounds:1835,323,39,59
+skin/skin_08/R foot
+bounds:2014,319,20,16
+skin/skin_08/R hand
+bounds:1419,466,65,22
+rotate:90
+skin/skin_08/R thing
+bounds:1877,950,49,78
+rotate:90
+skin/skin_08/body
+bounds:1018,958,16,135
+rotate:90
+skin/skin_08/head
+bounds:1146,351,95,97
+skin/skin_09/L arm
+bounds:1227,26,86,16
+rotate:90
+skin/skin_09/L calf
+bounds:1912,343,39,59
+skin/skin_09/L foot
+bounds:2014,301,20,16
+skin/skin_09/L hand
+bounds:1432,150,65,16
+rotate:90
+skin/skin_09/L thing
+bounds:1491,371,49,78
+skin/skin_09/R arm
+bounds:1245,114,86,16
+rotate:90
+skin/skin_09/R calf
+bounds:1953,355,39,59
+rotate:90
+skin/skin_09/R foot
+bounds:1155,976,20,16
+skin/skin_09/R hand
+bounds:1432,83,65,16
+rotate:90
+skin/skin_09/R thing
+bounds:1614,804,49,78
+skin/skin_09/body
+bounds:1146,469,16,135
+skin/skin_09/head
+bounds:1103,49,71,71
+skin/skin_10/L arm
+bounds:1245,26,86,16
+rotate:90
+skin/skin_10/L calf
+bounds:1912,282,39,59
+skin/skin_10/L foot
+bounds:276,16,20,16
+skin/skin_10/L hand
+bounds:1162,2,65,16
+skin/skin_10/L thing
+bounds:1665,804,49,78
+skin/skin_10/R arm
+bounds:1620,546,86,16
+skin/skin_10/R calf
+bounds:1953,296,39,59
+rotate:90
+skin/skin_10/R foot
+bounds:1146,451,20,16
+skin/skin_10/R hand
+bounds:1229,2,65,16
+skin/skin_10/R thing
+bounds:1630,724,49,78
+skin/skin_10/body
+bounds:1128,332,16,135
+skin/skin_10/head
+bounds:1535,525,83,85
+skin/skin_11/L arm
+bounds:1629,397,86,16
+skin/skin_11/L calf
+bounds:1341,244,39,59
+skin/skin_11/L foot
+bounds:1128,310,20,16
+rotate:90
+skin/skin_11/L hand
+bounds:1296,2,65,16
+skin/skin_11/L thing
+bounds:1630,644,49,78
+skin/skin_11/R arm
+bounds:1722,556,86,16
+rotate:90
+skin/skin_11/R calf
+bounds:1382,258,39,59
+rotate:90
+skin/skin_11/R foot
+bounds:1128,292,20,16
+skin/skin_11/R hand
+bounds:1432,16,65,16
+rotate:90
+skin/skin_11/R thing
+bounds:1681,724,49,78
+skin/skin_11/body
+bounds:139,16,16,135
+rotate:90
+skin/skin_11/head
+bounds:1355,873,74,119
+skin/skin_12/L arm
+bounds:1314,114,86,16
+rotate:90
+skin/skin_12/L calf
+bounds:1327,203,39,59
+rotate:90
+skin/skin_12/L foot
+bounds:2012,794,20,16
+rotate:90
+skin/skin_12/L hand
+bounds:1711,242,65,16
+rotate:90
+skin/skin_12/L thing
+bounds:1681,644,49,78
+skin/skin_12/R arm
+bounds:1314,26,86,16
+rotate:90
+skin/skin_12/R calf
+bounds:1332,142,39,59
+skin/skin_12/R foot
+bounds:1971,860,20,16
+skin/skin_12/R hand
+bounds:1729,259,65,16
+rotate:90
+skin/skin_12/R thing
+bounds:1716,822,49,78
+skin/skin_12/body
+bounds:1164,469,16,135
+skin/skin_12/head
+bounds:1355,642,110,83
+offsets:0,0,110,84
+rotate:90
+skin/skin_13/L arm
+bounds:1855,816,86,16
+skin/skin_13/L calf
+bounds:1332,81,39,59
+skin/skin_13/L foot
+bounds:1443,281,20,16
+skin/skin_13/L hand
+bounds:1747,253,65,16
+skin/skin_13/L thing
+bounds:1767,838,49,78
+skin/skin_13/R arm
+bounds:1732,734,86,16
+rotate:90
+skin/skin_13/R calf
+bounds:1332,20,39,59
+skin/skin_13/R foot
+bounds:1391,16,20,16
+skin/skin_13/R hand
+bounds:1814,253,65,16
+skin/skin_13/R thing
+bounds:1818,838,49,78
+skin/skin_13/body
+bounds:1755,1016,16,135
+rotate:90
+skin/skin_13/head
+bounds:299,2,100,89
+skin/skin_14/L arm
+bounds:1732,646,86,16
+rotate:90
+skin/skin_14/L calf
+bounds:1388,217,39,59
+rotate:90
+skin/skin_14/L foot
+bounds:1956,36,20,16
+skin/skin_14/L hand
+bounds:1729,235,65,16
+skin/skin_14/L thing
+bounds:1869,852,49,78
+skin/skin_14/R arm
+bounds:1852,667,86,16
+skin/skin_14/R calf
+bounds:1391,156,39,59
+skin/skin_14/R foot
+bounds:1155,958,20,16
+skin/skin_14/R hand
+bounds:1796,235,65,16
+skin/skin_14/R thing
+bounds:1920,852,49,78
+skin/skin_14/body
+bounds:1530,982,16,135
+rotate:90
+skin/skin_14/head
+bounds:1074,195,91,95
+offsets:0,0,92,95
+skin/skin_15/L arm
+bounds:1750,642,86,16
+skin/skin_15/L calf
+bounds:1391,95,39,59
+skin/skin_15/L foot
+bounds:1146,311,20,16
+rotate:90
+skin/skin_15/L hand
+bounds:1450,168,65,16
+rotate:90
+skin/skin_15/L thing
+bounds:1542,391,49,78
+skin/skin_15/R arm
+bounds:1852,649,86,16
+skin/skin_15/R calf
+bounds:1391,34,39,59
+skin/skin_15/R foot
+bounds:2012,772,20,16
+rotate:90
+skin/skin_15/R hand
+bounds:1450,101,65,16
+rotate:90
+skin/skin_15/R thing
+bounds:1167,253,49,78
+skin/skin_15/body
+bounds:1612,658,16,135
+skin/skin_15/head
+bounds:862,180,95,110
+offsets:1,0,96,110
+skin/skin_16/L arm
+bounds:1842,551,86,16
+skin/skin_16/L calf
+bounds:1670,257,39,59
+skin/skin_16/L foot
+bounds:1993,860,20,16
+skin/skin_16/L hand
+bounds:1450,34,65,16
+rotate:90
+skin/skin_16/R hand
+bounds:1450,34,65,16
+rotate:90
+skin/skin_16/R arm
+bounds:1740,544,86,16
+skin/skin_16/R calf
+bounds:1747,271,39,59
+rotate:90
+skin/skin_16/R foot
+bounds:1443,263,20,16
+skin/skin_16/body
+bounds:623,128,16,135
+rotate:90
+skin/skin_16/head
+bounds:486,135,135,144
+offsets:1,0,136,144
+skin/skin_17/L calf
+bounds:1808,271,39,59
+rotate:90
+skin/skin_17/R hand
+bounds:1468,168,65,16
+rotate:90
+skin/skin_17/head
+bounds:1355,754,75,117
+skin/skin_18/L arm
+bounds:1611,379,86,16
+skin/skin_18/L calf
+bounds:1648,174,39,59
+skin/skin_18/L foot
+bounds:1956,18,20,16
+skin/skin_18/L hand
+bounds:1468,101,65,16
+rotate:90
+skin/skin_18/R arm
+bounds:1943,816,86,16
+skin/skin_18/R calf
+bounds:1648,113,39,59
+skin/skin_18/R foot
+bounds:1978,36,20,16
+skin/skin_18/R hand
+bounds:1468,34,65,16
+rotate:90
+skin/skin_18/body
+bounds:862,162,16,135
+rotate:90
+skin/skin_18/head
+bounds:1440,682,101,86
+rotate:90
+skin/skin_19/L arm
+bounds:1828,533,86,16
+skin/skin_19/L calf
+bounds:1648,52,39,59
+skin/skin_19/L foot
+bounds:1978,18,20,16
+skin/skin_19/L hand
+bounds:1486,274,65,16
+skin/skin_19/L thing
+bounds:1167,202,49,78
+rotate:90
+skin/skin_19/R arm
+bounds:1731,414,86,16
+rotate:90
+skin/skin_19/R calf
+bounds:1689,174,39,59
+skin/skin_19/R foot
+bounds:1449,235,20,16
+rotate:90
+skin/skin_19/R hand
+bounds:1486,168,65,16
+rotate:90
+skin/skin_19/R thing
+bounds:1218,253,49,78
+skin/skin_19/body
+bounds:862,144,16,135
+rotate:90
+skin/skin_19/head
+bounds:1431,888,91,105
+offsets:1,0,92,105
+skin/skin_20/L arm
+bounds:1800,384,86,16
+skin/skin_20/L calf
+bounds:1689,113,39,59
+skin/skin_20/L foot
+bounds:1467,235,20,16
+rotate:90
+skin/skin_20/L hand
+bounds:1486,101,65,16
+rotate:90
+skin/skin_20/L thing
+bounds:1176,122,49,78
+skin/skin_20/R arm
+bounds:1902,404,86,16
+rotate:90
+skin/skin_20/R calf
+bounds:1730,174,39,59
+skin/skin_20/R foot
+bounds:1485,235,20,16
+rotate:90
+skin/skin_20/R hand
+bounds:1486,34,65,16
+rotate:90
+skin/skin_20/R thing
+bounds:1176,42,49,78
+skin/skin_20/body
+bounds:840,126,16,135
+rotate:90
+skin/skin_20/head
+bounds:1443,581,99,90
+rotate:90
+skin/skin_21/L arm
+bounds:1920,404,86,16
+rotate:90
+skin/skin_21/L calf
+bounds:1689,52,39,59
+skin/skin_21/L foot
+bounds:1503,235,20,16
+rotate:90
+skin/skin_21/L hand
+bounds:1450,16,65,16
+skin/skin_21/L thing
+bounds:1620,564,49,78
+skin/skin_21/R arm
+bounds:1938,404,86,16
+rotate:90
+skin/skin_21/R calf
+bounds:1730,113,39,59
+skin/skin_21/R foot
+bounds:1521,235,20,16
+rotate:90
+skin/skin_21/R hand
+bounds:1504,168,65,16
+rotate:90
+skin/skin_21/R thing
+bounds:1671,564,49,78
+skin/skin_21/body
+bounds:840,108,16,135
+rotate:90
+skin/skin_21/head
+bounds:1443,502,90,77
+skin/skin_22/L arm
+bounds:1956,414,86,16
+rotate:90
+skin/skin_22/L calf
+bounds:1771,174,39,59
+skin/skin_22/L foot
+bounds:1539,235,20,16
+rotate:90
+skin/skin_22/L hand
+bounds:1504,101,65,16
+rotate:90
+skin/skin_22/L thing
+bounds:1623,495,49,78
+rotate:90
+skin/skin_22/R arm
+bounds:1974,414,86,16
+rotate:90
+skin/skin_22/R calf
+bounds:1730,52,39,59
+skin/skin_22/R foot
+bounds:1557,235,20,16
+rotate:90
+skin/skin_22/R hand
+bounds:1504,34,65,16
+rotate:90
+skin/skin_22/R thing
+bounds:1629,415,49,78
+skin/skin_22/body
+bounds:840,90,16,135
+rotate:90
+skin/skin_22/head
+bounds:623,146,125,133
+skin/skin_23/L arm
+bounds:1992,414,86,16
+rotate:90
+skin/skin_23/L calf
+bounds:1771,113,39,59
+skin/skin_23/L foot
+bounds:1575,235,20,16
+rotate:90
+skin/skin_23/L hand
+bounds:1522,168,65,16
+rotate:90
+skin/skin_23/L thing
+bounds:1680,415,49,78
+skin/skin_23/R arm
+bounds:2010,414,86,16
+rotate:90
+skin/skin_23/R calf
+bounds:1812,174,39,59
+skin/skin_23/R foot
+bounds:1593,235,20,16
+rotate:90
+skin/skin_23/R hand
+bounds:1522,101,65,16
+rotate:90
+skin/skin_23/R thing
+bounds:1247,202,49,78
+rotate:90
+skin/skin_23/body
+bounds:840,72,16,135
+rotate:90
+skin/skin_23/head
+bounds:760,79,78,77
+skin/skin_24/L arm
+bounds:1074,31,86,16
+skin/skin_24/L calf
+bounds:1771,52,39,59
+skin/skin_24/L foot
+bounds:1611,235,20,16
+rotate:90
+skin/skin_24/L hand
+bounds:1522,34,65,16
+rotate:90
+skin/skin_24/L thing
+bounds:1263,122,49,78
+skin/skin_24/R arm
+bounds:1074,13,86,16
+skin/skin_24/R calf
+bounds:1812,113,39,59
+skin/skin_24/R foot
+bounds:1629,235,20,16
+rotate:90
+skin/skin_24/R hand
+bounds:1540,168,65,16
+rotate:90
+skin/skin_24/R thing
+bounds:1263,42,49,78
+skin/skin_24/body
+bounds:840,54,16,135
+rotate:90
+skin/skin_24/head
+bounds:511,948,89,82
+rotate:90
+skin/skin_25/L arm
+bounds:1269,264,86,16
+rotate:90
+skin/skin_25/L calf
+bounds:1812,52,39,59
+skin/skin_25/L foot
+bounds:1647,235,20,16
+rotate:90
+skin/skin_25/L hand
+bounds:1540,101,65,16
+rotate:90
+skin/skin_25/L thing
+bounds:1750,740,49,78
+skin/skin_25/R arm
+bounds:1287,264,86,16
+rotate:90
+skin/skin_25/R calf
+bounds:1651,11,39,59
+rotate:90
+skin/skin_25/R foot
+bounds:1665,235,20,16
+rotate:90
+skin/skin_25/R hand
+bounds:1540,34,65,16
+rotate:90
+skin/skin_25/R thing
+bounds:1801,740,49,78
+skin/skin_25/body
+bounds:840,36,16,135
+rotate:90
+skin/skin_25/head
+bounds:1432,785,101,92
+rotate:90
+skin/skin_26/L arm
+bounds:1305,264,86,16
+rotate:90
+skin/skin_26/L calf
+bounds:1712,11,39,59
+rotate:90
+skin/skin_26/L foot
+bounds:1683,235,20,16
+rotate:90
+skin/skin_26/L hand
+bounds:1558,168,65,16
+rotate:90
+skin/skin_26/L thing
+bounds:1852,765,49,78
+rotate:90
+skin/skin_26/R arm
+bounds:1323,289,86,16
+rotate:90
+skin/skin_26/R calf
+bounds:1773,11,39,59
+rotate:90
+skin/skin_26/R foot
+bounds:2000,32,20,16
+rotate:90
+skin/skin_26/R hand
+bounds:1558,101,65,16
+rotate:90
+skin/skin_26/R thing
+bounds:1750,660,49,78
+skin/skin_26/body
+bounds:840,18,16,135
+rotate:90
+skin/skin_26/head
+bounds:1524,892,96,88
+offsets:0,1,96,89
+skin/skin_27/L arm
+bounds:1482,292,86,16
+skin/skin_27/L calf
+bounds:1853,174,39,59
+skin/skin_27/L foot
+bounds:715,28,20,16
+skin/skin_27/L hand
+bounds:1558,34,65,16
+rotate:90
+skin/skin_27/L thing
+bounds:1801,660,49,78
+skin/skin_27/R arm
+bounds:1971,878,86,16
+rotate:90
+skin/skin_27/R calf
+bounds:1853,113,39,59
+skin/skin_27/R foot
+bounds:715,10,20,16
+skin/skin_27/R hand
+bounds:1517,16,65,16
+skin/skin_27/R thing
+bounds:1852,685,49,78
+skin/skin_27/body
+bounds:977,7,16,135
+skin/skin_27/head
+bounds:750,158,110,121
+skin/skin_28/L arm
+bounds:1989,878,86,16
+rotate:90
+skin/skin_28/L calf
+bounds:1853,52,39,59
+skin/skin_28/L foot
+bounds:737,28,20,16
+skin/skin_28/L hand
+bounds:1576,271,65,16
+skin/skin_28/L thing
+bounds:1903,685,49,78
+skin/skin_28/R arm
+bounds:2007,878,86,16
+rotate:90
+skin/skin_28/R calf
+bounds:1834,11,39,59
+rotate:90
+skin/skin_28/R hand
+bounds:1576,168,65,16
+rotate:90
+skin/skin_28/R thing
+bounds:1740,562,49,78
+skin/skin_28/body
+bounds:995,7,16,135
+skin/skin_28/head
+bounds:1182,450,101,85
+offsets:0,0,102,85
+skin/skin_29/L arm
+bounds:1582,361,86,16
+skin/skin_29/L calf
+bounds:1885,241,39,59
+rotate:90
+skin/skin_29/L foot
+bounds:737,10,20,16
+skin/skin_29/L hand
+bounds:1576,101,65,16
+rotate:90
+skin/skin_29/L thing
+bounds:1791,562,49,78
+skin/skin_29/R arm
+bounds:1582,343,86,16
+skin/skin_29/R calf
+bounds:1894,180,39,59
+skin/skin_29/R foot
+bounds:759,10,20,16
+skin/skin_29/R hand
+bounds:1576,34,65,16
+rotate:90
+skin/skin_29/R thing
+bounds:1842,569,49,78
+skin/skin_29/body
+bounds:1013,43,16,135
+skin/skin_29/head
+bounds:1345,384,71,74
+skin/skin_30/L arm
+bounds:1582,325,86,16
+skin/skin_30/L calf
+bounds:1894,119,39,59
+skin/skin_30/L foot
+bounds:781,10,20,16
+skin/skin_30/L hand
+bounds:1594,168,65,16
+rotate:90
+skin/skin_30/L thing
+bounds:1893,569,49,78
+skin/skin_30/R arm
+bounds:1582,307,86,16
+skin/skin_30/R calf
+bounds:1894,58,39,59
+skin/skin_30/R foot
+bounds:803,10,20,16
+skin/skin_30/R hand
+bounds:1594,101,65,16
+rotate:90
+skin/skin_30/R thing
+bounds:1932,765,49,78
+rotate:90
+skin/skin_30/body
+bounds:1031,43,16,135
+skin/skin_30/head
+bounds:1355,533,107,86
+rotate:90
+skin/skin_31/L arm
+bounds:1570,289,86,16
+skin/skin_31/L calf
+bounds:1946,237,39,59
+rotate:90
+skin/skin_31/L foot
+bounds:1941,507,20,16
+skin/skin_31/L hand
+bounds:1594,34,65,16
+rotate:90
+skin/skin_31/L thing
+bounds:1954,685,49,78
+skin/skin_31/R arm
+bounds:1711,309,86,16
+rotate:90
+skin/skin_31/R calf
+bounds:1935,176,39,59
+skin/skin_31/R foot
+bounds:1963,507,20,16
+skin/skin_31/R hand
+bounds:1612,168,65,16
+rotate:90
+skin/skin_31/R thing
+bounds:1944,605,49,78
+skin/skin_31/body
+bounds:1049,61,16,135
+skin/skin_31/head
+bounds:1526,795,86,95
+skin/skin_32/L arm
+bounds:1729,326,86,16
+rotate:90
+skin/skin_32/L calf
+bounds:1935,115,39,59
+skin/skin_32/L foot
+bounds:1413,12,20,16
+rotate:90
+skin/skin_32/L hand
+bounds:1612,101,65,16
+rotate:90
+skin/skin_32/L thing
+bounds:1944,525,49,78
+skin/skin_32/R arm
+bounds:1747,366,86,16
+skin/skin_32/R calf
+bounds:1935,54,39,59
+skin/skin_32/R foot
+bounds:2007,256,20,16
+rotate:90
+skin/skin_32/R hand
+bounds:1612,34,65,16
+rotate:90
+skin/skin_32/R thing
+bounds:1749,464,49,78
+skin/skin_32/body
+bounds:1067,58,16,135
+skin/skin_32/head
+bounds:1336,460,71,81
+rotate:90
+skin/skin_33/L arm
+bounds:1747,348,86,16
+skin/skin_33/L calf
+bounds:1976,176,39,59
+skin/skin_33/L foot
+bounds:2007,238,20,16
+skin/skin_33/L hand
+bounds:1630,168,65,16
+rotate:90
+skin/skin_33/L thing
+bounds:1800,482,49,78
+rotate:90
+skin/skin_33/R arm
+bounds:1747,330,86,16
+skin/skin_33/R calf
+bounds:1976,115,39,59
+skin/skin_33/R foot
+bounds:1643,271,20,16
+skin/skin_33/R hand
+bounds:1630,101,65,16
+rotate:90
+skin/skin_33/R thing
+bounds:1749,384,49,78
+skin/skin_33/body
+bounds:1085,58,16,135
+skin/skin_33/head
+bounds:959,198,92,113
+rotate:90
+skin/skin_34/L arm
+bounds:1747,312,86,16
+skin/skin_34/L calf
+bounds:1976,54,39,59
+skin/skin_34/L foot
+bounds:2017,216,20,16
+rotate:90
+skin/skin_34/L hand
+bounds:1630,34,65,16
+rotate:90
+skin/skin_34/L thing
+bounds:1800,402,49,78
+skin/skin_34/R arm
+bounds:1894,314,86,16
+rotate:90
+skin/skin_34/R calf
+bounds:1895,13,39,59
+rotate:90
+skin/skin_34/R foot
+bounds:2017,194,20,16
+rotate:90
+skin/skin_34/R hand
+bounds:1584,16,65,16
+skin/skin_34/R thing
+bounds:1851,402,49,78
+skin/skin_34/body
+bounds:1393,995,21,135
+rotate:90
+skin/skin_34/head
+bounds:593,43,85,83

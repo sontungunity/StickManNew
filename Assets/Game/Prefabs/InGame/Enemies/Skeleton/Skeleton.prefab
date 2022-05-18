@@ -507,7 +507,7 @@ MonoBehaviour:
   animmation: {fileID: 3624144201042095131}
   animIdle: idle
   anim_Die: die
-  anim_GetDame: idle
+  anim_GetDame: get_damage
   lstStrAttack:
   - attack
   anim_Walk: idle
@@ -527,6 +527,7 @@ MonoBehaviour:
   eventATK: dmg
   circleAttackInfo: {fileID: 3403873045063803165}
   enemyBase: {fileID: 3624144201626175916}
+  timeDelayAttack: 1
   skeletonArrow: {fileID: 2127356584280005831, guid: b085ebf8c92c20044ab5199c678fdca5, type: 3}
   point: {fileID: 1052184772956271142}
   angleStart: 45

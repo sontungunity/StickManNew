@@ -114,7 +114,9 @@ public class EnemyBase : CharacterBase {
         curStatus = status;
         if(curStatus == EnemyStatus.ATTACK) {
             rg2D.velocity = Vector2.zero;
-            enemyAttack.Attack(() => { SetStatus(EnemyStatus.IDLE); });
+            enemyAttack.Attack(() => { 
+                SetStatus(EnemyStatus.IDLE); 
+            });
         } else if(curStatus == EnemyStatus.DETECH || curStatus == EnemyStatus.MOVE) {
             enemyAnim.SetAnimWalk();
         } else {

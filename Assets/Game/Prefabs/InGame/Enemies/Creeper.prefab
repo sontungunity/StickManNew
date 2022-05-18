@@ -334,6 +334,7 @@ MonoBehaviour:
   eventATK: dmg
   circleAttackInfo: {fileID: 1219307497935739817}
   enemyBase: {fileID: 980850380195263239}
+  timeDelayAttack: 1
 --- !u!114 &980850380195263239
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -580,7 +581,7 @@ MonoBehaviour:
   immutableTriangles: 0
   pmaVertexColors: 1
   clearStateOnDisable: 0
-  tintBlack: 0
+  tintBlack: 1
   singleSubmesh: 0
   fixDrawOrder: 0
   addNormals: 0

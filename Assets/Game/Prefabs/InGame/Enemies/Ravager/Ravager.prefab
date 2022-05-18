@@ -183,6 +183,7 @@ MonoBehaviour:
   eventATK: dmg
   circleAttackInfo: {fileID: 0}
   enemyBase: {fileID: 5913883041747426703}
+  timeDelayAttack: 1
   rb2D: {fileID: 5913883041747426699}
   beamFace: {fileID: 5913883042994728769}
   animMove: move

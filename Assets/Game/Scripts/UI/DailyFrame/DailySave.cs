@@ -12,12 +12,22 @@ public class DailySave {
 
     public DailySave() {
         lstIndexReceived = new List<int>();
-        str_TimeStart = DateTime.Today.ToString();
+        DateTime start = DateTime.Today.AddDays(-1);
+        str_TimeStart = start.ToString();
     }
 
     public int GetCurIndex() {
         TimeSpan time = DateTime.Today - dateStart;
-        return (int)time.TotalDays;
+        int daymore = (int)time.TotalDays;
+        if(daymore >= 1) {
+            int days =lstIndexReceived.Count();
+            if(days >= 7) {
+                return 0;
+            }
+            return lstIndexReceived.Count();
+        } else {
+            return lstIndexReceived.Count() - 1;
+        }
     }
 
     public bool CheckReceived(int index) {
@@ -26,18 +36,17 @@ public class DailySave {
 
     public void AddIndexDay(int index) {
         lstIndexReceived.Add(index);
-        if(index == 6) {
-            if(lstIndexReceived.Count >= 7) {
-                //EventDispatcher.Dispatch<EventKey.QuestEvent>(new EventKey.QuestEvent(QuestID.CLAIM_DAILY,1));
-            }
-        }
+        str_TimeStart = DateTime.Today.ToString();
     }
 
     public void GetUpDate() {
         int index = GetCurIndex();
-        if(index > 6) {
-            lstIndexReceived = new List<int>();
-            str_TimeStart = DateTime.Today.ToString();
+        if(index >= 7) {
+            TimeSpan time = DateTime.Today - dateStart;
+            int daymore = (int)time.TotalDays;
+            if(daymore>=1) {
+                lstIndexReceived.Clear();
+            }
         }
     }
 }

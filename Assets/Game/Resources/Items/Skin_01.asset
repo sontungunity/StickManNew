@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5c4cfaef6f527fd40ae9134190417d20, type: 3}
   m_Name: Skin_01
   m_EditorClassIdentifier: 
-  itemID: 41
+  itemID: 11
   icon: {fileID: 21300000, guid: bcde4af68d6f0a54c95e0292ceca29c5, type: 3}
   description: Skin 01
   nameSpine: skin/skin_02

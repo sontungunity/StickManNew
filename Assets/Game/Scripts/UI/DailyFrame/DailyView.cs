@@ -8,14 +8,14 @@ public class DailyView : MonoBehaviour {
 
     [SerializeField] private Button btn_Buy;
     [SerializeField] private int Index;
-    [SerializeField] private ItemStackView itemStackV;
+    [SerializeField] protected ItemStackView itemStackV;
     [Space]
-    [SerializeField] private GameObject disPlay;
+    [SerializeField] private GameObject imgActive;
     [SerializeField] private GameObject tickV;
-    [SerializeField] private DisplayObjects btn_Stt; //0.Active 1.NoActive
     private DailyFrame dailyFrame;
-    private Status status;
-    private ItemStack reward;
+    protected Status status;
+    protected ItemStack reward;
+    private DailySave dailySave => DataManager.Instance.PlayerData.DailySave;
     private void Awake() {
         btn_Buy.onClick.AddListener(OnClaim);
     }
@@ -25,39 +25,27 @@ public class DailyView : MonoBehaviour {
         this.Index = index;
     }
 
-    public void Show(ItemStack itemStack) {
+    public virtual void Show(ItemStack itemStack) {
         this.reward = itemStack;
         itemStackV.Show(itemStack);
-        Show();
+        this.status = GetStatus();
+        Show(this.status);
     }
 
     #region Status
     private void SetUpNoActive() {
-        disPlay.SetActive(false);
+        imgActive.SetActive(false);
         tickV.SetActive(false);
-        btn_Buy.gameObject.SetActive(true);
-        btn_Stt.Active(1);
     }
 
     private void SetUpActive() {
-        disPlay.SetActive(false);
+        imgActive.SetActive(true);
         tickV.SetActive(false);
-        btn_Buy.gameObject.SetActive(true);
-        btn_Stt.Active(0);
     }
 
     private void SetUpReceived() {
-        disPlay.SetActive(true);
+        imgActive.SetActive(true);
         tickV.SetActive(true);
-        btn_Buy.gameObject.SetActive(false);
-        btn_Stt.Active(0);
-    }
-
-    private void SetUpMiss() {
-        disPlay.SetActive(true);
-        tickV.SetActive(false);
-        btn_Buy.gameObject.SetActive(false);
-        btn_Stt.Active(0);
     }
     #endregion
 
@@ -67,13 +55,22 @@ public class DailyView : MonoBehaviour {
                 DataManager.Instance.PlayerData.AddItem(reward);
                 DataManager.Instance.PlayerData.DailySave.AddIndexDay(Index);
                 this.status = Status.RECEIVED;
-                Show();
-                //EventDispatcher.Dispatch<EventKey.DailyChange>(new EventKey.DailyChange());
+                Show(this.status);
             });
         }
     }
 
-    private void Show() {
+    protected Status GetStatus() {
+        if(dailySave.CheckReceived(Index)) {
+            return Status.RECEIVED;
+        } else if(Index == dailySave.GetCurIndex()) {
+            return Status.ACTIVE;
+        } else {
+            return Status.NOACTIVE;
+        }
+    }
+
+    protected void Show(Status status) {
         switch(status) {
             case Status.NOACTIVE:
                 SetUpNoActive();

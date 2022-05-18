@@ -59,4 +59,8 @@ public class PlayerData {
         }
         return item.Amount >= 1;
     }
+
+    public void Update() {
+        DailySave.GetUpDate();
+    }
 }

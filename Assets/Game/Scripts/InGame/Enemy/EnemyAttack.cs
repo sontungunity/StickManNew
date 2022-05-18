@@ -4,6 +4,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using DG.Tweening;
 
 public class EnemyAttack : MonoBehaviour
 {
@@ -11,13 +12,27 @@ public class EnemyAttack : MonoBehaviour
     [SerializeField, SpineEvent] private string eventATK;
     [SerializeField] private OverlapCircleAll circleAttackInfo;
     [SerializeField] protected EnemyBase enemyBase;
+    [SerializeField] private float timeDelayAttack= 1f;
+    private Tween tween;
+    private bool canAttack;
     protected virtual void Awake() {
-        enemyAnim.Anim.AnimationState.Event += EventDamege;   
+        enemyAnim.Anim.AnimationState.Event += EventDamege;
+        canAttack = true;
     }
 
     public virtual void Attack(Action callback = null ) {
         enemyBase.Rg2D.velocity = Vector2.zero;
-        enemyAnim.SetAnimAttack(callback);
+        if(canAttack) {
+            canAttack = false;
+            enemyAnim.SetAnimAttack(()=> {
+                callback?.Invoke();
+                tween.CheckKillTween();
+                tween = DOVirtual.DelayedCall(timeDelayAttack, () => {
+                    canAttack = true;
+                });
+            });
+        }
+        
     }
 
     protected virtual void EventDamege(TrackEntry trackEntry, Spine.Event e) {
@@ -32,5 +47,9 @@ public class EnemyAttack : MonoBehaviour
                 }
             }
         }
+    }
+
+    private void OnDisable() {
+        tween.CheckKillTween();
     }
 }

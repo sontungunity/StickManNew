@@ -119,6 +119,7 @@ MonoBehaviour:
   eventATK: dmg
   circleAttackInfo: {fileID: 391022787585108720}
   enemyBase: {fileID: 1736778308808442433}
+  timeDelayAttack: 1
 --- !u!50 &9051794903260557747
 Rigidbody2D:
   serializedVersion: 4
