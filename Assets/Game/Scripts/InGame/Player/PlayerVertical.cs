@@ -29,6 +29,9 @@ public class PlayerVertical : MonoBehaviour
     }
 
     private void Update() {
+        if(player.CurStatus.TypeStatus == EnumPlayerStatus.DIE || player.CurStatus.TypeStatus == EnumPlayerStatus.WIN) {
+            return;
+        }
         Inputs();
     }
 
@@ -38,8 +41,11 @@ public class PlayerVertical : MonoBehaviour
         }
     }
     private void FixedUpdate() {
+        if(player.CurStatus.TypeStatus == EnumPlayerStatus.DIE || player.CurStatus.TypeStatus == EnumPlayerStatus.WIN) {
+            return;
+        }
         //Hanlder Input
-         if(doJump) {
+        if(doJump) {
             if(playerMovement.PlayerTourch == PlayerTourch.GROUND) {
                 turnJump.Set(EnumJumpType.JUMP_I,jumpForceGround, timeForOneJump);
                 player.SetPlayerStatusCheckRank(EnumPlayerStatus.JUMPBEFOR,()=> {

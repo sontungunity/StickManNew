@@ -10,7 +10,20 @@ public class GameManager : Singleton<GameManager> {
     [SerializeField] private GameObject[] managers;
     private States state = States.None;
     public States State => state;
+    //
+    [SerializeField]private int curLevel;
+    public int CurLevel {
+        get {
+            return curLevel;
+        }
 
+        set {
+            if(curLevel != value) {
+                curLevel = value;
+                EventDispatcher.Dispatch<EventKey.EventLevelChange>(new EventKey.EventLevelChange());
+            }
+        }
+    }
     protected override void OnAwake() {
         base.OnAwake();
         DontDestroyOnLoad(gameObject);
@@ -31,6 +44,7 @@ public class GameManager : Singleton<GameManager> {
         }
         yield return null;
         state = States.Started;
+        curLevel = DataManager.Instance.PlayerData.LevelMap;
         EventDispatcher.Dispatch<EventKey.LoadFinal>(new EventKey.LoadFinal());
     }
 

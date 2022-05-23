@@ -137,7 +137,7 @@ MeshRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -1001872171
-  m_SortingLayer: 2
+  m_SortingLayer: 3
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
 --- !u!114 &3624144201042095131
@@ -321,7 +321,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   amountRaycast: 8
   space: 0.7
-  distance: 8
+  distance: 14
   layer:
     serializedVersion: 2
     m_Bits: 64
@@ -510,7 +510,7 @@ MonoBehaviour:
   anim_GetDame: get_damage
   lstStrAttack:
   - attack
-  anim_Walk: idle
+  anim_Walk: move
 --- !u!114 &3624144201626175880
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -597,7 +597,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   amountRaycast: 8
   space: 0.7
-  distance: 8
+  distance: 14
   layer:
     serializedVersion: 2
     m_Bits: 64
@@ -744,7 +744,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   amountRaycast: 8
   space: 0.7
-  distance: 8
+  distance: 14
   layer:
     serializedVersion: 2
     m_Bits: 64

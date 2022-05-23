@@ -4,8 +4,6 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using DG.Tweening;
-[RequireComponent(typeof(Rigidbody2D))]
-[RequireComponent(typeof(CapsuleCollider2D))]
 [RequireComponent(typeof(PlayerMovement))]
 [RequireComponent(typeof(PlayerHorizontal))]
 [RequireComponent(typeof(PlayerVertical))]
@@ -17,6 +15,7 @@ public class Player : CharacterBase {
     [SerializeField] private PlayerAttack playerAttack;
     [SerializeField] private PlayerVertical playerVertical;
     [SerializeField] private PlayerHorizontal playerHorizontal;
+    [SerializeField] private Rigidbody2D rg2D;
     [Header("Blood")]
     [SerializeField] private ParticleSystem par_Blood;
     [Header("Custom")]
@@ -25,8 +24,7 @@ public class Player : CharacterBase {
     private ItemID skinID = ItemID.SKIN_00;
     private SortStatus curStatus;
     public SortStatus CurStatus => curStatus;
-    private WeaponID weaponID = WeaponID.NONE;
-    public WeaponID WeaponID => weaponID;
+    public WeaponData Weapon = null;
     private bool isProtect = false;
     private Tween tween;
     protected override void Awake() {
@@ -36,7 +34,7 @@ public class Player : CharacterBase {
     }
 
     public void SetUpPlayer() {
-        weaponID = WeaponID.NONE;
+        Weapon = null;
         skinID = playerData.SkinID;
         var skinData = skinID.GetDataByID() as SkinItemData;
         playerAnim.SetSkin(skinData.NameSpine);
@@ -127,6 +125,7 @@ public class Player : CharacterBase {
             playerAttack.SetUpNoneAttack();
             playerVertical.SetUpNoVertical();
             playerHorizontal.SetUpNoMove();
+            rg2D.velocity = Vector2.zero;
         }
         playerAnim.HalderAnim(curStatus.TypeStatus, callback);
     }
@@ -172,8 +171,9 @@ public class Player : CharacterBase {
         EventDispatcher.Dispatch<EventKey.PlayerChange>(new EventKey.PlayerChange());
     }
 
-    public void SetWeapon(WeaponID id) {
-        weaponID = id;
+    public void SetWeapon(WeaponData data) {
+        this.Weapon = data;
+        playerAnim.AddSkin(Weapon.NameSkin);
     }
 }
 

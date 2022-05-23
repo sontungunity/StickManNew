@@ -15,21 +15,20 @@ public class EnemyAttack : MonoBehaviour
     [SerializeField] private float timeDelayAttack= 1f;
     private Tween tween;
     private bool canAttack;
+    public bool CanAttack => canAttack;
     protected virtual void Awake() {
         enemyAnim.Anim.AnimationState.Event += EventDamege;
         canAttack = true;
     }
 
     public virtual void Attack(Action callback = null ) {
-        enemyBase.Rg2D.velocity = Vector2.zero;
         if(canAttack) {
             canAttack = false;
-            enemyAnim.SetAnimAttack(()=> {
-                callback?.Invoke();
-                tween.CheckKillTween();
-                tween = DOVirtual.DelayedCall(timeDelayAttack, () => {
-                    canAttack = true;
-                });
+            enemyBase.Rg2D.velocity = Vector2.zero;
+            enemyAnim.SetAnimAttack(callback);
+            tween.CheckKillTween();
+            tween = DOVirtual.DelayedCall(timeDelayAttack, () => {
+                canAttack = true;
             });
         }
         
@@ -40,7 +39,7 @@ public class EnemyAttack : MonoBehaviour
         if(e.Data.Name == eventATK && circleAttackInfo != null) {
             Collider2D[] listCol = Physics2D.OverlapCircleAll(circleAttackInfo.transform.position, circleAttackInfo.lookRadius, circleAttackInfo.layerMask);
             foreach(var col in listCol) {
-                Player player = col.GetComponent<Player>();
+                Player player = col.transform.parent.GetComponent<Player>();
                 if(player != null) {
                     Debug.Log("Detech player");
                     player.GetDame(enemyBase.curDame);

@@ -28,7 +28,7 @@ public class SkeletonArrow : MonoBehaviour
     }
 
     private void OnTriggerEnter2D(Collider2D collision) {
-        Player player = collision.GetComponent<Player>();
+        Player player = collision.transform.parent.GetComponent<Player>();
         if(player) {
             player.GetDame(dame);
         }

@@ -8,6 +8,7 @@ using UnityEngine;
 public class PlayerAnim : SpineBase {
     [Header("Player")]
     [SerializeField] private Player player;
+    [SerializeField] private PlayerMovement playerMovement;
     [Header("NameAnime")]
     [SerializeField, SpineAnimation] private string animRun;
     [SerializeField, SpineAnimation] private string animJump,animJumpFall,animJumpBefor;
@@ -17,10 +18,11 @@ public class PlayerAnim : SpineBase {
     [SerializeField, SpineAnimation] private string animGetDame;
     [SerializeField, SpineAnimation] private string animWin;
     [SerializeField, SpineAnimation] private string animStun;
-    [Header("NameAnime Attack")] 
+    [Header("NameAnime Attack")]
     [SerializeField, SpineAnimation] private List<string> lstAttackNone;
     [SerializeField, SpineAnimation] private List<string> lstAttackWeapon;
-
+    [SerializeField, SpineAnimation] private string longAttack;
+    [SerializeField, SpineAnimation] private string climbAttack;
     protected override void Awake() {
         base.Awake();
     }
@@ -45,13 +47,13 @@ public class PlayerAnim : SpineBase {
                 SetAnim(0, animJumpFall, true, callback);
                 break;
             case EnumPlayerStatus.ATTACK1:
-                SetAnim(0, GetStringAnimByWeapon(player.WeaponID, 0), false, callback);
+                HalderAnimAttack(EnumPlayerStatus.ATTACK1, callback);
                 break;
             case EnumPlayerStatus.ATTACK2:
-                SetAnim(0, GetStringAnimByWeapon(player.WeaponID, 1), false, callback);
+                HalderAnimAttack(EnumPlayerStatus.ATTACK2, callback);
                 break;
             case EnumPlayerStatus.ATTACK3:
-                SetAnim(0, GetStringAnimByWeapon(player.WeaponID,2), false, callback);
+                HalderAnimAttack(EnumPlayerStatus.ATTACK3, callback);
                 break;
             case EnumPlayerStatus.CLIMB:
                 SetAnim(0, animClimb, false, callback);
@@ -77,11 +79,33 @@ public class PlayerAnim : SpineBase {
         }
     }
 
-    public string GetStringAnimByWeapon(WeaponID id, int index) {
-        if(player.WeaponID == WeaponID.SWORD) {
+    public string GetStringAnimByWeapon(WeaponData data, int index) {
+        if(data == null) {
+            return lstAttackNone[index];
+        } else if(data.TypeWeapon == TypeWeapon.SORT) {
             return lstAttackWeapon[index];
+        } else if(data.TypeWeapon == TypeWeapon.LONG) {
+            return longAttack;
         } else {
             return lstAttackNone[index];
+        }
+    }
+
+    public void HalderAnimAttack(EnumPlayerStatus enumPlayerStatus, Action callback) {
+        if(enumPlayerStatus != EnumPlayerStatus.ATTACK1 && enumPlayerStatus != EnumPlayerStatus.ATTACK2 && enumPlayerStatus != EnumPlayerStatus.ATTACK3) {
+            return;
+        }
+
+        if(playerMovement.PlayerTourch == PlayerTourch.WALL) {
+            SetAnim(0, climbAttack, false, callback);
+        } else {
+            if(enumPlayerStatus == EnumPlayerStatus.ATTACK1) {
+                SetAnim(0, GetStringAnimByWeapon(player.Weapon, 0), false, callback);
+            } else if(enumPlayerStatus == EnumPlayerStatus.ATTACK2) {
+                SetAnim(0, GetStringAnimByWeapon(player.Weapon, 1), false, callback);
+            } else {
+                SetAnim(0, GetStringAnimByWeapon(player.Weapon, 2), false, callback);
+            }
         }
     }
 

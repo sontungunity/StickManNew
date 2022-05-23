@@ -31,6 +31,9 @@ public class PlayerHorizontal : MonoBehaviour {
     }
     #region Update
     private void Update() {
+        if(player.CurStatus.TypeStatus == EnumPlayerStatus.DIE || player.CurStatus.TypeStatus == EnumPlayerStatus.WIN) {
+            return;
+        }
         Inputs();
     }
 
@@ -51,6 +54,9 @@ public class PlayerHorizontal : MonoBehaviour {
     }
     #endregion
     private void FixedUpdate() {
+        if(player.CurStatus.TypeStatus == EnumPlayerStatus.DIE || player.CurStatus.TypeStatus == EnumPlayerStatus.WIN) {
+            return;
+        }
         Move();
     }
 
@@ -120,9 +126,9 @@ public class PlayerHorizontal : MonoBehaviour {
 
     private void Flip(DirHorizontal dir) {
         if(dir == DirHorizontal.RIGHT) {
-            display.localScale = new Vector3(1, 1, 1);
+            display.eulerAngles = new Vector3(0, 0 , 0);
         }else if(dir == DirHorizontal.LEFT) {
-            display.localScale = new Vector3(-1, 1, 1);
+            display.eulerAngles = new Vector3(0, 180, 0);
         }
     }
 

@@ -10,7 +10,7 @@ public class SwordCS : MonoBehaviour
         if(player != null) {
             AdsManager.Instance.ShowRewarded((value)=> {
                 if(value) {
-                    player.SetWeapon(weaponID);
+                    player.SetWeapon(weaponID.GetDataWeaponByID());
                     gameObject.SetActive(false);
                 }
             });

@@ -4,7 +4,7 @@ using UnityEngine;
 
 public static class RuleDameAndHeart
 {
-    public const int Heart_Base_Player = 100;
+    public const int Heart_Base_Player = 150;
     public const int Dame_Base_Player = 20;
     #region Rule Dame - Heart - Coin player;
     public static void GetDameHeartByLevel(int level, out int heart, out int damage, out int coin) {

@@ -12,7 +12,7 @@ public class CheckPoint : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision) {
         if(!fire.activeInHierarchy) {
-            Player player = collision.GetComponent<Player>();
+            Player player = collision.transform.parent.GetComponent<Player>();
             if(player!=null) {
                 fire.SetActive(true);
                 InGameManager.Instance.PositionRevive = transform.position;

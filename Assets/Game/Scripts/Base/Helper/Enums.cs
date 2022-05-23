@@ -16,7 +16,3 @@ public enum ItemID {
     #endregion
 }
 
-public enum WeaponID {
-    NONE = 0,
-    SWORD = 1,
-}

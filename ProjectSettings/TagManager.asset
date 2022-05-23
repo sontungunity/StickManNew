@@ -41,10 +41,13 @@ TagManager:
   - name: Default
     uniqueID: 0
     locked: 0
+  - name: InGameBehind
+    uniqueID: 4012260861
+    locked: 0
   - name: Ground
     uniqueID: 4109189411
     locked: 0
-  - name: InGame
+  - name: InGameAHead
     uniqueID: 3293095125
     locked: 0
   - name: Player

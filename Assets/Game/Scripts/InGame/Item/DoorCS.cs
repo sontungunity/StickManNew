@@ -9,6 +9,7 @@ public class DoorCS : MonoBehaviour
     [SerializeField] private Collider2D col2D;
     private bool open;
     private Tween tween;
+    private Tween tweenMovePlayer;
     private void Start() {
         open = false;
     }
@@ -19,6 +20,8 @@ public class DoorCS : MonoBehaviour
 
     private void OnDisable() {
         EventDispatcher.RemoveListener<EventKey.EnemyDie>(HalderEvent);
+        tween.CheckKillTween();
+        tweenMovePlayer.CheckKillTween();
     }
 
     private void HalderEvent(EventKey.EnemyDie evt) {
@@ -34,11 +37,13 @@ public class DoorCS : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision) {
         if(open) {
-            Player player = collision.GetComponent<Player>();
+            Player player = collision.transform.parent.GetComponent<Player>();
             if(player!=null) {
-                player.SetPlayerStatusCheckRank(EnumPlayerStatus.WIN,()=> {
+                tweenMovePlayer.CheckKillTween();
+                tweenMovePlayer = player.transform.DOMoveX(transform.position.x, 1f).OnComplete(()=> {
                     InGameManager.Instance.FinishMap();
                 });
+                player.SetPlayerStatusCheckRank(EnumPlayerStatus.WIN);
             }
         }
     }

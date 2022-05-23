@@ -11,7 +11,7 @@ public class EnemyBase : CharacterBase {
     [SerializeField] protected EnemyStatus curStatus;
     [SerializeField] protected EnemyHeartBar enemyBar;
     [SerializeField] protected EnemyAttack enemyAttack;
-    [SerializeField] private Collider2D collider2D;
+    [SerializeField] protected Collider2D collider2D;
     [SerializeField] protected Rigidbody2D rg2D;
     [Header("ForceDie")]
     [SerializeField] protected Vector2 forceDie = new Vector2(20,5);
@@ -74,14 +74,14 @@ public class EnemyBase : CharacterBase {
     }
     protected virtual void SetupStatus() {
         foreach(var col in distan_attack.ArrayCollider2D) {
-            if(col != null && col.GetComponent<Player>() != null) {
+            if(col != null && col.transform.parent.GetComponent<Player>() != null) {
                 afterUpdateStatus = EnemyStatus.ATTACK;
                 return;
             }
         }
 
         foreach(var col in eye_Befor.ArrayCollider2D) {
-            if(col != null && col.GetComponent<Player>() != null) {
+            if(col != null && col.transform.parent.GetComponent<Player>() != null) {
                 afterUpdateStatus = EnemyStatus.DETECH;
                 break;
             }
@@ -89,7 +89,7 @@ public class EnemyBase : CharacterBase {
 
         if(afterUpdateStatus != EnemyStatus.DETECH) {
             foreach(var col in eye_After.ArrayCollider2D) {
-                if(col != null && col.GetComponent<Player>() != null) {
+                if(col != null && col.transform.parent.GetComponent<Player>() != null) {
                     afterUpdateStatus = EnemyStatus.DETECH;
                     Flip();
                     break;
@@ -107,16 +107,27 @@ public class EnemyBase : CharacterBase {
         }
     }
 
+    public void Flip(DirHorizontal dir) {
+        if(dir == DirHorizontal.RIGHT) {
+            display.localEulerAngles = new Vector3(0, 0, 0);
+        } else if(dir == DirHorizontal.LEFT) {
+            display.localEulerAngles = new Vector3(0, -180, 0);
+        }
+    }
+
     protected virtual bool SetStatus(EnemyStatus status) {
         if(curStatus == status) {
             return true;
         }
         curStatus = status;
         if(curStatus == EnemyStatus.ATTACK) {
-            rg2D.velocity = Vector2.zero;
-            enemyAttack.Attack(() => { 
-                SetStatus(EnemyStatus.IDLE); 
-            });
+            if(enemyAttack.CanAttack) {
+                enemyAttack.Attack(() => {
+                    SetStatus(EnemyStatus.IDLE);
+                });
+            } else {
+                SetStatus(EnemyStatus.IDLE);
+            }
         } else if(curStatus == EnemyStatus.DETECH || curStatus == EnemyStatus.MOVE) {
             enemyAnim.SetAnimWalk();
         } else {
@@ -139,6 +150,10 @@ public class EnemyBase : CharacterBase {
         }
         SpawnerCoin.Instance.Spawner(transform.position, 3);
         InGameManager.Instance.AddEnemyDie();
+    }
+
+    protected virtual void OnDisable() {
+        tween.CheckKillTween();
     }
 }
 

@@ -46,4 +46,8 @@ public static class Extentions {
         text.text = content;
         return true;
     }
+
+    public static WeaponData GetDataWeaponByID(this WeaponID ID) {
+        return DataManager.Instance.GetWeaponByID(ID);
+    }
 }

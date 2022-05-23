@@ -1,4 +1,4 @@
-using Spine;
+﻿using Spine;
 using Spine.Unity;
 using System;
 using System.Collections;
@@ -6,13 +6,14 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityStandardAssets.CrossPlatformInput;
 
-public class PlayerAttack : MonoBehaviour
-{
+public class PlayerAttack : MonoBehaviour {
     public static float TIME_DELAY_KEY = 0.5f;
     [SerializeField,SpineEvent] private string eventATK;
-    [SerializeField] private PlayerAnim playerAnim;
-    [SerializeField] private OverlapCircleAll circleAttackInfo;
     [SerializeField] private Player player;
+    [SerializeField] private PlayerAnim playerAnim;
+    [SerializeField] private PlayerMovement playerMovemenet;
+    [SerializeField] private OverlapCircleAll circleAttackHand,circleAttackSort,circleAttackWall;
+    [SerializeField] private Transform positionArrow;
     [Header("ListAnim")]
     [SerializeField] private List<EnumPlayerStatus> lstStatusIdle;
     public TurnAttack TurnAttack;
@@ -26,7 +27,7 @@ public class PlayerAttack : MonoBehaviour
                     break;
                 }
             }
-            return isAttacking; 
+            return isAttacking;
         }
     }
     private void Awake() {
@@ -35,6 +36,9 @@ public class PlayerAttack : MonoBehaviour
     }
 
     private void Update() {
+        if(player.CurStatus.TypeStatus == EnumPlayerStatus.DIE || player.CurStatus.TypeStatus == EnumPlayerStatus.WIN) {
+            return;
+        }
         //Input
         if(Input.GetKeyDown(KeyCode.C) || CrossPlatformInputManager.GetButtonDown("Attack")) {
             inputAttack = true;
@@ -46,10 +50,15 @@ public class PlayerAttack : MonoBehaviour
                 return;
             }
             if(TurnAttack.input == 0) {
-                if(player.SetPlayerStatusCheckRank(EnumPlayerStatus.ATTACK1,DoAttack)) {
-                    TurnAttack.input = 3;
-                    TurnAttack.timeCountDown = TIME_DELAY_KEY;
+                if(player.Weapon!= null && player.Weapon.TypeWeapon == TypeWeapon.LONG ) {
+                    player.SetPlayerStatusCheckRank(EnumPlayerStatus.ATTACK3, () => { SetUpNoneAttack(); });
+                } else {
+                    if(player.SetPlayerStatusCheckRank(EnumPlayerStatus.ATTACK1, DoAttack)) {
+                        TurnAttack.input++;
+                        TurnAttack.timeCountDown = TIME_DELAY_KEY;
+                    }
                 }
+
             } else if(TurnAttack.timeCountDown > 0) {
                 TurnAttack.input++;
                 TurnAttack.timeCountDown = TIME_DELAY_KEY;
@@ -66,11 +75,9 @@ public class PlayerAttack : MonoBehaviour
         if(player.CurStatus.TypeStatus == EnumPlayerStatus.ATTACK1 && TurnAttack.input > 1) {
             if(!player.SetPlayerStatusCheckRank(EnumPlayerStatus.ATTACK2, DoAttack)) {
                 SetUpNoneAttack();
-            } 
-        }else if(player.CurStatus.TypeStatus == EnumPlayerStatus.ATTACK2 && TurnAttack.input > 2) {
-            if(!player.SetPlayerStatusCheckRank(EnumPlayerStatus.ATTACK3, DoAttack)) {
-                SetUpNoneAttack();
             }
+        } else if(player.CurStatus.TypeStatus == EnumPlayerStatus.ATTACK2 && TurnAttack.input > 2) {
+            player.SetPlayerStatusCheckRank(EnumPlayerStatus.ATTACK3, () => { SetUpNoneAttack(); });
         } else {
             SetUpNoneAttack();
         }
@@ -84,15 +91,35 @@ public class PlayerAttack : MonoBehaviour
     void EventDamage(TrackEntry trackEntry, Spine.Event e) {
         // Play some sound if the event named "footstep" fired.
         if(e.Data.Name == eventATK) {
-            Collider2D[] listCol = Physics2D.OverlapCircleAll(circleAttackInfo.transform.position, circleAttackInfo.lookRadius, circleAttackInfo.layerMask);
-            foreach(var col in listCol) {
-                EnemyBase enemyBase = col.transform.parent.GetComponent<EnemyBase>();
-                if(enemyBase != null) {
-                    enemyBase.GetDame(player.curDame,gameObject);
-                    SpawnerTextDame.Instance.Spawner(circleAttackInfo.transform.position, player.curDame.ToString());
+            if(playerMovemenet.PlayerTourch == PlayerTourch.WALL) {
+                HalderEventDameByOverlapCircleAll(circleAttackWall);
+            } else {
+                if(player.Weapon == null) {
+                    HalderEventDameByOverlapCircleAll(circleAttackHand);
+                }else if(player.Weapon.TypeWeapon == TypeWeapon.SORT) {
+                    HalderEventDameByOverlapCircleAll(circleAttackSort);
+                }else if(player.Weapon.TypeWeapon == TypeWeapon.LONG) {
+                    HalderEventAttackLong(player.Weapon);
                 }
             }
         }
+    }
+
+    private void HalderEventDameByOverlapCircleAll(OverlapCircleAll infoAttack) {
+        Collider2D[] listCol = Physics2D.OverlapCircleAll(infoAttack.transform.position, infoAttack.lookRadius, infoAttack.layerMask);
+        foreach(var col in listCol) {
+            EnemyBase enemyBase = col.transform.parent.GetComponent<EnemyBase>();
+            if(enemyBase != null) {
+                enemyBase.GetDame(player.curDame, gameObject);
+                SpawnerTextDame.Instance.Spawner(infoAttack.transform.position, player.curDame.ToString());
+            }
+        }
+    }
+
+    private void HalderEventAttackLong(WeaponData data) {
+        var arrow = data.ArrowPref.Spawn(InGameManager.Instance.LevelMap);
+        arrow.transform.position = positionArrow.position;
+        arrow.Action(positionArrow.right,data.Speed,data.Dame);
     }
 }
 

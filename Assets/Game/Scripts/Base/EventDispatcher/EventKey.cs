@@ -59,4 +59,8 @@ public static class EventKey {
             this.IDAfter = idAfter;
         }
     }
+
+    public struct EventLevelChange : IEventArgs {
+        
+    }
 }

@@ -29,12 +29,16 @@ public class DataManager : Singleton<DataManager> {
     private const string LEVELMAPS_PATH = "Maps";
     [SerializeField] private List<LevelMap> lstMap = new List<LevelMap>();
     public int LevelMapMax => lstMap.Count - 1;
+    private const string WEAPONS_PATH = "Weapons";
+    [SerializeField] private List<WeaponData> lstWeapon = new List<WeaponData>();
+    public IEnumerable<WeaponData> LstWeapon => lstWeapon;
     #endregion
 
     private void Start() {
         LoadData();
         LoadItemData();
         LoadLevelMap();
+        LoadWeaponData();
         playerData.Update();
     }
 
@@ -118,6 +122,17 @@ public class DataManager : Singleton<DataManager> {
 
     public LevelMap GetlevelMapByLevel(int level) {
         return lstMap.Find(x=>x.Level == level);
+    }
+
+    private void LoadWeaponData() {
+        foreach(WeaponData weapon in Resources.LoadAll<WeaponData>(WEAPONS_PATH)) {
+            lstWeapon.Add(weapon);
+        }
+    }
+
+    public WeaponData GetWeaponByID(WeaponID weaponID) {
+        WeaponData result = lstWeapon.Find(x => x.ID == weaponID);
+        return result;
     }
     #endregion
 }
