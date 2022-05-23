@@ -17,7 +17,7 @@ public class PlayerHorizontal : MonoBehaviour {
     [SerializeField] private Player player;
     [Header("ListAnim")]
     [SerializeField] private List<EnumPlayerStatus> lstStatusIdle;
-    public DirHorizontal PlayerFace => display.localScale.x == 1 ? DirHorizontal.RIGHT : DirHorizontal.LEFT;
+    public DirHorizontal PlayerFace => display.eulerAngles.y == 0 ? DirHorizontal.RIGHT : DirHorizontal.LEFT;
     public TurnMove MoveTurn;
     private float xDirectionalInput;
     private DirHorizontal direction;
@@ -104,7 +104,7 @@ public class PlayerHorizontal : MonoBehaviour {
         if(MoveTurn.TypeMove == TypeMove.DASH) {
             player.SetPlayerStatusCheckRank(EnumPlayerStatus.DASH);
         } else {
-            if(Mathf.Abs(xDirectionalInput)>0 && playerMovement.PlayerTourch == PlayerTourch.GROUND ) {
+            if(Mathf.Abs(xDirectionalInput) > 0 && playerMovement.PlayerTourch == PlayerTourch.GROUND) {
                 Flip(xDirectionalInput > 0 ? DirHorizontal.RIGHT : DirHorizontal.LEFT);
                 var result = player.SetPlayerStatusCheckRank(EnumPlayerStatus.RUN);
             } else {
@@ -126,8 +126,8 @@ public class PlayerHorizontal : MonoBehaviour {
 
     private void Flip(DirHorizontal dir) {
         if(dir == DirHorizontal.RIGHT) {
-            display.eulerAngles = new Vector3(0, 0 , 0);
-        }else if(dir == DirHorizontal.LEFT) {
+            display.eulerAngles = new Vector3(0, 0, 0);
+        } else if(dir == DirHorizontal.LEFT) {
             display.eulerAngles = new Vector3(0, 180, 0);
         }
     }

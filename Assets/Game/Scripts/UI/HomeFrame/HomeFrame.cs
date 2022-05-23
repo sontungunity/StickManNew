@@ -26,12 +26,12 @@ public class HomeFrame : FrameBase {
     }
 
     private void HalderEventLevelChange(EventKey.EventLevelChange evt) {
-        txt_Level.text = $"LEVEL {GameManager.Instance.CurLevel}";
+        txt_Level.text = $"LEVEL {GameManager.Instance.CurLevel + 1}";
     }
 
     public override void OnShow(Action onCompleted = null, bool instant = false) {
         base.OnShow(onCompleted, instant);
-        txt_Level.text = $"LEVEL {GameManager.Instance.CurLevel}";
+        txt_Level.text = $"LEVEL {GameManager.Instance.CurLevel + 1}";
     }
 
     private void StartGame() {

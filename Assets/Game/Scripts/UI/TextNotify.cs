@@ -27,6 +27,10 @@ public class TextNotify : Singleton<TextNotify> {
         });
     }
 
+    public void ShowFailAds() {
+        Show("Can't get the reward");
+    }
+
     [ContextMenu("ShowDemo")]
     public void ShowDemo() {
         Show("Show Demo");

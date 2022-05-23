@@ -57,7 +57,7 @@ public class PlayerData {
         if(item == null) {
             return false;
         }
-        return item.Amount >= 1;
+        return item.Amount >= amout;
     }
 
     public void Update() {
