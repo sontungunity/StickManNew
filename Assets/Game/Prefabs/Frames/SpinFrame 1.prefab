@@ -2553,7 +2553,7 @@ GameObject:
   - component: {fileID: 6019550735689133321}
   - component: {fileID: 6019550735689133367}
   m_Layer: 5
-  m_Name: SpinFrame
+  m_Name: SpinFrame 1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

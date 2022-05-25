@@ -1,7 +1,5 @@
 using EnhancedUI.EnhancedScroller;
 using System;
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class SkinFloorShow : EnhancedScrollerCellView {
@@ -19,4 +17,5 @@ public class SkinFloorShow : EnhancedScrollerCellView {
         skinView3.SetOnSelect(OnSelect);
         skinView3.Show(itemData3);
     }
+    
 }

@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 [RequireComponent(typeof(Button))]
@@ -7,18 +5,21 @@ public class ButtonClose : MonoBehaviour {
     [SerializeField] private Button btn_Close;
     [SerializeField] private FrameBase frame;
 
-    private void Awake() {
+    private void Awake()
+    {
+        btn_Close = GetComponent<Button>();
         btn_Close.onClick.AddListener(CloseFrame);
     }
 
-    private void CloseFrame() {
+    private void CloseFrame() 
+    {
         if(frame!=null) {
             frame.Hide();
         }
     }
 
-    private void OnValidate() {
-        btn_Close = GetComponent<Button>();
+    private void OnValidate() 
+    {
         if(btn_Close == null) {
             btn_Close = gameObject.AddComponent<Button>();
         }

@@ -1,11 +1,6 @@
-using Spine.Unity;
 using System;
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
-using TMPro;
-using STU;
 
 public class SkinView : MonoBehaviour {
     [Header("Data")]
@@ -19,12 +14,15 @@ public class SkinView : MonoBehaviour {
     [SerializeField] private Image iconLock;
 
     public SkinItemData Model => model;
-    private Action<SkinView> actionSelect;
-    private void Awake() {
+    private Action<SkinView> _actionSelect;
+    
+    private void Awake() 
+    {
         btn_Select.onClick.AddListener(OnSelect);
     }
 
-    public void Show(SkinItemData skinData) {
+    public void Show(SkinItemData skinData) 
+    {
         this.model = skinData;
         if(skinData == null) {
             main.SetActive(false);
@@ -56,11 +54,11 @@ public class SkinView : MonoBehaviour {
         iconLock.gameObject.SetActive(true);
     }
     
-    public void SetOnSelect(Action<SkinView> OnSelect) {
-        this.actionSelect = OnSelect;
+    public void SetOnSelect(Action<SkinView> onSelect) {
+        this._actionSelect = onSelect;
     }
 
     private void OnSelect() {
-        actionSelect?.Invoke(this);
+        _actionSelect?.Invoke(this);
     }
 }
