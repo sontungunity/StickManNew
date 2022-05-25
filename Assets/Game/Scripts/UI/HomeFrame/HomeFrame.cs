@@ -10,6 +10,7 @@ public class HomeFrame : FrameBase {
     [SerializeField] private Button btn_Play;
     [SerializeField] private Button btn_Spin,btn_Skin,btn_Daily;
     [SerializeField] private TextMeshProUGUI txt_Level;
+    [SerializeField] private AudioClip musicMenu;
     private void Awake() {
         btn_Play.onClick.AddListener(StartGame);
         btn_Spin.onClick.AddListener(() => { FrameManager.Instance.Push<SpinFrame>(); });
@@ -32,6 +33,7 @@ public class HomeFrame : FrameBase {
     public override void OnShow(Action onCompleted = null, bool instant = false) {
         base.OnShow(onCompleted, instant);
         txt_Level.text = $"LEVEL {GameManager.Instance.CurLevel + 1}";
+        SoundManager.Instance.PlayMusic(musicMenu);
     }
 
     private void StartGame() {

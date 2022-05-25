@@ -75,7 +75,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3114555189736675559}
   m_LocalRotation: {x: -0, y: 1, z: -0, w: 0}
-  m_LocalPosition: {x: 0, y: 1.5, z: 0}
+  m_LocalPosition: {x: 0, y: 1, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 3114555191535318249}
@@ -93,7 +93,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 50443153fd5ba3b4d80efd9fd8dfa8fa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  amountRaycast: 4
+  amountRaycast: 3
   space: 0.7
   distance: 4
   layer:
@@ -125,7 +125,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3114555190246105997}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 1.33, z: 0}
+  m_LocalPosition: {x: 0, y: 1, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 3114555191535318249}
@@ -143,7 +143,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 50443153fd5ba3b4d80efd9fd8dfa8fa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  amountRaycast: 4
+  amountRaycast: 3
   space: 0.7
   distance: 1
   layer:
@@ -175,7 +175,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3114555190536923183}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 1.5, z: 0}
+  m_LocalPosition: {x: 0, y: 1, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 3114555191535318249}
@@ -193,7 +193,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 50443153fd5ba3b4d80efd9fd8dfa8fa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  amountRaycast: 4
+  amountRaycast: 3
   space: 0.7
   distance: 1.5
   layer:
@@ -225,7 +225,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3114555190581533132}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 3.5, z: 0}
+  m_LocalPosition: {x: 0, y: 2.4, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 3114555191387062397}
@@ -611,8 +611,8 @@ CapsuleCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 1.5}
-  m_Size: {x: 1, y: 3}
+  m_Offset: {x: 0, y: 1}
+  m_Size: {x: 1, y: 2}
   m_Direction: 0
 --- !u!1 &3114555191690628464
 GameObject:
@@ -639,7 +639,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3114555191690628464}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 1.5, z: 0}
+  m_LocalPosition: {x: 0, y: 1, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 3114555191535318249}
@@ -657,7 +657,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 50443153fd5ba3b4d80efd9fd8dfa8fa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  amountRaycast: 4
+  amountRaycast: 3
   space: 0.7
   distance: 4
   layer:
@@ -771,7 +771,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3402017069729138215}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.5, y: 1.5, z: 0}
+  m_LocalPosition: {x: 0.5, y: 1, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 3114555191535318249}
@@ -789,7 +789,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5e682a2c5f86fe043b32a41f9191b467, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  lookRadius: 1
+  lookRadius: 0.5
   layerMask:
     serializedVersion: 2
     m_Bits: 64
@@ -804,6 +804,22 @@ PrefabInstance:
       propertyPath: m_Name
       value: GreenBlood_Particle
       objectReference: {fileID: 0}
+    - target: {fileID: 8960922227965646664, guid: 65f84854a8bb2be46a137656adf0b3e7, type: 3}
+      propertyPath: useRigidbodyForVelocity
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8960922227965646664, guid: 65f84854a8bb2be46a137656adf0b3e7, type: 3}
+      propertyPath: InitialModule.startSize.scalar
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8960922227965646664, guid: 65f84854a8bb2be46a137656adf0b3e7, type: 3}
+      propertyPath: InitialModule.startSizeY.scalar
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8960922227965646664, guid: 65f84854a8bb2be46a137656adf0b3e7, type: 3}
+      propertyPath: InitialModule.startSizeZ.scalar
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 8960922227965646665, guid: 65f84854a8bb2be46a137656adf0b3e7, type: 3}
       propertyPath: m_RootOrder
       value: 6
@@ -814,7 +830,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8960922227965646665, guid: 65f84854a8bb2be46a137656adf0b3e7, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 1.619
+      value: 1.16
       objectReference: {fileID: 0}
     - target: {fileID: 8960922227965646665, guid: 65f84854a8bb2be46a137656adf0b3e7, type: 3}
       propertyPath: m_LocalPosition.z

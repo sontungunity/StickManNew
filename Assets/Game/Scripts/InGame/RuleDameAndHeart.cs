@@ -13,7 +13,7 @@ public static class RuleDameAndHeart
     public static LevelPlayerInfo GetTotalDameHeartCoinByLevel(int level) {
         LevelPlayerInfo result = new LevelPlayerInfo();
         result.Heart = Heart_Base_Player + level * Heart_Up_Level;
-        result.Damage = Dame_Base_Player + level * Dame_Base_Player;
+        result.Damage = Dame_Base_Player + level * Dame_Up_Level;
         result.Coin = Coin_UP_Level * level;
         return result;
     }

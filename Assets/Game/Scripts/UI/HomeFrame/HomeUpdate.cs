@@ -20,7 +20,7 @@ public class HomeUpdate : MonoBehaviour
     }
 
     private void GenderInfoPlayer() {
-        txt_Level.text = playerData.LevelPlayer.ToString();
+        txt_Level.text = (playerData.LevelPlayer+1).ToString();
         var levelPlayerInfo = RuleDameAndHeart.GetTotalDameHeartCoinByLevel(playerData.LevelPlayer);
         txt_Hp.text = levelPlayerInfo.Heart.ToString();
         txt_Damage.text = levelPlayerInfo.Damage.ToString();

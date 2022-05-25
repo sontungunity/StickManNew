@@ -111,7 +111,6 @@ public class PlayerAttack : MonoBehaviour {
             EnemyBase enemyBase = col.transform.parent.GetComponent<EnemyBase>();
             if(enemyBase != null) {
                 enemyBase.GetDame(player.curDame, gameObject);
-                SpawnerTextDame.Instance.Spawner(infoAttack.transform.position, player.curDame.ToString());
             }
         }
     }

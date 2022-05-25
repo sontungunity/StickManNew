@@ -21,4 +21,10 @@ public class SpawnerCoin : Singleton<SpawnerCoin>
     public void TestSpawnCoin() {
         Spawner(InGameManager.Instance.Player.transform.position + Vector3.up*3f,5);
     }
+
+    private void Update() {
+        if(Input.GetKeyDown(KeyCode.Q)) {
+            Spawner(InGameManager.Instance.Player.transform.position + Vector3.up * 3f, 5);
+        }
+    }
 }
