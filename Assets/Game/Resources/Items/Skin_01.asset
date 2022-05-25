@@ -13,12 +13,12 @@ MonoBehaviour:
   m_Name: Skin_01
   m_EditorClassIdentifier: 
   itemID: 11
-  icon: {fileID: 21300000, guid: bcde4af68d6f0a54c95e0292ceca29c5, type: 3}
+  icon: {fileID: 21300000, guid: a2feec5a0301ba641b2693e5591b1f8f, type: 3}
   description: Skin 01
   nameSpine: skin/skin_02
   wayGetItem:
-    Type: 4
+    Type: 1
     ItemStackDetail:
-      itemID: 0
-      amount: 10
-    LevelDetail: 15
+      itemID: 1
+      amount: 3000
+    LevelDetail: 0
