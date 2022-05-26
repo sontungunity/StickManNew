@@ -1,13 +1,10 @@
-using Spine.Unity;
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using DG.Tweening;
 
 public class EnemyBase : CharacterBase {
     [SerializeField] private Transform display;
     [SerializeField] protected EnemyAnim enemyAnim;
-    [SerializeField] protected BeamRayCast eye_Befor,eye_After,distan_attack;
+    [SerializeField] protected BeamRayCast eye_Befor, eye_After, distan_attack;
     [SerializeField] protected EnemyStatus curStatus;
     [SerializeField] protected EnemyHeartBar enemyBar;
     [SerializeField] protected EnemyAttack enemyAttack;
@@ -17,6 +14,9 @@ public class EnemyBase : CharacterBase {
     [SerializeField] protected Vector2 forceDie = new Vector2(20,5);
     [Header("Effect")]
     [SerializeField] protected ParticleSystem particleBlood;
+
+    [SerializeField] private ParticleSystem par_newBlood;
+    // [SerializeField] protected ParticleSystem par_blooding;
     public Rigidbody2D Rg2D => rg2D;
     public Transform Display => display;
     public EnemyStatus CurStatus => curStatus;
@@ -42,8 +42,6 @@ public class EnemyBase : CharacterBase {
         SetStatus(EnemyStatus.IDLE);
         enemyBar.Init();
     }
-
-
 
     protected virtual void Update() {
         if(curStatus == EnemyStatus.IDLE || curStatus == EnemyStatus.MOVE || curStatus == EnemyStatus.NONE || curStatus == EnemyStatus.DETECH) {
@@ -73,6 +71,7 @@ public class EnemyBase : CharacterBase {
             });
             enemyBar.UpdateHeart(PercentHeart);
             particleBlood?.Play();
+            par_newBlood.Play();
         }
     }
     protected virtual void SetupStatus() {

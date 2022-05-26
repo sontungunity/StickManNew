@@ -8,7 +8,14 @@ public class SoundManager : Singleton<SoundManager> {
     [SerializeField] private AudioSource musicAudioSource;
     [SerializeField] private AudioSource soundAudioSource;
     [Header("Customer")]
-    [SerializeField] private AudioClip audioButton;
+    [SerializeField] private AudioClip audio_PressButton;
+    [SerializeField] private AudioClip audio_CollectGold;
+    // [SerializeField] private AudioClip audio_Attack1;
+    // [SerializeField] private AudioClip audio_Attack2;
+    // [SerializeField] private AudioClip audio_Attack3;
+    // [SerializeField] private AudioClip audio_Slashing12;
+    // [SerializeField] private AudioClip audio_Slashing3;
+
     private Coroutine fadeCoroutine;
     private SettingSave settingS;
     public SettingSave SettingS {
@@ -119,8 +126,35 @@ public class SoundManager : Singleton<SoundManager> {
     }
 
     public void PlaySoundButton() {
-        PlaySound(audioButton);
+        PlaySound(audio_PressButton);
     }
+
+    public void PlaySoundGoldCollect()
+    {
+        PlaySound(audio_CollectGold);
+    }
+
+    // public void PlaySoundAttack1()
+    // {
+    //     PlaySound(audio_Slashing12);
+    // }
+    // public void PlaySoundAttack2()
+    // {
+    //     PlaySound(audio_Slashing12);
+    // }
+    // public void PlaySoundAttack3()
+    // {
+    //     PlaySound(audio_Slashing3);
+    // }
+    //
+    // public void PlaySoundSlashing12()
+    // {
+    //     PlaySound(audio_Attack2);
+    // }
+    // public void PlaySoundSlashing3()
+    // {
+    //     PlaySound(audio_Attack3);
+    // }
     #endregion
     #region Vibrate
     public void Vibrate() {

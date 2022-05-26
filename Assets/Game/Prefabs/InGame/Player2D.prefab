@@ -434,6 +434,7 @@ MonoBehaviour:
   playerHorizontal: {fileID: 5886882179965856177}
   rg2D: {fileID: 5886882179965856180}
   par_Blood: {fileID: 5112590819138126634}
+  par_NewBlood: {fileID: 19881554, guid: 0ebcd60dd020022408e53f535d12f313, type: 3}
   timeProtect: 5
   Weapon: {fileID: 0}
 --- !u!1 &5886882180011657165
