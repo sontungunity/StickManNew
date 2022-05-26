@@ -1,0 +1,765 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ContentModelStore">
+    <e p="C:\Users\ASUS\AppData\Local\JetBrains\Rider2020.1\extResources" t="IncludeRecursive" />
+    <e p="C:\Users\ASUS\AppData\Local\JetBrains\Rider2020.1\resharper-host\Local\Transient\ReSharperHost\v201\SolutionCaches\_StickManNew.-676218660.00" t="ExcludeRecursive" />
+    <e p="H:\eSupport\StickManNew" t="IncludeRecursive">
+      <e p="Assembly-CSharp-Editor-firstpass.csproj" t="IncludeRecursive" />
+      <e p="Assembly-CSharp-Editor.csproj" t="IncludeRecursive" />
+      <e p="Assembly-CSharp-firstpass.csproj" t="IncludeRecursive" />
+      <e p="Assembly-CSharp.csproj" t="IncludeRecursive" />
+      <e p="Assets" t="Include">
+        <e p="Blaze.atlas.txt" t="Include" />
+        <e p="Demigiant" t="Include">
+          <e p="DemiLib" t="Include">
+            <e p="Core" t="Include">
+              <e p="DemiLib.xml" t="Include" />
+              <e p="Editor" t="Include">
+                <e p="DemiEditor.xml" t="Include" />
+              </e>
+            </e>
+          </e>
+          <e p="DOTween" t="Include">
+            <e p="Modules" t="Include">
+              <e p="DOTweenModuleAudio.cs" t="Include" />
+              <e p="DOTweenModulePhysics.cs" t="Include" />
+              <e p="DOTweenModulePhysics2D.cs" t="Include" />
+              <e p="DOTweenModuleSprite.cs" t="Include" />
+              <e p="DOTweenModuleUI.cs" t="Include" />
+              <e p="DOTweenModuleUnityVersion.cs" t="Include" />
+              <e p="DOTweenModuleUtils.cs" t="Include" />
+            </e>
+            <e p="README.txt" t="Include" />
+          </e>
+          <e p="DOTweenPro" t="Include">
+            <e p="DOTweenAnimation.cs" t="Include" />
+            <e p="DOTweenProShortcuts.cs" t="Include" />
+            <e p="DOTweenTextMeshPro.cs" t="Include" />
+            <e p="DOTweenTk2d.cs" t="Include" />
+            <e p="Editor" t="Include">
+              <e p="DOTweenAnimationInspector.cs" t="Include" />
+              <e p="DOTweenPreviewManager.cs" t="Include" />
+            </e>
+            <e p="README.txt" t="Include" />
+          </e>
+          <e p="readme_DOTweenPro.txt" t="Include" />
+        </e>
+        <e p="EnhancedScroller" t="Include">
+          <e p="EnhancedScroller.cs" t="Include" />
+          <e p="EnhancedScrollerCellView.cs" t="Include" />
+          <e p="IEnhancedScrollerDelegate.cs" t="Include" />
+          <e p="SmallList.cs" t="Include" />
+        </e>
+        <e p="Game" t="Include">
+          <e p="Console" t="Include">
+            <e p="Scripts" t="Include">
+              <e p="Console.cs" t="Include" />
+              <e p="ConsoleMesage.cs" t="Include" />
+              <e p="ConsoleSystem.cs" t="Include" />
+              <e p="ConsoleView.cs" t="Include" />
+            </e>
+          </e>
+          <e p="Editor" t="Include">
+            <e p="SceneTools.cs" t="Include" />
+          </e>
+          <e p="Scripts" t="Include">
+            <e p="Base" t="Include">
+              <e p="AdsManager.cs" t="Include" />
+              <e p="DataManager" t="Include">
+                <e p="DataManager.cs" t="Include" />
+                <e p="ItemData.cs" t="Include" />
+                <e p="ItemStack.cs" t="Include" />
+                <e p="PlayerData.cs" t="Include" />
+                <e p="SkinItemData.cs" t="Include" />
+                <e p="SpinSave.cs" t="Include" />
+                <e p="WayGetItem.cs" t="Include" />
+                <e p="WeaponData.cs" t="Include" />
+              </e>
+              <e p="EventDispatcher" t="Include">
+                <e p="EventDispatcher.cs" t="Include" />
+                <e p="EventKey.cs" t="Include" />
+              </e>
+              <e p="FrameBase" t="Include">
+                <e p="FrameBase.cs" t="Include" />
+                <e p="FrameManager.cs" t="Include" />
+                <e p="UIAnchorPosition.cs" t="Include" />
+                <e p="UIAnimation.cs" t="Include" />
+                <e p="UIScale.cs" t="Include" />
+                <e p="UITransition.cs" t="Include" />
+              </e>
+              <e p="GameManager.cs" t="Include" />
+              <e p="Helper" t="Include">
+                <e p="Enums.cs" t="Include" />
+                <e p="Extentions.cs" t="Include" />
+              </e>
+              <e p="LoadingManager.cs" t="Include" />
+              <e p="PoolManager.cs" t="Include" />
+              <e p="SceneManager.cs" t="Include" />
+              <e p="SoundManager.cs" t="Include" />
+            </e>
+            <e p="InGame" t="Include">
+              <e p="BeamRayCast.cs" t="Include" />
+              <e p="CharacterBase.cs" t="Include" />
+              <e p="Enemy" t="Include">
+                <e p="BossBase.cs" t="Include" />
+                <e p="Creeper" t="Include">
+                  <e p="DetechPlayer.cs" t="Include" />
+                  <e p="EnemyCreeper.cs" t="Include" />
+                </e>
+                <e p="EnemyAnim.cs" t="Include" />
+                <e p="EnemyAttack.cs" t="Include" />
+                <e p="EnemyBase.cs" t="Include" />
+                <e p="EnemyHeartBar.cs" t="Include" />
+                <e p="EnemyMove.cs" t="Include" />
+                <e p="EnemyReward.cs" t="Include" />
+                <e p="Ravager" t="Include">
+                  <e p="RavagerAttack.cs" t="Include" />
+                  <e p="RavagerBoss.cs" t="Include" />
+                  <e p="RavagerMakeDame.cs" t="Include" />
+                </e>
+                <e p="Skeleton" t="Include">
+                  <e p="SkeletonArrow.cs" t="Include" />
+                  <e p="SkeletonAttack.cs" t="Include" />
+                </e>
+                <e p="SpiderLand" t="Include">
+                  <e p="SpiderLand.cs" t="Include" />
+                  <e p="SpiderLandSp.cs" t="Include" />
+                </e>
+              </e>
+              <e p="Golem.cs" t="Include" />
+              <e p="InGameManager.cs" t="Include" />
+              <e p="Item" t="Include">
+                <e p="AppleCS.cs" t="Include" />
+                <e p="BigCoinCS.cs" t="Include" />
+                <e p="CheckPoint.cs" t="Include" />
+                <e p="Coin.cs" t="Include" />
+                <e p="DoorCS.cs" t="Include" />
+                <e p="SignCS.cs" t="Include" />
+                <e p="SpikeCS.cs" t="Include" />
+                <e p="SwordCS.cs" t="Include" />
+                <e p="TriggerBoss.cs" t="Include" />
+                <e p="WallDisableCS.cs" t="Include" />
+              </e>
+              <e p="LevelMap.cs" t="Include" />
+              <e p="Player" t="Include">
+                <e p="OverlapBoxInfo.cs" t="Include" />
+                <e p="OverlapCircleAll.cs" t="Include" />
+                <e p="Player.cs" t="Include" />
+                <e p="PlayerAnim.cs" t="Include" />
+                <e p="PlayerAttack.cs" t="Include" />
+                <e p="PlayerHorizontal.cs" t="Include" />
+                <e p="PlayerMovement.cs" t="Include" />
+                <e p="PlayerSkin.cs" t="Include" />
+                <e p="PlayerVertical.cs" t="Include" />
+                <e p="SpineBase.cs" t="Include" />
+                <e p="WeaponArrow.cs" t="Include" />
+              </e>
+              <e p="RuleDameAndHeart.cs" t="Include" />
+              <e p="SpawnerCoin.cs" t="Include" />
+              <e p="SpawnerTextDame.cs" t="Include" />
+              <e p="TextDameInGame.cs" t="Include" />
+            </e>
+            <e p="Singleton.cs" t="Include" />
+            <e p="UI" t="Include">
+              <e p="Barpercent.cs" t="Include" />
+              <e p="BarpercentUI.cs" t="Include" />
+              <e p="ButtonClose.cs" t="Include" />
+              <e p="Collection" t="Include">
+                <e p="CollectionController.cs" t="Include" />
+                <e p="CollectionItem.cs" t="Include" />
+              </e>
+              <e p="CountDown.cs" t="Include" />
+              <e p="DailyFrame" t="Include">
+                <e p="DailyFrame.cs" t="Include" />
+                <e p="DailySave.cs" t="Include" />
+                <e p="DailyView.cs" t="Include" />
+                <e p="DailyViewPlus.cs" t="Include" />
+              </e>
+              <e p="DisplayObjects.cs" t="Include" />
+              <e p="GameFrame" t="Include">
+                <e p="BossBarHeart.cs" t="Include" />
+                <e p="GameFrame.cs" t="Include" />
+                <e p="ItemListener.cs" t="Include" />
+                <e p="LifeAndHeart.cs" t="Include" />
+                <e p="ReviveFrame.cs" t="Include" />
+                <e p="RoomSetting.cs" t="Include" />
+                <e p="SettingFrame.cs" t="Include" />
+                <e p="WeaponArea.cs" t="Include" />
+              </e>
+              <e p="HomeFrame.cs" t="Include" />
+              <e p="ItemStackView.cs" t="Include" />
+              <e p="LevelSelectFrame" t="Include">
+                <e p="LevelSelectFrame.cs" t="Include" />
+                <e p="LevelSelectView.cs" t="Include" />
+              </e>
+              <e p="PlayerSpinUI.cs" t="Include" />
+              <e p="SkinFrame" t="Include">
+                <e p="Barbase.cs" t="Include" />
+                <e p="NarbarManager.cs" t="Include" />
+                <e p="SkinFloorShow.cs" t="Include" />
+                <e p="SkinFrame.cs" t="Include" />
+                <e p="SkinReview.cs" t="Include" />
+                <e p="SkinView.cs" t="Include" />
+              </e>
+              <e p="SoundButton.cs" t="Include" />
+              <e p="SpinArrow.cs" t="Include" />
+              <e p="SpineFrame.cs" t="Include" />
+              <e p="SpinFrame" t="Include">
+                <e p="SpinFrame.cs" t="Include" />
+              </e>
+              <e p="TextNotify.cs" t="Include" />
+            </e>
+          </e>
+          <e p="Spine" t="Include">
+            <e p="BlazeWither" t="Include">
+              <e p="blazing_wither.atlas.txt" t="Include" />
+            </e>
+            <e p="Creeper" t="Include">
+              <e p="creeper.atlas.txt" t="Include" />
+            </e>
+            <e p="Dragon" t="Include">
+              <e p="dragon.atlas.txt" t="Include" />
+            </e>
+            <e p="Enderman" t="Include">
+              <e p="enderman.atlas.txt" t="Include" />
+            </e>
+            <e p="Ghast" t="Include">
+              <e p="ghast.atlas.txt" t="Include" />
+            </e>
+            <e p="Golem" t="Include">
+              <e p="golem.atlas.txt" t="Include" />
+            </e>
+            <e p="Pig" t="Include">
+              <e p="pig.atlas.txt" t="Include" />
+            </e>
+            <e p="Piglin" t="Include">
+              <e p="piglin.atlas.txt" t="Include" />
+            </e>
+            <e p="Player" t="Include">
+              <e p="stickman.atlas.txt" t="Include" />
+            </e>
+            <e p="Poppy" t="Include">
+              <e p="poppy.atlas.txt" t="Include" />
+            </e>
+            <e p="Ravager" t="Include">
+              <e p="ravager.atlas.txt" t="Include" />
+            </e>
+            <e p="Skeleton" t="Include">
+              <e p="skeleton.atlas.txt" t="Include" />
+            </e>
+            <e p="Spiderlend" t="Include">
+              <e p="spider_land.atlas.txt" t="Include" />
+            </e>
+            <e p="Spiderwall" t="Include">
+              <e p="spider_wall.atlas.txt" t="Include" />
+            </e>
+            <e p="Zombie" t="Include">
+              <e p="zombie.atlas.txt" t="Include" />
+            </e>
+          </e>
+        </e>
+        <e p="ProCamera2D" t="Include">
+          <e p="3rd Party Plugins Support" t="Include">
+            <e p="PlayMakerActions" t="Include">
+              <e p="FsmStateActionProCamera2DBase.cs" t="Include" />
+              <e p="PC2DAddCameraTarget.cs" t="Include" />
+              <e p="PC2DAdjustCameraTargetInfluence.cs" t="Include" />
+              <e p="PC2DApplyInfluence.cs" t="Include" />
+              <e p="PC2DApplyInfluencesTimed.cs" t="Include" />
+              <e p="PC2DCinematicsToggle.cs" t="Include" />
+              <e p="PC2DMoveCameraInstantlyToPosition.cs" t="Include" />
+              <e p="PC2DRemoveCameraTarget.cs" t="Include" />
+              <e p="PC2DRoomsEnter.cs" t="Include" />
+              <e p="PC2DShakeConstantStop.cs" t="Include" />
+              <e p="PC2DShakeConstantWithPreset.cs" t="Include" />
+              <e p="PC2DShakeStop.cs" t="Include" />
+              <e p="PC2DShakeWithPreset.cs" t="Include" />
+              <e p="PC2DShakeWithValues.cs" t="Include" />
+            </e>
+          </e>
+          <e p="Code" t="Include">
+            <e p="Core" t="Include">
+              <e p="BasePC2D.cs" t="Include" />
+              <e p="BaseTrigger.cs" t="Include" />
+              <e p="BoundariesAnimator.cs" t="Include" />
+              <e p="CameraTarget.cs" t="Include" />
+              <e p="ConstantShakePreset.cs" t="Include" />
+              <e p="Editor" t="Include">
+                <e p="CleanupMissingScripts.cs" t="Include" />
+                <e p="ConstantShakePresetEditor.cs" t="Include" />
+                <e p="MinMaxSliderDrawer.cs" t="Include" />
+                <e p="ProCamera2DEditor.cs" t="Include" />
+                <e p="ProCamera2DEditorResources.cs" t="Include" />
+                <e p="ProCamera2DHierarchyIcon.cs" t="Include" />
+                <e p="ProCamera2DPrefs.cs" t="Include" />
+                <e p="ScriptableObjectUtility.cs" t="Include" />
+                <e p="ShakePresetEditor.cs" t="Include" />
+              </e>
+              <e p="EnumMovementAxis.cs" t="Include" />
+              <e p="EnumUpdateType.cs" t="Include" />
+              <e p="IPositionDeltaChanger.cs" t="Include" />
+              <e p="IPositionOverrider.cs" t="Include" />
+              <e p="IPostMover.cs" t="Include" />
+              <e p="IPreMover.cs" t="Include" />
+              <e p="ISizeDeltaChanger.cs" t="Include" />
+              <e p="ISizeOverrider.cs" t="Include" />
+              <e p="KDTree.cs" t="Include" />
+              <e p="MoveInColliderBoundaries.cs" t="Include" />
+              <e p="ShakePreset.cs" t="Include" />
+              <e p="Utils" t="Include">
+                <e p="EditorPrefsX.cs" t="Include" />
+                <e p="MinMaxSliderAttribute.cs" t="Include" />
+                <e p="PrefsData.cs" t="Include" />
+                <e p="Utils.cs" t="Include" />
+              </e>
+            </e>
+            <e p="Extensions" t="Include">
+              <e p="Editor" t="Include">
+                <e p="ProCamera2DCameraWindowEditor.cs" t="Include" />
+                <e p="ProCamera2DCinematicsEditor.cs" t="Include" />
+                <e p="ProCamera2DContentFitterEditor.cs" t="Include" />
+                <e p="ProCamera2DForwardFocusEditor.cs" t="Include" />
+                <e p="ProCamera2DGeometryBoundariesEditor.cs" t="Include" />
+                <e p="ProCamera2DLimitDistanceEditor.cs" t="Include" />
+                <e p="ProCamera2DLimitSpeedEditor.cs" t="Include" />
+                <e p="ProCamera2DNumericBoundariesEditor.cs" t="Include" />
+                <e p="ProCamera2DPanAndZoomEditor.cs" t="Include" />
+                <e p="ProCamera2DParallaxEditor.cs" t="Include" />
+                <e p="ProCamera2DPixelPerfectEditor.cs" t="Include" />
+                <e p="ProCamera2DPointerInfluenceEditor.cs" t="Include" />
+                <e p="ProCamera2DRailsEditor.cs" t="Include" />
+                <e p="ProCamera2DRepeaterEditor.cs" t="Include" />
+                <e p="ProCamera2DRoomsEditor.cs" t="Include" />
+                <e p="ProCamera2DShakeEditor.cs" t="Include" />
+                <e p="ProCamera2DSpeedBasedZoomEditor.cs" t="Include" />
+                <e p="ProCamera2DTransitionsFXEditor.cs" t="Include" />
+                <e p="ProCamera2DZoomToFitTargetsEditor.cs" t="Include" />
+              </e>
+              <e p="ProCamera2DCameraWindow.cs" t="Include" />
+              <e p="ProCamera2DCinematics.cs" t="Include" />
+              <e p="ProCamera2DContentFitter.cs" t="Include" />
+              <e p="ProCamera2DForwardFocus.cs" t="Include" />
+              <e p="ProCamera2DGeometryBoundaries.cs" t="Include" />
+              <e p="ProCamera2DLimitDistance.cs" t="Include" />
+              <e p="ProCamera2DLimitSpeed.cs" t="Include" />
+              <e p="ProCamera2DNumericBoundaries.cs" t="Include" />
+              <e p="ProCamera2DPanAndZoom.cs" t="Include" />
+              <e p="ProCamera2DParallax.cs" t="Include" />
+              <e p="ProCamera2DPixelPerfect.cs" t="Include" />
+              <e p="ProCamera2DPointerInfluence.cs" t="Include" />
+              <e p="ProCamera2DRails.cs" t="Include" />
+              <e p="ProCamera2DRepeater.cs" t="Include" />
+              <e p="ProCamera2DRooms.cs" t="Include" />
+              <e p="ProCamera2DShake.cs" t="Include" />
+              <e p="ProCamera2DSpeedBasedZoom.cs" t="Include" />
+              <e p="ProCamera2DTransitionsFX.cs" t="Include" />
+              <e p="ProCamera2DZoomToFitTargets.cs" t="Include" />
+            </e>
+            <e p="Helpers" t="Include">
+              <e p="Letterbox" t="Include">
+                <e p="ProCamera2DLetterbox.cs" t="Include" />
+                <e p="Resources" t="Include">
+                  <e p="Letterbox.shader" t="Include" />
+                </e>
+              </e>
+              <e p="Parallax" t="Include">
+                <e p="ProCamera2DParallaxObject.cs" t="Include" />
+              </e>
+              <e p="Pixel Perfect" t="Include">
+                <e p="Editor" t="Include">
+                  <e p="ProCamera2DPixelPerfectSpriteEditor.cs" t="Include" />
+                </e>
+                <e p="ProCamera2DPixelPerfectSprite.cs" t="Include" />
+              </e>
+              <e p="TransitionFX" t="Include">
+                <e p="BasicBlit.cs" t="Include" />
+                <e p="Resources" t="Include">
+                  <e p="PC2D_Blinds.shader" t="Include" />
+                  <e p="PC2D_Circle.shader" t="Include" />
+                  <e p="PC2D_Fade.shader" t="Include" />
+                  <e p="PC2D_Shutters.shader" t="Include" />
+                  <e p="PC2D_Texture.shader" t="Include" />
+                  <e p="PC2D_Wipe.shader" t="Include" />
+                </e>
+              </e>
+            </e>
+            <e p="Triggers" t="Include">
+              <e p="Editor" t="Include">
+                <e p="ProCamera2DTriggerBoundariesEditor.cs" t="Include" />
+                <e p="ProCamera2DTriggerInfluenceEditor.cs" t="Include" />
+                <e p="ProCamera2DTriggerRailsEditor.cs" t="Include" />
+                <e p="ProCamera2DTriggerZoomEditor.cs" t="Include" />
+              </e>
+              <e p="ProCamera2DTriggerBoundaries.cs" t="Include" />
+              <e p="ProCamera2DTriggerInfluence.cs" t="Include" />
+              <e p="ProCamera2DTriggerRails.cs" t="Include" />
+              <e p="ProCamera2DTriggerZoom.cs" t="Include" />
+            </e>
+          </e>
+          <e p="ProCamera2D.cs" t="Include" />
+          <e p="README.txt" t="Include" />
+          <e p="Timeline" t="Include">
+            <e p="README.txt" t="Include" />
+          </e>
+          <e p="TransitionFX Textures" t="Include">
+            <e p="README.txt" t="Include" />
+          </e>
+        </e>
+        <e p="Spine" t="Include">
+          <e p="Editor" t="Include">
+            <e p="spine-unity" t="Include">
+              <e p="Editor" t="Include">
+                <e p="Asset Types" t="Include">
+                  <e p="AnimationReferenceAssetEditor.cs" t="Include" />
+                  <e p="SkeletonDataAssetInspector.cs" t="Include" />
+                  <e p="SpineAtlasAssetInspector.cs" t="Include" />
+                  <e p="SpineSpriteAtlasAssetInspector.cs" t="Include" />
+                </e>
+                <e p="Components" t="Include">
+                  <e p="BoneFollowerGraphicInspector.cs" t="Include" />
+                  <e p="BoneFollowerInspector.cs" t="Include" />
+                  <e p="BoundingBoxFollowerGraphicInspector.cs" t="Include" />
+                  <e p="BoundingBoxFollowerInspector.cs" t="Include" />
+                  <e p="PointFollowerInspector.cs" t="Include" />
+                  <e p="SkeletonAnimationInspector.cs" t="Include" />
+                  <e p="SkeletonGraphicCustomMaterialsInspector.cs" t="Include" />
+                  <e p="SkeletonGraphicInspector.cs" t="Include" />
+                  <e p="SkeletonMecanimInspector.cs" t="Include" />
+                  <e p="SkeletonMecanimRootMotionInspector.cs" t="Include" />
+                  <e p="SkeletonRendererCustomMaterialsInspector.cs" t="Include" />
+                  <e p="SkeletonRendererInspector.cs" t="Include" />
+                  <e p="SkeletonRootMotionBaseInspector.cs" t="Include" />
+                  <e p="SkeletonRootMotionInspector.cs" t="Include" />
+                  <e p="SkeletonUtilityBoneInspector.cs" t="Include" />
+                  <e p="SkeletonUtilityInspector.cs" t="Include" />
+                </e>
+                <e p="Menus.cs" t="Include" />
+                <e p="Resources" t="Include">
+                  <e p="SpineAssetDatabaseMarker.txt" t="Include" />
+                </e>
+                <e p="Shaders" t="Include">
+                  <e p="SpineShaderWithOutlineGUI.cs" t="Include" />
+                  <e p="SpineSpriteShaderGUI.cs" t="Include" />
+                </e>
+                <e p="SpineAttributeDrawers.cs" t="Include" />
+                <e p="Utility" t="Include">
+                  <e p="AssetDatabaseAvailabilityDetector.cs" t="Include" />
+                  <e p="AssetUtility.cs" t="Include" />
+                  <e p="BlendModeMaterialsUtility.cs" t="Include" />
+                  <e p="BuildSettings.cs" t="Include" />
+                  <e p="DataReloadHandler.cs" t="Include" />
+                  <e p="Icons.cs" t="Include" />
+                  <e p="Instantiation.cs" t="Include" />
+                  <e p="Preferences.cs" t="Include" />
+                  <e p="SpineBuildProcessor.cs" t="Include" />
+                  <e p="SpineEditorUtilities.cs" t="Include" />
+                  <e p="SpineHandles.cs" t="Include" />
+                  <e p="SpineInspectorUtility.cs" t="Include" />
+                  <e p="SpineMaskUtilities.cs" t="Include" />
+                </e>
+                <e p="Windows" t="Include">
+                  <e p="SkeletonBaker.cs" t="Include" />
+                  <e p="SkeletonBakingWindow.cs" t="Include" />
+                  <e p="SkeletonDebugWindow.cs" t="Include" />
+                  <e p="SpinePreferences.cs" t="Include" />
+                  <e p="SpriteAtlasImportWindow.cs" t="Include" />
+                </e>
+              </e>
+              <e p="Modules" t="Include">
+                <e p="SkeletonRenderSeparator" t="Include">
+                  <e p="Editor" t="Include">
+                    <e p="SkeletonPartsRendererInspector.cs" t="Include" />
+                    <e p="SkeletonRenderSeparatorInspector.cs" t="Include" />
+                  </e>
+                </e>
+              </e>
+            </e>
+            <e p="spine-unity-editor.asmdef" t="Include" />
+          </e>
+          <e p="Runtime" t="Include">
+            <e p="spine-csharp" t="Include">
+              <e p="Animation.cs" t="Include" />
+              <e p="AnimationState.cs" t="Include" />
+              <e p="AnimationStateData.cs" t="Include" />
+              <e p="Atlas.cs" t="Include" />
+              <e p="Attachments" t="Include">
+                <e p="AtlasAttachmentLoader.cs" t="Include" />
+                <e p="Attachment.cs" t="Include" />
+                <e p="AttachmentLoader.cs" t="Include" />
+                <e p="AttachmentType.cs" t="Include" />
+                <e p="BoundingBoxAttachment.cs" t="Include" />
+                <e p="ClippingAttachment.cs" t="Include" />
+                <e p="MeshAttachment.cs" t="Include" />
+                <e p="PathAttachment.cs" t="Include" />
+                <e p="PointAttachment.cs" t="Include" />
+                <e p="RegionAttachment.cs" t="Include" />
+                <e p="VertexAttachment.cs" t="Include" />
+              </e>
+              <e p="BlendMode.cs" t="Include" />
+              <e p="Bone.cs" t="Include" />
+              <e p="BoneData.cs" t="Include" />
+              <e p="ConstraintData.cs" t="Include" />
+              <e p="Event.cs" t="Include" />
+              <e p="EventData.cs" t="Include" />
+              <e p="ExposedList.cs" t="Include" />
+              <e p="IkConstraint.cs" t="Include" />
+              <e p="IkConstraintData.cs" t="Include" />
+              <e p="IUpdatable.cs" t="Include" />
+              <e p="Json.cs" t="Include" />
+              <e p="MathUtils.cs" t="Include" />
+              <e p="PathConstraint.cs" t="Include" />
+              <e p="PathConstraintData.cs" t="Include" />
+              <e p="Skeleton.cs" t="Include" />
+              <e p="SkeletonBinary.cs" t="Include" />
+              <e p="SkeletonBounds.cs" t="Include" />
+              <e p="SkeletonClipping.cs" t="Include" />
+              <e p="SkeletonData.cs" t="Include" />
+              <e p="SkeletonJson.cs" t="Include" />
+              <e p="SkeletonLoader.cs" t="Include" />
+              <e p="Skin.cs" t="Include" />
+              <e p="Slot.cs" t="Include" />
+              <e p="SlotData.cs" t="Include" />
+              <e p="spine-csharp.asmdef" t="Include" />
+              <e p="TransformConstraint.cs" t="Include" />
+              <e p="TransformConstraintData.cs" t="Include" />
+              <e p="Triangulator.cs" t="Include" />
+            </e>
+            <e p="spine-unity" t="Include">
+              <e p="Asset Types" t="Include">
+                <e p="AnimationReferenceAsset.cs" t="Include" />
+                <e p="AtlasAssetBase.cs" t="Include" />
+                <e p="BlendModeMaterials.cs" t="Include" />
+                <e p="EventDataReferenceAsset.cs" t="Include" />
+                <e p="RegionlessAttachmentLoader.cs" t="Include" />
+                <e p="SkeletonDataAsset.cs" t="Include" />
+                <e p="SkeletonDataCompatibility.cs" t="Include" />
+                <e p="SkeletonDataModifierAsset.cs" t="Include" />
+                <e p="SpineAtlasAsset.cs" t="Include" />
+                <e p="SpineSpriteAtlasAsset.cs" t="Include" />
+              </e>
+              <e p="Components" t="Include">
+                <e p="Following" t="Include">
+                  <e p="BoneFollower.cs" t="Include" />
+                  <e p="BoneFollowerGraphic.cs" t="Include" />
+                  <e p="BoundingBoxFollower.cs" t="Include" />
+                  <e p="BoundingBoxFollowerGraphic.cs" t="Include" />
+                  <e p="PointFollower.cs" t="Include" />
+                </e>
+                <e p="Internal" t="Include">
+                  <e p="SkeletonSubmeshGraphic.cs" t="Include" />
+                </e>
+                <e p="RootMotion" t="Include">
+                  <e p="SkeletonMecanimRootMotion.cs" t="Include" />
+                  <e p="SkeletonRootMotion.cs" t="Include" />
+                  <e p="SkeletonRootMotionBase.cs" t="Include" />
+                </e>
+                <e p="SkeletonAnimation.cs" t="Include" />
+                <e p="SkeletonGraphic.cs" t="Include" />
+                <e p="SkeletonMecanim.cs" t="Include" />
+                <e p="SkeletonRenderer.cs" t="Include" />
+                <e p="SkeletonRendererCustomMaterials" t="Include">
+                  <e p="SkeletonGraphicCustomMaterials.cs" t="Include" />
+                  <e p="SkeletonRendererCustomMaterials.cs" t="Include" />
+                </e>
+                <e p="SkeletonRenderSeparator" t="Include">
+                  <e p="SkeletonPartsRenderer.cs" t="Include" />
+                  <e p="SkeletonRenderSeparator.cs" t="Include" />
+                </e>
+                <e p="SkeletonUtility" t="Include">
+                  <e p="ActivateBasedOnFlipDirection.cs" t="Include" />
+                  <e p="FollowLocationRigidbody.cs" t="Include" />
+                  <e p="FollowLocationRigidbody2D.cs" t="Include" />
+                  <e p="FollowSkeletonUtilityRootRotation.cs" t="Include" />
+                  <e p="SkeletonUtility.cs" t="Include" />
+                  <e p="SkeletonUtilityBone.cs" t="Include" />
+                  <e p="SkeletonUtilityConstraint.cs" t="Include" />
+                </e>
+              </e>
+              <e p="ISkeletonAnimation.cs" t="Include" />
+              <e p="Mesh Generation" t="Include">
+                <e p="DoubleBuffered.cs" t="Include" />
+                <e p="MeshGenerator.cs" t="Include" />
+                <e p="MeshRendererBuffers.cs" t="Include" />
+                <e p="SkeletonRendererInstruction.cs" t="Include" />
+                <e p="SpineMesh.cs" t="Include" />
+              </e>
+              <e p="Modules" t="Include">
+                <e p="TK2D" t="Include">
+                  <e p="SpriteCollectionAttachmentLoader.cs" t="Include" />
+                </e>
+              </e>
+              <e p="Shaders" t="Include">
+                <e p="BlendModes" t="Include">
+                  <e p="Spine-Skeleton-PMA-Additive.shader" t="Include" />
+                  <e p="Spine-Skeleton-PMA-Multiply.shader" t="Include" />
+                  <e p="Spine-Skeleton-PMA-Screen.shader" t="Include" />
+                </e>
+                <e p="CGIncludes" t="Include">
+                  <e p="Spine-Common.cginc" t="Include" />
+                  <e p="Spine-DepthOnlyPass.cginc" t="Include" />
+                  <e p="Spine-Outline-Common.cginc" t="Include" />
+                  <e p="Spine-Skeleton-Lit-Common-Shadow.cginc" t="Include" />
+                  <e p="Spine-Skeleton-Lit-Common.cginc" t="Include" />
+                  <e p="Spine-Skeleton-Tint-Common.cginc" t="Include" />
+                </e>
+                <e p="Outline" t="Include">
+                  <e p="BlendModes" t="Include">
+                    <e p="Spine-Skeleton-PMA-Additive-Outline.shader" t="Include" />
+                    <e p="Spine-Skeleton-PMA-Multiply-Outline.shader" t="Include" />
+                    <e p="Spine-Skeleton-PMA-Screen-Outline.shader" t="Include" />
+                  </e>
+                  <e p="CGIncludes" t="Include">
+                    <e p="Spine-Outline-Pass.cginc" t="Include" />
+                  </e>
+                  <e p="SkeletonGraphic" t="Include">
+                    <e p="Spine-SkeletonGraphic-Outline.shader" t="Include" />
+                    <e p="Spine-SkeletonGraphic-TintBlack-Outline.shader" t="Include" />
+                  </e>
+                  <e p="Spine-Skeleton-Fill-Outline.shader" t="Include" />
+                  <e p="Spine-Skeleton-Lit-Outline.shader" t="Include" />
+                  <e p="Spine-Skeleton-Lit-ZWrite-Outline.shader" t="Include" />
+                  <e p="Spine-Skeleton-Outline.shader" t="Include" />
+                  <e p="Spine-Skeleton-OutlineOnly-ZWrite.shader" t="Include" />
+                  <e p="Spine-Skeleton-Tint-Outline.shader" t="Include" />
+                  <e p="Spine-Skeleton-TintBlack-Outline.shader" t="Include" />
+                  <e p="Spine-Special-Skeleton-Grayscale-Outline.shader" t="Include" />
+                  <e p="Sprite" t="Include">
+                    <e p="SpritesPixelLit-Outline.shader" t="Include" />
+                    <e p="SpritesUnlit-Outline.shader" t="Include" />
+                    <e p="SpritesVertexLit-Outline.shader" t="Include" />
+                  </e>
+                </e>
+                <e p="SkeletonGraphic" t="Include">
+                  <e p="CGIncludes" t="Include">
+                    <e p="Spine-SkeletonGraphic-NormalPass.cginc" t="Include" />
+                  </e>
+                  <e p="Spine-SkeletonGraphic-Additive.shader" t="Include" />
+                  <e p="Spine-SkeletonGraphic-Multiply.shader" t="Include" />
+                  <e p="Spine-SkeletonGraphic-Screen.shader" t="Include" />
+                  <e p="Spine-SkeletonGraphic-TintBlack.shader" t="Include" />
+                  <e p="Spine-SkeletonGraphic.shader" t="Include" />
+                </e>
+                <e p="Spine-Skeleton-Fill.shader" t="Include" />
+                <e p="Spine-Skeleton-Lit-ZWrite.shader" t="Include" />
+                <e p="Spine-Skeleton-Lit.shader" t="Include" />
+                <e p="Spine-Skeleton-Tint.shader" t="Include" />
+                <e p="Spine-Skeleton-TintBlack.shader" t="Include" />
+                <e p="Spine-Skeleton.shader" t="Include" />
+                <e p="Spine-Special-Skeleton-Grayscale.shader" t="Include" />
+                <e p="Sprite" t="Include">
+                  <e p="CameraDepthNormalsTexture.shader" t="Include" />
+                  <e p="CameraDepthTexture.shader" t="Include" />
+                  <e p="CameraNormalsTexture.shader" t="Include" />
+                  <e p="CGIncludes" t="Include">
+                    <e p="ShaderMaths.cginc" t="Include" />
+                    <e p="ShaderShared.cginc" t="Include" />
+                    <e p="SpriteLighting.cginc" t="Include" />
+                    <e p="SpritePixelLighting.cginc" t="Include" />
+                    <e p="SpriteShadows.cginc" t="Include" />
+                    <e p="SpriteSpecular.cginc" t="Include" />
+                    <e p="SpriteUnlit.cginc" t="Include" />
+                    <e p="SpriteVertexLighting.cginc" t="Include" />
+                  </e>
+                  <e p="SpriteDepthNormalsTexture.shader" t="Include" />
+                  <e p="SpritesPixelLit.shader" t="Include" />
+                  <e p="SpritesUnlit.shader" t="Include" />
+                  <e p="SpritesVertexLit.shader" t="Include" />
+                </e>
+                <e p="Utility" t="Include">
+                  <e p="Hidden-Spine-Bones.shader" t="Include" />
+                  <e p="HiddenPass.shader" t="Include" />
+                </e>
+              </e>
+              <e p="SkeletonDataModifierAssets" t="Include">
+                <e p="BlendModeMaterials" t="Include">
+                  <e p="BlendModeMaterialsAsset.cs" t="Include" />
+                </e>
+              </e>
+              <e p="SpineAttributes.cs" t="Include" />
+              <e p="Utility" t="Include">
+                <e p="AtlasUtilities.cs" t="Include" />
+                <e p="AttachmentCloneExtensions.cs" t="Include" />
+                <e p="AttachmentRegionExtensions.cs" t="Include" />
+                <e p="MaterialChecks.cs" t="Include" />
+                <e p="SkeletonExtensions.cs" t="Include" />
+                <e p="TimelineExtensions.cs" t="Include" />
+                <e p="YieldInstructions" t="Include">
+                  <e p="WaitForSpineAnimation.cs" t="Include" />
+                  <e p="WaitForSpineAnimationComplete.cs" t="Include" />
+                  <e p="WaitForSpineAnimationEnd.cs" t="Include" />
+                  <e p="WaitForSpineEvent.cs" t="Include" />
+                  <e p="WaitForSpineTrackEntryEnd.cs" t="Include" />
+                </e>
+              </e>
+            </e>
+            <e p="spine-unity.asmdef" t="Include" />
+          </e>
+          <e p="version.txt" t="Include" />
+        </e>
+        <e p="Standard Assets" t="Include">
+          <e p="CrossPlatformInput" t="Include">
+            <e p="CrossPlatformInputGuidelines.txt" t="Include" />
+            <e p="Scripts" t="Include">
+              <e p="AxisTouchButton.cs" t="Include" />
+              <e p="ButtonHandler.cs" t="Include" />
+              <e p="CrossPlatformInputManager.cs" t="Include" />
+              <e p="InputAxisScrollbar.cs" t="Include" />
+              <e p="Joystick.cs" t="Include" />
+              <e p="MobileControlRig.cs" t="Include" />
+              <e p="PlatformSpecific" t="Include">
+                <e p="MobileInput.cs" t="Include" />
+                <e p="StandaloneInput.cs" t="Include" />
+              </e>
+              <e p="TiltInput.cs" t="Include" />
+              <e p="TouchPad.cs" t="Include" />
+              <e p="VirtualInput.cs" t="Include" />
+            </e>
+          </e>
+          <e p="Editor" t="Include">
+            <e p="CrossPlatformInput" t="Include">
+              <e p="CrossPlatformInputInitialize.cs" t="Include" />
+            </e>
+          </e>
+        </e>
+        <e p="TextMesh Pro" t="Include">
+          <e p="Fonts" t="Include">
+            <e p="LiberationSans - OFL.txt" t="Include" />
+          </e>
+          <e p="Resources" t="Include">
+            <e p="LineBreaking Following Characters.txt" t="Include" />
+            <e p="LineBreaking Leading Characters.txt" t="Include" />
+          </e>
+          <e p="Shaders" t="Include">
+            <e p="TMP_Bitmap-Custom-Atlas.shader" t="Include" />
+            <e p="TMP_Bitmap-Mobile.shader" t="Include" />
+            <e p="TMP_Bitmap.shader" t="Include" />
+            <e p="TMP_SDF Overlay.shader" t="Include" />
+            <e p="TMP_SDF SSD.shader" t="Include" />
+            <e p="TMP_SDF-Mobile Masking.shader" t="Include" />
+            <e p="TMP_SDF-Mobile Overlay.shader" t="Include" />
+            <e p="TMP_SDF-Mobile SSD.shader" t="Include" />
+            <e p="TMP_SDF-Mobile.shader" t="Include" />
+            <e p="TMP_SDF-Surface-Mobile.shader" t="Include" />
+            <e p="TMP_SDF-Surface.shader" t="Include" />
+            <e p="TMP_SDF.shader" t="Include" />
+            <e p="TMP_Sprite.shader" t="Include" />
+            <e p="TMPro.cginc" t="Include" />
+            <e p="TMPro_Mobile.cginc" t="Include" />
+            <e p="TMPro_Properties.cginc" t="Include" />
+            <e p="TMPro_Surface.cginc" t="Include" />
+          </e>
+          <e p="Sprites" t="Include">
+            <e p="EmojiOne Attribution.txt" t="Include" />
+          </e>
+        </e>
+      </e>
+      <e p="obj" t="ExcludeRecursive" />
+      <e p="Packages" t="ExcludeRecursive" />
+      <e p="spine-csharp.csproj" t="IncludeRecursive" />
+      <e p="spine-unity-editor.csproj" t="IncludeRecursive" />
+      <e p="spine-unity.csproj" t="IncludeRecursive" />
+      <e p="StickManNew.sln" t="IncludeFlat" />
+      <e p="Temp\Bin" t="ExcludeRecursive" />
+    </e>
+  </component>
+</project>

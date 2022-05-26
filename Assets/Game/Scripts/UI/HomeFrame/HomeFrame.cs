@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
@@ -8,7 +6,7 @@ using STU;
 
 public class HomeFrame : FrameBase {
     [SerializeField] private Button btn_Play;
-    [SerializeField] private Button btn_Spin,btn_Skin,btn_Daily;
+    [SerializeField] private Button btn_Spin,btn_Skin,btn_Daily, btn_Levels;
     [SerializeField] private TextMeshProUGUI txt_Level;
     [SerializeField] private AudioClip musicMenu;
     private void Awake() {
@@ -16,6 +14,7 @@ public class HomeFrame : FrameBase {
         btn_Spin.onClick.AddListener(() => { FrameManager.Instance.Push<SpinFrame>(); });
         btn_Skin.onClick.AddListener(() => { FrameManager.Instance.Push<SkinFrame>(); });
         btn_Daily.onClick.AddListener(() => { FrameManager.Instance.Push<DailyFrame>(); });
+        btn_Levels.onClick.AddListener(() => { FrameManager.Instance.Push<LevelSelectFrame>(); });
     }
 
     private void OnEnable() {

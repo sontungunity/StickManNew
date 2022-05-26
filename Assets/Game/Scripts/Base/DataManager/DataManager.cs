@@ -1,6 +1,5 @@
 using STU;
 using System;
-using System.Collections;
 using System.Collections.Generic;
 using System.IO;
 using UnityEngine;
@@ -10,11 +9,17 @@ public class DataManager : Singleton<DataManager> {
     private string pathFlie => Path.Combine(Application.persistentDataPath, FILE_DATA_NAME);
     private PlayerData playerData;
 
-    public PlayerData PlayerData {
-        get {
-            if(playerData != null) {
+    public PlayerData PlayerData 
+    {
+        get 
+        {
+            if(playerData != null) 
+            {
                 return playerData;
-            } else {
+            }
+            
+            else 
+            {
                 LoadData();
                 return playerData;
             }
@@ -43,7 +48,8 @@ public class DataManager : Singleton<DataManager> {
     }
 
     #region SaveAndLoadPlayer
-    public void SaveData() {
+    public void SaveData() 
+    {
         //PlayerPrefs.SetString(PLAYER_KEY, JsonUtility.ToJson(playerData));
         string data = JsonUtility.ToJson(playerData);
         //if(!Directory.Exists(FILE_DATA_PATH)) {
@@ -51,42 +57,56 @@ public class DataManager : Singleton<DataManager> {
         //    Directory.CreateDirectory(FILE_DATA_PATH);
         //}
 
-        try {
-            using(StreamWriter writer = File.CreateText(pathFlie)) {
+        try 
+        {
+            using(StreamWriter writer = File.CreateText(pathFlie)) 
+            {
                 writer.Write(data);
                 Debug.Log($"[DATA] Write file completed.\n <path>: {pathFlie}\n <content>: {data}");
                 writer.Close();
             }
-        } catch(Exception e) {
+        } 
+        catch(Exception e) 
+        {
             Debug.LogError($"[DATA] Write file failed.\n <path>: {pathFlie}\n <error>: {e}");
         }
     }
-    public void LoadData() {
-        if(File.Exists(pathFlie)) {
-            try {
-                using(StreamReader reader = File.OpenText(pathFlie)) {
+    public void LoadData() 
+    {
+        if(File.Exists(pathFlie)) 
+        {
+            try 
+            {
+                using(StreamReader reader = File.OpenText(pathFlie)) 
+                {
                     string data = reader.ReadToEnd();
                     playerData = JsonUtility.FromJson<PlayerData>(data);
                     reader.Close();
                 }
-            } catch(Exception e) {
+            } 
+            catch(Exception e) 
+            {
                 Debug.Log($"[DATA] Read file no found.\n <path>: {pathFlie}\n <error>: {e}");
             }
-
-        } else {
+        } 
+        else 
+        {
             Debug.Log($"[DATA] Read file no found.\n <path>: {pathFlie}");
             playerData = new PlayerData();
         }
         //SaveData();
     }
 
-    private void OnApplicationPause(bool pause) {
-        if(pause) {
+    private void OnApplicationPause(bool pause) 
+    {
+        if(pause) 
+        {
             SaveData();
         }
     }
 
-    private void OnApplicationQuit() {
+    private void OnApplicationQuit() 
+    {
         SaveData();
     }
     #endregion
@@ -115,13 +135,14 @@ public class DataManager : Singleton<DataManager> {
     }
 
     private void LoadLevelMap() {
-        foreach(LevelMap map in Resources.LoadAll<LevelMap>(LEVELMAPS_PATH)) {
+        foreach(LevelMap map in Resources.LoadAll<LevelMap>(LEVELMAPS_PATH)) 
+        {
             lstMap.Add(map);
         }
     }
 
     public LevelMap GetlevelMapByLevel(int level) {
-        return lstMap.Find(x=>x.Level == level);
+        return lstMap.Find(x=> x.Level == level);
     }
 
     private void LoadWeaponData() {

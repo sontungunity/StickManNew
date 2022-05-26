@@ -13,12 +13,14 @@ public class SkinFrame : FrameBase, IEnhancedScrollerDelegate {
     [SerializeField] private float hightFloor;
     [SerializeField] private SkinReview skinReview;
     [SerializeField] private NarbarManager narManager;
+    
     #region listSkin
     private List<SkinItemData> lstItemSkin = new List<SkinItemData>();
-    private SkinItemData skinUse = default;
+    private SkinItemData _skinUse = default;
     private List<SkinItemData> lstItemSkinUnLock = new List<SkinItemData>();
     private List<SkinItemData> lstItemSkinLock = new List<SkinItemData>();
     #endregion
+    
     private ItemID cur_SkinID = default;
     private PlayerData player => DataManager.Instance.PlayerData;
     private void Awake() {
@@ -35,18 +37,19 @@ public class SkinFrame : FrameBase, IEnhancedScrollerDelegate {
         GenderListSkin();
         myScroller.ReloadData();
         myScroller.ScrollPosition = 0f;
-        
     }
 
     #region Scroller 
-    public EnhancedScrollerCellView GetCellView(EnhancedScroller scroller, int dataIndex, int cellIndex) {
+    public EnhancedScrollerCellView GetCellView(EnhancedScroller scroller, int dataIndex, int cellIndex)
+    {
         SkinFloorShow floor = scroller.GetCellView(skinFloorPref) as SkinFloorShow;
-        int root = dataIndex*3; 
-        floor.Show(GetElementAt(root), GetElementAt(root+1),GetElementAt(root+2), OnSelect);
+        int root = dataIndex * 3; 
+        floor.Show(GetElementAt(root), GetElementAt(root + 1),GetElementAt(root + 2), OnSelect);
         return floor;
     }
 
-    public float GetCellViewSize(EnhancedScroller scroller, int dataIndex) {
+    public float GetCellViewSize(EnhancedScroller scroller, int dataIndex)
+    {
         return hightFloor;
     }
 
@@ -90,21 +93,29 @@ public class SkinFrame : FrameBase, IEnhancedScrollerDelegate {
             default:
                 type = WayGetItem.PriceType.NONE;
                 break;
-
         }
+        
         //Set up list
-        skinUse = null;
+        _skinUse = null;
         lstItemSkinUnLock.Clear();
         lstItemSkinLock.Clear();
         ItemID skinPlayer = DataManager.Instance.PlayerData.SkinID;
-        foreach(var item in DataManager.Instance.LstItem) {
-            if(item is SkinItemData itemskin) {
-                if(itemskin.WayGetItem.Type == type) {
-                    if(itemskin.ItemID == skinPlayer) {
-                        skinUse = itemskin;
-                    }else if(player.Enought(itemskin.ItemID)) {
+        foreach(var item in DataManager.Instance.LstItem) 
+        {
+            if(item is SkinItemData itemskin) 
+            {
+                if(itemskin.WayGetItem.Type == type) 
+                {
+                    if(itemskin.ItemID == skinPlayer) 
+                    {
+                        _skinUse = itemskin;
+                    }
+                    else if(player.Enought(itemskin.ItemID)) 
+                    {
                         lstItemSkinUnLock.Add(itemskin);
-                    } else {
+                    } 
+                    else 
+                    {
                         lstItemSkinLock.Add(itemskin);
                     }
                 }
@@ -112,8 +123,8 @@ public class SkinFrame : FrameBase, IEnhancedScrollerDelegate {
         }
         //Gender listSkin
         lstItemSkin.Clear();
-        if(skinUse != null) {
-            lstItemSkin.Add(skinUse);
+        if(_skinUse != null) {
+            lstItemSkin.Add(_skinUse);
         }
         foreach(var skin in lstItemSkinUnLock) {
             lstItemSkin.Add(skin);

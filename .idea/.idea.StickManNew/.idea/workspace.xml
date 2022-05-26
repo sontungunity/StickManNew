@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="d92654e1-2d14-4ccc-8fd5-59e82fb39156" name="Default Changelist" comment="" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/Assets/Game/Scripts/UI/SpinFrame/SpinFrame.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Game/Scripts/Base/DataManager/ItemStack.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Game/Scripts/UI/SkinFrame/SkinFrame.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Game/Scripts/UI/LevelSelectFrame/LevelSelectFrame.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Game/Scripts/Base/DataManager/DataManager.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/AD3EAA08-78D9-4CBE-8E45-F9C494D71647/eb/e5279b08/MonoBehaviour.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Game/Scripts/UI/SkinFrame/SkinView.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Game/Scripts/UI/SkinFrame/SkinFloorShow.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Game/Scripts/UI/SkinFrame/NarbarManager.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Game/Scripts/Base/DataManager/ItemData.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Game/Scripts/UI/SkinFrame/SkinReview.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Game/Scripts/Base/DataManager/SkinItemData.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Game/Scripts/Base/FrameBase/FrameBase.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Game/Scripts/InGame/Player/PlayerSkin.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Game/Scripts/Base/FrameBase/UIAnimation.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Game/Scripts/UI/GameFrame/GameFrame.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Game/Scripts/Base/Helper/Enums.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/0B59F3B6-14A0-4547-A8BF-657DE1E23F2C/5f/6bc546cf/JsonUtility.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Game/Scripts/Base/FrameBase/FrameManager.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/AD3EAA08-78D9-4CBE-8E45-F9C494D71647/0b/b8faa598/UnityEvent.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/EnhancedScroller/IEnhancedScrollerDelegate.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Game/Scripts/UI/ItemStackView.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Game/Scripts/UI/SoundButton.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Game/Scripts/UI/DailyFrame/DailySave.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Game/Scripts/UI/DailyFrame/DailyViewPlus.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Game/Scripts/UI/DailyFrame/DailyFrame.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Game/Scripts/UI/LevelSelectFrame/LevelSelectView.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Game/Scripts/UI/Collection/CollectionController.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Game/Scripts/UI/HomeFrame.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Game/Scripts/UI/DailyFrame/DailyView.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Game/Scripts/UI/ButtonClose.cs" root0="FORCE_HIGHLIGHTING" />
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/Assets/Game/Scripts/UI/SoundButton.cs" />
+        <option value="$PROJECT_DIR$/Assets/LevelMenu.cs" />
+        <option value="$PROJECT_DIR$/Assets/Game/Scripts/UI/SpinFrame/SpinFrame.cs" />
+        <option value="$PROJECT_DIR$/Assets/Game/Scripts/UI/DailyFrame/DailyView.cs" />
+        <option value="$PROJECT_DIR$/Assets/Game/Scripts/UI/ItemStackView.cs" />
+        <option value="$PROJECT_DIR$/Assets/Game/Scripts/UI/LevelSelectFrame/LevelFrame.cs" />
+        <option value="$PROJECT_DIR$/Assets/Game/Scripts/UI/DailyFrame/DailyFrame.cs" />
+        <option value="$PROJECT_DIR$/Assets/Game/Scripts/UI/LevelSelectFrame/LevelSelectFrame.cs" />
+        <option value="$PROJECT_DIR$/Assets/Game/Scripts/UI/LevelSelectFrame/LevelSelectView.cs" />
+        <option value="$PROJECT_DIR$/Assets/Game/Scripts/UI/HomeFrame.cs" />
+        <option value="$PROJECT_DIR$/Assets/Game/Scripts/UI/ButtonClose.cs" />
+        <option value="$PROJECT_DIR$/Assets/Game/Scripts/UI/SkinFrame/NarbarManager.cs" />
+        <option value="$PROJECT_DIR$/Assets/Game/Scripts/InGame/Player/PlayerSkin.cs" />
+        <option value="$PROJECT_DIR$/Assets/Game/Scripts/UI/SkinFrame/SkinFloorShow.cs" />
+        <option value="$PROJECT_DIR$/Assets/Game/Scripts/UI/SkinFrame/SkinView.cs" />
+        <option value="$PROJECT_DIR$/Assets/Game/Scripts/Base/DataManager/SkinItemData.cs" />
+        <option value="$PROJECT_DIR$/Assets/Game/Scripts/Base/Helper/Enums.cs" />
+        <option value="$PROJECT_DIR$/Assets/Game/Scripts/UI/SkinFrame/SkinFrame.cs" />
+        <option value="$PROJECT_DIR$/Assets/Game/Scripts/UI/GameFrame/GameFrame.cs" />
+        <option value="$PROJECT_DIR$/Assets/Game/Scripts/Base/DataManager/DataManager.cs" />
+      </list>
+    </option>
+  </component>
+  <component name="ProjectId" id="29YYq4iaLEcrb5mdKzBhR313rq3" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="Discover.Launch.Via.Unity" value="true" />
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+  </component>
+  <component name="RunManager" selected="Attach to Unity Editor.Attach to Unity Editor">
+    <configuration name="Attach to Unity Editor &amp; Play" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="UNITY_ATTACH_AND_PLAY" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost">
+      <option name="allowRunningInParallel" value="false" />
+      <option name="listenPortForConnections" value="false" />
+      <option name="pid" />
+      <method v="2" />
+    </configuration>
+    <configuration name="Attach to Unity Editor" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="Unity Debug" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost">
+      <option name="allowRunningInParallel" value="false" />
+      <option name="listenPortForConnections" value="false" />
+      <option name="pid" />
+      <method v="2" />
+    </configuration>
+  </component>
+  <component name="UnityProjectConfiguration" hasMinimizedUI="true" />
+  <component name="UnityUnitTestConfiguration" currentTestLauncher="EditMode" />
+  <component name="VcsManagerConfiguration">
+    <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
+  </component>
+</project>
