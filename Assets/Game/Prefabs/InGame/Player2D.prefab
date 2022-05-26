@@ -235,7 +235,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5886882179965856175}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -1.5, y: -0.74, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -359,6 +359,12 @@ MonoBehaviour:
   - weapon_1_attack3
   longAttack: weapon_2_attack
   climbAttack: climb_attack_1
+  lstSoundATHand: []
+  lstSoundATSword: []
+  longAttackSound: {fileID: 8300000, guid: 1ab4d85a8935c26418272a990f28724b, type: 3}
+  DashSound: {fileID: 0}
+  ClimbSound: {fileID: 0}
+  JumpSound: {fileID: 0}
 --- !u!114 &5886882179965856178
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -433,7 +439,6 @@ MonoBehaviour:
   playerVertical: {fileID: 5886882179965856176}
   playerHorizontal: {fileID: 5886882179965856177}
   rg2D: {fileID: 5886882179965856180}
-  par_Blood: {fileID: 5112590819138126634}
   par_NewBlood: {fileID: 19881554, guid: 0ebcd60dd020022408e53f535d12f313, type: 3}
   timeProtect: 5
   Weapon: {fileID: 0}
@@ -735,11 +740,6 @@ PrefabInstance:
 --- !u!4 &5112590819138126635 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 5600209200992503730, guid: 7161332f931ca9244a68f15a8d6f9a37, type: 3}
-  m_PrefabInstance: {fileID: 811882529692746905}
-  m_PrefabAsset: {fileID: 0}
---- !u!198 &5112590819138126634 stripped
-ParticleSystem:
-  m_CorrespondingSourceObject: {fileID: 5600209200992503731, guid: 7161332f931ca9244a68f15a8d6f9a37, type: 3}
   m_PrefabInstance: {fileID: 811882529692746905}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &3907873179626208942
