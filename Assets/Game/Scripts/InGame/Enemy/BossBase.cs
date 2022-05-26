@@ -1,7 +1,5 @@
 using DG.Tweening;
 using STU;
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class BossBase : EnemyBase

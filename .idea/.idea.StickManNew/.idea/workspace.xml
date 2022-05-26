@@ -9,6 +9,7 @@
   </component>
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$PROJECT_DIR$/Assets/Game/Scripts/UI/SpinFrame/SpinFrame.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Game/Scripts/InGame/Enemy/BossBase.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Game/Scripts/Base/DataManager/ItemStack.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Game/Scripts/UI/SkinFrame/SkinFrame.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Game/Scripts/UI/LevelSelectFrame/LevelSelectFrame.cs" root0="FORCE_HIGHLIGHTING" />
@@ -16,7 +17,9 @@
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/AD3EAA08-78D9-4CBE-8E45-F9C494D71647/eb/e5279b08/MonoBehaviour.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Game/Scripts/UI/SkinFrame/SkinView.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Game/Scripts/UI/SkinFrame/SkinFloorShow.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Game/Scripts/InGame/Enemy/EnemyAnim.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Game/Scripts/UI/SkinFrame/NarbarManager.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Game/Scripts/InGame/Enemy/EnemyBase.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Game/Scripts/Base/DataManager/ItemData.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Game/Scripts/UI/SkinFrame/SkinReview.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Game/Scripts/Base/DataManager/SkinItemData.cs" root0="FORCE_HIGHLIGHTING" />
@@ -25,13 +28,18 @@
     <setting file="file://$PROJECT_DIR$/Assets/Game/Scripts/Base/FrameBase/UIAnimation.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Game/Scripts/UI/GameFrame/GameFrame.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Game/Scripts/Base/Helper/Enums.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Game/Scripts/InGame/Player/PlayerAttack.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Game/Scripts/UI/PlayerSpinUI.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Game/Scripts/InGame/Player/PlayerAnim.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/0B59F3B6-14A0-4547-A8BF-657DE1E23F2C/5f/6bc546cf/JsonUtility.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Game/Scripts/Base/FrameBase/FrameManager.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/AD3EAA08-78D9-4CBE-8E45-F9C494D71647/0b/b8faa598/UnityEvent.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/EnhancedScroller/IEnhancedScrollerDelegate.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Game/Scripts/InGame/Player/Player.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Game/Scripts/UI/ItemStackView.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Game/Scripts/UI/SoundButton.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Game/Scripts/UI/DailyFrame/DailySave.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Game/Scripts/InGame/Enemy/Ravager/RavagerBoss.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Game/Scripts/UI/DailyFrame/DailyViewPlus.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Game/Scripts/UI/DailyFrame/DailyFrame.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Game/Scripts/UI/LevelSelectFrame/LevelSelectView.cs" root0="FORCE_HIGHLIGHTING" />
@@ -63,6 +71,11 @@
         <option value="$PROJECT_DIR$/Assets/Game/Scripts/UI/SkinFrame/SkinFrame.cs" />
         <option value="$PROJECT_DIR$/Assets/Game/Scripts/UI/GameFrame/GameFrame.cs" />
         <option value="$PROJECT_DIR$/Assets/Game/Scripts/Base/DataManager/DataManager.cs" />
+        <option value="$PROJECT_DIR$/Assets/Game/Scripts/InGame/Player/Player.cs" />
+        <option value="$PROJECT_DIR$/Assets/Game/Scripts/InGame/Enemy/BossBase.cs" />
+        <option value="$PROJECT_DIR$/Assets/Game/Scripts/InGame/Enemy/EnemyAnim.cs" />
+        <option value="$PROJECT_DIR$/Assets/Game/Scripts/InGame/Enemy/EnemyBase.cs" />
+        <option value="$PROJECT_DIR$/Assets/Game/Scripts/InGame/Enemy/Ravager/RavagerBoss.cs" />
       </list>
     </option>
   </component>

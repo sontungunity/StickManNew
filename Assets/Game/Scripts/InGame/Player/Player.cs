@@ -1,6 +1,5 @@
 using STU;
 using System;
-using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using DG.Tweening;
@@ -17,7 +16,10 @@ public class Player : CharacterBase {
     [SerializeField] private PlayerHorizontal playerHorizontal;
     [SerializeField] private Rigidbody2D rg2D;
     [Header("Blood")]
-    [SerializeField] private ParticleSystem par_Blood;
+    
+    // [SerializeField] private ParticleSystem par_Blood;
+    [SerializeField] private ParticleSystem par_NewBlood;
+    
     [Header("Custom")]
     [SerializeField] private float timeProtect;
     private PlayerData playerData => DataManager.Instance.PlayerData;
@@ -68,10 +70,11 @@ public class Player : CharacterBase {
                 FrameManager.Instance.Push<ReviveFrame>();
             });
         } else {
-            SetPlayerStatus(EnumPlayerStatus.GETDAME, () => {
+            SetPlayerStatus(EnumPlayerStatus.GETDAME, () => 
+            {
                 SetPlayerStatus(EnumPlayerStatus.IDLE);
             });
-            par_Blood.Play();
+            par_NewBlood.Play();
         }
         EventDispatcher.Dispatch<EventKey.PlayerChange>(new EventKey.PlayerChange());
     }
@@ -94,7 +97,7 @@ public class Player : CharacterBase {
             tween = DOVirtual.DelayedCall(timeProtect, () => {
                 isProtect = false;
             });
-            par_Blood.Play();
+            par_NewBlood.Play();
         }
         EventDispatcher.Dispatch<EventKey.PlayerChange>(new EventKey.PlayerChange());
 
@@ -115,7 +118,7 @@ public class Player : CharacterBase {
     }
 
     private void SetPlayerStatus(EnumPlayerStatus status, Action callback = null) {
-        SortStatus sortstatus = lstSortStatus.Find(x=>x.TypeStatus == status);
+        SortStatus sortstatus = lstSortStatus.Find(x=> x.TypeStatus == status);
         curStatus.Set(sortstatus);
         //set up 
         if(curStatus.TypeStatus == EnumPlayerStatus.DASH) {
