@@ -4,6 +4,7 @@ using Random = UnityEngine.Random;
 
 public class Coin : MonoBehaviour
 {
+    [SerializeField] private AudioClip audioCoin;
     private void OnCollisionEnter2D(Collision2D collision) {
         Player player = collision.gameObject.GetComponent<Player>();
         if(player!= null) {
@@ -14,6 +15,7 @@ public class Coin : MonoBehaviour
                 //DataManager.Instance.PlayerData.AddItem(new ItemStack(ItemID.COIN,1));
                 InGameManager.Instance.CoinInGame += random;
                 SpawnerTextDame.Instance.Spawner(player.transform.position,$"+{random}");
+                SoundManager.Instance.PlaySound(audioCoin);
                 this.Recycle();
             }
         }

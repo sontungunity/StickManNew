@@ -6,21 +6,22 @@ public static class RuleDameAndHeart
 {
     public const int Heart_Base_Player = 150;
     public const int Dame_Base_Player = 20;
+    public const int Coin_UP_Level = 300;
+    public const int Heart_Up_Level = 15;
+    public const int Dame_Up_Level = 2;
     #region Rule Dame - Heart - Coin player;
-    public static void GetDameHeartByLevel(int level, out int heart, out int damage, out int coin) {
-        if(level == 0) {
-            damage = 0;
-            heart = 0;
-            coin = 0;
-        } else if(level > 0 && level < 6) { // dame = level , tiền thì cấp 1 = 300, cấp sau x2 cấp trước
-            damage = level;
-            heart =  2 * level;
-            coin = 2 ^ (level - 1) * 30;
-        } else { // cấp 6 trở đi mặc định
-            damage = 5;
-            heart = 10;
-            coin = 2 ^ (level - 1) * 30;
-        }
+    public static LevelPlayerInfo GetTotalDameHeartCoinByLevel(int level) {
+        LevelPlayerInfo result = new LevelPlayerInfo();
+        result.Heart = Heart_Base_Player + level * Heart_Up_Level;
+        result.Damage = Dame_Base_Player + level * Dame_Up_Level;
+        result.Coin = Coin_UP_Level * level;
+        return result;
     }
     #endregion
+}
+
+public struct LevelPlayerInfo{
+    public int Heart;
+    public int Damage;
+    public int Coin;
 }

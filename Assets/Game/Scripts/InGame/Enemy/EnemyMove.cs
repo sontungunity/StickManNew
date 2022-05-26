@@ -5,13 +5,13 @@ using System.Linq;
 
 public class EnemyMove : MonoBehaviour
 {
-    [SerializeField] private EnemyBase enemyBase;
-    [SerializeField] private Rigidbody2D rb2D;
-    [SerializeField] private float speed = 2f;
-    [SerializeField] private float speedTarget = 8f;
-    [SerializeField] private BeamRayCast beamFace;
-    [SerializeField] private BeamRayCast beamDownward;
-    private void FixedUpdate() {
+    [SerializeField] protected EnemyBase enemyBase;
+    [SerializeField] protected Rigidbody2D rb2D;
+    [SerializeField] protected float speed = 2f;
+    [SerializeField] protected float speedTarget = 8f;
+    [SerializeField] protected BeamRayCast beamFace;
+    [SerializeField] protected BeamRayCast beamDownward;
+    protected virtual void FixedUpdate() {
         if(enemyBase.CurStatus != EnemyStatus.MOVE && enemyBase.CurStatus != EnemyStatus.DETECH) {
             return;
         }
@@ -31,7 +31,7 @@ public class EnemyMove : MonoBehaviour
         }
     }
 
-    private bool CheckDownWardCanMove() {
+    protected bool CheckDownWardCanMove() {
         Collider2D collider2D = null;
         foreach(var col in beamDownward.ArrayCollider2D) {
             if(col != null) {
@@ -42,7 +42,7 @@ public class EnemyMove : MonoBehaviour
         return collider2D != null;
     }
 
-    private bool CheckFaceCanMove() {
+    protected bool CheckFaceCanMove() {
         Collider2D collider2D = null;
         foreach(var col in beamFace.ArrayCollider2D) {
             if(col != null) {

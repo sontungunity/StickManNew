@@ -30,10 +30,6 @@ public class BossBarHeart : MonoBehaviour
         barPercentUI.Show(boss.PercentHeart);
     }
 
-    private void Start() {
-        StartActive(false);
-    }
-
     public void StartActive(bool active) {
         if(active) {
             boss = InGameManager.Instance.LevelMap.transform.GetComponentInChildren<BossBase>();

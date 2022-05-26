@@ -24,7 +24,7 @@ public class WeaponArea : MonoBehaviour
 
     private void Start() {
         display.anchoredPosition = new Vector2(-positionDisplay.x, positionDisplay.y);
-        btn_Move.transform.eulerAngles = new Vector3(0, 0, 180);
+        btn_Move.transform.eulerAngles = new Vector3(0, 0, 0);
         Ondisplay = false;
         GenderWeapon();
     }
@@ -49,15 +49,15 @@ public class WeaponArea : MonoBehaviour
         float angleTarget = 0f;
         if(Ondisplay) {
             xTarget = positionDisplay.x;
-            angleTarget = 0f;
+            angleTarget = 180f;
         } else {
             xTarget = -positionDisplay.x;
-            angleTarget = 180f;
+            angleTarget = 0f;
         }
         float distance = Mathf.Abs(display.anchoredPosition.x - xTarget);
         float time = distance/speedMove;
         tweenmove = display.DOAnchorPosX(xTarget, time).SetEase(Ease.Linear);
-        float angle = Mathf.Abs(display.eulerAngles.z - angleTarget);
+        float angle = Mathf.Abs(btn_Move.GetComponent<RectTransform>().eulerAngles.z - angleTarget);
         float timeAngle = angle/speedRotation;
         tweenRotate = btn_Move.transform.DORotate(new Vector3(0,0,angleTarget), timeAngle).SetEase(Ease.Linear);
     }

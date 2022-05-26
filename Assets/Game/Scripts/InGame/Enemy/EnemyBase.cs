@@ -39,6 +39,7 @@ public class EnemyBase : CharacterBase {
     protected Tween tween;
 
     protected virtual void Start() {
+        SetStatus(EnemyStatus.IDLE);
         enemyBar.Init();
     }
 
@@ -53,11 +54,13 @@ public class EnemyBase : CharacterBase {
         //}
     }
 
-    public override void GetDame(int dame,GameObject objMakeDame = null) {
+    public override void GetDame(int dame, GameObject objMakeDame = null) {
         if(curStatus == EnemyStatus.DIE || curHeart <= 0) {
             return;
         }
         curHeart -= dame;
+        Vector3 randomPos = new Vector3(Random.Range(-0.5f,0.5f),Random.Range(-0.5f,0.5f),0);
+        SpawnerTextDame.Instance.Spawner(transform.position + randomPos, dame.ToString());
         if(curHeart <= 0) {
             Die(objMakeDame);
         } else {
@@ -130,7 +133,7 @@ public class EnemyBase : CharacterBase {
         } else if(curStatus == EnemyStatus.DETECH || curStatus == EnemyStatus.MOVE) {
             enemyAnim.SetAnimWalk();
         } else {
-            enemyAnim.SetAnimWalk();
+            enemyAnim.AnimIdle();
         }
         return true;
     }
@@ -142,12 +145,13 @@ public class EnemyBase : CharacterBase {
             transform.gameObject.SetActive(false);
         });
         collider2D.isTrigger = true;
-        if(objMakeDame!=null && objMakeDame.transform.position.x > transform.position.x) {
-            rg2D.AddForce(new Vector2(-forceDie.x,forceDie.y), ForceMode2D.Impulse);
+        if(objMakeDame != null && objMakeDame.transform.position.x > transform.position.x) {
+            rg2D.AddForce(new Vector2(-forceDie.x, forceDie.y), ForceMode2D.Impulse);
         } else {
             rg2D.AddForce(forceDie, ForceMode2D.Impulse);
         }
-        SpawnerCoin.Instance.Spawner(transform.position, 3);
+        int randomCoin = Random.Range(3,6);
+        SpawnerCoin.Instance.Spawner(transform.position + Vector3.up, randomCoin);
         InGameManager.Instance.AddEnemyDie();
     }
 

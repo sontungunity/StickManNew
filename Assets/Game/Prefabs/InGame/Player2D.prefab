@@ -299,7 +299,7 @@ MonoBehaviour:
   speedAir: 6
   speedAttack: 3
   timeDash: 0.2
-  speedDash: 36
+  speedDash: 20
   display: {fileID: 5886882180011657170}
   playerAttack: {fileID: 5886882179965856178}
   player: {fileID: 5886882179965856173}
@@ -322,6 +322,7 @@ MonoBehaviour:
   playerAttack: {fileID: 5886882179965856178}
   player: {fileID: 5886882179965856173}
   lstStatusIdle: 0300000004000000090000000e000000
+  soundJump: {fileID: 0}
 --- !u!114 &5886882179965856179
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -561,7 +562,7 @@ MonoBehaviour:
   disableRenderingOnOverride: 1
   _animationName: idle
   loop: 1
-  timeScale: 1
+  timeScale: 1.25
 --- !u!70 &8420900253042136515
 CapsuleCollider2D:
   m_ObjectHideFlags: 0

@@ -26,7 +26,7 @@ public class CollectionItem : MonoBehaviour {
 
     public void Move(Vector2 root, Vector2 startPos, Vector2 endPos, Action callback = null, float timeDelay = 0) {
         transform.position = root;
-        tween = transform.DOMove(startPos, 0.2f).OnComplete(() => {
+        tween = transform.DOMove(startPos, 0.5f).OnComplete(() => {
             float time = Vector2.Distance(startPos,endPos)/speed;
             tween = DOVirtual.DelayedCall(timeDelay, () => {
                 tween = transform.DOMove(endPos, time).SetEase(Ease.Linear).OnComplete(() => {

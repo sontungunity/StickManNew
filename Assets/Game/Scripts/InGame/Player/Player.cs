@@ -27,6 +27,16 @@ public class Player : CharacterBase {
     private SortStatus curStatus;
     public SortStatus CurStatus => curStatus;
     public WeaponData Weapon = null;
+    public int Dame {
+        get {
+            int result = curDame;
+            if(Weapon != null) {
+                int bonus = Mathf.RoundToInt(curDame*Weapon.Dame/100f);
+                result += bonus;
+            }
+            return result;
+        }
+    }
     private bool isProtect = false;
     private Tween tween;
     protected override void Awake() {
@@ -43,21 +53,15 @@ public class Player : CharacterBase {
         SetUpHeartDame();
         SetPlayerStatus(EnumPlayerStatus.IDLE);
         isProtect = false;
+        EventDispatcher.Dispatch<EventKey.PlayerChange>(new EventKey.PlayerChange());
     }
 
     private void SetUpHeartDame() {
-        originHeart = RuleDameAndHeart.Heart_Base_Player;
-        originDame = RuleDameAndHeart.Dame_Base_Player;
-
-        for(int i = 0; i <= playerData.LevelPlayer; i++) {
-            RuleDameAndHeart.GetDameHeartByLevel(i, out int heart, out int damage, out int coin);
-            originHeart += heart;
-            originDame += damage;
-        }
-
+        var levelPlayerInfo = RuleDameAndHeart.GetTotalDameHeartCoinByLevel(playerData.LevelPlayer);
+        originHeart = levelPlayerInfo.Heart;
+        originDame = levelPlayerInfo.Damage;
         curHeart = originHeart;
         curDame = originDame;
-        EventDispatcher.Dispatch<EventKey.PlayerChange>(new EventKey.PlayerChange());
     }
 
     public override void GetDame(int dame, GameObject objMakeDame = null) {
@@ -89,7 +93,7 @@ public class Player : CharacterBase {
                 FrameManager.Instance.Push<ReviveFrame>();
             });
         } else {
-            SetPlayerStatus(EnumPlayerStatus.STUN,() => {
+            SetPlayerStatus(EnumPlayerStatus.STUN, () => {
                 SetPlayerStatus(EnumPlayerStatus.IDLE);
             });
             isProtect = true;
@@ -100,7 +104,6 @@ public class Player : CharacterBase {
             par_NewBlood.Play();
         }
         EventDispatcher.Dispatch<EventKey.PlayerChange>(new EventKey.PlayerChange());
-
     }
 
 
@@ -177,6 +180,7 @@ public class Player : CharacterBase {
     public void SetWeapon(WeaponData data) {
         this.Weapon = data;
         playerAnim.AddSkin(Weapon.NameSkin);
+        EventDispatcher.Dispatch<EventKey.PlayerChange>(new EventKey.PlayerChange());
     }
 }
 

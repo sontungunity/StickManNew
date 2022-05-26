@@ -9,7 +9,7 @@ using DG.Tweening;
 public class EnemyAttack : MonoBehaviour
 {
     [SerializeField] protected EnemyAnim enemyAnim;
-    [SerializeField, SpineEvent] private string eventATK;
+    [SerializeField, SpineEvent] protected string eventATK;
     [SerializeField] private OverlapCircleAll circleAttackInfo;
     [SerializeField] protected EnemyBase enemyBase;
     [SerializeField] private float timeDelayAttack= 1f;
@@ -31,7 +31,6 @@ public class EnemyAttack : MonoBehaviour
                 canAttack = true;
             });
         }
-        
     }
 
     protected virtual void EventDamege(TrackEntry trackEntry, Spine.Event e) {

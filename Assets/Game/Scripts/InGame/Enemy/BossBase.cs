@@ -5,7 +5,7 @@ using UnityEngine;
 public class BossBase : EnemyBase
 {
     protected override void Start() {
-        
+        SetStatus(EnemyStatus.IDLE);
     }
 
     public override void GetDame(int dame, GameObject objMakeDame = null) {

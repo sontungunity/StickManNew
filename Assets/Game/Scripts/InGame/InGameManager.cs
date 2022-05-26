@@ -7,6 +7,7 @@ public class InGameManager : Singleton<InGameManager>
 {
     [SerializeField] private Camera camera;
     [SerializeField] private Player player;
+    [SerializeField] private AudioClip musicInGame;
     public Camera Camera => camera;
     public Player Player => player;
     [Header("Edit")]
@@ -20,6 +21,7 @@ public class InGameManager : Singleton<InGameManager>
 
     private void Start() {
         SetupNewGame();
+        SoundManager.Instance.PlayMusic(musicInGame);
     }
 
     public void SetupNewGame() {
@@ -32,16 +34,16 @@ public class InGameManager : Singleton<InGameManager>
             Destroy(LevelMap.gameObject);
         }
         SetUpMap();
+        EventDispatcher.Dispatch<EventKey.EventSetupNewGame>(new EventKey.EventSetupNewGame());
     }
 
     private void SetUpMap() {
         if(Edit) {
             return;
         }
-        var mapPref = DataManager.Instance.GetlevelMapByLevel(DataManager.Instance.PlayerData.LevelMap);
+        var mapPref = DataManager.Instance.GetlevelMapByLevel(GameManager.Instance.CurLevel);
         LevelMap = Instantiate(mapPref, transform);
         LevelMap.transform.localPosition = Vector3.zero;
-        EventDispatcher.Dispatch<EventKey.EnemyDie>(new EventKey.EnemyDie());
     }
 
     public void AddEnemyDie(int amount = 1) {
@@ -51,11 +53,30 @@ public class InGameManager : Singleton<InGameManager>
 
     public void FinishMap() {
         DataManager.Instance.PlayerData.GetLevelPass(LevelMap.Level);
-        SceneManager.Instance.LoadSceneAsyn(SceneManager.SCENE_HOME);
+        GameManager.Instance.CurLevel = DataManager.Instance.PlayerData.LevelMap;
+        var WinFrame =  FrameManager.Instance.Push<WinFrame>(onCompleted:()=> {
+            ItemStack rewardInGame = new ItemStack(ItemID.COIN, InGameManager.Instance.CoinInGame);
+            CollectionController.Instance.GetItemStack(rewardInGame, new Vector2(Screen.width/2,Screen.height/2), () => {
+                DataManager.Instance.PlayerData.AddItem(rewardInGame);
+            });
+        });
+        
     }
 
     public void Revived() {
         player.transform.position = PositionRevive;
         player.SetUpPlayer();
+    }
+
+    public void SetUpBoss(bool onBossArea = false) {
+        var frameGame = FrameManager.Instance.GetFrame<GameFrame>();
+        if(onBossArea) {
+            frameGame.BossBarHeart.StartActive(true);
+            frameGame.RoomSetting.StartActive(false);
+            frameGame.RoomSetting.SetUpOrtho(10f);
+        } else {
+            frameGame.BossBarHeart.StartActive(false);
+            frameGame.RoomSetting.StartActive(true);
+        }
     }
 }
