@@ -9,6 +9,7 @@ public class EnemyAnim : SpineBase
     [SerializeField, SpineAnimation] private string anim_GetDame;
     [SerializeField, SpineAnimation] private List<string> lstStrAttack;
     [SerializeField, SpineAnimation] private string anim_Walk;
+    [SerializeField] private AudioClip fire;
 
     public void SetAnimDie(Action callBack = null) {
         SetAnim(0, anim_Die, false, callBack);
@@ -19,6 +20,7 @@ public class EnemyAnim : SpineBase
     }
     public void SetAnimAttack(Action callBack = null) {
         int index = UnityEngine.Random.Range(0,lstStrAttack.Count);
+        SoundManager.Instance.PlaySound(fire);
         SetAnim(0, lstStrAttack[index], false, callBack);
     }
 

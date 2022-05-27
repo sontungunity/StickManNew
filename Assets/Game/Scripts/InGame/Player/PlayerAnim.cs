@@ -30,6 +30,7 @@ public class PlayerAnim : SpineBase {
     [SerializeField] private AudioClip DashSound;
     [SerializeField] private AudioClip ClimbSound;
     [SerializeField] private AudioClip JumpSound;
+    [SerializeField] private AudioClip GetDameSound;
 
     protected override void Awake() {
         base.Awake();
@@ -71,12 +72,14 @@ public class PlayerAnim : SpineBase {
                 break;
             case EnumPlayerStatus.GETDAME:
                 SetAnim(0, animGetDame, false, callback);
+                SoundManager.Instance.PlaySound(GetDameSound);
                 break;
             case EnumPlayerStatus.WIN:
                 SetAnim(0, animWin, false, callback);
                 break;
             case EnumPlayerStatus.STUN:
                 SetAnim(0, animStun, false, callback);
+                SoundManager.Instance.PlaySound(GetDameSound);
                 break;
             case EnumPlayerStatus.JUMPBEFOR:
                 SetAnim(0, animJumpBefor, false, callback);

@@ -106,8 +106,6 @@ public class Player : CharacterBase {
         EventDispatcher.Dispatch<EventKey.PlayerChange>(new EventKey.PlayerChange());
     }
 
-
-
     public bool SetPlayerStatusCheckRank(EnumPlayerStatus typeAnim, Action callback = null) {
         SortStatus sortStatus = lstSortStatus.Find(x=>x.TypeStatus == typeAnim);
         if(sortStatus == null) {
