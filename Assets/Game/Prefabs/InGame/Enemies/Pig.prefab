@@ -470,7 +470,7 @@ MonoBehaviour:
   collider2D: {fileID: 4492985602552981685}
   rg2D: {fileID: 7949312967967226578}
   forceDie: {x: 20, y: 5}
-  par_blooding: {fileID: 19803318, guid: fcb242a204cb73e46bb764583d0bf1fa, type: 3}
+  particleBlood: {fileID: 4335303442995092700}
 --- !u!114 &6697500074227366537
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -853,5 +853,10 @@ PrefabInstance:
 --- !u!4 &4335303442995092701 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 8960922227965646665, guid: 65f84854a8bb2be46a137656adf0b3e7, type: 3}
+  m_PrefabInstance: {fileID: 4643634291581602708}
+  m_PrefabAsset: {fileID: 0}
+--- !u!198 &4335303442995092700 stripped
+ParticleSystem:
+  m_CorrespondingSourceObject: {fileID: 8960922227965646664, guid: 65f84854a8bb2be46a137656adf0b3e7, type: 3}
   m_PrefabInstance: {fileID: 4643634291581602708}
   m_PrefabAsset: {fileID: 0}

@@ -22,10 +22,7 @@ public class PlayerAnim : SpineBase {
     [SerializeField, SpineAnimation] private List<string> lstAttackNone;
     [SerializeField, SpineAnimation] private List<string> lstAttackWeapon;
     [SerializeField, SpineAnimation] private string longAttack;
-<<<<<<< HEAD
     [SerializeField, SpineAnimation] private string climbAttack,climbAttackWeapon;
-=======
-    [SerializeField, SpineAnimation] private string climbAttack;
     [Header("Sound")]
     [SerializeField] private List<AudioClip> lstSoundATHand;
     [SerializeField] private List<AudioClip> lstSoundATSword;
@@ -34,7 +31,6 @@ public class PlayerAnim : SpineBase {
     [SerializeField] private AudioClip ClimbSound;
     [SerializeField] private AudioClip JumpSound;
 
->>>>>>> origin/PhuongLe
     protected override void Awake() {
         base.Awake();
     }

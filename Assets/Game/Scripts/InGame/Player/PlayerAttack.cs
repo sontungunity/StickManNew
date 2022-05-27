@@ -76,10 +76,13 @@ public class PlayerAttack : MonoBehaviour {
             if(!player.SetPlayerStatusCheckRank(EnumPlayerStatus.ATTACK2, DoAttack)) {
                 SetUpNoneAttack();
             }
+            return;
         } else if(player.CurStatus.TypeStatus == EnumPlayerStatus.ATTACK2 && TurnAttack.input > 2) {
             player.SetPlayerStatusCheckRank(EnumPlayerStatus.ATTACK3, () => { SetUpNoneAttack(); });
+            return;
         } else {
             SetUpNoneAttack();
+            return;
         }
     }
 

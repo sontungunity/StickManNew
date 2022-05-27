@@ -14,8 +14,6 @@ public class PlayerVertical : MonoBehaviour
     [SerializeField] private Player player;
     [Header("ListAnim")]
     [SerializeField] private List<EnumPlayerStatus> lstStatusIdle;
-    [Header("Sound")]
-    [SerializeField] private AudioClip soundJump;
     private TurnJump turnJump;
     public TurnJump JumpInfo => turnJump;
     private bool doJump;

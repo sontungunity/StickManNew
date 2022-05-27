@@ -14,8 +14,6 @@ public class EnemyBase : CharacterBase {
     [SerializeField] protected Vector2 forceDie = new Vector2(20,5);
     [Header("Effect")]
     [SerializeField] protected ParticleSystem particleBlood;
-
-    [SerializeField] private ParticleSystem par_newBlood;
     // [SerializeField] protected ParticleSystem par_blooding;
     public Rigidbody2D Rg2D => rg2D;
     public Transform Display => display;
@@ -71,7 +69,6 @@ public class EnemyBase : CharacterBase {
             });
             enemyBar.UpdateHeart(PercentHeart);
             particleBlood?.Play();
-            par_newBlood.Play();
         }
     }
     protected virtual void SetupStatus() {
