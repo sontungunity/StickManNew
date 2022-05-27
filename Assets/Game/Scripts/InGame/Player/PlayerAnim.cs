@@ -22,13 +22,23 @@ public class PlayerAnim : SpineBase {
     [SerializeField, SpineAnimation] private List<string> lstAttackNone;
     [SerializeField, SpineAnimation] private List<string> lstAttackWeapon;
     [SerializeField, SpineAnimation] private string longAttack;
+<<<<<<< HEAD
     [SerializeField, SpineAnimation] private string climbAttack,climbAttackWeapon;
+=======
+    [SerializeField, SpineAnimation] private string climbAttack;
+    [Header("Sound")]
+    [SerializeField] private List<AudioClip> lstSoundATHand;
+    [SerializeField] private List<AudioClip> lstSoundATSword;
+    [SerializeField] private AudioClip longAttackSound;
+    [SerializeField] private AudioClip DashSound;
+    [SerializeField] private AudioClip ClimbSound;
+    [SerializeField] private AudioClip JumpSound;
+
+>>>>>>> origin/PhuongLe
     protected override void Awake() {
         base.Awake();
     }
-
-
-
+    
     public void HalderAnim(EnumPlayerStatus typeAnim, Action callback = null) {
         switch(typeAnim) {
             case EnumPlayerStatus.IDLE:
@@ -39,6 +49,7 @@ public class PlayerAnim : SpineBase {
                 break;
             case EnumPlayerStatus.DASH:
                 SetAnim(0, animDash, true, callback);
+                SoundManager.Instance.PlaySound(DashSound);
                 break;
             case EnumPlayerStatus.JUMP:
                 SetAnim(0, animJump, true, callback);
@@ -57,6 +68,7 @@ public class PlayerAnim : SpineBase {
                 break;
             case EnumPlayerStatus.CLIMB:
                 SetAnim(0, animClimb, false, callback);
+                SoundManager.Instance.PlaySound(ClimbSound);
                 break;
             case EnumPlayerStatus.DIE:
                 SetAnim(0, animDie, false, callback);
@@ -72,6 +84,7 @@ public class PlayerAnim : SpineBase {
                 break;
             case EnumPlayerStatus.JUMPBEFOR:
                 SetAnim(0, animJumpBefor, false, callback);
+                SoundManager.Instance.PlaySound(JumpSound);
                 break;
             default:
                 SetAnim(0, animIdle, true, callback);
@@ -91,6 +104,26 @@ public class PlayerAnim : SpineBase {
         }
     }
 
+    public AudioClip GetAudioClipByWeaponIndex(WeaponData data, int index)
+    {
+        if(data == null) 
+        {
+            return lstSoundATHand[index];
+        } 
+        else if(data.TypeWeapon == TypeWeapon.SORT)
+        {
+            return lstSoundATSword[index];
+        } 
+        else if(data.TypeWeapon == TypeWeapon.LONG) 
+        {
+            return longAttackSound;
+        } 
+        else 
+        {
+            return lstSoundATHand[index];
+        }
+    }
+
     public void HalderAnimAttack(EnumPlayerStatus enumPlayerStatus, Action callback) {
         if(enumPlayerStatus != EnumPlayerStatus.ATTACK1 && enumPlayerStatus != EnumPlayerStatus.ATTACK2 && enumPlayerStatus != EnumPlayerStatus.ATTACK3) {
             return;
@@ -103,12 +136,20 @@ public class PlayerAnim : SpineBase {
                 SetAnim(0, climbAttackWeapon, false, callback);
             }
         } else {
-            if(enumPlayerStatus == EnumPlayerStatus.ATTACK1) {
+            if(enumPlayerStatus == EnumPlayerStatus.ATTACK1) 
+            {
                 SetAnim(0, GetStringAnimByWeapon(player.Weapon, 0), false, callback);
-            } else if(enumPlayerStatus == EnumPlayerStatus.ATTACK2) {
+                SoundManager.Instance.PlaySound(GetAudioClipByWeaponIndex(player.Weapon, 0));
+            } 
+            else if(enumPlayerStatus == EnumPlayerStatus.ATTACK2) 
+            {
                 SetAnim(0, GetStringAnimByWeapon(player.Weapon, 1), false, callback);
-            } else {
+                SoundManager.Instance.PlaySound(GetAudioClipByWeaponIndex(player.Weapon, 1));
+            } 
+            else 
+            {
                 SetAnim(0, GetStringAnimByWeapon(player.Weapon, 2), false, callback);
+                SoundManager.Instance.PlaySound(GetAudioClipByWeaponIndex(player.Weapon, 2));
             }
         }
     }
