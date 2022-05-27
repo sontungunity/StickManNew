@@ -12,7 +12,7 @@ public class PlayerAttack : MonoBehaviour {
     [SerializeField] private Player player;
     [SerializeField] private PlayerAnim playerAnim;
     [SerializeField] private PlayerMovement playerMovemenet;
-    [SerializeField] private OverlapCircleAll circleAttackHand,circleAttackSort,circleAttackWall;
+    [SerializeField] private OverlapCircleAll circleAttackHand,circleAttackSort,circleAttackHandWall,circleAttackSortWall;
     [SerializeField] private Transform positionArrow;
     [Header("ListAnim")]
     [SerializeField] private List<EnumPlayerStatus> lstStatusIdle;
@@ -92,12 +92,18 @@ public class PlayerAttack : MonoBehaviour {
         // Play some sound if the event named "footstep" fired.
         if(e.Data.Name == eventATK) {
             if(playerMovemenet.PlayerTourch == PlayerTourch.WALL) {
-                HalderEventDameByOverlapCircleAll(circleAttackWall);
+                if(player.Weapon == null) {
+                    HalderEventDameByOverlapCircleAll(circleAttackHandWall,player.curDame);
+                } else if(player.Weapon.TypeWeapon == TypeWeapon.SORT) {
+                    HalderEventDameByOverlapCircleAll(circleAttackSortWall,player.Dame);
+                } else if(player.Weapon.TypeWeapon == TypeWeapon.LONG) {
+                    HalderEventDameByOverlapCircleAll(circleAttackHandWall,player.curDame);
+                }
             } else {
                 if(player.Weapon == null) {
-                    HalderEventDameByOverlapCircleAll(circleAttackHand);
-                }else if(player.Weapon.TypeWeapon == TypeWeapon.SORT) {
-                    HalderEventDameByOverlapCircleAll(circleAttackSort);
+                    HalderEventDameByOverlapCircleAll(circleAttackHand,player.curDame);
+                } else if(player.Weapon.TypeWeapon == TypeWeapon.SORT) {
+                    HalderEventDameByOverlapCircleAll(circleAttackSort,player.Dame);
                 }else if(player.Weapon.TypeWeapon == TypeWeapon.LONG) {
                     HalderEventAttackLong(player.Weapon);
                 }
@@ -105,12 +111,12 @@ public class PlayerAttack : MonoBehaviour {
         }
     }
 
-    private void HalderEventDameByOverlapCircleAll(OverlapCircleAll infoAttack) {
+    private void HalderEventDameByOverlapCircleAll(OverlapCircleAll infoAttack,int dame) {
         Collider2D[] listCol = Physics2D.OverlapCircleAll(infoAttack.transform.position, infoAttack.lookRadius, infoAttack.layerMask);
         foreach(var col in listCol) {
             EnemyBase enemyBase = col.transform.parent.GetComponent<EnemyBase>();
             if(enemyBase != null) {
-                enemyBase.GetDame(player.curDame, gameObject);
+                enemyBase.GetDame(dame, gameObject);
             }
         }
     }

@@ -6,7 +6,7 @@ public class SwordCS : MonoBehaviour
 {
     [SerializeField] private WeaponID weaponID;
     private void OnTriggerEnter2D(Collider2D collision) {
-        Player player = collision.GetComponent<Player>();
+        Player player = collision.transform.parent.GetComponent<Player>();
         if(player != null) {
             AdsManager.Instance.ShowRewarded((value)=> {
                 if(value) {

@@ -204,8 +204,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3145ca790e291b84cb0246e45888e7c6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  originHeart: 200
-  originDame: 30
+  originHeart: 1000
+  originDame: 20
   curHeart: 0
   curDame: 0
   display: {fileID: 5913883042238199843}

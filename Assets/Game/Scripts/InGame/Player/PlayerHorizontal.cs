@@ -1,3 +1,4 @@
+using Spine.Unity.Examples;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -11,6 +12,7 @@ public class PlayerHorizontal : MonoBehaviour {
     [Header("Dash")]
     [SerializeField] private float timeDash = 0.2f;
     [SerializeField] private float speedDash = 36f;
+    [SerializeField] private SkeletonGhost skeletonGhost;
     [Header("Display")]
     [SerializeField] private Transform display;
     [SerializeField] private PlayerAttack playerAttack;
@@ -28,6 +30,7 @@ public class PlayerHorizontal : MonoBehaviour {
         this.playerMovement = playerMovement;
         MoveTurn = new TurnMove(DirHorizontal.RIGHT, 0f, TypeMove.NONE);
         direction = DirHorizontal.NONE;
+        skeletonGhost.ghostingEnabled = false;
     }
     #region Update
     private void Update() {
@@ -66,6 +69,7 @@ public class PlayerHorizontal : MonoBehaviour {
             if(MoveTurn.TypeMove != TypeMove.DASH) {
                 if(MoveTurn.TypeMove == TypeMove.NORMAL) {
                     if(MoveTurn.Time > 0 && MoveTurn.Direc == direction) {
+                        skeletonGhost.ghostingEnabled = true;
                         MoveTurn.Set(direction, timeDash, TypeMove.DASH);
                         Flip(direction);
                     } else {
@@ -118,6 +122,7 @@ public class PlayerHorizontal : MonoBehaviour {
             if(MoveTurn.Time <= 0) {
                 if(MoveTurn.TypeMove == TypeMove.DASH) {
                     player.SetIdleCheckStatus(lstStatusIdle);
+                    skeletonGhost.ghostingEnabled = false;
                 }
                 MoveTurn.TypeMove = TypeMove.NORMAL;
             }
@@ -135,6 +140,7 @@ public class PlayerHorizontal : MonoBehaviour {
     public void SetUpNoMove() {
         MoveTurn.Defaul();
         player.SetIdleCheckStatus(lstStatusIdle);
+        skeletonGhost.ghostingEnabled = false;
     }
 
     public class TurnMove {

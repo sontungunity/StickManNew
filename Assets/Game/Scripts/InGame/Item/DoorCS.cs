@@ -3,15 +3,17 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using DG.Tweening;
+using Spine.Unity;
 
 public class DoorCS : MonoBehaviour
 {
     [SerializeField] private Collider2D col2D;
-    private bool open;
-    private Tween tween;
+    [SerializeField] private SpineBase spineDoor;
+    [SerializeField,SpineAnimation] private string animClose,animOpen;
     private Tween tweenMovePlayer;
     private void Start() {
-        open = false;
+        col2D.enabled = false;
+        spineDoor.SetAnim(0,animClose,true);
     }
 
     private void OnEnable() {
@@ -20,31 +22,26 @@ public class DoorCS : MonoBehaviour
 
     private void OnDisable() {
         EventDispatcher.RemoveListener<EventKey.EnemyDie>(HalderEvent);
-        tween.CheckKillTween();
+        //tween.CheckKillTween();
         tweenMovePlayer.CheckKillTween();
     }
 
     private void HalderEvent(EventKey.EnemyDie evt) {
-        if(!open) {
-            col2D.enabled = false;
-            tween = DOVirtual.DelayedCall(0.5f, () => {
-                open = InGameManager.Instance.KillAllEnemy;
-                col2D.enabled = true;
-            });
+        if(InGameManager.Instance.KillAllEnemy) {
+            col2D.enabled = true;
+            spineDoor.SetAnim(0, animOpen, true);
         }
     }
 
 
     private void OnTriggerEnter2D(Collider2D collision) {
-        if(open) {
-            Player player = collision.transform.parent.GetComponent<Player>();
-            if(player!=null) {
-                tweenMovePlayer.CheckKillTween();
-                tweenMovePlayer = player.transform.DOMoveX(transform.position.x, 1f).OnComplete(()=> {
-                    InGameManager.Instance.FinishMap();
-                });
-                player.SetPlayerStatusCheckRank(EnumPlayerStatus.WIN);
-            }
+        Player player = collision.transform.parent.GetComponent<Player>();
+        if(player != null) {
+            tweenMovePlayer.CheckKillTween();
+            tweenMovePlayer = player.transform.DOMoveX(transform.position.x, 1f).OnComplete(() => {
+                InGameManager.Instance.FinishMap();
+            });
+            player.SetPlayerStatusCheckRank(EnumPlayerStatus.WIN);
         }
     }
 }

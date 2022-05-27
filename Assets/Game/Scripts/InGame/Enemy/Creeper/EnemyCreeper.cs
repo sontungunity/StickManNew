@@ -39,6 +39,6 @@ public class EnemyCreeper : EnemyBase {
         transform.gameObject.SetActive(false);
         int coinRandom = Random.Range(1,6);
         SpawnerCoin.Instance.Spawner(transform.position, coinRandom);
-        InGameManager.Instance.AddEnemyDie();
+        InGameManager.Instance.AddEnemyDie(this);
     }
 }

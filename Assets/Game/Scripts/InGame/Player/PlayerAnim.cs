@@ -22,7 +22,7 @@ public class PlayerAnim : SpineBase {
     [SerializeField, SpineAnimation] private List<string> lstAttackNone;
     [SerializeField, SpineAnimation] private List<string> lstAttackWeapon;
     [SerializeField, SpineAnimation] private string longAttack;
-    [SerializeField, SpineAnimation] private string climbAttack;
+    [SerializeField, SpineAnimation] private string climbAttack,climbAttackWeapon;
     protected override void Awake() {
         base.Awake();
     }
@@ -97,7 +97,11 @@ public class PlayerAnim : SpineBase {
         }
 
         if(playerMovement.PlayerTourch == PlayerTourch.WALL) {
-            SetAnim(0, climbAttack, false, callback);
+            if(player.Weapon == null || player.Weapon.TypeWeapon == TypeWeapon.LONG) {
+                SetAnim(0, climbAttack, false, callback);
+            } else {
+                SetAnim(0, climbAttackWeapon, false, callback);
+            }
         } else {
             if(enumPlayerStatus == EnumPlayerStatus.ATTACK1) {
                 SetAnim(0, GetStringAnimByWeapon(player.Weapon, 0), false, callback);

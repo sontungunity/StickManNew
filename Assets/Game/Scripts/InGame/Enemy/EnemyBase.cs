@@ -101,7 +101,6 @@ public class EnemyBase : CharacterBase {
         }
     }
 
-
     public void Flip() {
         if(dirFace == DirHorizontal.RIGHT) {
             display.localEulerAngles = new Vector3(0, 180, 0);
@@ -153,7 +152,7 @@ public class EnemyBase : CharacterBase {
         }
         int randomCoin = Random.Range(3,6);
         SpawnerCoin.Instance.Spawner(transform.position + Vector3.up, randomCoin);
-        InGameManager.Instance.AddEnemyDie();
+        InGameManager.Instance.AddEnemyDie(this);
     }
 
     protected virtual void OnDisable() {

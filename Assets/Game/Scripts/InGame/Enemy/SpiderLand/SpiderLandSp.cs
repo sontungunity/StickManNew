@@ -27,7 +27,7 @@ public class SpiderLandSp : EnemyBase
         tween = DOVirtual.DelayedCall(2f, () => {
             transform.gameObject.SetActive(false);
         });
-        GetComponent<Collider2D>().isTrigger = true;
+        collider2D.isTrigger = true;
         if(objMakeDame != null && objMakeDame.transform.position.x > transform.position.x) {
             rg2D.AddForce(new Vector2(-forceDie.x, forceDie.y), ForceMode2D.Impulse);
         } else {

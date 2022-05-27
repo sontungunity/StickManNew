@@ -19,11 +19,9 @@ public class BossBase : EnemyBase
         if(curHeart <= 0) {
             Die(objMakeDame);
         } else {
-            curStatus = EnemyStatus.GET_DAME;
+            //curStatus = EnemyStatus.GET_DAME;
             rg2D.velocity = Vector2.zero;
-            enemyAnim.SetAnimGetDame(() => {
-                SetStatus(EnemyStatus.MOVE);
-            });
+            enemyAnim.SetAnimGetDame();
             particleBlood?.Play();
         }
     }
@@ -42,6 +40,6 @@ public class BossBase : EnemyBase
         //    rg2D.AddForce(forceDie, ForceMode2D.Impulse);
         //}
         SpawnerCoin.Instance.Spawner(transform.position, 20);
-        InGameManager.Instance.AddEnemyDie();
+        InGameManager.Instance.AddEnemyDie(this);
     }
 }

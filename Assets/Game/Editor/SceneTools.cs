@@ -40,7 +40,7 @@ public class SceneTools {
     }
 
 
-    [MenuItem("Game/Delete Data %C", false, 1)]
+    [MenuItem("Game/Delete Data", false, 1)]
     private static void ClearData() {
         //PlayerPrefs.SetString(PLAYER_KEY, JsonUtility.ToJson(playerData));
         string data = JsonUtility.ToJson(new PlayerData());

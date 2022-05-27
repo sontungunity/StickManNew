@@ -1858,7 +1858,7 @@ MonoBehaviour:
   lifeAndHeart: {fileID: 2030572397636649527}
   btn_Setting: {fileID: 1696183066948154542}
   bossBarHeart: {fileID: 592897829746669692}
-  roomSetting: {fileID: 0}
+  roomSetting: {fileID: 3343950355903038125}
 --- !u!1 &5320294861921003437
 GameObject:
   m_ObjectHideFlags: 0

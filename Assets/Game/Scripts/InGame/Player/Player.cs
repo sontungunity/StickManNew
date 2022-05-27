@@ -98,6 +98,7 @@ public class Player : CharacterBase {
             tween = DOVirtual.DelayedCall(timeProtect, () => {
                 isProtect = false;
             });
+            playerAnim.Flash(timeProtect);
             par_Blood.Play();
         }
         EventDispatcher.Dispatch<EventKey.PlayerChange>(new EventKey.PlayerChange());
