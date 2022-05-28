@@ -33,6 +33,7 @@
     <setting file="file://$PROJECT_DIR$/Assets/Game/Scripts/UI/SoundButton.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Game/Scripts/UI/LevelSelectFrame/LevelSelectView.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Game/Scripts/UI/ButtonClose.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Spine/Runtime/spine-unity/Components/SkeletonAnimation.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Game/Scripts/Base/DataManager/ItemStack.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Game/Scripts/UI/LevelSelectFrame/LevelSelectFrame.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Game/Scripts/Base/DataManager/DataManager.cs" root0="FORCE_HIGHLIGHTING" />
@@ -64,6 +65,7 @@
     <setting file="file://$PROJECT_DIR$/Assets/Game/Scripts/InGame/Enemy/Skeleton/SkeletonAttack.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Game/Scripts/UI/DailyFrame/DailySave.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Game/Scripts/InGame/Enemy/Ravager/RavagerBoss.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Game/Scripts/Base/PoolManager.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Game/Scripts/UI/DailyFrame/DailyViewPlus.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Game/Scripts/UI/DailyFrame/DailyFrame.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Game/Scripts/UI/Collection/CollectionController.cs" root0="FORCE_HIGHLIGHTING" />
@@ -98,11 +100,11 @@
         <option value="$PROJECT_DIR$/Assets/Game/Scripts/InGame/Enemy/EnemyAnim.cs" />
         <option value="$PROJECT_DIR$/Assets/Game/Scripts/InGame/Enemy/EnemyBase.cs" />
         <option value="$PROJECT_DIR$/Assets/Game/Scripts/InGame/Enemy/Ravager/RavagerBoss.cs" />
-        <option value="$PROJECT_DIR$/Assets/Game/Scripts/InGame/Item/Coin.cs" />
         <option value="$PROJECT_DIR$/Assets/Standard Assets/CrossPlatformInput/Scripts/PlatformSpecific/StandaloneInput.cs" />
         <option value="$PROJECT_DIR$/Assets/Game/Scripts/Base/SoundManager.cs" />
         <option value="$PROJECT_DIR$/Assets/Game/Scripts/InGame/Player/PlayerAnim.cs" />
         <option value="$PROJECT_DIR$/Assets/Game/Scripts/InGame/Player/WeaponArrow.cs" />
+        <option value="$PROJECT_DIR$/Assets/Game/Scripts/InGame/Item/Coin.cs" />
         <option value="$PROJECT_DIR$/Assets/Game/Scripts/InGame/Player/Shadow.cs" />
       </list>
     </option>
