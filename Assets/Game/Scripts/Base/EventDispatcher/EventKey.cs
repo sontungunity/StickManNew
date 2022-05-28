@@ -27,7 +27,10 @@ public static class EventKey {
     }
 
     public struct EnemyDie : IEventArgs {
-
+        public EnemyBase enemyDie;
+        public EnemyDie(EnemyBase enemyDie) {
+            this.enemyDie = enemyDie;
+        }
     }
 
     public struct PlayerChange : IEventArgs {

@@ -12,15 +12,16 @@ public class SpineBase : MonoBehaviour {
     [SerializeField, SpineAnimation] protected string animIdle;
     public SkeletonAnimation Anim => animmation;
     private Tween tween;
+    private Tween tweenFade;
     protected virtual void Awake() {
         animmation.AnimationState.Complete += HandleEventComplete;
     }
-    
+
     private void HandleEventComplete(TrackEntry trackEntry) {
         evtComplate?.Invoke();
     }
 
-    public void SetAnim(int trackIndex, string animationName, bool loop,Action callBack = null ) {
+    public void SetAnim(int trackIndex, string animationName, bool loop, Action callBack = null) {
         if(animmation == null) {
             callBack?.Invoke();
             return;
@@ -46,7 +47,7 @@ public class SpineBase : MonoBehaviour {
     }
 
     public void AnimIdle(int trackIndex = 0, bool loop = true, Action callBack = null) {
-        SetAnim(trackIndex, animIdle,loop,callBack);
+        SetAnim(trackIndex, animIdle, loop, callBack);
     }
 
     public float SetTimeAnim(int trackIndex, string animationName, bool loop) {
@@ -54,21 +55,32 @@ public class SpineBase : MonoBehaviour {
         return animmation.AnimationState.GetCurrent(0).TrackTime;
     }
 
-    public void Fade(bool appear,float timeFade = 1,Action callback = null) {
-        //tween.CheckKillTween();
-        //if(appear) {
-        //    tween = DOTween.To(() => 0f, (value) => { Anim.skeleton.A = value; }, 1f, timeFade).OnComplete(() => {
-        //        callback?.Invoke();
-        //    });
-        //} else {
-        //    tween = DOTween.To(() => 1f, (value) => { Anim.skeleton.A = value; }, 0f, timeFade).OnComplete(() => {
-        //        callback?.Invoke();
-        //    });
-        //}
+    public void Fade(bool appear, float timeFade = 1, Action callback = null) {
+        tweenFade.CheckKillTween();
+        if(appear) {
+            tweenFade = DOTween.To(() => 0f, (value) => { Anim.skeleton.A = value; }, 1f, timeFade).OnComplete(() => {
+                callback?.Invoke();
+            });
+        } else {
+            tweenFade = DOTween.To(() => 1f, (value) => { Anim.skeleton.A = value; }, 0f, timeFade).OnComplete(() => {
+                callback?.Invoke();
+            });
+        }
+    }
+
+    public void Flash(float timeFlash,Action callback = null) {
+        Anim.skeleton.A = 0.5f;
+        tweenFade.CheckKillTween();
+        tweenFade = DOVirtual.DelayedCall(timeFlash, () => {
+            Anim.skeleton.A = 1f;
+            callback?.Invoke();
+        });
     }
 
     private void OnDisable() {
-        //tween.CheckKillTween();
+        tween.CheckKillTween();
+        tweenFade.CheckKillTween();
+        Anim.skeleton.A = 1f;
     }
 
     public void SetOrder(int order) {

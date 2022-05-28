@@ -32,7 +32,7 @@ public class RoomSetting : MonoBehaviour {
             float roomSave = LoadData();
             float plusSize = (maxSize-minSize)*roomSave;
             float newSize = minSize + plusSize;
-            SetUpOrtho(newSize);
+            SetUpOrtho(newSize,roomSave);
         } else {
             float distance = Mathf.Abs(-orginPosition.y - rectTransform.anchoredPosition.y);
             float timeMove = distance/speed;
@@ -50,10 +50,14 @@ public class RoomSetting : MonoBehaviour {
         }
     }
 
-    public void SetUpOrtho(float newSize) {
+    public void SetUpOrtho(float newSize,float value = -1) {
         float distanceRoom = Mathf.Abs(newSize - InGameManager.Instance.Camera.orthographicSize);
         tweenRoom.CheckKillTween();
-        tweenRoom = InGameManager.Instance.Camera.DOOrthoSize(newSize, distanceRoom).SetEase(Ease.Linear);
+        tweenRoom = InGameManager.Instance.Camera.DOOrthoSize(newSize, distanceRoom/2).SetEase(Ease.Linear).OnComplete(()=> {
+            if(value != -1) {
+                slider.value = value;
+            }
+        });
     }
 
     #region Save And Load

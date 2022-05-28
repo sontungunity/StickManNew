@@ -22,12 +22,21 @@ public class GhastAttack : EnemyAttack
     private Tween tween;
     public GhastAttack.Status CurAttackStatus;
     private int curTimeAttack;
+    private Action callback;
+    private bool moveHight = false;
     public override void Attack(Action callback = null) {
+        this.callback = callback;
         CurAttackStatus = Status.SETUPHIGH;
         enemyAnim.SetAnim(0,animIdle,true);
-        tween = transform.DOMove(transform.position + Vector3.up * highPlus, 1f).SetEase(Ease.Linear).OnComplete(()=> {
+        if(moveHight == false) {
+            tween = transform.DOMove(transform.position + Vector3.up * highPlus, 1f).SetEase(Ease.Linear).OnComplete(() => {
+                moveHight = true;
+                SetUpMove();
+            });
+        } else {
             SetUpMove();
-        });
+        }
+        
     }
 
     private void SpawnerFireDown() {
@@ -64,9 +73,11 @@ public class GhastAttack : EnemyAttack
                 AttackFire();
             });
         } else {
+            CurAttackStatus = Status.STUN;
             enemyAnim.SetAnim(0, animShock,true);
             tween = DOVirtual.DelayedCall(timeStun,()=> {
-                SetUpMove();
+                //SetUpMove();
+                  callback?.Invoke();
             });
         }
         

@@ -14,7 +14,7 @@ public class SpiderLand : EnemyBase {
             transform.gameObject.SetActive(false);
         });
         SpawnerCoin.Instance.Spawner(transform.position, 3);
-        InGameManager.Instance.AddEnemyDie();
+        InGameManager.Instance.AddEnemyDie(this);
         for(int i = 0; i < amount; i++) {
             var smallSpider = smallSpiderPref.Spawn(InGameManager.Instance.LevelMap.transform,false);
             

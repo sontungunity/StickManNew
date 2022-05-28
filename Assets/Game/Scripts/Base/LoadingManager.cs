@@ -4,8 +4,8 @@ using UnityEngine;
 using UnityEngine.UI;
 
 public class LoadingManager : Singleton<LoadingManager> {
-    [SerializeField] private Image cur_;
-    [SerializeField] private float time = 1;
+    //[SerializeField] private Image cur_;
+    [SerializeField] private float time = 7;
     private Tween tween;
     private bool LoadFinal;
     private void OnEnable() {
@@ -20,14 +20,12 @@ public class LoadingManager : Singleton<LoadingManager> {
 
     private void Start() {
         LoadFinal = false;
-        cur_.transform.localScale = new Vector3(0, 1, 1);
-        tween = cur_.transform.DOScaleX(0.8f, time).SetEase(Ease.Linear).OnComplete(() => {
-            LoadFinal = true;
-            if(GameManager.Instance.State == GameManager.States.Started) {
-                SceneManager.Instance.LoadSceneAsyn(SceneManager.SCENE_HOME);
-            } else {
-                Debug.Log("Load too long");
-            }
+        tween = DOVirtual.DelayedCall(time, () => {
+                if(GameManager.Instance.State == GameManager.States.Started) {
+                    SceneManager.Instance.LoadSceneAsyn(SceneManager.SCENE_HOME);
+                } else {
+                    Debug.Log("Load too long");
+                }
         });
     }
 

@@ -16,8 +16,6 @@ public class Player : CharacterBase {
     [SerializeField] private PlayerHorizontal playerHorizontal;
     [SerializeField] private Rigidbody2D rg2D;
     [Header("Blood")]
-    
-    // [SerializeField] private ParticleSystem par_Blood;
     [SerializeField] private ParticleSystem par_NewBlood;
     
     [Header("Custom")]
@@ -101,6 +99,7 @@ public class Player : CharacterBase {
             tween = DOVirtual.DelayedCall(timeProtect, () => {
                 isProtect = false;
             });
+            playerAnim.Flash(timeProtect);
             par_NewBlood.Play();
         }
         EventDispatcher.Dispatch<EventKey.PlayerChange>(new EventKey.PlayerChange());

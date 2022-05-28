@@ -46,9 +46,9 @@ public class InGameManager : Singleton<InGameManager>
         LevelMap.transform.localPosition = Vector3.zero;
     }
 
-    public void AddEnemyDie(int amount = 1) {
-        EnemyKilled += amount;
-        EventDispatcher.Dispatch<EventKey.EnemyDie>(new EventKey.EnemyDie());
+    public void AddEnemyDie(EnemyBase enemy) {
+        EnemyKilled += 1;
+        EventDispatcher.Dispatch<EventKey.EnemyDie>(new EventKey.EnemyDie(enemy));
     }
 
     public void FinishMap() {

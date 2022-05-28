@@ -14,8 +14,6 @@ public class EnemyBase : CharacterBase {
     [SerializeField] protected Vector2 forceDie = new Vector2(5,5);
     [Header("Effect")]
     [SerializeField] protected ParticleSystem particleBlood;
-
-    [SerializeField] private ParticleSystem par_newBlood;
     // [SerializeField] protected ParticleSystem par_blooding;
     public Rigidbody2D Rg2D => rg2D;
     public Transform Display => display;
@@ -71,7 +69,6 @@ public class EnemyBase : CharacterBase {
             });
             enemyBar.UpdateHeart(PercentHeart);
             particleBlood?.Play();
-            par_newBlood.Play();
         }
     }
     protected virtual void SetupStatus() {
@@ -99,7 +96,6 @@ public class EnemyBase : CharacterBase {
             }
         }
     }
-
 
     public void Flip() {
         if(dirFace == DirHorizontal.RIGHT) {
@@ -152,7 +148,7 @@ public class EnemyBase : CharacterBase {
         }
         int randomCoin = Random.Range(3,6);
         SpawnerCoin.Instance.Spawner(transform.position + Vector3.up, randomCoin);
-        InGameManager.Instance.AddEnemyDie();
+        InGameManager.Instance.AddEnemyDie(this);
     }
 
     protected virtual void OnDisable() {
