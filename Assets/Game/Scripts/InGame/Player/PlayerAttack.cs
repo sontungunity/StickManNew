@@ -55,20 +55,20 @@ public class PlayerAttack : MonoBehaviour {
                 } else {
                     if(player.SetPlayerStatusCheckRank(EnumPlayerStatus.ATTACK1, DoAttack)) {
                         TurnAttack.input++;
-                        TurnAttack.timeCountDown = TIME_DELAY_KEY;
+                        //TurnAttack.timeCountDown = TIME_DELAY_KEY;
                     }
                 }
 
-            } else if(TurnAttack.timeCountDown > 0) {
+            } else if(player.CurStatus.TypeStatus == EnumPlayerStatus.ATTACK1 || player.CurStatus.TypeStatus == EnumPlayerStatus.ATTACK2 || player.CurStatus.TypeStatus == EnumPlayerStatus.ATTACK3) {
                 TurnAttack.input++;
-                TurnAttack.timeCountDown = TIME_DELAY_KEY;
+                //TurnAttack.timeCountDown = TIME_DELAY_KEY;
             }
         }
 
         //Halder time
-        if(TurnAttack.timeCountDown > 0) {
-            TurnAttack.timeCountDown -= Time.deltaTime;
-        }
+        //if(TurnAttack.timeCountDown > 0) {
+        //    TurnAttack.timeCountDown -= Time.deltaTime;
+        //}
     }
 
     private void DoAttack() {
@@ -134,12 +134,12 @@ public class PlayerAttack : MonoBehaviour {
 [System.Serializable]
 public class TurnAttack {
     public int input = 0;
-    public float timeCountDown = 0f;
+    //public float timeCountDown = 0f;
     //public EnumPlayerAttack curAttack = EnumPlayerAttack.NONE;
 
     public void Defaul() {
         this.input = 0;
-        this.timeCountDown = 0f;
+        //this.timeCountDown = 0f;
         //this.curAttack = EnumPlayerAttack.NONE;
     }
 }

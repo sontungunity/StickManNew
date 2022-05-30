@@ -16609,7 +16609,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6505579082704963095}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -16638,7 +16638,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4a86e001b5bfaab42b0394f7b60e5878, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  level: 3
+  level: 7
   numberEnemy: 1
 --- !u!1 &6505579083994023838
 GameObject:
@@ -17299,9 +17299,17 @@ PrefabInstance:
       propertyPath: m_Name
       value: Ghast
       objectReference: {fileID: 0}
+    - target: {fileID: 1692650520237186343, guid: cf6bff70d6e39424daec6eba3942073d, type: 3}
+      propertyPath: speedBullet
+      value: 10
+      objectReference: {fileID: 0}
     - target: {fileID: 1692650520692504710, guid: cf6bff70d6e39424daec6eba3942073d, type: 3}
       propertyPath: m_Mesh
       value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 1692650520692504712, guid: cf6bff70d6e39424daec6eba3942073d, type: 3}
+      propertyPath: timeScale
+      value: 0.5
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: cf6bff70d6e39424daec6eba3942073d, type: 3}

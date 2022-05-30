@@ -8,7 +8,7 @@ public class GameManager : Singleton<GameManager> {
     [SerializeField] private int targetFrameRate = 60;
     [SerializeField] private bool multiTouchEnabled = false;
     [SerializeField] private GameObject[] managers;
-    private States state = States.None;
+    [SerializeField] private States state = States.None;
     public States State => state;
     //
     [SerializeField]private int curLevel;

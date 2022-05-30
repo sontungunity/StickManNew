@@ -30,6 +30,7 @@ public class PlayerAnim : SpineBase {
     [SerializeField] private AudioClip DashSound;
     [SerializeField] private AudioClip ClimbSound;
     [SerializeField] private AudioClip JumpSound;
+    [SerializeField] private AudioClip talkingDamage;
 
     protected override void Awake() {
         base.Awake();
@@ -71,6 +72,7 @@ public class PlayerAnim : SpineBase {
                 break;
             case EnumPlayerStatus.GETDAME:
                 SetAnim(0, animGetDame, false, callback);
+                SoundManager.Instance.PlaySound(talkingDamage);
                 break;
             case EnumPlayerStatus.WIN:
                 SetAnim(0, animWin, false, callback);
@@ -128,8 +130,10 @@ public class PlayerAnim : SpineBase {
         if(playerMovement.PlayerTourch == PlayerTourch.WALL) {
             if(player.Weapon == null || player.Weapon.TypeWeapon == TypeWeapon.LONG) {
                 SetAnim(0, climbAttack, false, callback);
+                SoundManager.Instance.PlaySound(lstSoundATHand[1]);
             } else {
                 SetAnim(0, climbAttackWeapon, false, callback);
+                SoundManager.Instance.PlaySound(lstSoundATSword[2]);
             }
         } else {
             if(enumPlayerStatus == EnumPlayerStatus.ATTACK1) 

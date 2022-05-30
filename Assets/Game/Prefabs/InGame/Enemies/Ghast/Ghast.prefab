@@ -97,7 +97,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   animmation: {fileID: 1692650520692504712}
   animIdle: move
-  anim_Die: die
+  anim_Die: explode
   anim_GetDame: get_damage
   lstStrAttack:
   - attack

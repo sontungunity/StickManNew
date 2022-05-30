@@ -3,8 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityStandardAssets.CrossPlatformInput;
 
-public class PlayerVertical : MonoBehaviour
-{
+public class PlayerVertical : MonoBehaviour {
     [Header("Jump")]
     [SerializeField] private Vector2 jumpForceGround = new Vector2(0,9f);
     [SerializeField] private Vector2 jumpForceWall = new Vector2(9f,9f);
@@ -20,7 +19,7 @@ public class PlayerVertical : MonoBehaviour
 
     private PlayerMovement playerMovement;
     private Rigidbody2D rb2D => playerMovement.Rb2D;
-    
+
     private void Awake() {
         turnJump = new TurnJump();
     }
@@ -47,11 +46,11 @@ public class PlayerVertical : MonoBehaviour
         //Hanlder Input
         if(doJump) {
             if(playerMovement.PlayerTourch == PlayerTourch.GROUND) {
-                turnJump.Set(EnumJumpType.JUMP_I,jumpForceGround, timeForOneJump);
-                player.SetPlayerStatusCheckRank(EnumPlayerStatus.JUMPBEFOR,()=> {
-                    player.SetAnimCheckStatus(EnumPlayerStatus.JUMP,lstStatusIdle);
+                turnJump.Set(EnumJumpType.JUMP_I, jumpForceGround, timeForOneJump);
+                player.SetPlayerStatusCheckRank(EnumPlayerStatus.JUMPBEFOR, () => {
+                    player.SetAnimCheckStatus(EnumPlayerStatus.JUMP, lstStatusIdle);
                 });
-            } else if(playerMovement.PlayerTourch == PlayerTourch.WALL) { 
+            } else if(playerMovement.PlayerTourch == PlayerTourch.WALL) {
                 Vector2 bounce = jumpForceWall;
                 if(playerMovement.PlayerHor.PlayerFace == DirHorizontal.RIGHT) {
                     bounce.x = -bounce.x;
@@ -61,15 +60,22 @@ public class PlayerVertical : MonoBehaviour
                     player.SetAnimCheckStatus(EnumPlayerStatus.JUMP, lstStatusIdle);
                 });
             } else if(playerMovement.PlayerTourch == PlayerTourch.AIR) {
-                if(turnJump.TypeJump == EnumJumpType.JUMP_I) {
-                    turnJump.Set(EnumJumpType.JUMP_II,jumpForceGround, timeForOneJump);
+                if(turnJump.TypeJump == EnumJumpType.JUMP_II) {
+
+                } else if(turnJump.TypeJump == EnumJumpType.JUMP_I) {
+                    turnJump.Set(EnumJumpType.JUMP_II, jumpForceGround, timeForOneJump);
+                    player.SetPlayerStatusCheckRank(EnumPlayerStatus.JUMPBEFOR, () => {
+                        player.SetAnimCheckStatus(EnumPlayerStatus.JUMP, lstStatusIdle);
+                    });
+                } else {
+                    turnJump.Set(EnumJumpType.JUMP_I, jumpForceGround, timeForOneJump);
                     player.SetPlayerStatusCheckRank(EnumPlayerStatus.JUMPBEFOR, () => {
                         player.SetAnimCheckStatus(EnumPlayerStatus.JUMP, lstStatusIdle);
                     });
                 }
             }
             doJump = false;
-        } 
+        }
 
         //Hanlder movement
         if(turnJump.TimeJump > 0) {
@@ -97,9 +103,9 @@ public class PlayerVertical : MonoBehaviour
         }
 
         //hanlder Time
-        if(turnJump.TimeJump > 0) {  
+        if(turnJump.TimeJump > 0) {
             turnJump.TimeJump -= Time.fixedDeltaTime;
-        } 
+        }
     }
 
     public void SetUpNoVertical() {
@@ -118,7 +124,7 @@ public class PlayerVertical : MonoBehaviour
             this.TimeJump = 0f;
         }
 
-        public TurnJump(EnumJumpType type, Vector2 force,float timeJump) {
+        public TurnJump(EnumJumpType type, Vector2 force, float timeJump) {
             this.TypeJump = type;
             this.Force = force;
             this.TimeJump = timeJump;
@@ -131,7 +137,7 @@ public class PlayerVertical : MonoBehaviour
         }
 
         public void Defaul() {
-            this.TypeJump = EnumJumpType.NONE;
+            //this.TypeJump = EnumJumpType.NONE;
             this.Force = Vector2.zero;
             this.TimeJump = 0f;
         }

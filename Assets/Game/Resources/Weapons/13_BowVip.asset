@@ -17,5 +17,5 @@ MonoBehaviour:
   type: 2
   dame: 20
   nameSkin: weapon/weapon_07
-  arrowPref: {fileID: 7035271853751005175, guid: 311df5d32c775844c8b4496e525353ac, type: 3}
+  arrowPref: {fileID: 7949466946706282663, guid: 2a361ef0784b47347a02c9d35b491e2e, type: 3}
   speed: 14

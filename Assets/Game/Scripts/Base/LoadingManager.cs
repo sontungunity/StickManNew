@@ -21,11 +21,12 @@ public class LoadingManager : Singleton<LoadingManager> {
     private void Start() {
         LoadFinal = false;
         tween = DOVirtual.DelayedCall(time, () => {
-                if(GameManager.Instance.State == GameManager.States.Started) {
-                    SceneManager.Instance.LoadSceneAsyn(SceneManager.SCENE_HOME);
-                } else {
-                    Debug.Log("Load too long");
-                }
+            LoadFinal = true;
+            if(GameManager.Instance.State == GameManager.States.Started) {
+                SceneManager.Instance.LoadSceneAsyn(SceneManager.SCENE_HOME);
+            } else {
+                Debug.Log("Load too long");
+            }
         });
     }
 
