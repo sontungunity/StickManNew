@@ -30,7 +30,7 @@ public class PlayerAnim : SpineBase {
     [SerializeField] private AudioClip DashSound;
     [SerializeField] private AudioClip ClimbSound;
     [SerializeField] private AudioClip JumpSound;
-    [SerializeField] private AudioClip GetDameSound;
+    [SerializeField] public AudioClip GetDameSound;
 
     protected override void Awake() {
         base.Awake();

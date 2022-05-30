@@ -14,7 +14,6 @@ public class EnemyBase : CharacterBase {
     [SerializeField] protected Vector2 forceDie = new Vector2(5,5);
     [Header("Effect")]
     [SerializeField] protected ParticleSystem particleBlood;
-    // [SerializeField] protected ParticleSystem par_blooding;
     public Rigidbody2D Rg2D => rg2D;
     public Transform Display => display;
     public EnemyStatus CurStatus => curStatus;

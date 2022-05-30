@@ -10,8 +10,9 @@ public class SkinView : MonoBehaviour {
     [Header("Displaye")]
     [SerializeField] private GameObject main;
     [SerializeField] private Image icon;
-    [SerializeField] private DisplayObjects bgDisplay; // 0.Using, 1.Lock, 2.Unlock
-    [SerializeField] private Image iconLock;
+    [SerializeField] public DisplayObjects bgDisplay; // 0.Using, 1.Lock, 2.Unlock
+    [SerializeField] public Image iconLock;
+    [SerializeField] private GetItemBtn _getItemBtn;
 
     public SkinItemData Model => model;
     private Action<SkinView> _actionSelect;
@@ -39,12 +40,12 @@ public class SkinView : MonoBehaviour {
         }
     }
 
-    private void SetUpUsing() {
+    public void SetUpUsing() {
         bgDisplay.Active(0);
         iconLock.gameObject.SetActive(false);
     }
 
-    private void SetUpUnLock() {
+    public void SetUpUnLock() {
         bgDisplay.Active(2);
         iconLock.gameObject.SetActive(false);
     }
