@@ -7,7 +7,7 @@ using UnityEngine;
 using DG.Tweening;
 
 public class SpineBase : MonoBehaviour {
-    [SerializeField] private SkeletonAnimation animmation;
+    [SerializeField] protected SkeletonAnimation animmation;
     [SerializeField] private Action evtComplate;
     [SerializeField, SpineAnimation] protected string animIdle;
     public SkeletonAnimation Anim => animmation;
@@ -17,7 +17,7 @@ public class SpineBase : MonoBehaviour {
         animmation.AnimationState.Complete += HandleEventComplete;
     }
 
-    private void HandleEventComplete(TrackEntry trackEntry) {
+    protected virtual void HandleEventComplete(TrackEntry trackEntry) {
         evtComplate?.Invoke();
     }
 

@@ -189,6 +189,7 @@ MonoBehaviour:
   animMove: move
   animAttack: attack
   animShock: stun
+  animMoveBefor: move_before
   speedTarget: 8
   turnMove: 3
   timeStun: 5

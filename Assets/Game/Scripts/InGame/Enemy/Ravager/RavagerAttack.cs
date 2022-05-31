@@ -8,7 +8,7 @@ using UnityEngine;
 public class RavagerAttack : EnemyAttack {
     [SerializeField] private Rigidbody2D rb2D;
     [SerializeField] private BeamRayCast beamFace;
-    [SerializeField, SpineAnimation] private string animMove,animAttack,animShock;
+    [SerializeField, SpineAnimation] private string animMove,animAttack,animShock,animMoveBefor;
     [Header("Customer")]
     [SerializeField] private float speedTarget;
     [SerializeField] private int turnMove;
@@ -21,8 +21,10 @@ public class RavagerAttack : EnemyAttack {
     public override void Attack(Action callback = null) {
         this.callback = callback;
         curTurnMove = turnMove;
-        attackType = RavagerAttackType.MOVE;
-        enemyAnim.SetAnim(0, animMove, true, null);
+        enemyAnim.SetAnim(0, animMoveBefor, false, () => {
+            attackType = RavagerAttackType.MOVE;
+            enemyAnim.SetAnim(0, animMove, true, null);
+        });
     }
 
     private void Update() {

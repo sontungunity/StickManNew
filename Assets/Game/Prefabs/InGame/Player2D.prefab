@@ -301,7 +301,7 @@ MonoBehaviour:
   animDash: dash
   animDie: dead
   animGetDame: get_damage
-  animWin: full_attack
+  animWin: win
   animStun: fall
   lstAttackNone:
   - attack1
@@ -327,6 +327,8 @@ MonoBehaviour:
   ClimbSound: {fileID: 8300000, guid: fe31f2045940575499d322eb3cbb5ea3, type: 3}
   JumpSound: {fileID: 8300000, guid: 4bd9794ef35b7474bb91bcc025f5e2ea, type: 3}
   talkingDamage: {fileID: 8300000, guid: 607f69b5165162f4a8b94fc377a9771c, type: 3}
+  audioRun: {fileID: 8300000, guid: ef2fe34bc93820449ab89f46466210ae, type: 3}
+  evtStep: step
 --- !u!114 &5886882179965856178
 MonoBehaviour:
   m_ObjectHideFlags: 0

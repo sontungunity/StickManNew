@@ -31,18 +31,34 @@ public class PlayerAnim : SpineBase {
     [SerializeField] private AudioClip ClimbSound;
     [SerializeField] private AudioClip JumpSound;
     [SerializeField] private AudioClip talkingDamage;
-
+    [SerializeField] private AudioClip audioRun;
+    [Header("Event")]
+    [SerializeField,SpineEvent] private string evtStep;
     protected override void Awake() {
-        base.Awake();
+        animmation.AnimationState.Complete += HandleEventComplete;
+        animmation.AnimationState.Event += HalderEvent;
     }
-    
+
+    private void HalderEvent(TrackEntry trackEntry, Spine.Event e) {
+        if(e.Data.Name == evtStep) {
+            SoundManager.Instance.PlaySound(audioRun);
+        }
+    }
+
+    protected override void HandleEventComplete(TrackEntry trackEntry) {
+        base.HandleEventComplete(trackEntry);
+        if(trackEntry.Animation.Name == animRun) {
+            SoundManager.Instance.PlaySound(audioRun);
+        }
+    }
+
     public void HalderAnim(EnumPlayerStatus typeAnim, Action callback = null) {
         switch(typeAnim) {
             case EnumPlayerStatus.IDLE:
                 SetAnim(0, animIdle, true, callback);
                 break;
             case EnumPlayerStatus.RUN:
-                SetAnim(0, animRun, true, callback);
+                SetAnim(0, animRun, true);
                 break;
             case EnumPlayerStatus.DASH:
                 SetAnim(0, animDash, true, callback);
