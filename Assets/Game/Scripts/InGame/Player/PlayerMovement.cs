@@ -22,8 +22,7 @@ public class PlayerMovement : MonoBehaviour {
         playerHorizontal.Init(this);
         playerVertical.Init(this);
     }
-
-
+    
     private void Update() {
         if(Physics2D.OverlapBox(boxGroundInfo.transform.position, boxGroundInfo.size, boxGroundInfo.angle, boxGroundInfo.layerMask)) {
             playerTourch = PlayerTourch.GROUND;

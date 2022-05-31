@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
 using DG.Tweening;
@@ -31,7 +29,7 @@ public class ItemListener : MonoBehaviour {
         this.cur_int = itemSave.Amount;
         txt_Amount.text = this.cur_int.ToString();
     }
-
+    
     public void UpdateAmount(EventKey.IteamChange evt) {
         tween.CheckKillTween(true);
         int amout = itemSave.Amount;

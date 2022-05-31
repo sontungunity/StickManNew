@@ -5,6 +5,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using System.Linq;
 using Spine.Unity;
+using UnityEngine.UI;
 
 public class SkinFrame : FrameBase, IEnhancedScrollerDelegate {
     [Header("Scroller")]
@@ -13,7 +14,8 @@ public class SkinFrame : FrameBase, IEnhancedScrollerDelegate {
     [SerializeField] private float hightFloor;
     [SerializeField] private SkinReview skinReview;
     [SerializeField] private NarbarManager narManager;
-    
+    [SerializeField] private GetItemBtn _getItemBtn;
+
     #region listSkin
     private List<SkinItemData> lstItemSkin = new List<SkinItemData>();
     private SkinItemData _skinUse = default;

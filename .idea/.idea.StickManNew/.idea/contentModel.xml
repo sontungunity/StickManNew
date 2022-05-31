@@ -112,6 +112,12 @@
                 <e p="EnemyHeartBar.cs" t="Include" />
                 <e p="EnemyMove.cs" t="Include" />
                 <e p="EnemyReward.cs" t="Include" />
+                <e p="Ghast" t="Include">
+                  <e p="GhastAttack.cs" t="Include" />
+                  <e p="GhastBoss.cs" t="Include" />
+                  <e p="GhastBullet.cs" t="Include" />
+                  <e p="GhastMove.cs" t="Include" />
+                </e>
                 <e p="Ravager" t="Include">
                   <e p="RavagerAttack.cs" t="Include" />
                   <e p="RavagerBoss.cs" t="Include" />
@@ -151,7 +157,9 @@
                 <e p="PlayerMovement.cs" t="Include" />
                 <e p="PlayerSkin.cs" t="Include" />
                 <e p="PlayerVertical.cs" t="Include" />
+                <e p="Shadow.cs" t="Include" />
                 <e p="SpineBase.cs" t="Include" />
+                <e p="SpineBaseUI.cs" t="Include" />
                 <e p="WeaponArrow.cs" t="Include" />
               </e>
               <e p="RuleDameAndHeart.cs" t="Include" />
@@ -185,8 +193,12 @@
                 <e p="RoomSetting.cs" t="Include" />
                 <e p="SettingFrame.cs" t="Include" />
                 <e p="WeaponArea.cs" t="Include" />
+                <e p="WinFrame.cs" t="Include" />
               </e>
-              <e p="HomeFrame.cs" t="Include" />
+              <e p="HomeFrame" t="Include">
+                <e p="HomeFrame.cs" t="Include" />
+                <e p="HomeUpdate.cs" t="Include" />
+              </e>
               <e p="ItemStackView.cs" t="Include" />
               <e p="LevelSelectFrame" t="Include">
                 <e p="LevelSelectFrame.cs" t="Include" />
@@ -213,6 +225,9 @@
           <e p="Spine" t="Include">
             <e p="BlazeWither" t="Include">
               <e p="blazing_wither.atlas.txt" t="Include" />
+            </e>
+            <e p="Chest" t="Include">
+              <e p="Chest.atlas.txt" t="Include" />
             </e>
             <e p="Creeper" t="Include">
               <e p="creeper.atlas.txt" t="Include" />
@@ -255,6 +270,16 @@
             </e>
             <e p="Zombie" t="Include">
               <e p="zombie.atlas.txt" t="Include" />
+            </e>
+          </e>
+        </e>
+        <e p="Hovl Studio" t="Include">
+          <e p="Procedural fire" t="Include">
+            <e p="Demo scene" t="Include">
+              <e p="README.txt" t="Include" />
+            </e>
+            <e p="Shaders" t="Include">
+              <e p="FireSphere.shader" t="Include" />
             </e>
           </e>
         </e>

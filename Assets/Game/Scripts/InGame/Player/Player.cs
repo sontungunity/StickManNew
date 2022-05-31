@@ -76,6 +76,7 @@ public class Player : CharacterBase {
             {
                 SetPlayerStatus(EnumPlayerStatus.IDLE);
             });
+            SoundManager.Instance.PlaySound(playerAnim.GetDameSound);
             par_NewBlood.Play();
         }
         EventDispatcher.Dispatch<EventKey.PlayerChange>(new EventKey.PlayerChange());
@@ -104,8 +105,6 @@ public class Player : CharacterBase {
         }
         EventDispatcher.Dispatch<EventKey.PlayerChange>(new EventKey.PlayerChange());
     }
-
-
 
     public bool SetPlayerStatusCheckRank(EnumPlayerStatus typeAnim, Action callback = null) {
         SortStatus sortStatus = lstSortStatus.Find(x=>x.TypeStatus == typeAnim);

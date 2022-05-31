@@ -2,13 +2,17 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using DG.Tweening;
+using Unity.Collections.LowLevel.Unsafe;
+
 public class SkeletonArrow : MonoBehaviour
 {
     [SerializeField] private Rigidbody2D rg2D;
+    [SerializeField] private ParticleSystem fire;
     private Tween tween;
     //Info
     private int dame;
     public void MoveTarget(int dame, Vector2 force) {
+        fire.Play();
         this.dame = dame;
         rg2D.velocity = force;
         tween.CheckKillTween();

@@ -24,6 +24,9 @@ public class PlayerHorizontal : MonoBehaviour {
     private float xDirectionalInput;
     private DirHorizontal direction;
     private PlayerMovement playerMovement;
+
+    public bool _isMoving;
+    // private Shadow _shadow;
     //private boo
     public float XDirectionalInput => xDirectionalInput;
     public void Init(PlayerMovement playerMovement) {
@@ -81,12 +84,14 @@ public class PlayerHorizontal : MonoBehaviour {
                     Flip(direction);
                 }
             }
+            _isMoving = true;
             direction = DirHorizontal.NONE;
         }
 
         //Move
         if(MoveTurn.TypeMove == TypeMove.DASH) {
             rb2D.velocity = new Vector2(speedDash * (int)MoveTurn.Direc, 0);
+            _isMoving = true;
             //rb2D.AddForce(new Vector2(speedDash,0f),ForceMode2D.Impulse);
         } else {
             if(playerMovement.PlayerTourch == PlayerTourch.AIR) {
@@ -127,6 +132,8 @@ public class PlayerHorizontal : MonoBehaviour {
                 MoveTurn.TypeMove = TypeMove.NORMAL;
             }
         }
+
+        _isMoving = false;
     }
 
     private void Flip(DirHorizontal dir) {

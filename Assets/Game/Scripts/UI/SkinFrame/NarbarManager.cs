@@ -14,8 +14,6 @@ public class NarbarManager : MonoBehaviour
         }
     }
 
-
-
     private void Start() {
         OnSelect(curIndex);
         foreach(var bar in lstBarbase) {
