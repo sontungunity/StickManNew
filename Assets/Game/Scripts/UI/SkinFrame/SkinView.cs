@@ -12,7 +12,7 @@ public class SkinView : MonoBehaviour {
     [SerializeField] private Image icon;
     [SerializeField] public DisplayObjects bgDisplay; // 0.Using, 1.Lock, 2.Unlock
     [SerializeField] public Image iconLock;
-    [SerializeField] private GetItemBtn _getItemBtn;
+    [SerializeField] private SkinBtnBuy _getItemBtn;
 
     public SkinItemData Model => model;
     private Action<SkinView> _actionSelect;

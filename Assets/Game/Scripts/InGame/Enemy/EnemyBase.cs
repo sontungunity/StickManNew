@@ -14,6 +14,7 @@ public class EnemyBase : CharacterBase {
     [SerializeField] protected Vector2 forceDie = new Vector2(5,5);
     [Header("Effect")]
     [SerializeField] protected ParticleSystem particleBlood;
+    [SerializeField] protected AudioClip soundDie;
     public Rigidbody2D Rg2D => rg2D;
     public Transform Display => display;
     public EnemyStatus CurStatus => curStatus;
@@ -67,7 +68,11 @@ public class EnemyBase : CharacterBase {
                 SetStatus(EnemyStatus.IDLE);
             });
             enemyBar.UpdateHeart(PercentHeart);
-            particleBlood?.Play();
+            var point = Physics2D.ClosestPoint(objMakeDame.transform.position,collider2D);
+            if(particleBlood!=null) {
+                particleBlood.transform.position = point;
+                particleBlood?.Play();
+            }
         }
     }
     protected virtual void SetupStatus() {
@@ -148,6 +153,7 @@ public class EnemyBase : CharacterBase {
         int randomCoin = Random.Range(3,6);
         SpawnerCoin.Instance.Spawner(transform.position + Vector3.up, randomCoin);
         InGameManager.Instance.AddEnemyDie(this);
+        SoundManager.Instance.PlaySound(soundDie);
     }
 
     protected virtual void OnDisable() {

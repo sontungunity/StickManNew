@@ -119,7 +119,9 @@ public class PlayerAttack : MonoBehaviour {
         foreach(var col in listCol) {
             EnemyBase enemyBase = col.transform.parent.GetComponent<EnemyBase>();
             if(enemyBase != null) {
-                enemyBase.GetDame(dame, gameObject);
+                enemyBase.GetDame(dame, infoAttack.gameObject);
+                var point = Physics2D.ClosestPoint(infoAttack.transform.position,col);
+                SpawnerEffect.Instance.SpawnerEffectDame(point);
             }
         }
     }

@@ -515,6 +515,7 @@ MonoBehaviour:
   - {fileID: 960387233396715562, guid: a73fc9a27ac7c1242a79378ec0b45dce, type: 3}
   - {fileID: 3047957495795817658, guid: 74e9136ede2ddc341b95fdedb7dbcabb, type: 3}
   - {fileID: 5180982447984370536, guid: 93fc6bbad01fa434cba94d1c4a8445f8, type: 3}
+  state: 0
   curLevel: 0
 --- !u!1 &1171162131
 GameObject:

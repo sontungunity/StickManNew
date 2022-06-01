@@ -10,7 +10,6 @@ public class PlayerData {
     public SpinSave SpinSave = new SpinSave();
     public DailySave DailySave = new DailySave();
     public ItemID SkinID = ItemID.SKIN_00;
-
     public void AddItem(ItemStack itemStack) {
         ItemStack result = GetItemSaveByItemId(itemStack.ItemID);
         result.Add(itemStack.Amount);
@@ -60,5 +59,13 @@ public class PlayerData {
 
     public void Update() {
         DailySave.GetUpDate();
+    }
+
+    public void SetSkin(ItemID itemID) {
+        var itemData = itemID.GetDataByID();
+        if(itemData as SkinItemData) {
+            SkinID = itemID;
+            EventDispatcher.Dispatch<EventKey.EventSkinChange>(new EventKey.EventSkinChange());
+        }
     }
 }

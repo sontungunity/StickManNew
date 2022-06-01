@@ -3026,6 +3026,7 @@ MonoBehaviour:
   - full_attack
   - full_attack_sword
   - get_damage
+  - win
 --- !u!114 &8108667303396524272
 MonoBehaviour:
   m_ObjectHideFlags: 0

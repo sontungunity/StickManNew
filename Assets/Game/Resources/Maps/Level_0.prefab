@@ -11360,6 +11360,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 8469245284368052884}
     m_Modifications:
+    - target: {fileID: 578878819493316856, guid: bd112ed0e94d03f42a4015162a724549, type: 3}
+      propertyPath: m_PlayOnAwake
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 980850380195263235, guid: bd112ed0e94d03f42a4015162a724549, type: 3}
       propertyPath: m_Name
       value: Creeper

@@ -7,7 +7,7 @@ public class SpawnerTextDame : Singleton<SpawnerTextDame> {
     [SerializeField] private TextDameInGame textPref;
     public void Spawner(Vector3 position, string content, TextDameInGame.TypeTextShow type = TextDameInGame.TypeTextShow.UP) {
         var textInGame = textPref.Spawn();
-        textInGame.transform.SetParent(InGameManager.Instance.LevelMap.transform);
+        textInGame.transform.SetParent(transform);
         textInGame.Show(content, position, type);
     }
 

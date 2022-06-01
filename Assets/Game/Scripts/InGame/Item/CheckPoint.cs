@@ -5,9 +5,12 @@ using UnityEngine;
 public class CheckPoint : MonoBehaviour
 {
     [SerializeField] private GameObject fire;
+    [SerializeField] private GameObject effect;
+    [SerializeField] private ParticleSystem partUpRead;
 
     private void Start() {
         fire.SetActive(false);
+        effect.SetActive(false);
     }
 
     private void OnTriggerEnter2D(Collider2D collision) {
@@ -15,6 +18,8 @@ public class CheckPoint : MonoBehaviour
             Player player = collision.transform.parent.GetComponent<Player>();
             if(player!=null) {
                 fire.SetActive(true);
+                effect.SetActive(true);
+                partUpRead.Play();
                 InGameManager.Instance.PositionRevive = transform.position;
             }
         }

@@ -31,7 +31,7 @@ public class ReviveFrame : FrameBase
     private void StartCircle() {
         tweenCircle.CheckKillTween();
         tweenCircle = DOTween.To(() => 1f, (value) => { imgCircle.fillAmount = value; }, 0f, timeCount).SetEase(Ease.Linear).OnComplete(()=> {
-            SceneManager.Instance.LoadSceneAsyn(SceneManager.SCENE_HOME);
+            SceneManagerLoad.Instance.LoadSceneAsyn(SceneManagerLoad.SCENE_HOME);
         });
     }
 

@@ -13,6 +13,7 @@ public class EnemyAttack : MonoBehaviour
     [SerializeField] private OverlapCircleAll circleAttackInfo;
     [SerializeField] protected EnemyBase enemyBase;
     [SerializeField] private float timeDelayAttack= 1f;
+    [SerializeField] private AudioClip soundAttack;
     private Tween tween;
     private bool canAttack;
     public bool CanAttack => canAttack;
@@ -36,6 +37,7 @@ public class EnemyAttack : MonoBehaviour
     protected virtual void EventDamege(TrackEntry trackEntry, Spine.Event e) {
         // Play some sound if the event named "footstep" fired.
         if(e.Data.Name == eventATK && circleAttackInfo != null) {
+            SoundManager.Instance.PlaySound(soundAttack);
             Collider2D[] listCol = Physics2D.OverlapCircleAll(circleAttackInfo.transform.position, circleAttackInfo.lookRadius, circleAttackInfo.layerMask);
             foreach(var col in listCol) {
                 Player player = col.transform.parent.GetComponent<Player>();

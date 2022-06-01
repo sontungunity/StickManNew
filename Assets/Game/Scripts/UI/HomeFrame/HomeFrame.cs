@@ -36,6 +36,6 @@ public class HomeFrame : FrameBase {
     }
 
     private void StartGame() {
-        SceneManager.Instance.LoadSceneAsyn(SceneManager.SCENE_GAME);
+        SceneManagerLoad.Instance.LoadSceneAsyn(SceneManagerLoad.SCENE_GAME);
     }
 }

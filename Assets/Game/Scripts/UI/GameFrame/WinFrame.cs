@@ -46,7 +46,7 @@ public class WinFrame : FrameBase
     }
 
     private void HalderHome() {
-        SceneManager.Instance.LoadSceneAsyn(SceneManager.SCENE_HOME);
+        SceneManagerLoad.Instance.LoadSceneAsyn(SceneManagerLoad.SCENE_HOME);
     }
 
     private void HalderReplay() {

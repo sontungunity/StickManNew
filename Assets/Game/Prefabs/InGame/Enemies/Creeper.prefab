@@ -318,6 +318,9 @@ MonoBehaviour:
   lstStrAttack:
   - explode
   anim_Walk: move
+  getDame: {fileID: 0}
+  die: {fileID: 0}
+  packCoinDrop: {fileID: 0}
 --- !u!114 &2091459059279378316
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -335,6 +338,7 @@ MonoBehaviour:
   circleAttackInfo: {fileID: 1219307497935739817}
   enemyBase: {fileID: 980850380195263239}
   timeDelayAttack: 1
+  soundAttack: {fileID: 0}
 --- !u!114 &980850380195263239
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -363,6 +367,8 @@ MonoBehaviour:
   rg2D: {fileID: 6960589591660371030}
   forceDie: {x: 20, y: 5}
   particleBlood: {fileID: 2839696668694826743}
+  soundDie: {fileID: 0}
+  effectPref: {fileID: 4208076277898823088, guid: 799d2512e866826419ed804755804baa, type: 3}
 --- !u!50 &6960589591660371030
 Rigidbody2D:
   serializedVersion: 4

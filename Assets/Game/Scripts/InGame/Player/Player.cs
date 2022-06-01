@@ -76,7 +76,6 @@ public class Player : CharacterBase {
             {
                 SetPlayerStatus(EnumPlayerStatus.IDLE);
             });
-            SoundManager.Instance.PlaySound(playerAnim.GetDameSound);
             par_NewBlood.Play();
         }
         EventDispatcher.Dispatch<EventKey.PlayerChange>(new EventKey.PlayerChange());
