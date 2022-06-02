@@ -255,9 +255,9 @@ GameObject:
   - component: {fileID: 980850380195263236}
   - component: {fileID: 980850380195263257}
   - component: {fileID: 980850380195263258}
-  - component: {fileID: 2091459059279378316}
   - component: {fileID: 980850380195263239}
   - component: {fileID: 6960589591660371030}
+  - component: {fileID: 596777633}
   m_Layer: 10
   m_Name: Creeper
   m_TagString: Untagged
@@ -321,24 +321,6 @@ MonoBehaviour:
   getDame: {fileID: 0}
   die: {fileID: 0}
   packCoinDrop: {fileID: 0}
---- !u!114 &2091459059279378316
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 980850380195263235}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d752f15871e100a48b0246d11b765db7, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  enemyAnim: {fileID: 980850380195263258}
-  eventATK: dmg
-  circleAttackInfo: {fileID: 1219307497935739817}
-  enemyBase: {fileID: 980850380195263239}
-  timeDelayAttack: 1
-  soundAttack: {fileID: 0}
 --- !u!114 &980850380195263239
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -362,13 +344,12 @@ MonoBehaviour:
   distan_attack: {fileID: 980850379527096938}
   curStatus: 0
   enemyBar: {fileID: 9050482216123541762}
-  enemyAttack: {fileID: 2091459059279378316}
+  enemyAttack: {fileID: 596777633}
   collider2D: {fileID: 7571027250899741330}
   rg2D: {fileID: 6960589591660371030}
   forceDie: {x: 20, y: 5}
   particleBlood: {fileID: 2839696668694826743}
   soundDie: {fileID: 0}
-  effectPref: {fileID: 4208076277898823088, guid: 799d2512e866826419ed804755804baa, type: 3}
 --- !u!50 &6960589591660371030
 Rigidbody2D:
   serializedVersion: 4
@@ -390,6 +371,25 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 4
+--- !u!114 &596777633
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 980850380195263235}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aa2e7b334afffc947bc797211548c76d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  enemyAnim: {fileID: 980850380195263258}
+  eventATK: dmg
+  circleAttackInfo: {fileID: 1219307497935739817}
+  enemyBase: {fileID: 980850380195263239}
+  timeDelayAttack: 1
+  soundAttack: {fileID: 0}
+  effectPref: {fileID: 4208076277898823088, guid: 799d2512e866826419ed804755804baa, type: 3}
 --- !u!1 &980850380360507961
 GameObject:
   m_ObjectHideFlags: 0

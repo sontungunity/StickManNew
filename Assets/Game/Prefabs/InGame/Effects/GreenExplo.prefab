@@ -9698,7 +9698,6 @@ GameObject:
   - component: {fileID: 4208076277899839198}
   - component: {fileID: 4208076277879073210}
   - component: {fileID: 2914790835864759153}
-  - component: {fileID: 7703191185983092789}
   m_Layer: 0
   m_Name: GreenExplo
   m_TagString: Untagged
@@ -14538,18 +14537,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 178017f9cd29bfb4a9e7cc9629f36a40, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  particleSystem: {fileID: 4208076277898823088}
-  time: 3
   source: {fileID: 4208076277879073210}
---- !u!114 &7703191185983092789
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4208076277879857096}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b242685d1b6b3264896123e324f0f5c2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 

@@ -3,7 +3,6 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class EnemyCreeper : EnemyBase {
-    [SerializeField] private ParticleSystem effectPref;
     public override void GetDame(int dame, GameObject objMakeDame = null) {
         if(curStatus == EnemyStatus.DIE || curHeart <= 0) {
             return;
@@ -41,8 +40,5 @@ public class EnemyCreeper : EnemyBase {
         int coinRandom = Random.Range(1,6);
         SpawnerCoin.Instance.Spawner(transform.position, coinRandom);
         InGameManager.Instance.AddEnemyDie(this);
-        var effectnew = effectPref.Spawn();
-        effectnew.transform.position = transform.position;
-        effectnew.Play();
     }
 }

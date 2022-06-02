@@ -10,10 +10,10 @@ public class EnemyAttack : MonoBehaviour
 {
     [SerializeField] protected EnemyAnim enemyAnim;
     [SerializeField, SpineEvent] protected string eventATK;
-    [SerializeField] private OverlapCircleAll circleAttackInfo;
+    [SerializeField] protected OverlapCircleAll circleAttackInfo;
     [SerializeField] protected EnemyBase enemyBase;
     [SerializeField] private float timeDelayAttack= 1f;
-    [SerializeField] private AudioClip soundAttack;
+    [SerializeField] protected AudioClip soundAttack;
     private Tween tween;
     private bool canAttack;
     public bool CanAttack => canAttack;
