@@ -6,7 +6,7 @@ using STU;
 
 public class HomeFrame : FrameBase {
     [SerializeField] private Button btn_Play;
-    [SerializeField] private Button btn_Spin,btn_Skin,btn_Daily, btn_Levels;
+    [SerializeField] private Button btn_Spin,btn_Skin,btn_Daily, btn_Levels, btn_Shop;
     [SerializeField] private TextMeshProUGUI txt_Level;
     [SerializeField] private AudioClip musicMenu;
     private void Awake() {
@@ -15,6 +15,7 @@ public class HomeFrame : FrameBase {
         btn_Skin.onClick.AddListener(() => { FrameManager.Instance.Push<SkinFrame>(); });
         btn_Daily.onClick.AddListener(() => { FrameManager.Instance.Push<DailyFrame>(); });
         btn_Levels.onClick.AddListener(() => { FrameManager.Instance.Push<LevelSelectFrame>(); });
+        btn_Shop.onClick.AddListener(() => { FrameManager.Instance.Push<ShopFrame>(); });
     }
 
     private void OnEnable() {
