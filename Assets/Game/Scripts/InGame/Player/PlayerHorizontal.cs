@@ -87,7 +87,7 @@ public class PlayerHorizontal : MonoBehaviour {
             _isMoving = true;
             direction = DirHorizontal.NONE;
         }
-
+         
         //Move
         if(MoveTurn.TypeMove == TypeMove.DASH) {
             rb2D.velocity = new Vector2(speedDash * (int)MoveTurn.Direc, 0);

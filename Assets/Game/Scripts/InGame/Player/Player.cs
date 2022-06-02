@@ -25,6 +25,7 @@ public class Player : CharacterBase {
     private SortStatus curStatus;
     public SortStatus CurStatus => curStatus;
     public WeaponData Weapon = null;
+    public Rigidbody2D RG2D => rg2D;
     public int Dame {
         get {
             int result = curDame;
