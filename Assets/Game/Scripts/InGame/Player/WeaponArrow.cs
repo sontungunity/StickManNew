@@ -6,13 +6,7 @@ public class WeaponArrow : MonoBehaviour {
     [SerializeField] private Vector2 direction;
     [SerializeField] private float speed;
     [SerializeField] private int dame;
-    [SerializeField] private ParticleSystem fire;
-
-    private void Start()
-    {
-        fire.Play();
-    }
-
+    [SerializeField] private ParticleSystem particlePref;
     public void Action(Vector2 direction, float speed, int dame) {
         this.direction = direction;
         this.speed = speed;
@@ -35,6 +29,11 @@ public class WeaponArrow : MonoBehaviour {
 
         if(enemy) {
             enemy.GetDame(dame, gameObject);
+        }
+
+        if(particlePref != null) {
+            var par = particlePref.Spawn();
+            par.transform.position = transform.position;
         }
         this.Recycle();
     }
