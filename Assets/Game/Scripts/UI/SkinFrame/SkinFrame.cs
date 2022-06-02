@@ -1,11 +1,8 @@
 using EnhancedUI.EnhancedScroller;
 using System;
-using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using System.Linq;
-using Spine.Unity;
-using UnityEngine.UI;
 
 public class SkinFrame : FrameBase, IEnhancedScrollerDelegate {
     [Header("Scroller")]
@@ -14,7 +11,6 @@ public class SkinFrame : FrameBase, IEnhancedScrollerDelegate {
     [SerializeField] private float hightFloor;
     [SerializeField] private SkinReview skinReview;
     [SerializeField] private NarbarManager narManager;
-    [SerializeField] private GetItemBtn _getItemBtn;
 
     #region listSkin
     private List<SkinItemData> lstItemSkin = new List<SkinItemData>();
@@ -31,7 +27,7 @@ public class SkinFrame : FrameBase, IEnhancedScrollerDelegate {
 
     public override void OnShow(Action onCompleted = null, bool instant = false) {
         base.OnShow(onCompleted, instant);
-        //Set up skin 
+        //Set up skin
         cur_SkinID = DataManager.Instance.PlayerData.SkinID;
         skinReview.Show(cur_SkinID);
         //Set up scroller
@@ -104,7 +100,7 @@ public class SkinFrame : FrameBase, IEnhancedScrollerDelegate {
         ItemID skinPlayer = DataManager.Instance.PlayerData.SkinID;
         foreach(var item in DataManager.Instance.LstItem) 
         {
-            if(item is SkinItemData itemskin) 
+            if(item is SkinItemData itemskin)
             {
                 if(itemskin.WayGetItem.Type == type) 
                 {
