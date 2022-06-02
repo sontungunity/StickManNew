@@ -480,6 +480,9 @@ MonoBehaviour:
   lstStrAttack:
   - attack
   anim_Walk: move
+  getDame: {fileID: 0}
+  die: {fileID: 0}
+  packCoinDrop: {fileID: 0}
 --- !u!114 &1100985139040637804
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -497,6 +500,7 @@ MonoBehaviour:
   circleAttackInfo: {fileID: 192246850469822281}
   enemyBase: {fileID: 6509126526263252861}
   timeDelayAttack: 1
+  soundAttack: {fileID: 0}
 --- !u!50 &3278169878999619490
 Rigidbody2D:
   serializedVersion: 4
@@ -546,6 +550,7 @@ MonoBehaviour:
   rg2D: {fileID: 3278169878999619490}
   forceDie: {x: 20, y: 5}
   particleBlood: {fileID: 9152954532156666284}
+  soundDie: {fileID: 0}
   timeDelay: 2
 --- !u!1 &2296141954873910570
 GameObject:

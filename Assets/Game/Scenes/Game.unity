@@ -721,7 +721,6 @@ GameObject:
   - component: {fileID: 4701280679932496779}
   - component: {fileID: 4701280679932496778}
   - component: {fileID: 4701280679932496821}
-  - component: {fileID: 4701280679932496824}
   - component: {fileID: 4701280679932496823}
   - component: {fileID: 4701280679932496822}
   m_Layer: 0
@@ -748,40 +747,18 @@ MonoBehaviour:
   m_GameObject: {fileID: 4701280679932496820}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c17020d0b9b514c5ea3b8251d0c4ee6a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _pc2D: {fileID: 4701280679932496824}
-  Progressive: 1
-  SpeedMultiplier: 1
-  TransitionSmoothness: 0.5
-  MaintainInfluenceOnStop: 1
-  MovementThreshold: {x: 0, y: 0}
-  LeftFocus: 0.25
-  RightFocus: 0.25
-  TopFocus: 0.25
-  BottomFocus: 0.25
---- !u!114 &4701280679932496823
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4701280679932496820}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: d7b9c22c96ab04d479afeb29c7b9bfc4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _pc2D: {fileID: 4701280679932496824}
+  _pc2D: {fileID: 4701280679932496823}
   CameraWindowRect:
     serializedVersion: 2
     x: 0
-    y: -1.5
-    width: 0.3
-    height: 0.3
-  IsRelativeSizeAndPosition: 0
---- !u!114 &4701280679932496824
+    y: 0
+    width: 0
+    height: 0
+  IsRelativeSizeAndPosition: 1
+--- !u!114 &4701280679932496823
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -800,7 +777,7 @@ MonoBehaviour:
     TargetOffset: {x: 0, y: 0}
   CenterTargetOnStart: 0
   Axis: 0
-  UpdateType: 0
+  UpdateType: 1
   FollowHorizontal: 1
   HorizontalFollowSmoothness: 0.15
   FollowVertical: 1
