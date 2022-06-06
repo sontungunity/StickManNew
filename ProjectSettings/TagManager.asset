@@ -3,7 +3,8 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags: []
+  tags:
+  - Ground
   layers:
   - Default
   - TransparentFX
@@ -52,6 +53,9 @@ TagManager:
     locked: 0
   - name: Player
     uniqueID: 3301946729
+    locked: 0
+  - name: InGameAHeadS
+    uniqueID: 3643998819
     locked: 0
   - name: Particle
     uniqueID: 4128526193

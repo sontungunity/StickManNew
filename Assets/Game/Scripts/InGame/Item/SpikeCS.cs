@@ -6,6 +6,7 @@ public class SpikeCS : MonoBehaviour {
     //[SerializeField] private Transform display;
     [SerializeField] private BoxCollider2D  boxCollider;
     [SerializeField] private float timeUp = 0.5f,timeDown = 1f,timeDelay = 2f;
+    [SerializeField] private int dame = 20;
     private Sequence mySequence;
     private void Start() {
         float yStart = -boxCollider.size.y;
@@ -27,7 +28,7 @@ public class SpikeCS : MonoBehaviour {
     private void OnCollisionEnter2D(Collision2D collision) {
         Player player = collision.transform.parent.GetComponent<Player>();
         if(player != null) {
-            player.GetDame(player.curHeart);
+            player.GetDameStun(dame, fall:false);
         }
     }
 

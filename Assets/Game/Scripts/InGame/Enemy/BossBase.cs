@@ -19,7 +19,9 @@ public class BossBase : EnemyBase
         } else {
             //curStatus = EnemyStatus.GET_DAME;
             rg2D.velocity = Vector2.zero;
-            enemyAnim.SetAnimGetDame();
+            enemyAnim.SetAnimGetDame(()=> {
+                enemyAnim.AnimIdle();
+            });
             particleBlood?.Play();
         }
     }
