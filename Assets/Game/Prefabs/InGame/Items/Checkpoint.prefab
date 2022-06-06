@@ -5032,7 +5032,7 @@ ParticleSystem:
         m_RotationOrder: 0
     startSizeY:
       serializedVersion: 2
-      minMaxState: 0
+      minMaxState: 3
       scalar: 1
       minScalar: 1
       maxCurve:
@@ -5085,7 +5085,7 @@ ParticleSystem:
         m_RotationOrder: 4
     startSizeZ:
       serializedVersion: 2
-      minMaxState: 0
+      minMaxState: 3
       scalar: 1
       minScalar: 1
       maxCurve:
@@ -5138,7 +5138,7 @@ ParticleSystem:
         m_RotationOrder: 4
     startRotationX:
       serializedVersion: 2
-      minMaxState: 0
+      minMaxState: 3
       scalar: 0
       minScalar: 0
       maxCurve:
@@ -5191,7 +5191,7 @@ ParticleSystem:
         m_RotationOrder: 4
     startRotationY:
       serializedVersion: 2
-      minMaxState: 0
+      minMaxState: 3
       scalar: 0
       minScalar: 0
       maxCurve:
@@ -37994,6 +37994,7 @@ MonoBehaviour:
   fire: {fileID: 8817724501437893679}
   effect: {fileID: 6794033983279888458}
   partUpRead: {fileID: 4190949477604306653}
+  sound: {fileID: 8300000, guid: 5c46c08d081456a4ea67069c79ccf709, type: 3}
 --- !u!1 &8817724501437893679
 GameObject:
   m_ObjectHideFlags: 0

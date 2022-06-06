@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using DG.Tweening;
+using Spine.Unity.AttachmentTools;
 
 public class WeaponArea : MonoBehaviour
 {
@@ -10,6 +11,8 @@ public class WeaponArea : MonoBehaviour
     [SerializeField] private Button btn_Move,btn_Bow,btn_Sword;
     [SerializeField] private Vector2 positionDisplay;
     [SerializeField] private float speedMove, speedRotation;
+    [SerializeField] private Image imgBow, imgSword;
+    
     private bool Ondisplay = false;
     private Tween tweenmove;
     private Tween tweenRotate;
@@ -65,11 +68,15 @@ public class WeaponArea : MonoBehaviour
     private void HalderButtonBow() {
         int indexRandom = Random.Range(0,lstBow.Count);
         player.SetWeapon(lstBow[indexRandom]);
+        imgBow.sprite = lstBow[indexRandom].Icon;
+        imgBow.transform.rotation = new Quaternion(0, 0 , 0, 0) ;
     }
 
     private void HalderButtonSword() {
         int indexRandom = Random.Range(0,lstSword.Count);
         player.SetWeapon(lstSword[indexRandom]);
+        imgSword.sprite = lstSword[indexRandom].Icon;
+        imgSword.transform.rotation = new Quaternion(0, 0 , 0, 0) ;
     }
 
     private void OnDisable() {

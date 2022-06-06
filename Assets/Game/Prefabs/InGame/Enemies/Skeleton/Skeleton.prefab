@@ -262,8 +262,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
+  m_SortingLayerID: -1001872171
+  m_SortingLayer: 3
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: 39c931f6742ad3945a2b019927972123, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -395,8 +395,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
+  m_SortingLayerID: -1001872171
+  m_SortingLayer: 3
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: 2d4735cf3e59a9a47815107db4948cb2, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -474,6 +474,7 @@ MonoBehaviour:
   rg2D: {fileID: 264401739993228301}
   forceDie: {x: 20, y: 5}
   particleBlood: {fileID: 3819499535094984582}
+  soundDie: {fileID: 0}
 --- !u!114 &3624144201626175917
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -511,6 +512,9 @@ MonoBehaviour:
   lstStrAttack:
   - attack
   anim_Walk: move
+  getDame: {fileID: 0}
+  die: {fileID: 0}
+  packCoinDrop: {fileID: 0}
 --- !u!114 &3624144201626175880
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -528,6 +532,7 @@ MonoBehaviour:
   circleAttackInfo: {fileID: 3403873045063803165}
   enemyBase: {fileID: 3624144201626175916}
   timeDelayAttack: 1
+  soundAttack: {fileID: 0}
   skeletonArrow: {fileID: 2127356584280005831, guid: b085ebf8c92c20044ab5199c678fdca5, type: 3}
   point: {fileID: 1052184772956271142}
   angleStart: 45

@@ -7,6 +7,7 @@ public class CheckPoint : MonoBehaviour
     [SerializeField] private GameObject fire;
     [SerializeField] private GameObject effect;
     [SerializeField] private ParticleSystem partUpRead;
+    [SerializeField] private AudioClip sound;
 
     private void Start() {
         fire.SetActive(false);
@@ -20,6 +21,7 @@ public class CheckPoint : MonoBehaviour
                 fire.SetActive(true);
                 effect.SetActive(true);
                 partUpRead.Play();
+                SoundManager.Instance.PlaySound(sound);
                 InGameManager.Instance.PositionRevive = transform.position;
             }
         }
