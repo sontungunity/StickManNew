@@ -13,9 +13,9 @@ MonoBehaviour:
   m_Name: golem_SkeletonData
   m_EditorClassIdentifier: 
   atlasAssets:
-  - {fileID: 11400000, guid: cef42f371c1777045a0fd470aed9c0bd, type: 2}
-  scale: 0.02
-  skeletonJSON: {fileID: 4900000, guid: df7a16dd9b4234f4ca6463bc41aa5ab1, type: 3}
+  - {fileID: 11400000, guid: 575a7658a898ac347a78920154660de5, type: 2}
+  scale: 0.007
+  skeletonJSON: {fileID: 4900000, guid: 07bc1c492b0473a4884b9c79738b7748, type: 3}
   isUpgradingBlendModeMaterials: 0
   blendModeMaterials:
     requiresBlendModeMaterials: 0

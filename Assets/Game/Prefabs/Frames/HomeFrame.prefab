@@ -4474,6 +4474,7 @@ MonoBehaviour:
   btn_Skin: {fileID: 636028391308910652}
   btn_Daily: {fileID: 3006821903714295689}
   btn_Levels: {fileID: 4972960813305496460}
+  btn_Shop: {fileID: 6179716117023670815}
   txt_Level: {fileID: 7970947053055173752}
   musicMenu: {fileID: 8300000, guid: 62e039cfbeb229c45877a1b6c02935c7, type: 3}
 --- !u!1 &7970947052885123203

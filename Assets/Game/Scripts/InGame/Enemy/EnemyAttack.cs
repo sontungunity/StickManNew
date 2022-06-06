@@ -12,10 +12,10 @@ public class EnemyAttack : MonoBehaviour
     [SerializeField, SpineEvent] protected string eventATK;
     [SerializeField] protected OverlapCircleAll circleAttackInfo;
     [SerializeField] protected EnemyBase enemyBase;
-    [SerializeField] private float timeDelayAttack= 1f;
+    [SerializeField] protected float timeDelayAttack= 1f;
     [SerializeField] protected AudioClip soundAttack;
-    private Tween tween;
-    private bool canAttack;
+    protected Tween tween;
+    protected bool canAttack;
     public bool CanAttack => canAttack;
     protected virtual void Awake() {
         enemyAnim.Anim.AnimationState.Event += EventDamege;
@@ -32,10 +32,14 @@ public class EnemyAttack : MonoBehaviour
                 canAttack = true;
             });
         }
+        else
+        {
+            callback?.Invoke();
+        }
+
     }
 
     protected virtual void EventDamege(TrackEntry trackEntry, Spine.Event e) {
-        // Play some sound if the event named "footstep" fired.
         if(e.Data.Name == eventATK && circleAttackInfo != null) {
             SoundManager.Instance.PlaySound(soundAttack);
             Collider2D[] listCol = Physics2D.OverlapCircleAll(circleAttackInfo.transform.position, circleAttackInfo.lookRadius, circleAttackInfo.layerMask);

@@ -123,7 +123,5 @@ public class GhastAttack : EnemyAttack
         MOVE,
         ATTACK,
         STUN
-
     }
-
 }

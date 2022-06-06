@@ -17,7 +17,7 @@ public class Player : CharacterBase {
     [SerializeField] private Rigidbody2D rg2D;
     [Header("Blood")]
     [SerializeField] private ParticleSystem par_NewBlood;
-    
+
     [Header("Custom")]
     [SerializeField] private float timeProtect;
     private PlayerData playerData => DataManager.Instance.PlayerData;
@@ -25,6 +25,7 @@ public class Player : CharacterBase {
     private SortStatus curStatus;
     public SortStatus CurStatus => curStatus;
     public WeaponData Weapon = null;
+    public Rigidbody2D RG2D => rg2D;
     public int Dame {
         get {
             int result = curDame;
@@ -72,8 +73,7 @@ public class Player : CharacterBase {
                 FrameManager.Instance.Push<ReviveFrame>();
             });
         } else {
-            SetPlayerStatus(EnumPlayerStatus.GETDAME, () => 
-            {
+            SetPlayerStatus(EnumPlayerStatus.GETDAME, () => {
                 SetPlayerStatus(EnumPlayerStatus.IDLE);
             });
             par_NewBlood.Play();
@@ -81,7 +81,7 @@ public class Player : CharacterBase {
         EventDispatcher.Dispatch<EventKey.PlayerChange>(new EventKey.PlayerChange());
     }
 
-    public void GetDameStun(int dame, GameObject objMakeDame = null) {
+    public void GetDameStun(int dame, GameObject objMakeDame = null, bool fall = true) {
         if(curHeart <= 0 || isProtect) {
             return;
         }
@@ -91,9 +91,15 @@ public class Player : CharacterBase {
                 FrameManager.Instance.Push<ReviveFrame>();
             });
         } else {
-            SetPlayerStatus(EnumPlayerStatus.STUN, () => {
-                SetPlayerStatus(EnumPlayerStatus.IDLE);
-            });
+            if(fall) {
+                SetPlayerStatus(EnumPlayerStatus.STUN, () => {
+                    SetPlayerStatus(EnumPlayerStatus.IDLE);
+                });
+            } else {
+                SetPlayerStatus(EnumPlayerStatus.GETDAME, () => {
+                    SetPlayerStatus(EnumPlayerStatus.IDLE);
+                });
+            }
             isProtect = true;
             tween.CheckKillTween();
             tween = DOVirtual.DelayedCall(timeProtect, () => {

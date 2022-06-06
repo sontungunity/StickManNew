@@ -12,6 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a6b194f808b1af6499c93410e504af42, type: 3}
   m_Name: golem_Atlas
   m_EditorClassIdentifier: 
-  atlasFile: {fileID: 4900000, guid: 0e0ee03417b2b624fb7fa87a2d92065f, type: 3}
+  atlasFile: {fileID: 4900000, guid: 8dfb53c64b857af46bb4e789ff6ffd5e, type: 3}
   materials:
-  - {fileID: 2100000, guid: 6a2dd1084502d1e40921f875975542ca, type: 2}
+  - {fileID: 2100000, guid: fed7a810a09841b479aaf197b72d877c, type: 2}

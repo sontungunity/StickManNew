@@ -69,7 +69,7 @@ public class EnemyBase : CharacterBase {
             });
             enemyBar.UpdateHeart(PercentHeart);
             var point = Physics2D.ClosestPoint(objMakeDame.transform.position,collider2D);
-            if(particleBlood!=null) {
+            if(particleBlood != null) {
                 particleBlood.transform.position = point;
                 particleBlood?.Play();
             }
@@ -79,6 +79,9 @@ public class EnemyBase : CharacterBase {
         foreach(var col in distan_attack.ArrayCollider2D) {
             if(col != null && col.transform.parent.GetComponent<Player>() != null) {
                 afterUpdateStatus = EnemyStatus.ATTACK;
+                if(!enemyAttack.CanAttack) {
+                    afterUpdateStatus = EnemyStatus.IDLE;
+                }
                 return;
             }
         }
@@ -121,19 +124,17 @@ public class EnemyBase : CharacterBase {
         if(curStatus == status) {
             return true;
         }
+        Debug.Log($"Set anim :{status}");
         curStatus = status;
         if(curStatus == EnemyStatus.ATTACK) {
-            if(enemyAttack.CanAttack) {
-                enemyAttack.Attack(() => {
-                    SetStatus(EnemyStatus.IDLE);
-                });
-            } else {
+            enemyAttack.Attack(() => {
                 SetStatus(EnemyStatus.IDLE);
-            }
+            });
         } else if(curStatus == EnemyStatus.DETECH || curStatus == EnemyStatus.MOVE) {
             enemyAnim.SetAnimWalk();
         } else {
             enemyAnim.AnimIdle();
+            return false;
         }
         return true;
     }
