@@ -68,7 +68,10 @@ public class SoundManager : Singleton<SoundManager> {
 
     public bool SoundEnabled {
         get { return SettingS.SoundEnabled; }
-        set { SettingS.SoundEnabled = value; }
+        set { 
+            SettingS.SoundEnabled = value;
+            EventDispatcher.Dispatch<EventKey.SoundChange>(new EventKey.SoundChange(value));
+        }
     }
 
     public bool VibrateEnabled {

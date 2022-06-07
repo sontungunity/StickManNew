@@ -22,7 +22,7 @@ public class SpineBase : MonoBehaviour {
     }
 
     public void SetAnim(int trackIndex, string animationName, bool loop, Action callBack = null) {
-        if(animmation == null) {
+        if(animmation == null || string.IsNullOrEmpty(animationName)) {
             callBack?.Invoke();
             return;
         }

@@ -64,10 +64,18 @@ public static class EventKey {
     }
 
     public struct EventLevelChange : IEventArgs {
-        
+
     }
 
     public struct EventSetupNewGame : IEventArgs {
 
+    }
+
+    public struct SoundChange : IEventArgs {
+        public bool Enable;
+
+        public SoundChange(bool enable) {
+            this.Enable = enable;
+        }
     }
 }
