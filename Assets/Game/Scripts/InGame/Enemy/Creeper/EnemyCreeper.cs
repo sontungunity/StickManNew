@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class EnemyCreeper : EnemyBase {
@@ -15,6 +13,7 @@ public class EnemyCreeper : EnemyBase {
             rg2D.velocity = Vector2.zero;
             enemyAttack.Attack(() => { DieByExploed(); });
             enemyBar.UpdateHeart(curHeart / (float)originHeart);
+            Debug.Log(curHeart);
         }
     }
 

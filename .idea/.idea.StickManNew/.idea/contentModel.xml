@@ -62,6 +62,11 @@
           <e p="Editor" t="Include">
             <e p="SceneTools.cs" t="Include" />
           </e>
+          <e p="Material" t="Include">
+            <e p="Image" t="Include">
+              <e p="Hovl_Particles_Add_CenterGlow.shader" t="Include" />
+            </e>
+          </e>
           <e p="Scripts" t="Include">
             <e p="Base" t="Include">
               <e p="AdsManager.cs" t="Include" />
@@ -94,21 +99,32 @@
               </e>
               <e p="LoadingManager.cs" t="Include" />
               <e p="PoolManager.cs" t="Include" />
-              <e p="SceneManager.cs" t="Include" />
+              <e p="SceneManagerLoad.cs" t="Include" />
               <e p="SoundManager.cs" t="Include" />
             </e>
             <e p="InGame" t="Include">
               <e p="BeamRayCast.cs" t="Include" />
               <e p="CharacterBase.cs" t="Include" />
+              <e p="EnableAutoRecycle.cs" t="Include" />
               <e p="Enemy" t="Include">
                 <e p="BossBase.cs" t="Include" />
                 <e p="Creeper" t="Include">
                   <e p="DetechPlayer.cs" t="Include" />
                   <e p="EnemyCreeper.cs" t="Include" />
+                  <e p="EnemyCreeperAttack.cs" t="Include" />
+                </e>
+                <e p="Dragon" t="Include">
+                  <e p="Dragon.cs" t="Include" />
+                  <e p="DragonAttack.cs" t="Include" />
+                  <e p="DragonFire.cs" t="Include" />
+                </e>
+                <e p="Enderman" t="Include">
+                  <e p="LaserBase.cs" t="Include" />
                 </e>
                 <e p="EnemyAnim.cs" t="Include" />
                 <e p="EnemyAttack.cs" t="Include" />
                 <e p="EnemyBase.cs" t="Include" />
+                <e p="EnemyEndermanAttack.cs" t="Include" />
                 <e p="EnemyHeartBar.cs" t="Include" />
                 <e p="EnemyMove.cs" t="Include" />
                 <e p="EnemyReward.cs" t="Include" />
@@ -116,7 +132,10 @@
                   <e p="GhastAttack.cs" t="Include" />
                   <e p="GhastBoss.cs" t="Include" />
                   <e p="GhastBullet.cs" t="Include" />
-                  <e p="GhastMove.cs" t="Include" />
+                </e>
+                <e p="Golem" t="Include">
+                  <e p="GolemAttack.cs" t="Include" />
+                  <e p="GolemStone.cs" t="Include" />
                 </e>
                 <e p="Ravager" t="Include">
                   <e p="RavagerAttack.cs" t="Include" />
@@ -140,11 +159,16 @@
                 <e p="CheckPoint.cs" t="Include" />
                 <e p="Coin.cs" t="Include" />
                 <e p="DoorCS.cs" t="Include" />
+                <e p="LavaCS.cs" t="Include" />
+                <e p="MoveObject.cs" t="Include" />
+                <e p="ObjectMakeDame.cs" t="Include" />
                 <e p="SignCS.cs" t="Include" />
+                <e p="SimplePlatform.cs" t="Include" />
                 <e p="SpikeCS.cs" t="Include" />
+                <e p="SpikeDieCS.cs" t="Include" />
                 <e p="SwordCS.cs" t="Include" />
+                <e p="SwordDownCS.cs" t="Include" />
                 <e p="TriggerBoss.cs" t="Include" />
-                <e p="WallDisableCS.cs" t="Include" />
               </e>
               <e p="LevelMap.cs" t="Include" />
               <e p="Player" t="Include">
@@ -163,7 +187,9 @@
                 <e p="WeaponArrow.cs" t="Include" />
               </e>
               <e p="RuleDameAndHeart.cs" t="Include" />
+              <e p="ShackParticle.cs" t="Include" />
               <e p="SpawnerCoin.cs" t="Include" />
+              <e p="SpawnerEffect.cs" t="Include" />
               <e p="SpawnerTextDame.cs" t="Include" />
               <e p="TextDameInGame.cs" t="Include" />
             </e>
@@ -205,9 +231,16 @@
                 <e p="LevelSelectView.cs" t="Include" />
               </e>
               <e p="PlayerSpinUI.cs" t="Include" />
+              <e p="ShopFrame" t="Include">
+                <e p="PackBtn.cs" t="Include" />
+                <e p="PackFrames.cs" t="Include" />
+                <e p="PriceBtn.cs" t="Include" />
+                <e p="ShopFrame.cs" t="Include" />
+              </e>
               <e p="SkinFrame" t="Include">
                 <e p="Barbase.cs" t="Include" />
                 <e p="NarbarManager.cs" t="Include" />
+                <e p="SkinBtnBuy.cs" t="Include" />
                 <e p="SkinFloorShow.cs" t="Include" />
                 <e p="SkinFrame.cs" t="Include" />
                 <e p="SkinReview.cs" t="Include" />
@@ -223,53 +256,72 @@
             </e>
           </e>
           <e p="Spine" t="Include">
-            <e p="BlazeWither" t="Include">
-              <e p="blazing_wither.atlas.txt" t="Include" />
+            <e p="Enemy" t="Include">
+              <e p="BlazeWither" t="Include">
+                <e p="blazing_wither.atlas.txt" t="Include" />
+              </e>
+              <e p="Chest" t="Include">
+                <e p="Chest.atlas.txt" t="Include" />
+              </e>
+              <e p="Creeper" t="Include">
+                <e p="creeper.atlas.txt" t="Include" />
+              </e>
+              <e p="Dragon" t="Include">
+                <e p="dragon.atlas.txt" t="Include" />
+              </e>
+              <e p="Enderman" t="Include">
+                <e p="enderman.atlas.txt" t="Include" />
+              </e>
+              <e p="Ghast" t="Include">
+                <e p="ghast.atlas.txt" t="Include" />
+              </e>
+              <e p="Golem" t="Include">
+                <e p="golem.atlas.txt" t="Include" />
+              </e>
+              <e p="GolemOld" t="Include">
+                <e p="golem.atlas.txt" t="Include" />
+              </e>
+              <e p="Pig" t="Include">
+                <e p="pig.atlas.txt" t="Include" />
+              </e>
+              <e p="Piglin" t="Include">
+                <e p="piglin.atlas.txt" t="Include" />
+              </e>
+              <e p="Poppy" t="Include">
+                <e p="poppy.atlas.txt" t="Include" />
+              </e>
+              <e p="Ravager" t="Include">
+                <e p="ravager.atlas.txt" t="Include" />
+              </e>
+              <e p="Skeleton" t="Include">
+                <e p="skeleton.atlas.txt" t="Include" />
+              </e>
+              <e p="Spiderlend" t="Include">
+                <e p="spider_land.atlas.txt" t="Include" />
+              </e>
+              <e p="Spiderwall" t="Include">
+                <e p="spider_wall.atlas.txt" t="Include" />
+              </e>
+              <e p="Zombie" t="Include">
+                <e p="zombie.atlas.txt" t="Include" />
+              </e>
             </e>
-            <e p="Chest" t="Include">
-              <e p="Chest.atlas.txt" t="Include" />
-            </e>
-            <e p="Creeper" t="Include">
-              <e p="creeper.atlas.txt" t="Include" />
-            </e>
-            <e p="Dragon" t="Include">
-              <e p="dragon.atlas.txt" t="Include" />
-            </e>
-            <e p="Enderman" t="Include">
-              <e p="enderman.atlas.txt" t="Include" />
-            </e>
-            <e p="Ghast" t="Include">
-              <e p="ghast.atlas.txt" t="Include" />
-            </e>
-            <e p="Golem" t="Include">
-              <e p="golem.atlas.txt" t="Include" />
-            </e>
-            <e p="Pig" t="Include">
-              <e p="pig.atlas.txt" t="Include" />
-            </e>
-            <e p="Piglin" t="Include">
-              <e p="piglin.atlas.txt" t="Include" />
+            <e p="Gate" t="Include">
+              <e p="gate.atlas.txt" t="Include" />
             </e>
             <e p="Player" t="Include">
               <e p="stickman.atlas.txt" t="Include" />
             </e>
-            <e p="Poppy" t="Include">
-              <e p="poppy.atlas.txt" t="Include" />
-            </e>
-            <e p="Ravager" t="Include">
-              <e p="ravager.atlas.txt" t="Include" />
-            </e>
-            <e p="Skeleton" t="Include">
-              <e p="skeleton.atlas.txt" t="Include" />
-            </e>
-            <e p="Spiderlend" t="Include">
-              <e p="spider_land.atlas.txt" t="Include" />
-            </e>
-            <e p="Spiderwall" t="Include">
-              <e p="spider_wall.atlas.txt" t="Include" />
-            </e>
-            <e p="Zombie" t="Include">
-              <e p="zombie.atlas.txt" t="Include" />
+            <e p="UI" t="Include">
+              <e p="IconDaily" t="Include">
+                <e p="icon_daily.atlas.txt" t="Include" />
+              </e>
+              <e p="IconGift" t="Include">
+                <e p="icon_gift.atlas.txt" t="Include" />
+              </e>
+              <e p="IconSpin" t="Include">
+                <e p="icon_spin.atlas.txt" t="Include" />
+              </e>
             </e>
           </e>
         </e>
@@ -281,6 +333,25 @@
             <e p="Shaders" t="Include">
               <e p="FireSphere.shader" t="Include" />
             </e>
+          </e>
+        </e>
+        <e p="Pixel Arsenal" t="Include">
+          <e p="Demo" t="Include">
+            <e p="Scripts" t="Include">
+              <e p="PixelArsenalBeamScript.cs" t="Include" />
+              <e p="PixelArsenalButtonScript.cs" t="Include" />
+              <e p="PixelArsenalDragMouseOrbit.cs" t="Include" />
+              <e p="PixelArsenalFireProjectile.cs" t="Include" />
+              <e p="PixelArsenalProjectileScript.cs" t="Include" />
+              <e p="PixelArsenalSceneSelect.cs" t="Include" />
+            </e>
+          </e>
+          <e p="Pixel Arsenal - ReadMe.txt" t="Include" />
+          <e p="Scripts" t="Include">
+            <e p="PixelArsenalLightFade.cs" t="Include" />
+            <e p="PixelArsenalLightFlicker.cs" t="Include" />
+            <e p="PixelArsenalLoopScript.cs" t="Include" />
+            <e p="PixelArsenalRotation.cs" t="Include" />
           </e>
         </e>
         <e p="ProCamera2D" t="Include">
@@ -721,6 +792,168 @@
           </e>
           <e p="version.txt" t="Include" />
         </e>
+        <e p="Spine Examples" t="Include">
+          <e p="Other Examples" t="Include">
+            <e p="Animation Tester" t="Include">
+              <e p="SpineAnimationTesterTool.cs" t="Include" />
+            </e>
+          </e>
+          <e p="Scripts" t="Include">
+            <e p="AttackSpineboy.cs" t="Include" />
+            <e p="DraggableTransform.cs" t="Include" />
+            <e p="FootSoldierExample.cs" t="Include" />
+            <e p="Getting Started Scripts" t="Include">
+              <e p="BasicPlatformerController.cs" t="Include" />
+              <e p="ConstrainedCamera.cs" t="Include" />
+              <e p="Raptor.cs" t="Include" />
+              <e p="SpineBeginnerTwo.cs" t="Include" />
+              <e p="SpineBlinkPlayer.cs" t="Include" />
+              <e p="SpineboyBeginnerInput.cs" t="Include" />
+              <e p="SpineboyBeginnerModel.cs" t="Include" />
+              <e p="SpineboyBeginnerView.cs" t="Include" />
+              <e p="SpineboyTargetController.cs" t="Include" />
+              <e p="TransitionDictionaryExample.cs" t="Include" />
+            </e>
+            <e p="Goblins.cs" t="Include" />
+            <e p="HandleEventWithAudioExample.cs" t="Include" />
+            <e p="HeroEffectsHandlerExample.cs" t="Include" />
+            <e p="HurtFlashEffect.cs" t="Include" />
+            <e p="MaterialPropertyBlockExample.cs" t="Include" />
+            <e p="MaterialReplacementExample.cs" t="Include" />
+            <e p="Mecanim as Logic" t="Include">
+              <e p="DummyMecanimControllerExample.cs" t="Include" />
+              <e p="MecanimToAnimationHandleExample.cs" t="Include" />
+              <e p="SkeletonAnimationHandleExample.cs" t="Include" />
+            </e>
+            <e p="MecanimAnimationMatchModifier" t="Include">
+              <e p="AnimationMatchModifierAsset.cs" t="Include" />
+              <e p="AnimationMatchModifierAsset.txt" t="Include" />
+            </e>
+            <e p="Mix and Match Character Customize" t="Include">
+              <e p="EquipAssetExample.cs" t="Include" />
+              <e p="EquipButtonExample.cs" t="Include" />
+              <e p="EquipsVisualsComponentExample.cs" t="Include" />
+              <e p="EquipSystemExample.cs" t="Include" />
+              <e p="MixAndMatchSkinsButtonExample.cs" t="Include" />
+              <e p="MixAndMatchSkinsExample.cs" t="Include" />
+            </e>
+            <e p="MixAndMatch.cs" t="Include" />
+            <e p="MixAndMatchGraphic.cs" t="Include" />
+            <e p="RaggedySpineboy.cs" t="Include" />
+            <e p="ReloadSceneOnKeyDown.cs" t="Include" />
+            <e p="Rotator.cs" t="Include" />
+            <e p="RuntimeLoadFromExportsExample.cs" t="Include" />
+            <e p="Sample Components" t="Include">
+              <e p="BoneLocalOverride.cs" t="Include" />
+              <e p="CombinedSkin.cs" t="Include" />
+              <e p="Ghost" t="Include">
+                <e p="Shaders" t="Include">
+                  <e p="Spine-Special-Skeleton-Ghost.shader" t="Include" />
+                  <e p="Spine-Special-Skeleton-GhostColor.shader" t="Include" />
+                </e>
+                <e p="SkeletonGhost.cs" t="Include" />
+                <e p="SkeletonGhostRenderer.cs" t="Include" />
+              </e>
+              <e p="Legacy" t="Include">
+                <e p="AtlasRegionAttacher.cs" t="Include" />
+                <e p="SpriteAttacher.cs" t="Include" />
+              </e>
+              <e p="OutlineSkeletonGraphic.cs" t="Include" />
+              <e p="RenderExistingMesh.cs" t="Include" />
+              <e p="RootMotionDeltaCompensation.cs" t="Include" />
+              <e p="Sample VertexEffects" t="Include">
+                <e p="JitterEffectExample.cs" t="Include" />
+                <e p="TwoByTwoTransformEffectExample.cs" t="Include" />
+              </e>
+              <e p="SetRigidbodySolverIterations.cs" t="Include" />
+              <e p="SkeletonAnimationFixedTimestep.cs" t="Include" />
+              <e p="SkeletonAnimationMulti" t="Include">
+                <e p="SkeletonAnimationMulti.cs" t="Include" />
+              </e>
+              <e p="SkeletonColorInitialize.cs" t="Include" />
+              <e p="SkeletonGraphicMirror.cs" t="Include" />
+              <e p="SkeletonGraphicPlayAnimationAtEvent.cs" t="Include" />
+              <e p="SkeletonUtility Modules" t="Include">
+                <e p="Editor" t="Include">
+                  <e p="SkeletonRagdoll2DInspector.cs" t="Include" />
+                  <e p="SkeletonRagdollInspector.cs" t="Include" />
+                  <e p="spine-unity-examples-editor.asmdef" t="Include" />
+                </e>
+                <e p="SkeletonRagdoll.cs" t="Include" />
+                <e p="SkeletonRagdoll2D.cs" t="Include" />
+                <e p="SkeletonUtilityEyeConstraint.cs" t="Include" />
+                <e p="SkeletonUtilityGroundConstraint.cs" t="Include" />
+                <e p="SkeletonUtilityKinematicShadow.cs" t="Include" />
+              </e>
+              <e p="SlotTintBlackFollower.cs" t="Include" />
+              <e p="SpineEventUnityHandler.cs" t="Include" />
+            </e>
+            <e p="SpawnFromSkeletonDataExample.cs" t="Include" />
+            <e p="SpawnSkeletonGraphicExample.cs" t="Include" />
+            <e p="Spineboy.cs" t="Include" />
+            <e p="SpineboyBodyTilt.cs" t="Include" />
+            <e p="SpineboyFacialExpression.cs" t="Include" />
+            <e p="SpineboyFootplanter.cs" t="Include" />
+            <e p="SpineboyFreeze.cs" t="Include" />
+            <e p="SpineboyPole.cs" t="Include" />
+            <e p="SpineboyPoleGraphic.cs" t="Include" />
+            <e p="SpineGauge.cs" t="Include" />
+          </e>
+          <e p="Spine Skeletons" t="Include">
+            <e p="Dragon" t="Include">
+              <e p="dragon.atlas.txt" t="Include" />
+              <e p="license.txt" t="Include" />
+            </e>
+            <e p="Eyes" t="Include">
+              <e p="eyes.atlas.txt" t="Include" />
+            </e>
+            <e p="FootSoldier" t="Include">
+              <e p="Equipment" t="Include">
+                <e p="Equipment.atlas.txt" t="Include" />
+              </e>
+              <e p="FS_White.atlas.txt" t="Include" />
+              <e p="license.txt" t="Include" />
+            </e>
+            <e p="Gauge" t="Include">
+              <e p="Gauge.atlas.txt" t="Include" />
+            </e>
+            <e p="Goblins" t="Include">
+              <e p="goblins.atlas.txt" t="Include" />
+            </e>
+            <e p="Hero" t="Include">
+              <e p="hero-pro.atlas.txt" t="Include" />
+              <e p="license.txt" t="Include" />
+            </e>
+            <e p="mix-and-match" t="Include">
+              <e p="mix-and-match-pma.atlas.txt" t="Include" />
+            </e>
+            <e p="Raggedy Spineboy" t="Include">
+              <e p="Raggedy Spineboy.atlas.txt" t="Include" />
+            </e>
+            <e p="Raptor" t="Include">
+              <e p="raptor.atlas.txt" t="Include" />
+            </e>
+            <e p="raptor-pro-and-mask" t="Include">
+              <e p="raptor-pma.atlas.txt" t="Include" />
+            </e>
+            <e p="spineboy-pro" t="Include">
+              <e p="spineboy-pro.atlas.txt" t="Include" />
+            </e>
+            <e p="spineboy-unity" t="Include">
+              <e p="spineboy.atlas.txt" t="Include" />
+            </e>
+            <e p="Spineunitygirl" t="Include">
+              <e p="Doi.atlas.txt" t="Include" />
+            </e>
+            <e p="Stretchyman" t="Include">
+              <e p="stretchyman-diffuse-pma.atlas.txt" t="Include" />
+            </e>
+            <e p="whirlyblendmodes" t="Include">
+              <e p="whirlyblendmodes.atlas.txt" t="Include" />
+            </e>
+          </e>
+          <e p="spine-unity-examples.asmdef" t="Include" />
+        </e>
         <e p="Standard Assets" t="Include">
           <e p="CrossPlatformInput" t="Include">
             <e p="CrossPlatformInputGuidelines.txt" t="Include" />
@@ -777,11 +1010,14 @@
             <e p="EmojiOne Attribution.txt" t="Include" />
           </e>
         </e>
+        <e p="unity3d.txt" t="Include" />
       </e>
       <e p="obj" t="ExcludeRecursive" />
       <e p="Packages" t="ExcludeRecursive" />
       <e p="spine-csharp.csproj" t="IncludeRecursive" />
       <e p="spine-unity-editor.csproj" t="IncludeRecursive" />
+      <e p="spine-unity-examples-editor.csproj" t="IncludeRecursive" />
+      <e p="spine-unity-examples.csproj" t="IncludeRecursive" />
       <e p="spine-unity.csproj" t="IncludeRecursive" />
       <e p="StickManNew.sln" t="IncludeFlat" />
       <e p="Temp\Bin" t="ExcludeRecursive" />
