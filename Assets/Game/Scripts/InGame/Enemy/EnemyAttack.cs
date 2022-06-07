@@ -36,7 +36,6 @@ public class EnemyAttack : MonoBehaviour
         {
             callback?.Invoke();
         }
-
     }
 
     protected virtual void EventDamege(TrackEntry trackEntry, Spine.Event e) {

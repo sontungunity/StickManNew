@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class GhastBullet : MonoBehaviour
+public class BulletCS : MonoBehaviour
 {
     [SerializeField] private Rigidbody2D rg2D;
     [SerializeField] private ParticleSystem explosion;
@@ -24,10 +24,17 @@ public class GhastBullet : MonoBehaviour
         if(collision.transform.parent.GetComponent<BossBase>()) {
             return;
         }
+
+        if(collision.GetComponent<BulletCS>()) {
+            return;
+        }
+
         Player player = collision.transform.parent.GetComponent<Player>();
         if(player!=null) {
             player.GetDame(dame);
         }
         this.Recycle();
+        var exp = explosion.Spawn(InGameManager.Instance.transform);
+        exp.transform.position = transform.position;
     }
 }
