@@ -12,7 +12,7 @@ public class GolemStone : MonoBehaviour {
     }
 
     public void Active(int dame) {
-        stone.SetDame(dame);
+        //stone.SetDame(dame);
         stone.gameObject.SetActive(true);
         tween.CheckKillTween();
         tween = stone.transform.DOLocalMoveY(0, 0.5f).SetEase(Ease.OutExpo).OnComplete(() => {

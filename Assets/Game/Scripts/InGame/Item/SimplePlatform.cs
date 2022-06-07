@@ -10,17 +10,33 @@ public class SimplePlatform : MonoBehaviour {
     private void OnCollisionEnter2D(Collision2D collision) {
         var player = collision.transform.GetComponent<Player>();
         if(player != null) {
-            player.transform.parent = transform;
+            //player.transform.parent = transform;
             this.player = player;
         }
     }
 
     private void OnCollisionExit2D(Collision2D collision) {
-        if(player != null) {
+        if(this.player != null) {
             var player = collision.transform.GetComponent<Player>();
             if(player != null) {
-                player.transform.parent = InGameManager.Instance.LevelMap.transform;
+                this.player = null;
+                //player.transform.parent = InGameManager.Instance.LevelMap.transform;
             }
         }
+    }
+
+    private void Start() {
+        startP = transform.position;
+    }
+
+    Vector3 distance,startP;
+
+    private void LateUpdate() {
+        distance = transform.position - startP;
+        if(player != null) {
+            player.transform.position += distance;
+        }
+
+        startP = transform.position;
     }
 }
