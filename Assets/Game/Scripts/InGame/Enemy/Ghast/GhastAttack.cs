@@ -14,7 +14,7 @@ public class GhastAttack : EnemyAttack
     [SerializeField] private float speedMove;
     [SerializeField] private int timeAttack;
     [SerializeField] private float timeStun;
-    [SerializeField] private GhastBullet ghastBulletPref;
+    [SerializeField] private BulletCS ghastBulletPref;
     [SerializeField] private Transform pointDown,pointMouth;
     [SerializeField] private float speedBullet;
     private Tween tween;
