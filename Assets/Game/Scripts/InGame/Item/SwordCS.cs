@@ -3,15 +3,15 @@ using UnityEngine;
 public class SwordCS : MonoBehaviour
 {
     [SerializeField] private WeaponID weaponID;
-    [SerializeField] private SpriteRenderer img;
+    // [SerializeField] private SpriteRenderer img;
     [SerializeField] private ParticleSystem par;
+    [SerializeField] private GameObject _itemBoost;
 
     private void Start()
     {
         WeaponData data = weaponID.GetDataWeaponByID();
-        img.sprite = data.Icon;
-        this.transform.localScale = new Vector3(0.4f, 0.4f, 0.4f);
-        // transform.rotation = new Quaternion(0, 0, -40, 0);
+        // img.sprite = data.Icon;
+        // transform.localScale = new Vector3(0.8f, 0.8f, 0.8f);
     }
 
     private void OnTriggerEnter2D(Collider2D collision) {
@@ -25,6 +25,7 @@ public class SwordCS : MonoBehaviour
             AdsManager.Instance.ShowRewarded((value)=> {
                 if(value) {
                     player.SetWeapon(weaponID.GetDataWeaponByID());
+                    _itemBoost.SetActive(false);
                     gameObject.SetActive(false);
                 }
             });
