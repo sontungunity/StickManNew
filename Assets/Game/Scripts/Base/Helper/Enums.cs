@@ -7,7 +7,9 @@ public enum ItemID {
     COIN = 1,
     REMOVEADS = 2,
     UNLOCKSKINS = 3,
-
+    LUCKYWEEL = 4,
+    ITEMSWORD = 5,
+    ITEMBOW =6,
 
     #region skin
     SKIN_00 = 10,

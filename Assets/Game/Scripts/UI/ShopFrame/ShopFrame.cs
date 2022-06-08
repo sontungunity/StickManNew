@@ -4,16 +4,18 @@ using UnityEngine;
 
 public class ShopFrame : FrameBase
 {
-    [SerializeField] private List<PackFrames> packFrame;
-    [SerializeField] private List<PackBtn> packBtn;
-    [SerializeField] private List<PriceBtn> priceBtn;
+    [SerializeField] private NarbarManager narManager;
+    [SerializeField] private DisplayObjects displayShop; // 0.Pack, 1.Coin, 2,Skin 
+    private void Awake() {
+        narManager.CallbackChange += HalderNarBarChange;
+    }
 
     public override void OnShow(Action onCompleted = null, bool instant = false)
     {
         base.OnShow(onCompleted, instant);
-        packFrame[0].ShowPack0();
-        packFrame[1].ShowPack1();
-        packFrame[2].ShowPack2();
-        packFrame[3].ShowPack3();
+    }
+
+    private void HalderNarBarChange(int index) {
+        displayShop.Active(index);
     }
 }

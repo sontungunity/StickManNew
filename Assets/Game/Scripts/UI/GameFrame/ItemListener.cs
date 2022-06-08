@@ -46,10 +46,7 @@ public class ItemListener : MonoBehaviour {
     }
 
     private void OpenShop() {
-        //if(!TutorialManager.Instance.HasTutorial) {
-        //    FrameManager.Instance.Push<ShopFrame>();
-        //} else {
-        //    TextNotify.Instance.Show("Can't open Shop !!");
-        //}
+        FrameManager.Instance.GetFrameTop().Hide();
+        FrameManager.Instance.Push<ShopFrame>();
     }
 }

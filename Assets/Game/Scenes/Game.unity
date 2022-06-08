@@ -192,6 +192,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   force: {x: 10, y: 14}
   coinPref: {fileID: 1641214059803572719, guid: d71505dde2d63da4482d431318df8a53, type: 3}
+  timeDelay: 0.2
 --- !u!114 &322030695
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -755,8 +756,8 @@ MonoBehaviour:
     serializedVersion: 2
     x: 0
     y: 0
-    width: 0
-    height: 0
+    width: 0.3
+    height: 0.3
   IsRelativeSizeAndPosition: 1
 --- !u!114 &4701280679932496823
 MonoBehaviour:
@@ -781,7 +782,7 @@ MonoBehaviour:
   FollowHorizontal: 1
   HorizontalFollowSmoothness: 0.15
   FollowVertical: 1
-  VerticalFollowSmoothness: 0.15
+  VerticalFollowSmoothness: 0
   OffsetX: 0
   OffsetY: 0
   IsRelativeOffset: 1
