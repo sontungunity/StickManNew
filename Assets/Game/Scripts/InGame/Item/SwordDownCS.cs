@@ -1,5 +1,4 @@
 using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using DG.Tweening;
 
@@ -21,22 +20,28 @@ public class SwordDownCS : MonoBehaviour {
             return;
         }
 
-        var hit  = Physics2D.Raycast(transform.position,transform.up * -1f,10f,layerMask);
+        var hit = Physics2D.Raycast(transform.position,transform.up * -1f,10f,layerMask);
         if(hit) {
             Player player = hit.collider.transform.parent.GetComponent<Player>();
             if(player != null) {
                 active = true;
+                
                 rg2D.bodyType = RigidbodyType2D.Dynamic;
             }
         }
     }
 
     private void OnTriggerEnter2D(Collider2D collision) {
+        
         CharacterBase character = collision.transform.parent.GetComponent<CharacterBase>();
         if(character) {
             character.GetDame(dame);
         }
 
+        /*if (collision.gameObject.tag == "Ground")
+        {
+            GetComponent<BoxCollider2D>().isTrigger = false;
+        }*/
 
     }
 

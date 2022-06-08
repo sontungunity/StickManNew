@@ -17,6 +17,7 @@ public class LifeAndHeart : MonoBehaviour
 
     private void Start() {
         txt_NumberLife.text = playerdata.Life.ToString();
+        txt_EnemyKiller.text = InGameManager.Instance.EnemyKilled + " /" + levelMap.NumberEnemy;
     }
 
     private void OnEnable() {

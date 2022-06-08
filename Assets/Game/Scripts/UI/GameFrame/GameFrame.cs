@@ -9,6 +9,7 @@ public class GameFrame : FrameBase
     [SerializeField] private Button btn_Setting;
     [SerializeField] private BossBarHeart bossBarHeart;
     [SerializeField] private RoomSetting roomSetting;
+
     public BossBarHeart BossBarHeart => bossBarHeart;
     public RoomSetting RoomSetting => roomSetting;
     private void Awake() {
