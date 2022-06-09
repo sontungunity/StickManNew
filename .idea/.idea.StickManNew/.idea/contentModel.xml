@@ -129,9 +129,9 @@
                 <e p="EnemyMove.cs" t="Include" />
                 <e p="EnemyReward.cs" t="Include" />
                 <e p="Ghast" t="Include">
-                  <e p="BulletCS.cs" t="Include" />
                   <e p="GhastAttack.cs" t="Include" />
                   <e p="GhastBoss.cs" t="Include" />
+                  <e p="GhastBullet.cs" t="Include" />
                 </e>
                 <e p="Golem" t="Include">
                   <e p="GolemAttack.cs" t="Include" />
@@ -146,17 +146,9 @@
                   <e p="SkeletonArrow.cs" t="Include" />
                   <e p="SkeletonAttack.cs" t="Include" />
                 </e>
-                <e p="SpiderBoss" t="Include">
-                  <e p="SpiderBoss.cs" t="Include" />
-                  <e p="SpiderBossAttack.cs" t="Include" />
-                </e>
                 <e p="SpiderLand" t="Include">
                   <e p="SpiderLand.cs" t="Include" />
                   <e p="SpiderLandSp.cs" t="Include" />
-                </e>
-                <e p="Warrior" t="Include">
-                  <e p="Warrior.cs" t="Include" />
-                  <e p="WarriorAttack.cs" t="Include" />
                 </e>
               </e>
               <e p="Golem.cs" t="Include" />
@@ -165,11 +157,8 @@
                 <e p="AppleCS.cs" t="Include" />
                 <e p="BigCoinCS.cs" t="Include" />
                 <e p="CheckPoint.cs" t="Include" />
-                <e p="ChestCS.cs" t="Include" />
                 <e p="Coin.cs" t="Include" />
                 <e p="DoorCS.cs" t="Include" />
-                <e p="ItemBoost.cs" t="Include" />
-                <e p="LaserCS.cs" t="Include" />
                 <e p="LavaCS.cs" t="Include" />
                 <e p="MoveObject.cs" t="Include" />
                 <e p="ObjectMakeDame.cs" t="Include" />
@@ -199,7 +188,6 @@
               </e>
               <e p="RuleDameAndHeart.cs" t="Include" />
               <e p="ShackParticle.cs" t="Include" />
-              <e p="SoundObject.cs" t="Include" />
               <e p="SpawnerCoin.cs" t="Include" />
               <e p="SpawnerEffect.cs" t="Include" />
               <e p="SpawnerTextDame.cs" t="Include" />
@@ -269,11 +257,6 @@
           </e>
           <e p="Spine" t="Include">
             <e p="Enemy" t="Include">
-              <e p="Warrrior" t="Include">
-                <e p="boss_warrior.atlas.txt" t="Include" />
-              </e>
-            </e>
-            <e p="Enemy&amp;Item" t="Include">
               <e p="BlazeWither" t="Include">
                 <e p="blazing_wither.atlas.txt" t="Include" />
               </e>
@@ -350,101 +333,6 @@
             <e p="Shaders" t="Include">
               <e p="FireSphere.shader" t="Include" />
             </e>
-          </e>
-        </e>
-        <e p="JMO Assets" t="Include">
-          <e p="Cartoon FX (legacy)" t="Include">
-            <e p="CartoonFX Readme.txt" t="Include" />
-            <e p="Demo" t="Include">
-              <e p="Assets" t="Include">
-                <e p="CFX_AutoStopLoopedEffect.cs" t="Include" />
-                <e p="CFX_Demo.cs" t="Include" />
-                <e p="CFX_Demo_New.cs" t="Include" />
-                <e p="CFX_Demo_RandomDir.cs" t="Include" />
-                <e p="CFX_Demo_RandomDirectionTranslate.cs" t="Include" />
-                <e p="CFX_Demo_RotateCamera.cs" t="Include" />
-                <e p="CFX_Demo_Translate.cs" t="Include" />
-                <e p="CFX_Demo_WaterWiggle.shader" t="Include" />
-              </e>
-            </e>
-            <e p="Editor" t="Include">
-              <e p="CFX_InspectorHelpEditor.cs" t="Include" />
-              <e p="CFX_SpawnSystemEditor.cs" t="Include" />
-            </e>
-            <e p="Scripts" t="Include">
-              <e p="CFX_AutoDestructShuriken.cs" t="Include" />
-              <e p="CFX_AutodestructWhenNoChildren.cs" t="Include" />
-              <e p="CFX_AutoRotate.cs" t="Include" />
-              <e p="CFX_InspectorHelp.cs" t="Include" />
-              <e p="CFX_LightIntensityFade.cs" t="Include" />
-              <e p="CFX_ShurikenThreadFix.cs" t="Include" />
-            </e>
-            <e p="Shaders" t="Include">
-              <e p="CFXM_MobileParticleAB_Alpha8.shader" t="Include" />
-              <e p="CFXM_MobileParticleAdd_Alpha8.shader" t="Include" />
-            </e>
-            <e p="Spawn System" t="Include">
-              <e p="CFX_SpawnSystem.cs" t="Include" />
-            </e>
-          </e>
-          <e p="Cartoon FX Easy Editor" t="Include">
-            <e p="CartoonFX Easy Editor Readme.txt" t="Include" />
-            <e p="Editor" t="Include">
-              <e p="CFXEasyEditor.cs" t="Include" />
-            </e>
-          </e>
-          <e p="Cartoon FX Remaster" t="Include">
-            <e p="CFXR Assets" t="Include">
-              <e p="Editor" t="Include">
-                <e p="CFXR Editor.asmdef" t="Include" />
-                <e p="CFXR_BuildShaderPreprocessor.cs" t="Include" />
-                <e p="CFXR_ExpressionParser.cs" t="Include" />
-                <e p="CFXR_MaterialInspector.cs" t="Include" />
-                <e p="CFXR_Styles.cs" t="Include" />
-              </e>
-              <e p="Scripts" t="Include">
-                <e p="CFXR Runtime.asmdef" t="Include" />
-                <e p="CFXR_Effect.CameraShake.cs" t="Include" />
-                <e p="CFXR_Effect.cs" t="Include" />
-                <e p="CFXR_ParticleText.cs" t="Include" />
-                <e p="CFXR_ParticleText_Runtime.cs" t="Include" />
-                <e p="CFXR_ParticleTextFontAsset.cs" t="Include" />
-              </e>
-              <e p="Shaders" t="Include">
-                <e p="CFXR Particle Distortion.shader" t="Include" />
-                <e p="CFXR Particle Glow.shader" t="Include" />
-                <e p="CFXR Particle Procedural Ring.shader" t="Include" />
-                <e p="CFXR Particle Ubershader.shader" t="Include" />
-                <e p="CFXR.cginc" t="Include" />
-                <e p="CFXR_SETTINGS.cginc" t="Include" />
-                <e p="CFXR_URP.cginc" t="Include" />
-              </e>
-            </e>
-            <e p="CFXR Prefabs" t="Include">
-              <e p="Texts" t="Include">
-                <e p="_Make your own text effect.txt" t="Include" />
-              </e>
-            </e>
-            <e p="Demo Assets" t="Include">
-              <e p="CFXR Demo.asmdef" t="Include" />
-              <e p="CFXR_Demo.cs" t="Include" />
-              <e p="CFXR_Demo_RandomText.cs" t="Include" />
-              <e p="CFXR_Demo_Rotate.cs" t="Include" />
-              <e p="Kino Bloom" t="Include">
-                <e p="Bloom.cs" t="Include" />
-                <e p="Editor" t="Include">
-                  <e p="BloomEditor.cs" t="Include" />
-                  <e p="BloomGraphDrawer.cs" t="Include" />
-                  <e p="KinoBloom.Editor.asmdef" t="Include" />
-                </e>
-                <e p="KinoBloom.Runtime.asmdef" t="Include" />
-                <e p="Shader" t="Include">
-                  <e p="Bloom.cginc" t="Include" />
-                  <e p="Bloom.shader" t="Include" />
-                </e>
-              </e>
-            </e>
-            <e p="Readme Cartoon FX Remaster.txt" t="Include" />
           </e>
         </e>
         <e p="Pixel Arsenal" t="Include">
@@ -1124,10 +1012,6 @@
         </e>
         <e p="unity3d.txt" t="Include" />
       </e>
-      <e p="CFXRDemo.csproj" t="IncludeRecursive" />
-      <e p="CFXREditor.csproj" t="IncludeRecursive" />
-      <e p="CFXRRuntime.csproj" t="IncludeRecursive" />
-      <e p="KinoBloom.Runtime.csproj" t="IncludeRecursive" />
       <e p="obj" t="ExcludeRecursive" />
       <e p="Packages" t="ExcludeRecursive" />
       <e p="spine-csharp.csproj" t="IncludeRecursive" />
@@ -1137,7 +1021,6 @@
       <e p="spine-unity.csproj" t="IncludeRecursive" />
       <e p="StickManNew.sln" t="IncludeFlat" />
       <e p="Temp\Bin" t="ExcludeRecursive" />
-      <e p="ToonyColorsPro.Demo.Editor.csproj" t="IncludeRecursive" />
     </e>
   </component>
 </project>
