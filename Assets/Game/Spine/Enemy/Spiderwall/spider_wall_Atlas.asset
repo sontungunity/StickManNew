@@ -12,6 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a6b194f808b1af6499c93410e504af42, type: 3}
   m_Name: spider_wall_Atlas
   m_EditorClassIdentifier: 
-  atlasFile: {fileID: 4900000, guid: b623d8d74d59b50429399cfefc394102, type: 3}
+  atlasFile: {fileID: 4900000, guid: 76ea593153e933a4b83984d913200586, type: 3}
   materials:
-  - {fileID: 2100000, guid: 8503c03cee02ef44197f90ca98dd565d, type: 2}
+  - {fileID: 2100000, guid: c6b5f44a33bbfce4680108090ca308a5, type: 2}
