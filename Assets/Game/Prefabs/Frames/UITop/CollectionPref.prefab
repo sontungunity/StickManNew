@@ -91,3 +91,4 @@ MonoBehaviour:
   icon: {fileID: 2533973181766137438}
   speed: 2000
   m_sound: {fileID: 8300000, guid: 8ff76dc920b164a43869ad94b096811e, type: 3}
+  parPref: {fileID: 4263383212871452042, guid: cbe3e067c6dad0c439720d7b09a96770, type: 3}

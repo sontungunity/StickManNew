@@ -79,7 +79,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   icon: {fileID: 6284242202258784751}
   txt_Amount: {fileID: 2618876786397681985}
-  txtBefor: 
+  txtBefor: +
 --- !u!1 &793402169758012002
 GameObject:
   m_ObjectHideFlags: 0
@@ -159,7 +159,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   icon: {fileID: 8868765139108816947}
   txt_Amount: {fileID: 2145211546140841352}
-  txtBefor: 
+  txtBefor: +
 --- !u!1 &967886874838882959
 GameObject:
   m_ObjectHideFlags: 0
@@ -716,7 +716,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   icon: {fileID: 3592156464930925600}
   txt_Amount: {fileID: 3231156930670509654}
-  txtBefor: 
+  txtBefor: +
 --- !u!1 &3520828776718575271
 GameObject:
   m_ObjectHideFlags: 0
@@ -1442,7 +1442,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   icon: {fileID: 3111389149255413848}
   txt_Amount: {fileID: 6974629628498131398}
-  txtBefor: 
+  txtBefor: +
 --- !u!1 &5326158845422395504
 GameObject:
   m_ObjectHideFlags: 0
@@ -1731,7 +1731,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   icon: {fileID: 3999219304405173234}
   txt_Amount: {fileID: 4846785157522688722}
-  txtBefor: 
+  txtBefor: +
 --- !u!1 &6019550734455007792
 GameObject:
   m_ObjectHideFlags: 0
@@ -2068,7 +2068,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   icon: {fileID: 6019550735956865551}
   txt_Amount: {fileID: 6019550735762100334}
-  txtBefor: 
+  txtBefor: +
 --- !u!1 &6019550735037735379
 GameObject:
   m_ObjectHideFlags: 0
@@ -2865,22 +2865,22 @@ MonoBehaviour:
   - {fileID: 1552530702716716701}
   - {fileID: 4006714224544524390}
   lstReward:
-  - itemID: 1
+  - itemID: 21
     amount: 1
   - itemID: 1
-    amount: 2
+    amount: 300
   - itemID: 1
-    amount: 3
+    amount: 500
   - itemID: 1
-    amount: 4
+    amount: 250
+  - itemID: 42
+    amount: 1
   - itemID: 1
-    amount: 5
+    amount: 200
   - itemID: 1
-    amount: 6
+    amount: 100
   - itemID: 1
-    amount: 7
-  - itemID: 1
-    amount: 8
+    amount: 100
   wheel: {fileID: 6019550734510886237}
   lightCell: {fileID: 6019550735850258716}
   spinCurve:
@@ -5069,7 +5069,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   icon: {fileID: 1198392689560812376}
   txt_Amount: {fileID: 4398367502151216288}
-  txtBefor: 
+  txtBefor: +
 --- !u!1 &8495661767740085927
 GameObject:
   m_ObjectHideFlags: 0
@@ -5283,7 +5283,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   icon: {fileID: 3432115434534930621}
   txt_Amount: {fileID: 1895394639733187451}
-  txtBefor: 
+  txtBefor: +
 --- !u!1 &9210806966702491615
 GameObject:
   m_ObjectHideFlags: 0

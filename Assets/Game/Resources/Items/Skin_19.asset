@@ -17,7 +17,7 @@ MonoBehaviour:
   description: Skin 19
   nameSpine: skin/skin_020
   wayGetItem:
-    Type: 4
+    Type: 5
     ItemStackDetail:
       itemID: 2
       amount: 0

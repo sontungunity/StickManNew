@@ -2856,7 +2856,7 @@ MonoBehaviour:
   initialSkinName: skin/skin_01
   initialFlipX: 0
   initialFlipY: 0
-  startingAnimation: 
+  startingAnimation: idle
   startingLoop: 1
   timeScale: 1
   freeze: 0
@@ -4947,18 +4947,18 @@ MonoBehaviour:
   - {fileID: 6059545397381916326}
   lstReward:
   - itemID: 1
-    amount: 100
-  - itemID: 1
-    amount: 200
-  - itemID: 1
     amount: 300
-  - itemID: 1
-    amount: 400
   - itemID: 1
     amount: 500
   - itemID: 1
-    amount: 600
-  - itemID: 12
+    amount: 700
+  - itemID: 1
+    amount: 1000
+  - itemID: 1
+    amount: 1500
+  - itemID: 1
+    amount: 2000
+  - itemID: 37
     amount: 1
 --- !u!1 &6059545398769558555
 GameObject:
