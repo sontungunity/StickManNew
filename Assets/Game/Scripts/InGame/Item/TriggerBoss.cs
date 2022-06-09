@@ -6,6 +6,7 @@ public class TriggerBoss : MonoBehaviour {
     [SerializeField] private GameObject displayBoss;
     [SerializeField] private GameObject disabe;
     [SerializeField] private BoxCollider2D col2D;
+    [SerializeField] private GameObject triggerBound; 
     private void Start() {
         col2D.enabled = true;
         if(displayBoss != null) {
@@ -14,7 +15,7 @@ public class TriggerBoss : MonoBehaviour {
         if(disabe != null) {
             disabe?.SetActive(true);
         }
-
+        triggerBound.SetActive(true);
     }
 
     private void OnEnable() {
@@ -30,6 +31,7 @@ public class TriggerBoss : MonoBehaviour {
             if(disabe!=null) {
                 disabe?.SetActive(false);
             }
+            triggerBound.SetActive(false);
             InGameManager.Instance.SetUpBoss(false);
         }
     }
