@@ -12,6 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a6b194f808b1af6499c93410e504af42, type: 3}
   m_Name: ghast_Atlas
   m_EditorClassIdentifier: 
-  atlasFile: {fileID: 4900000, guid: 1c418dfc7862348419ddb0756d4b168a, type: 3}
+  atlasFile: {fileID: 4900000, guid: 9b5f8b46a2cac65469a4644583de3ece, type: 3}
   materials:
-  - {fileID: 2100000, guid: ba5e7d76c3e88bb4d9fc0159495beed3, type: 2}
+  - {fileID: 2100000, guid: 2acb6eb5cd9a5c746b3412519e0bb3d2, type: 2}

@@ -97,6 +97,7 @@
                 <e p="Enums.cs" t="Include" />
                 <e p="Extentions.cs" t="Include" />
               </e>
+              <e p="IAPManager.cs" t="Include" />
               <e p="LoadingManager.cs" t="Include" />
               <e p="PoolManager.cs" t="Include" />
               <e p="SceneManagerLoad.cs" t="Include" />
@@ -244,7 +245,6 @@
               </e>
               <e p="PlayerSpinUI.cs" t="Include" />
               <e p="ShopFrame" t="Include">
-                <e p="PackBtn.cs" t="Include" />
                 <e p="PackFrames.cs" t="Include" />
                 <e p="PriceBtn.cs" t="Include" />
                 <e p="ShopFrame.cs" t="Include" />
@@ -269,8 +269,56 @@
           </e>
           <e p="Spine" t="Include">
             <e p="Enemy" t="Include">
+              <e p="BlazeWither" t="Include">
+                <e p="blazing_wither.atlas.txt" t="Include" />
+              </e>
+              <e p="Chest" t="Include">
+                <e p="Chest.atlas.txt" t="Include" />
+              </e>
+              <e p="Creeper" t="Include">
+                <e p="creeper.atlas.txt" t="Include" />
+              </e>
+              <e p="Dragon" t="Include">
+                <e p="dragon.atlas.txt" t="Include" />
+              </e>
+              <e p="Enderman" t="Include">
+                <e p="enderman.atlas.txt" t="Include" />
+              </e>
+              <e p="Ghast" t="Include">
+                <e p="ghast.atlas.txt" t="Include" />
+              </e>
+              <e p="Golem" t="Include">
+                <e p="golem.atlas.txt" t="Include" />
+              </e>
+              <e p="GolemOld" t="Include">
+                <e p="golem.atlas.txt" t="Include" />
+              </e>
+              <e p="Pig" t="Include">
+                <e p="pig.atlas.txt" t="Include" />
+              </e>
+              <e p="Piglin" t="Include">
+                <e p="piglin.atlas.txt" t="Include" />
+              </e>
+              <e p="Poppy" t="Include">
+                <e p="poppy.atlas.txt" t="Include" />
+              </e>
+              <e p="Ravager" t="Include">
+                <e p="ravager.atlas.txt" t="Include" />
+              </e>
+              <e p="Skeleton" t="Include">
+                <e p="skeleton.atlas.txt" t="Include" />
+              </e>
+              <e p="Spiderlend" t="Include">
+                <e p="spider_land.atlas.txt" t="Include" />
+              </e>
+              <e p="Spiderwall" t="Include">
+                <e p="spider_wall.atlas.txt" t="Include" />
+              </e>
               <e p="Warrrior" t="Include">
                 <e p="boss_warrior.atlas.txt" t="Include" />
+              </e>
+              <e p="Zombie" t="Include">
+                <e p="zombie.atlas.txt" t="Include" />
               </e>
             </e>
             <e p="Enemy&amp;Item" t="Include">
@@ -447,6 +495,29 @@
             <e p="Readme Cartoon FX Remaster.txt" t="Include" />
           </e>
         </e>
+        <e p="ParticleEffectForUGUI-3.3.10" t="Include">
+          <e p="Scripts" t="Include">
+            <e p="AnimatableProperty.cs" t="Include" />
+            <e p="BakingCamera.cs" t="Include" />
+            <e p="Coffee.UIParticle.asmdef" t="Include" />
+            <e p="CombineInstanceEx.cs" t="Include" />
+            <e p="Editor" t="Include">
+              <e p="AnimatedPropertiesEditor.cs" t="Include" />
+              <e p="Coffee.UIParticle.Editor.asmdef" t="Include" />
+              <e p="ImportSampleMenu.cs" t="Include" />
+              <e p="UIParticleEditor.cs" t="Include" />
+              <e p="UIParticleMenu.cs" t="Include" />
+            </e>
+            <e p="MeshHelper.cs" t="Include" />
+            <e p="ModifiedMaterial.cs" t="Include" />
+            <e p="UIParticle.cs" t="Include" />
+            <e p="UIParticleUpdater.cs" t="Include" />
+            <e p="Utils.cs" t="Include" />
+          </e>
+          <e p="Shaders" t="Include">
+            <e p="UIAdditive.shader" t="Include" />
+          </e>
+        </e>
         <e p="Pixel Arsenal" t="Include">
           <e p="Demo" t="Include">
             <e p="Scripts" t="Include">
@@ -599,6 +670,7 @@
                 <e p="ProCamera2DTriggerZoomEditor.cs" t="Include" />
               </e>
               <e p="ProCamera2DTriggerBoundaries.cs" t="Include" />
+              <e p="ProCamera2DTriggerBoundariesII.cs" t="Include" />
               <e p="ProCamera2DTriggerInfluence.cs" t="Include" />
               <e p="ProCamera2DTriggerRails.cs" t="Include" />
               <e p="ProCamera2DTriggerZoom.cs" t="Include" />
@@ -1127,6 +1199,8 @@
       <e p="CFXRDemo.csproj" t="IncludeRecursive" />
       <e p="CFXREditor.csproj" t="IncludeRecursive" />
       <e p="CFXRRuntime.csproj" t="IncludeRecursive" />
+      <e p="Coffee.UIParticle.csproj" t="IncludeRecursive" />
+      <e p="Coffee.UIParticle.Editor.csproj" t="IncludeRecursive" />
       <e p="KinoBloom.Runtime.csproj" t="IncludeRecursive" />
       <e p="obj" t="ExcludeRecursive" />
       <e p="Packages" t="ExcludeRecursive" />

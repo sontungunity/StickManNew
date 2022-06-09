@@ -85,10 +85,12 @@
     <setting file="file://$PROJECT_DIR$/Assets/Game/Scripts/InGame/Item/MoveObject.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Game/Scripts/UI/Collection/CollectionController.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Game/Scripts/InGame/Enemy/EnemyMove.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Game/Scripts/InGame/Item/SpikeDieCS.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Game/Scripts/UI/DailyFrame/DailyView.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Game/Scripts/InGame/Item/SwordDownCS.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Game/Scripts/InGame/Enemy/Creeper/DetechPlayer.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Game/Scripts/InGame/Enemy/Creeper/EnemyCreeper.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Spine/Runtime/spine-unity/Asset Types/SpineAtlasAsset.cs" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
@@ -135,6 +137,7 @@
         <option value="$PROJECT_DIR$/Assets/Game/Scripts/InGame/Item/AppleCS.cs" />
         <option value="$PROJECT_DIR$/Assets/Game/Scripts/InGame/Item/SwordCS.cs" />
         <option value="$PROJECT_DIR$/Assets/Game/Scripts/InGame/Player/Player.cs" />
+        <option value="$PROJECT_DIR$/Assets/Game/Scripts/InGame/Item/SpikeDieCS.cs" />
       </list>
     </option>
   </component>
