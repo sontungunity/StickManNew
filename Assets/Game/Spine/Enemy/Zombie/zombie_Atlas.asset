@@ -12,6 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a6b194f808b1af6499c93410e504af42, type: 3}
   m_Name: zombie_Atlas
   m_EditorClassIdentifier: 
-  atlasFile: {fileID: 4900000, guid: f9a798cd37f633f4ba1e001fd2fad739, type: 3}
+  atlasFile: {fileID: 4900000, guid: 463dcb351b31d7d4b828d57c95296217, type: 3}
   materials:
-  - {fileID: 2100000, guid: 67299eabab40edc46ab6da3dbbabe85a, type: 2}
+  - {fileID: 2100000, guid: 6baba8064855af44c8844e15737062e3, type: 2}

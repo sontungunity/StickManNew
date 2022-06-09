@@ -12,6 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a6b194f808b1af6499c93410e504af42, type: 3}
   m_Name: enderman_Atlas
   m_EditorClassIdentifier: 
-  atlasFile: {fileID: 4900000, guid: 28ebfe2031ef7ed45a5ac10370fa5412, type: 3}
+  atlasFile: {fileID: 4900000, guid: ad2d6c69ff7a356429468acacb28b094, type: 3}
   materials:
-  - {fileID: 2100000, guid: cdf1e0560cad3d84a94f51ef1e4ea422, type: 2}
+  - {fileID: 2100000, guid: 9d417c05753bed6419c56d148fecd383, type: 2}

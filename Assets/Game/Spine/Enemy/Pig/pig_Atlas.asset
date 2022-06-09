@@ -12,6 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a6b194f808b1af6499c93410e504af42, type: 3}
   m_Name: pig_Atlas
   m_EditorClassIdentifier: 
-  atlasFile: {fileID: 4900000, guid: cf11d69b525454e449cfb0b619f98bbd, type: 3}
+  atlasFile: {fileID: 4900000, guid: f6c7d461eedd6bf40ad935900d3313cc, type: 3}
   materials:
-  - {fileID: 2100000, guid: e76acb47543f7b1469a2ad4270513e11, type: 2}
+  - {fileID: 2100000, guid: fbe6980f5b5cd8a48a60e24c1c014922, type: 2}

@@ -12,6 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a6b194f808b1af6499c93410e504af42, type: 3}
   m_Name: poppy_Atlas
   m_EditorClassIdentifier: 
-  atlasFile: {fileID: 4900000, guid: df12d643584eb2b4f995a666181b9c05, type: 3}
+  atlasFile: {fileID: 4900000, guid: 75da5727d4a13ae469cc697f48739705, type: 3}
   materials:
-  - {fileID: 2100000, guid: d6cf0b6374c18444c80e8b959eaba6fa, type: 2}
+  - {fileID: 2100000, guid: 1ddb2bd5877356d479d04b2c2b6084cb, type: 2}

@@ -12,6 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a6b194f808b1af6499c93410e504af42, type: 3}
   m_Name: spider_land_Atlas
   m_EditorClassIdentifier: 
-  atlasFile: {fileID: 4900000, guid: a55cce3714683544aae16ccd43acb256, type: 3}
+  atlasFile: {fileID: 4900000, guid: 59ae79c9cde06c1409079ddef72d0e70, type: 3}
   materials:
-  - {fileID: 2100000, guid: fe0702eabd8022a4586a78fe8506aa8c, type: 2}
+  - {fileID: 2100000, guid: 60c37b5939ee61540b21bdcd5e443f9b, type: 2}

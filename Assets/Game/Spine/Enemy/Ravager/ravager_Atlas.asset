@@ -12,6 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a6b194f808b1af6499c93410e504af42, type: 3}
   m_Name: ravager_Atlas
   m_EditorClassIdentifier: 
-  atlasFile: {fileID: 4900000, guid: c75f8383c087fb14f84ac175cdfd1434, type: 3}
+  atlasFile: {fileID: 4900000, guid: ac02938048302cf45946a82fdd435b59, type: 3}
   materials:
-  - {fileID: 2100000, guid: 9e0b4cb3ea51e6f48be7dbcd632468dd, type: 2}
+  - {fileID: 2100000, guid: 1df152e501eb8a645af09e2cff430a83, type: 2}

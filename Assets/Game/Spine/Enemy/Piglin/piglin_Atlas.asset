@@ -12,6 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a6b194f808b1af6499c93410e504af42, type: 3}
   m_Name: piglin_Atlas
   m_EditorClassIdentifier: 
-  atlasFile: {fileID: 4900000, guid: 898dc1daf2eaf944792d1596bcc1663b, type: 3}
+  atlasFile: {fileID: 4900000, guid: 60ec833769867dc49be12314b4d23fb5, type: 3}
   materials:
-  - {fileID: 2100000, guid: c200492a0f7747642b1051112e99bf6d, type: 2}
+  - {fileID: 2100000, guid: 6a52e8fed0245b8419a66126b09bc18f, type: 2}

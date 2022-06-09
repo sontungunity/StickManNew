@@ -12,6 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a6b194f808b1af6499c93410e504af42, type: 3}
   m_Name: blazing_wither_Atlas
   m_EditorClassIdentifier: 
-  atlasFile: {fileID: 4900000, guid: 54049ff7e7a95164391f483a0e246e7a, type: 3}
+  atlasFile: {fileID: 4900000, guid: c0dfdd08a38c60e40ae7679cd5d27036, type: 3}
   materials:
-  - {fileID: 2100000, guid: 29775d565313aa0438b8e2b74fba3d9d, type: 2}
+  - {fileID: 2100000, guid: 2770ff4d9d10cea46945174ec0ed7657, type: 2}
