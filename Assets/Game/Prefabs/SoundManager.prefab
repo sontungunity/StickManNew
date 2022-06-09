@@ -47,7 +47,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   musicAudioSource: {fileID: 960387234279885510}
   soundAudioSource: {fileID: 960387234428127130}
-  audio_PressButton: {fileID: 0}
+  audio_PressButton: {fileID: 8300000, guid: fad2b291196b3544ebda26e652aa6f04, type: 3}
   audio_CollectGold: {fileID: 8300000, guid: 455e50252fa17b640b0ee5fa87aa3522, type: 3}
 --- !u!1 &960387234279885508
 GameObject:

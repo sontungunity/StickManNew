@@ -111,6 +111,8 @@ public class WarriorAttack : EnemyAttack {
     }
 
     private void OnDisable() {
-        StopCoroutine(coroutine);
+        if(coroutine != null) {
+            StopCoroutine(coroutine);
+        }
     }
 }

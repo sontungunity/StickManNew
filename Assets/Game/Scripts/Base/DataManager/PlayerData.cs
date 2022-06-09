@@ -6,7 +6,7 @@ public class PlayerData {
     public int LevelPlayer = 0;
     public int Life = 5;
     public int LevelMap = 0;
-    public List<ItemStack> eventory = new List<ItemStack>(){new ItemStack(ItemID.COIN,10)};
+    public List<ItemStack> eventory = new List<ItemStack>(){new ItemStack(ItemID.COIN,10),new ItemStack(ItemID.LUCKYWEEL,5),new ItemStack(ItemID.ITEMBOW,5),new ItemStack(ItemID.ITEMSWORD,5)};
     public SpinSave SpinSave = new SpinSave();
     public DailySave DailySave = new DailySave();
     public ItemID SkinID = ItemID.SKIN_00;

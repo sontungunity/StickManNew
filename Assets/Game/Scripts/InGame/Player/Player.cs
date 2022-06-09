@@ -15,9 +15,11 @@ public class Player : CharacterBase {
     [SerializeField] private PlayerVertical playerVertical;
     [SerializeField] private PlayerHorizontal playerHorizontal;
     [SerializeField] private Rigidbody2D rg2D;
-    [Header("Blood")]
+    [Header("Effect")]
     [SerializeField] private ParticleSystem par_NewBlood;
-
+    [SerializeField] private ParticleSystem par_GetWeapon;
+    [SerializeField] private ParticleSystem par_Heal;
+    [SerializeField] private AudioClip soundGetWeapon,soundHealing;
     [Header("Custom")]
     [SerializeField] private float timeProtect;
     private PlayerData playerData => DataManager.Instance.PlayerData;
@@ -177,12 +179,15 @@ public class Player : CharacterBase {
         int heart = Mathf.RoundToInt(originHeart*percent);
         curHeart += heart;
         curHeart = Mathf.Min(curHeart, originHeart);
+        par_Heal.Play();
         EventDispatcher.Dispatch<EventKey.PlayerChange>(new EventKey.PlayerChange());
     }
 
     public void SetWeapon(WeaponData data) {
         this.Weapon = data;
         playerAnim.AddSkin(Weapon.NameSkin);
+        par_GetWeapon.Play();
+        SoundManager.Instance.PlaySound(soundGetWeapon);
         EventDispatcher.Dispatch<EventKey.PlayerChange>(new EventKey.PlayerChange());
     }
 }

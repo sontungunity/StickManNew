@@ -561,8 +561,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   firstFrame: {fileID: 7970947052703437698, guid: bbadc9bb078c9c14f953c60afc192b44, type: 3}
   lstFrameCollectes:
-  - {fileID: 6019550735689133367, guid: 7c9313fa6a290e0478c55d663623478e, type: 3}
+  - {fileID: 7970947052703437698, guid: bbadc9bb078c9c14f953c60afc192b44, type: 3}
   - {fileID: 6511663798760766257, guid: 2147241a4a5a4b2489ca597fcda2a52a, type: 3}
   - {fileID: 6059545398746199667, guid: d5dc161a2593d4841b4a43038cc8e3f3, type: 3}
   - {fileID: 6019550735689133367, guid: c8af898d206dff14493debef8f6bb22a, type: 3}
-  - {fileID: 2239094207253565687, guid: 7862155aa330c3a45b0bc5a10df8c2b2, type: 3}
+  - {fileID: 5777564860349266674, guid: d5bd01ecdcd58284b923da83aeacdc9e, type: 3}
+  - {fileID: 1897959423306026408, guid: 71c70986d14c4a545b4340da0181a7b1, type: 3}

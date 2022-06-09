@@ -2,6 +2,7 @@ using STU;
 using System;
 using System.Collections.Generic;
 using UnityEngine;
+using System.Linq;
 
 public class FrameManager : Singleton<FrameManager> {
     [SerializeField] private FrameBase firstFrame;
@@ -24,6 +25,7 @@ public class FrameManager : Singleton<FrameManager> {
             pushOption?.Invoke(frame);
             frame.Show(onCompleted);
         }
+        frame.transform.SetAsLastSibling();
         return frame;
     }
 
@@ -43,5 +45,9 @@ public class FrameManager : Singleton<FrameManager> {
             }
         }
         return null;
+    }
+
+    public FrameBase GetFrameTop(){
+        return transform.GetComponentsInChildren<FrameBase>(false).Last<FrameBase>();
     }
 }

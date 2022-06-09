@@ -1,23 +1,47 @@
 using System;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
+using TMPro;
+public class LevelSelectFrame : FrameBase {
+    [SerializeField] private List<LevelSelectView> levelView;
+    [SerializeField] private Button btn_Right,btn_Left;
+    [SerializeField] private TextMeshProUGUI txt_Detail;
+    private int amountLevelView = 10;
+    private int levelStart;
+    private void Awake() {
+        amountLevelView = levelView.Count;
+        btn_Right.onClick.AddListener(SelectLevelRight);
+        btn_Left.onClick.AddListener(SelectlevelLeft);
+    }
 
-public class LevelSelectFrame: FrameBase{
-        
-        [SerializeField] private List<LevelSelectView> levelView;
-    
-        private void Awake() {
-            int i = 0;
-            foreach(LevelSelectView view in levelView) {
-                view.Init( this, i);
-                i++;
-            }
+    public override void OnShow(Action onCompleted = null, bool instant = false) {
+        base.OnShow(onCompleted, instant);
+        txt_Detail.text = $"LEVEL {DataManager.Instance.PlayerData.LevelMap+1}/{DataManager.Instance.LevelMapMax+1}";
+        int curLevel = DataManager.Instance.PlayerData.LevelPlayer;
+        levelStart = (curLevel % amountLevelView) * amountLevelView;
+        GenderLevel();
+    }
+
+    private void GenderLevel() {
+        for(int i = 0; i < amountLevelView; i++) {
+            levelView[i].Show(levelStart+i);
         }
-        public override void OnShow(Action onCompleted = null, bool instant = false) {
-            base.OnShow(onCompleted, instant);
-            for(int i = 0; i < levelView.Count; i++)
-            {
-                levelView[i].enabled = true;
-            }
+    }
+
+    private void SelectlevelLeft() {
+        int levelCheck = levelStart-amountLevelView;
+        if(levelCheck > 0 ) {
+            levelStart -=amountLevelView;
         }
+        GenderLevel();
+    }
+
+    private void SelectLevelRight() {
+        int levelCheck = levelStart+amountLevelView;
+        if(levelCheck<= DataManager.Instance.LevelMapMax) {
+            levelStart += amountLevelView;
+        }
+        GenderLevel();
+    }
 }

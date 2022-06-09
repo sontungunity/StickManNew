@@ -20,7 +20,6 @@ public class GameManager : Singleton<GameManager> {
         set {
             if(curLevel != value) {
                 curLevel = value;
-                EventDispatcher.Dispatch<EventKey.EventLevelChange>(new EventKey.EventLevelChange());
             }
         }
     }

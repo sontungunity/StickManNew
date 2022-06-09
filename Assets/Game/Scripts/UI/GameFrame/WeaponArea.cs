@@ -3,7 +3,6 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using DG.Tweening;
-using Spine.Unity.AttachmentTools;
 
 public class WeaponArea : MonoBehaviour
 {
@@ -11,8 +10,7 @@ public class WeaponArea : MonoBehaviour
     [SerializeField] private Button btn_Move,btn_Bow,btn_Sword;
     [SerializeField] private Vector2 positionDisplay;
     [SerializeField] private float speedMove, speedRotation;
-    [SerializeField] private Image imgBow, imgSword;
-    
+    [SerializeField] private ItemStackView swordView,bowView;
     private bool Ondisplay = false;
     private Tween tweenmove;
     private Tween tweenRotate;
@@ -30,6 +28,7 @@ public class WeaponArea : MonoBehaviour
         btn_Move.transform.eulerAngles = new Vector3(0, 0, 0);
         Ondisplay = false;
         GenderWeapon();
+        GenderView();
     }
 
     private void GenderWeapon() {
@@ -42,6 +41,14 @@ public class WeaponArea : MonoBehaviour
                 lstBow.Add(weapon);
             }
         }
+    }
+
+    private void GenderView() {
+        ItemStack dataSword = ItemID.ITEMSWORD.GetSaveByID();
+        swordView.Show(dataSword);
+
+        ItemStack dataBow = ItemID.ITEMBOW.GetSaveByID();
+        bowView.Show(dataBow);
     }
 
     private void HalderButtonMove() {
@@ -66,17 +73,21 @@ public class WeaponArea : MonoBehaviour
     }
 
     private void HalderButtonBow() {
-        int indexRandom = Random.Range(0,lstBow.Count);
-        player.SetWeapon(lstBow[indexRandom]);
-        imgBow.sprite = lstBow[indexRandom].Icon;
-        imgBow.transform.rotation = new Quaternion(0, 0 , 0, 0) ;
+        if(DataManager.Instance.PlayerData.RemoveItem(new ItemStack(ItemID.ITEMBOW,1))) {
+            int indexRandom = Random.Range(0,lstBow.Count);
+            player.SetWeapon(lstBow[indexRandom]);
+            GenderView();
+            HalderButtonMove();
+        }
     }
 
     private void HalderButtonSword() {
-        int indexRandom = Random.Range(0,lstSword.Count);
-        player.SetWeapon(lstSword[indexRandom]);
-        imgSword.sprite = lstSword[indexRandom].Icon;
-        imgSword.transform.rotation = new Quaternion(0, 0 , 0, 0) ;
+        if(DataManager.Instance.PlayerData.RemoveItem(new ItemStack(ItemID.ITEMSWORD, 1))) {
+            int indexRandom = Random.Range(0,lstSword.Count);
+            player.SetWeapon(lstSword[indexRandom]);
+            GenderView();
+            HalderButtonMove();
+        }
     }
 
     private void OnDisable() {
