@@ -550,6 +550,7 @@ MonoBehaviour:
   rg2D: {fileID: 3278169878999619490}
   forceDie: {x: 20, y: 5}
   particleBlood: {fileID: 9152954532156666284}
+  particleDiePref: {fileID: 0}
   soundDie: {fileID: 0}
   timeDelay: 2
 --- !u!1 &2296141954873910570

@@ -90,5 +90,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   icon: {fileID: 2533973181766137438}
   speed: 2000
-  m_sound: {fileID: 8300000, guid: 8ff76dc920b164a43869ad94b096811e, type: 3}
+  m_sound: {fileID: 0}
   parPref: {fileID: 5396361311051283788, guid: 372f052314bc644448fdb2d5034bba49, type: 3}

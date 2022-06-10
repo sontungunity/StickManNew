@@ -1,10 +1,12 @@
 using STU;
 using UnityEngine;
+using DG.Tweening;
 public class TriggerBoss : MonoBehaviour {
     [SerializeField] private GameObject displayBoss;
     [SerializeField] private GameObject disabe;
     [SerializeField] private BoxCollider2D col2D;
     [SerializeField] private Rect rect;
+
     private void Start() {
         col2D.enabled = true;
         if(displayBoss != null) {
@@ -41,8 +43,8 @@ public class TriggerBoss : MonoBehaviour {
                     displayBoss?.SetActive(true);
                 }
                 InGameManager.Instance.SetUpBoss(true);
-                ProcameraController.Instance.AddRoom(rect);
                 ProcameraController.Instance.SetOrthographic(10f);
+                ProcameraController.Instance.AddRoom(rect);
             }
         }
     }

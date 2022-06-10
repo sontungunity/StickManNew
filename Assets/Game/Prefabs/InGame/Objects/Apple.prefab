@@ -198,7 +198,6 @@ GameObject:
   m_Component:
   - component: {fileID: 8914683763967624257}
   - component: {fileID: 7965397923992244069}
-  - component: {fileID: 5362732725830962106}
   - component: {fileID: 921517479557073152}
   m_Layer: 0
   m_Name: Light
@@ -272,20 +271,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &5362732725830962106
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4281151121746829275}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a0e13b2781a686a46aafe2fd253624dc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  arrow: {fileID: 0}
-  pin: {fileID: 2462897299288982877}
 --- !u!114 &921517479557073152
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5245,7 +5230,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   percent: 0.25
   itemBoost: {fileID: 4281151121746829275}
-  par: {fileID: 0}
 --- !u!58 &7827381656874398487
 CircleCollider2D:
   m_ObjectHideFlags: 0

@@ -752,6 +752,7 @@ MonoBehaviour:
   rg2D: {fileID: 5346054203488174623}
   forceDie: {x: 5, y: 5}
   particleBlood: {fileID: 1750574780185191441}
+  particleDiePref: {fileID: 0}
   soundDie: {fileID: 8300000, guid: 66ba9c8a02049cc408eb067d54fba96d, type: 3}
   smallSpiderPref: {fileID: 6509126526263252861, guid: 1b7cc54bc46a8b94b9f152043b0298df, type: 3}
   timeForSpawner: 4

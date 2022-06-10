@@ -187,6 +187,7 @@ MonoBehaviour:
   rg2D: {fileID: 8284839374214328013}
   forceDie: {x: 20, y: 5}
   particleBlood: {fileID: 1168576119272471317}
+  particleDiePref: {fileID: 0}
   soundDie: {fileID: 0}
 --- !u!1 &1692650520343710750
 GameObject:
@@ -399,7 +400,7 @@ MonoBehaviour:
   disableRenderingOnOverride: 1
   _animationName: idle
   loop: 1
-  timeScale: 1
+  timeScale: 0.5
 --- !u!61 &1692650520692504717
 BoxCollider2D:
   m_ObjectHideFlags: 0

@@ -120,8 +120,13 @@ public class PlayerAttack : MonoBehaviour {
             EnemyBase enemyBase = col.transform.parent.GetComponent<EnemyBase>();
             if(enemyBase != null) {
                 enemyBase.GetDame(dame, gameObject);
-                var point = Physics2D.ClosestPoint(infoAttack.transform.position,col);
-                SpawnerEffect.Instance.SpawnerEffectDame(point);
+                try {
+                    var point = Physics2D.ClosestPoint(infoAttack.transform.position,col);
+                    SpawnerEffect.Instance.SpawnerEffectDame(point);
+                } catch {
+                    Debug.Log("NUll Closest");
+                    SpawnerEffect.Instance.SpawnerEffectDame(infoAttack.transform.position);
+                } 
             }
         }
     }

@@ -203,9 +203,7 @@ MonoBehaviour:
   animOpen: Open
   animOpenIdle: Open_Idle
   point: {fileID: 1317051052141070849}
-  par: {fileID: 0}
-  blink: {fileID: 0}
-  loot: {fileID: 0}
+  soundMusic: {fileID: 8300000, guid: 5aa353c5fbe79e2408ba48b11ed4103c, type: 3}
   open: 0
 --- !u!114 &1317051053229158602
 MonoBehaviour:

@@ -655,7 +655,7 @@ PlayerSettings:
   scriptingDefineSymbols:
     1: CROSS_PLATFORM_INPUT
     4: CROSS_PLATFORM_INPUT;MOBILE_INPUT
-    7: CROSS_PLATFORM_INPUT;MOBILE_INPUT;IAP
+    7: CROSS_PLATFORM_INPUT;MOBILE_INPUT
     14: MOBILE_INPUT
   additionalCompilerArguments: {}
   platformArchitecture: {}

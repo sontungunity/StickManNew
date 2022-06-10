@@ -671,6 +671,7 @@ MonoBehaviour:
   rg2D: {fileID: 324151450648369040}
   forceDie: {x: 20, y: 5}
   particleBlood: {fileID: 7399882893093847624}
+  particleDiePref: {fileID: 0}
   soundDie: {fileID: 8300000, guid: 66ba9c8a02049cc408eb067d54fba96d, type: 3}
 --- !u!114 &7060438244465976419
 MonoBehaviour:

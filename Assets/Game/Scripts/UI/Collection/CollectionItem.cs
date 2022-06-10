@@ -36,7 +36,8 @@ public class CollectionItem : MonoBehaviour {
                 tween = transform.DOMove(endPos, time).SetEase(Ease.Linear).OnComplete(() => {
                     SoundManager.Instance.PlaySound(m_sound);
                     gameObject.Recycle();
-                    var par = parPref.Spawn(CollectionController.Instance.DefaulTarget);
+                    var par = parPref.Spawn();
+                    par.transform.GetComponent<RectTransform>().SetParent(CollectionController.Instance.DefaulTarget);
                     par.transform.position = endPos;
                     callback?.Invoke();
                 });

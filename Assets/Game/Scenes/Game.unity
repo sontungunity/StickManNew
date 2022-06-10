@@ -130,30 +130,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 5046352039149026097, guid: ded6fa9a3f39bbf4196286421e1a337e, type: 3}
-      propertyPath: UseNumericBoundaries
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 5046352039149026100, guid: ded6fa9a3f39bbf4196286421e1a337e, type: 3}
       propertyPath: m_Name
       value: Main Camera
       objectReference: {fileID: 0}
     - target: {fileID: 5046352039149026103, guid: ded6fa9a3f39bbf4196286421e1a337e, type: 3}
-      propertyPath: CameraTargets.Array.size
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 5046352039149026103, guid: ded6fa9a3f39bbf4196286421e1a337e, type: 3}
       propertyPath: CameraTargets.Array.data[0].TargetTransform
       value: 
       objectReference: {fileID: 1192369756302267881}
-    - target: {fileID: 5046352039149026103, guid: ded6fa9a3f39bbf4196286421e1a337e, type: 3}
-      propertyPath: CameraTargets.Array.data[0].TargetInfluenceH
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 5046352039149026103, guid: ded6fa9a3f39bbf4196286421e1a337e, type: 3}
-      propertyPath: CameraTargets.Array.data[0].TargetInfluenceV
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 5046352039149026124, guid: ded6fa9a3f39bbf4196286421e1a337e, type: 3}
       propertyPath: m_RootOrder
       value: 0
@@ -198,10 +182,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 7798597608755831803, guid: ded6fa9a3f39bbf4196286421e1a337e, type: 3}
-      propertyPath: camShake
-      value: 
-      objectReference: {fileID: 51681845}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ded6fa9a3f39bbf4196286421e1a337e, type: 3}
 --- !u!20 &51681844 stripped
@@ -209,17 +189,6 @@ Camera:
   m_CorrespondingSourceObject: {fileID: 5046352039149026125, guid: ded6fa9a3f39bbf4196286421e1a337e, type: 3}
   m_PrefabInstance: {fileID: 51681843}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &51681845 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 299383000, guid: ded6fa9a3f39bbf4196286421e1a337e, type: 3}
-  m_PrefabInstance: {fileID: 51681843}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9ac0ec3d6ad5f4a3d9d184bc3773a3a7, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &322030691
 GameObject:
   m_ObjectHideFlags: 0
@@ -393,7 +362,7 @@ Canvas:
   m_SortingBucketNormalizedSize: 0
   m_AdditionalShaderChannelsFlag: 0
   m_SortingLayerID: 0
-  m_SortingOrder: 0
+  m_SortingOrder: -100
   m_TargetDisplay: 0
 --- !u!224 &559812469
 RectTransform:

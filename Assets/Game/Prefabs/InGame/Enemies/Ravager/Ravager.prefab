@@ -162,7 +162,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   animmation: {fileID: 5913883042238199842}
   animIdle: idle
-  anim_Die: idle
+  anim_Die: 
   anim_GetDame: idle
   lstStrAttack:
   - attack
@@ -226,6 +226,7 @@ MonoBehaviour:
   rg2D: {fileID: 5913883041747426699}
   forceDie: {x: 0, y: 0}
   particleBlood: {fileID: 3659753165658962881}
+  particleDiePref: {fileID: 3737363307936394812, guid: a3de35e880dad7e48ad6b5fd34206636, type: 3}
   soundDie: {fileID: 0}
 --- !u!1 &5913883041853754548
 GameObject:

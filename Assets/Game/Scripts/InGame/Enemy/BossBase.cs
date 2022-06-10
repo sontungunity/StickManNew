@@ -29,9 +29,13 @@ public class BossBase : EnemyBase
     protected override void Die(GameObject objMakeDame = null) {
         curStatus = EnemyStatus.DIE;
         enemyAttack.enabled = false;
-        enemyAnim.SetAnimDie();
-        tween = DOVirtual.DelayedCall(2f, () => {
+        enemyAnim.SetAnimDie(()=> {
             transform.gameObject.SetActive(false);
+            if(particleDiePref!=null) {
+                var par = particleDiePref.Spawn(InGameManager.Instance.LevelMap.transform);
+                par.transform.position = transform.position;
+            }
+            ProcameraController.Instance.SheckCamera();
         });
         SpawnerCoin.Instance.SpawnerII(transform.position + Vector3.up*2, 15);
         InGameManager.Instance.AddEnemyDie(this);

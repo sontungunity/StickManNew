@@ -19165,6 +19165,7 @@ MonoBehaviour:
   rg2D: {fileID: 5765572426616082142}
   forceDie: {x: 5, y: 5}
   particleBlood: {fileID: 3660680878049630982}
+  particleDiePref: {fileID: 0}
   soundDie: {fileID: 0}
 --- !u!1 &3857127168030829581
 GameObject:

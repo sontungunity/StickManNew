@@ -86,6 +86,7 @@ public class PlayerAnim : SpineBase {
                 break;
             case EnumPlayerStatus.DIE:
                 SetAnim(0, animDie, false, callback);
+                SoundManager.Instance.PlaySound(talkingDamage);
                 break;
             case EnumPlayerStatus.GETDAME:
                 SetAnim(0, animGetDame, false, callback);
@@ -97,6 +98,7 @@ public class PlayerAnim : SpineBase {
                 break;
             case EnumPlayerStatus.STUN:
                 SetAnim(0, animStun, false, callback);
+                SoundManager.Instance.PlaySound(talkingDamage);
                 break;
             case EnumPlayerStatus.JUMPBEFOR:
                 SetAnim(0, animJumpBefor, false, callback);

@@ -14,6 +14,7 @@ public class EnemyBase : CharacterBase {
     [SerializeField] protected Vector2 forceDie = new Vector2(5,5);
     [Header("Effect")]
     [SerializeField] protected ParticleSystem particleBlood;
+    [SerializeField] protected ParticleSystem particleDiePref;
     [SerializeField] protected AudioClip soundDie;
     public Rigidbody2D Rg2D => rg2D;
     public Transform Display => display;
@@ -68,7 +69,12 @@ public class EnemyBase : CharacterBase {
                 SetStatus(EnemyStatus.IDLE);
             });
             enemyBar.UpdateHeart(PercentHeart);
-            var point = Physics2D.ClosestPoint(objMakeDame.transform.position,col2D);
+            var point = transform.position;
+            try {
+                point = Physics2D.ClosestPoint(objMakeDame.transform.position, col2D);
+            } catch {
+                Debug.Log("ClosestPoint is null");
+            }
             if(particleBlood != null) {
                 particleBlood.transform.position = point;
                 particleBlood?.Play();
@@ -124,7 +130,6 @@ public class EnemyBase : CharacterBase {
         if(curStatus == status) {
             return true;
         }
-        Debug.Log($"Set anim :{status}");
         curStatus = status;
         if(curStatus == EnemyStatus.ATTACK) {
             enemyAttack.Attack(() => {
@@ -152,7 +157,7 @@ public class EnemyBase : CharacterBase {
             rg2D.AddForce(forceDie, ForceMode2D.Impulse);
         }
         int randomCoin = Random.Range(3,6);
-        SpawnerCoin.Instance.Spawner(transform.position + Vector3.up, randomCoin);
+        SpawnerCoin.Instance.Spawner(transform.position, randomCoin);
         InGameManager.Instance.AddEnemyDie(this);
         SoundManager.Instance.PlaySound(soundDie);
     }

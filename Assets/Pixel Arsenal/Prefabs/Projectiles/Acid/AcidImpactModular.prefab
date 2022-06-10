@@ -4811,7 +4811,6 @@ ParticleSystemRenderer:
   m_RendererPriority: 0
   m_Materials:
   - {fileID: 2100000, guid: dc465efe33ad97c42a9a8a3b1d42c7fd, type: 2}
-  - {fileID: 0}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -4977,6 +4976,7 @@ GameObject:
   - component: {fileID: 19877788}
   - component: {fileID: 19976660}
   - component: {fileID: 8236574}
+  - component: {fileID: 5602874613432848961}
   m_Layer: 0
   m_Name: AcidImpactModular
   m_TagString: Untagged
@@ -5011,7 +5011,7 @@ ParticleSystem:
   serializedVersion: 7
   lengthInSec: 1.5
   simulationSpeed: 1
-  stopAction: 0
+  stopAction: 3
   cullingMode: 3
   ringBufferMode: 0
   ringBufferLoopRange: {x: 0, y: 1}
@@ -9663,7 +9663,6 @@ ParticleSystemRenderer:
   m_RendererPriority: 0
   m_Materials:
   - {fileID: 2100000, guid: 2c4c8d762d1b1594ba58386c002f8817, type: 2}
-  - {fileID: 0}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -9805,6 +9804,19 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 0
+--- !u!114 &5602874613432848961
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 154216}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 178017f9cd29bfb4a9e7cc9629f36a40, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  source: {fileID: 0}
 --- !u!1 &180450
 GameObject:
   m_ObjectHideFlags: 0
@@ -14481,7 +14493,6 @@ ParticleSystemRenderer:
   m_RendererPriority: 0
   m_Materials:
   - {fileID: 2100000, guid: a1a93f357edccbc43a0d18d8c4895ffe, type: 2}
-  - {fileID: 0}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
