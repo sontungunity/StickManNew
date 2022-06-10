@@ -10,9 +10,10 @@ public class ChestCS : MonoBehaviour
     [SerializeField,SpineAnimation] private string animIdle,animOpen,animOpenIdle;
     [SerializeField] private Transform point;
     [SerializeField] private ParticleSystem par;
-    [SerializeField] private GameObject blink, loot;
+    [SerializeField] private GameObject blink;
 
     public bool open;
+    
     private void Start() {
         spine.SetAnim(0, animIdle, true);
         open = false;
@@ -24,8 +25,7 @@ public class ChestCS : MonoBehaviour
         }
         Player player = collision.transform.parent.GetComponent<Player>();
         if(player != null) {
-            // par.Play();
-            StartCoroutine(playPar());
+            StartCoroutine(PlayPar());
 
             open = true;
             spine.SetAnim(0,animOpen,false,()=> {
@@ -35,13 +35,12 @@ public class ChestCS : MonoBehaviour
         }
     }
 
-    IEnumerator playPar()
+    IEnumerator PlayPar()
     {
         var playPar = par.Spawn();
         playPar.transform.position = transform.position;
         playPar.Play();
         yield return new WaitForSeconds(1.5f);
         blink.SetActive(false);
-        loot.SetActive(false);
     }
 }
