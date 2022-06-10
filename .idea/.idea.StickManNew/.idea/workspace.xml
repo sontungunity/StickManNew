@@ -132,12 +132,12 @@
         <option value="$PROJECT_DIR$/Assets/Game/Scripts/InGame/Item/SwordDownCS.cs" />
         <option value="$PROJECT_DIR$/Assets/Game/Scripts/InGame/Item/SpearCS.cs" />
         <option value="$PROJECT_DIR$/Assets/Game/Scripts/InGame/Enemy/Creeper/EnemyCreeperAttack.cs" />
-        <option value="$PROJECT_DIR$/Assets/Game/Scripts/InGame/Item/ChestCS.cs" />
         <option value="$PROJECT_DIR$/Assets/Game/Scripts/InGame/Item/ItemBoost.cs" />
         <option value="$PROJECT_DIR$/Assets/Game/Scripts/InGame/Item/AppleCS.cs" />
         <option value="$PROJECT_DIR$/Assets/Game/Scripts/InGame/Item/SwordCS.cs" />
         <option value="$PROJECT_DIR$/Assets/Game/Scripts/InGame/Player/Player.cs" />
         <option value="$PROJECT_DIR$/Assets/Game/Scripts/InGame/Item/SpikeDieCS.cs" />
+        <option value="$PROJECT_DIR$/Assets/Game/Scripts/InGame/Item/ChestCS.cs" />
       </list>
     </option>
   </component>

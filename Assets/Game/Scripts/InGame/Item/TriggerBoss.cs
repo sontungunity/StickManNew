@@ -1,6 +1,4 @@
 using STU;
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 public class TriggerBoss : MonoBehaviour {
     [SerializeField] private GameObject displayBoss;

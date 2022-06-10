@@ -97,7 +97,12 @@
                 <e p="Enums.cs" t="Include" />
                 <e p="Extentions.cs" t="Include" />
               </e>
-              <e p="IAPManager.cs" t="Include" />
+              <e p="IAPManager" t="Include">
+                <e p="IAPConfig.cs" t="Include" />
+                <e p="IAPManager.cs" t="Include" />
+                <e p="IAPRestore.cs" t="Include" />
+                <e p="IAPSupport.cs" t="Include" />
+              </e>
               <e p="LoadingManager.cs" t="Include" />
               <e p="PoolManager.cs" t="Include" />
               <e p="SceneManagerLoad.cs" t="Include" />
@@ -236,6 +241,7 @@
               </e>
               <e p="HomeFrame" t="Include">
                 <e p="HomeFrame.cs" t="Include" />
+                <e p="HomeTheme.cs" t="Include" />
                 <e p="HomeUpdate.cs" t="Include" />
               </e>
               <e p="ItemStackView.cs" t="Include" />
@@ -245,8 +251,6 @@
               </e>
               <e p="PlayerSpinUI.cs" t="Include" />
               <e p="ShopFrame" t="Include">
-                <e p="PackFrames.cs" t="Include" />
-                <e p="PriceBtn.cs" t="Include" />
                 <e p="ShopFrame.cs" t="Include" />
               </e>
               <e p="SkinFrame" t="Include">
