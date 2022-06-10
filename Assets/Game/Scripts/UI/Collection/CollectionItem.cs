@@ -7,6 +7,7 @@ public class CollectionItem : MonoBehaviour {
     [SerializeField] private Image icon;
     [SerializeField] private float speed;
     [SerializeField] private AudioClip m_sound;
+    [SerializeField] private ParticleSystem parPref;
     private Tween tween;
     public void Show(Sprite icon) {
         this.icon.sprite = icon;
@@ -19,6 +20,9 @@ public class CollectionItem : MonoBehaviour {
             tween = transform.DOMove(endPos, time).SetEase(Ease.Linear).OnComplete(() => {
                 SoundManager.Instance.PlaySound(m_sound);
                 gameObject.Recycle();
+                var par = parPref.Spawn();
+                par.transform.GetComponent<RectTransform>().SetParent(CollectionController.Instance.DefaulTarget);
+                par.transform.position = endPos;
                 callback?.Invoke();
             });
         });
@@ -32,6 +36,8 @@ public class CollectionItem : MonoBehaviour {
                 tween = transform.DOMove(endPos, time).SetEase(Ease.Linear).OnComplete(() => {
                     SoundManager.Instance.PlaySound(m_sound);
                     gameObject.Recycle();
+                    var par = parPref.Spawn(CollectionController.Instance.DefaulTarget);
+                    par.transform.position = endPos;
                     callback?.Invoke();
                 });
             });

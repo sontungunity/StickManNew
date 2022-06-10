@@ -10,6 +10,19 @@ public class PlayerData {
     public SpinSave SpinSave = new SpinSave();
     public DailySave DailySave = new DailySave();
     public ItemID SkinID = ItemID.SKIN_00;
+
+    public void AddItem(List<ItemStack> lstItemStack) {
+        foreach(var itemStack in lstItemStack) {
+            AddItem(itemStack);
+        }
+    }
+
+    public void AddItem(IEnumerable<ItemStack> itemStacks) {
+        foreach(var itemStack in itemStacks) {
+            AddItem(itemStack);
+        }
+    }
+
     public void AddItem(ItemStack itemStack) {
         ItemStack result = GetItemSaveByItemId(itemStack.ItemID);
         result.Add(itemStack.Amount);

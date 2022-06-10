@@ -12,13 +12,13 @@ public static class Extentions {
     public static Color GetColorByInt(this int index) { //0.green, 1.red, 2.yellow, 3.blue, Defaul.While
         if(index == 0) {
             return Color.green;
-        }else if(index == 1) {
+        } else if(index == 1) {
             return Color.red;
-        }else if(index == 2) {
+        } else if(index == 2) {
             return Color.yellow;
-        }else if(index == 3) {
+        } else if(index == 3) {
             return Color.blue;
-        }else{
+        } else {
             return Color.white;
         }
     }
@@ -50,4 +50,22 @@ public static class Extentions {
     public static WeaponData GetDataWeaponByID(this WeaponID ID) {
         return DataManager.Instance.GetWeaponByID(ID);
     }
+
+    #region rect
+    public static void SetLeft(this RectTransform rt, float left) {
+        rt.offsetMin = new Vector2(left, rt.offsetMin.y);
+    }
+
+    public static void SetRight(this RectTransform rt, float right) {
+        rt.offsetMax = new Vector2(-right, rt.offsetMax.y);
+    }
+
+    public static void SetTop(this RectTransform rt, float top) {
+        rt.offsetMax = new Vector2(rt.offsetMax.x, -top);
+    }
+
+    public static void SetBottom(this RectTransform rt, float bottom) {
+        rt.offsetMin = new Vector2(rt.offsetMin.x, bottom);
+    }
+    #endregion
 }
