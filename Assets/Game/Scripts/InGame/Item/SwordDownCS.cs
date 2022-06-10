@@ -1,4 +1,3 @@
-using System.Collections;
 using UnityEngine;
 using DG.Tweening;
 
@@ -19,13 +18,11 @@ public class SwordDownCS : MonoBehaviour {
         if(active) {
             return;
         }
-
         var hit = Physics2D.Raycast(transform.position,transform.up * -1f,10f,layerMask);
         if(hit) {
             Player player = hit.collider.transform.parent.GetComponent<Player>();
             if(player != null) {
                 active = true;
-                
                 rg2D.bodyType = RigidbodyType2D.Dynamic;
             }
         }
@@ -36,17 +33,15 @@ public class SwordDownCS : MonoBehaviour {
         CharacterBase character = collision.transform.parent.GetComponent<CharacterBase>();
         if(character) {
             character.GetDame(dame);
+            tween.CheckKillTween();
+            gameObject.SetActive(false);
         }
-
-        /*if (collision.gameObject.tag == "Ground")
-        {
-            GetComponent<BoxCollider2D>().isTrigger = false;
-        }*/
-
     }
 
     private void OnCollisionEnter2D(Collision2D collision) {
-        if(collision.gameObject.tag == "Ground") {
+        if(collision.gameObject.tag == "Ground") 
+        {
+            Debug.Log("touch the ground");
             tween.CheckKillTween();
             Color color = Color.white;
             tween = DOVirtual.DelayedCall(1f, () => {

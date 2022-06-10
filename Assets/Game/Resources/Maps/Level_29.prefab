@@ -42340,7 +42340,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4a86e001b5bfaab42b0394f7b60e5878, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  level: 28
+  level: 29
   numberEnemy: 23
 --- !u!1 &6325173646158529286
 GameObject:
