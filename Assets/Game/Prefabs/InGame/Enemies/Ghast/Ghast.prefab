@@ -183,7 +183,7 @@ MonoBehaviour:
   curStatus: 0
   enemyBar: {fileID: 7455967604865156901}
   enemyAttack: {fileID: 1692650520237186343}
-  collider2D: {fileID: 1692650520692504717}
+  col2D: {fileID: 1692650520692504717}
   rg2D: {fileID: 8284839374214328013}
   forceDie: {x: 20, y: 5}
   particleBlood: {fileID: 1168576119272471317}
@@ -340,7 +340,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: ba5e7d76c3e88bb4d9fc0159495beed3, type: 2}
+  - {fileID: 2100000, guid: 56fdf180b111a344f8268b69e72b585e, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0

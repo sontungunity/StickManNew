@@ -1,3 +1,4 @@
+using Com.LuisPedroFonseca.ProCamera2D;
 using STU;
 using System.Collections;
 using System.Collections.Generic;
@@ -5,10 +6,8 @@ using UnityEngine;
 
 public class InGameManager : Singleton<InGameManager>
 {
-    [SerializeField] private Camera camera;
     [SerializeField] private Player player;
     [SerializeField] private AudioClip musicInGame;
-    public Camera Camera => camera;
     public Player Player => player;
     [Header("Edit")]
     public bool Edit;
@@ -73,7 +72,7 @@ public class InGameManager : Singleton<InGameManager>
         if(onBossArea) {
             frameGame.BossBarHeart.StartActive(true);
             frameGame.RoomSetting.StartActive(false);
-            frameGame.RoomSetting.SetUpOrtho(10f);
+            //frameGame.RoomSetting.SetUpOrtho(10f);
         } else {
             frameGame.BossBarHeart.StartActive(false);
             frameGame.RoomSetting.StartActive(true);

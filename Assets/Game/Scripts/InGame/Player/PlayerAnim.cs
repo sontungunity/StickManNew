@@ -32,6 +32,7 @@ public class PlayerAnim : SpineBase {
     [SerializeField] private AudioClip JumpSound;
     [SerializeField] private AudioClip talkingDamage;
     [SerializeField] private AudioClip audioRun;
+    [SerializeField] private AudioClip audioWin;
     [Header("Event")]
     [SerializeField,SpineEvent] private string evtStep;
     protected override void Awake() {
@@ -92,6 +93,7 @@ public class PlayerAnim : SpineBase {
                 break;
             case EnumPlayerStatus.WIN:
                 SetAnim(0, animWin, false, callback);
+                SoundManager.Instance.PlaySound(audioWin);
                 break;
             case EnumPlayerStatus.STUN:
                 SetAnim(0, animStun, false, callback);

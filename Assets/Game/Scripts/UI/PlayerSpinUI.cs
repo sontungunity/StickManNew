@@ -13,6 +13,9 @@ public class PlayerSpinUI : MonoBehaviour
     [SerializeField] private SkeletonGraphic skeleton;
     [SerializeField, SpineAnimation] private string animIdle;
     [SerializeField, SpineAnimation] private List<string> lstAnim;
+    [SerializeField] private ParticleSystem parUpPower;
+    [SerializeField, SpineAnimation] private string animWin;
+    [SerializeField] private AudioClip soundUpdate;
     [SerializeField] private Action evtComplate;
     private void Awake() {
         skeleton.AnimationState.Complete += HandleEventComplete;
@@ -21,11 +24,13 @@ public class PlayerSpinUI : MonoBehaviour
 
     private void OnEnable() {
         EventDispatcher.AddListener<EventKey.EventSkinChange>(EventSkinChange);
+        EventDispatcher.AddListener<EventKey.EventUpdatePower>(EventUpdatePower);
         Show();
     }
 
     private void OnDisable() {
         EventDispatcher.RemoveListener<EventKey.EventSkinChange>(EventSkinChange);
+        EventDispatcher.RemoveListener<EventKey.EventUpdatePower>(EventUpdatePower);
     }
 
     private void HandleEventComplete(TrackEntry trackEntry) {
@@ -47,5 +52,15 @@ public class PlayerSpinUI : MonoBehaviour
 
     private void EventSkinChange(EventKey.EventSkinChange evt) {
         Show();
+    }
+
+    private void EventUpdatePower(EventKey.EventUpdatePower evt) {
+        if(parUpPower != null) {
+            parUpPower.Play();
+        }
+        if(string.IsNullOrEmpty(animWin)==false) {
+            skeleton.AnimationState.SetAnimation(0, animWin, false);
+        }
+        SoundManager.Instance.PlaySound(soundUpdate);
     }
 }

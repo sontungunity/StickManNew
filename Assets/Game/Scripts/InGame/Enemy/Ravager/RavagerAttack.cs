@@ -13,11 +13,12 @@ public class RavagerAttack : EnemyAttack {
     [SerializeField] private float speedTarget;
     [SerializeField] private int turnMove;
     [SerializeField] private float timeStun;
+    [SerializeField] private ParticleSystem particle;
     private int curTurnMove;
     private RavagerAttackType attackType;
     public RavagerAttackType AttackType => attackType;
     private Action callback;
-    private Tween tween;
+    private Tween tweenCur;
     public override void Attack(Action callback = null) {
         this.callback = callback;
         curTurnMove = turnMove;
@@ -33,6 +34,12 @@ public class RavagerAttack : EnemyAttack {
         }
 
         if(!CheckFaceCanMove()) {
+            //effect start
+            ProcameraController.Instance.SheckCamera();
+            var par = particle.Spawn(InGameManager.Instance.LevelMap.transform);
+            par.transform.position = beamFace.transform.position; 
+            par.Play();
+            //effect end
             rb2D.velocity = new Vector2(0f, rb2D.velocity.y);
             curTurnMove--;
             if(curTurnMove>0) {
@@ -45,8 +52,8 @@ public class RavagerAttack : EnemyAttack {
             } else {
                 attackType = RavagerAttackType.SHOCK;
                 enemyAnim.SetAnim(0, animShock, true);
-                tween.CheckKillTween();
-                tween = DOVirtual.DelayedCall(timeStun,() => {
+                tweenCur.CheckKillTween();
+                tweenCur = DOVirtual.DelayedCall(timeStun,() => {
                     attackType = RavagerAttackType.NONE;
                     callback?.Invoke();
                 });
@@ -74,7 +81,7 @@ public class RavagerAttack : EnemyAttack {
     }
 
     private void OnDisable() {
-        tween.CheckKillTween();
+        tweenCur.CheckKillTween();
     }
 
     public enum RavagerAttackType {

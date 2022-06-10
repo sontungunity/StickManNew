@@ -18,8 +18,8 @@ public class LevelSelectFrame : FrameBase {
     public override void OnShow(Action onCompleted = null, bool instant = false) {
         base.OnShow(onCompleted, instant);
         txt_Detail.text = $"LEVEL {DataManager.Instance.PlayerData.LevelMap+1}/{DataManager.Instance.LevelMapMax+1}";
-        int curLevel = DataManager.Instance.PlayerData.LevelPlayer;
-        levelStart = (curLevel % amountLevelView) * amountLevelView;
+        int curLevel = DataManager.Instance.PlayerData.LevelMap;
+        levelStart = Mathf.FloorToInt(curLevel / amountLevelView) * amountLevelView;
         GenderLevel();
     }
 

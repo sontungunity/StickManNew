@@ -9,6 +9,7 @@ public class PlayerData {
     public List<ItemStack> eventory = new List<ItemStack>(){new ItemStack(ItemID.COIN,10),new ItemStack(ItemID.LUCKYWEEL,5),new ItemStack(ItemID.ITEMBOW,5),new ItemStack(ItemID.ITEMSWORD,5)};
     public SpinSave SpinSave = new SpinSave();
     public DailySave DailySave = new DailySave();
+    public GiftsSave GiftsSave = new GiftsSave();
     public ItemID SkinID = ItemID.SKIN_00;
 
     public void AddItem(List<ItemStack> lstItemStack) {

@@ -27,13 +27,13 @@ public class SpiderLandSp : EnemyBase
         tween = DOVirtual.DelayedCall(2f, () => {
             transform.gameObject.SetActive(false);
         });
-        collider2D.isTrigger = true;
+        col2D.isTrigger = true;
         if(objMakeDame != null && objMakeDame.transform.position.x > transform.position.x) {
             rg2D.AddForce(new Vector2(-forceDie.x, forceDie.y), ForceMode2D.Impulse);
         } else {
             rg2D.AddForce(forceDie, ForceMode2D.Impulse);
         }
-        SpawnerCoin.Instance.Spawner(transform.position, 3);
+        SpawnerCoin.Instance.SpawnerII(transform.position, 3);
         //InGameManager.Instance.AddEnemyDie();
     }
 }

@@ -17,7 +17,7 @@ public class GhastAttack : EnemyAttack
     [SerializeField] private BulletCS ghastBulletPref;
     [SerializeField] private Transform pointDown,pointMouth;
     [SerializeField] private float speedBullet;
-    private Tween tween;
+    private Tween tweenGhast;
     public GhastAttack.Status CurAttackStatus;
     private int curTimeAttack;
     private Action callback;
@@ -27,7 +27,7 @@ public class GhastAttack : EnemyAttack
         CurAttackStatus = Status.SETUPHIGH;
         enemyAnim.SetAnim(0,animIdle,true);
         if(moveHight == false) {
-            tween = transform.DOMove(transform.position + Vector3.up * highPlus, 1f).SetEase(Ease.Linear).OnComplete(() => {
+            tweenGhast = transform.DOMove(transform.position + Vector3.up * highPlus, 1f).SetEase(Ease.Linear).OnComplete(() => {
                 moveHight = true;
                 SetUpMove();
             });
@@ -73,7 +73,7 @@ public class GhastAttack : EnemyAttack
         } else {
             CurAttackStatus = Status.STUN;
             enemyAnim.SetAnim(0, animShock,true);
-            tween = DOVirtual.DelayedCall(timeStun,()=> {
+            tweenGhast = DOVirtual.DelayedCall(timeStun,()=> {
                 //SetUpMove();
                   callback?.Invoke();
             });
@@ -114,7 +114,7 @@ public class GhastAttack : EnemyAttack
     }
 
     private void OnDisable() {
-        tween.CheckKillTween();
+        tweenGhast.CheckKillTween();
     }
 
     public enum Status {

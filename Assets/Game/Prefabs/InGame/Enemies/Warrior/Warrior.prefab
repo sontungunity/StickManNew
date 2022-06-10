@@ -729,7 +729,7 @@ MonoBehaviour:
   curStatus: 0
   enemyBar: {fileID: 0}
   enemyAttack: {fileID: 1888080125848745652}
-  collider2D: {fileID: 1758805520236134188}
+  col2D: {fileID: 1758805520236134188}
   rg2D: {fileID: 9203079402774627675}
   forceDie: {x: 5, y: 5}
   particleBlood: {fileID: 2123961498875400323}

@@ -3,29 +3,30 @@ using UnityEngine;
 public class SwordCS : MonoBehaviour
 {
     [SerializeField] private WeaponID weaponID;
-    // [SerializeField] private SpriteRenderer img;
-    [SerializeField] private ParticleSystem par;
-    [SerializeField] private GameObject _itemBoost;
+    [SerializeField] private SpriteRenderer img;
+    [SerializeField] private GameObject iconAds;
+    [Header("Customer")] 
+    [SerializeField] private bool noAds;
 
     private void Start()
     {
         WeaponData data = weaponID.GetDataWeaponByID();
-        // img.sprite = data.Icon;
-        // transform.localScale = new Vector3(0.8f, 0.8f, 0.8f);
+        img.sprite = data.Icon;
+        iconAds.SetActive(!noAds);
     }
 
     private void OnTriggerEnter2D(Collider2D collision) {
         Player player = collision.transform.parent.GetComponent<Player>();
         if(player != null) 
         {
-            var spawnPar = par.Spawn();
-            spawnPar.transform.position = this.transform.position;
-            spawnPar.Play();
-
+            if(noAds) {
+                player.SetWeapon(weaponID.GetDataWeaponByID());
+                gameObject.SetActive(false);
+                return;
+            }
             AdsManager.Instance.ShowRewarded((value)=> {
                 if(value) {
                     player.SetWeapon(weaponID.GetDataWeaponByID());
-                    //_itemBoost.SetActive(false);
                     gameObject.SetActive(false);
                 }
             });

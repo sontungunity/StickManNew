@@ -118,7 +118,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 0d643f688920a9644b80d833498dec09, type: 2}
+  - {fileID: 2100000, guid: 4d080d2fd71f13e448f0000ac9130383, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -459,7 +459,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   originHeart: 100
-  originDame: 2
+  originDame: 10
   curHeart: 0
   curDame: 0
   display: {fileID: 3624144201042095130}
@@ -470,7 +470,7 @@ MonoBehaviour:
   curStatus: 0
   enemyBar: {fileID: 4778002913381880758}
   enemyAttack: {fileID: 3624144201626175880}
-  collider2D: {fileID: 610591642541069007}
+  col2D: {fileID: 610591642541069007}
   rg2D: {fileID: 264401739993228301}
   forceDie: {x: 20, y: 5}
   particleBlood: {fileID: 3819499535094984582}

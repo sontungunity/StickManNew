@@ -10,6 +10,7 @@ public class DoorCS : MonoBehaviour
     [SerializeField] private Collider2D col2D;
     [SerializeField] private SpineBase spineDoor;
     [SerializeField,SpineAnimation] private string animClose,animOpen;
+    [SerializeField] private ParticleSystem par;
     private Tween tweenMovePlayer;
     private void Start() {
         col2D.enabled = false;
@@ -30,6 +31,7 @@ public class DoorCS : MonoBehaviour
         if(InGameManager.Instance.KillAllEnemy) {
             col2D.enabled = true;
             spineDoor.SetAnim(0, animOpen, true);
+            par.Play();
         }
     }
 

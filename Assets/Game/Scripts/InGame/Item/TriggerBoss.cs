@@ -6,7 +6,7 @@ public class TriggerBoss : MonoBehaviour {
     [SerializeField] private GameObject displayBoss;
     [SerializeField] private GameObject disabe;
     [SerializeField] private BoxCollider2D col2D;
-    [SerializeField] private GameObject triggerBound; 
+    [SerializeField] private Rect rect;
     private void Start() {
         col2D.enabled = true;
         if(displayBoss != null) {
@@ -15,7 +15,6 @@ public class TriggerBoss : MonoBehaviour {
         if(disabe != null) {
             disabe?.SetActive(true);
         }
-        triggerBound.SetActive(true);
     }
 
     private void OnEnable() {
@@ -31,8 +30,8 @@ public class TriggerBoss : MonoBehaviour {
             if(disabe!=null) {
                 disabe?.SetActive(false);
             }
-            triggerBound.SetActive(false);
             InGameManager.Instance.SetUpBoss(false);
+            ProcameraController.Instance.SetUpDefault();
         }
     }
     private void OnTriggerExit2D(Collider2D collision) {
@@ -40,10 +39,12 @@ public class TriggerBoss : MonoBehaviour {
         if(player != null) {
             if(player.transform.position.x > transform.position.x) {
                 col2D.enabled = false;
-                InGameManager.Instance.SetUpBoss(true);
                 if(displayBoss!=null) {
                     displayBoss?.SetActive(true);
                 }
+                InGameManager.Instance.SetUpBoss(true);
+                ProcameraController.Instance.AddRoom(rect);
+                ProcameraController.Instance.SetOrthographic(10f);
             }
         }
     }

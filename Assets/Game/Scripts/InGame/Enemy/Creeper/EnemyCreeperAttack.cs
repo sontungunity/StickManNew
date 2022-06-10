@@ -19,7 +19,7 @@ public class EnemyCreeperAttack : EnemyAttack
                 if(player != null) {
                     Debug.Log("Detech player");
                     player.GetDameStun(enemyBase.curDame);
-                    SoundManager.Instance.Vibrate();
+                    //SoundManager.Instance.Vibrate();
                 }
             }
         }

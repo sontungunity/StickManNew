@@ -8,7 +8,7 @@ public class EnemyBase : CharacterBase {
     [SerializeField] protected EnemyStatus curStatus;
     [SerializeField] protected EnemyHeartBar enemyBar;
     [SerializeField] protected EnemyAttack enemyAttack;
-    [SerializeField] protected Collider2D collider2D;
+    [SerializeField] protected Collider2D col2D;
     [SerializeField] protected Rigidbody2D rg2D;
     [Header("ForceDie")]
     [SerializeField] protected Vector2 forceDie = new Vector2(5,5);
@@ -68,7 +68,7 @@ public class EnemyBase : CharacterBase {
                 SetStatus(EnemyStatus.IDLE);
             });
             enemyBar.UpdateHeart(PercentHeart);
-            var point = Physics2D.ClosestPoint(objMakeDame.transform.position,collider2D);
+            var point = Physics2D.ClosestPoint(objMakeDame.transform.position,col2D);
             if(particleBlood != null) {
                 particleBlood.transform.position = point;
                 particleBlood?.Play();
@@ -145,7 +145,7 @@ public class EnemyBase : CharacterBase {
         tween = DOVirtual.DelayedCall(2f, () => {
             transform.gameObject.SetActive(false);
         });
-        collider2D.isTrigger = true;
+        col2D.isTrigger = true;
         if(objMakeDame != null && objMakeDame.transform.position.x > transform.position.x) {
             rg2D.AddForce(new Vector2(-forceDie.x, forceDie.y), ForceMode2D.Impulse);
         } else {

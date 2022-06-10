@@ -39,12 +39,17 @@ public class DataManager : Singleton<DataManager> {
     public IEnumerable<WeaponData> LstWeapon => lstWeapon;
     #endregion
 
-    private void Start() {
+    protected override void OnAwake() {
+        base.OnAwake();
         LoadData();
         LoadItemData();
         LoadLevelMap();
         LoadWeaponData();
         playerData.Update();
+    }
+
+    private void Start() {
+
     }
 
     #region SaveAndLoadPlayer

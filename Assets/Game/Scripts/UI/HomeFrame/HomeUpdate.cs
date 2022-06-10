@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
 using UnityEngine.UI;
+using STU;
 
 public class HomeUpdate : MonoBehaviour
 {
@@ -33,6 +34,7 @@ public class HomeUpdate : MonoBehaviour
         if(playerData.RemoveItem(new ItemStack(ItemID.COIN, RuleDameAndHeart.Coin_UP_Level))) {
             playerData.LevelPlayer++;
             GenderInfoPlayer();
+            EventDispatcher.Dispatch<EventKey.EventUpdatePower>(new EventKey.EventUpdatePower());
         }
     }
 
@@ -41,6 +43,7 @@ public class HomeUpdate : MonoBehaviour
             if(value) {
                 playerData.LevelPlayer++;
                 GenderInfoPlayer();
+                EventDispatcher.Dispatch<EventKey.EventUpdatePower>(new EventKey.EventUpdatePower());
             } else {
                 TextNotify.Instance.ShowFailAds();
             }

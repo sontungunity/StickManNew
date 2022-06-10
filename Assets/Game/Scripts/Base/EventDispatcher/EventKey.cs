@@ -63,6 +63,10 @@ public static class EventKey {
         }
     }
 
+    public struct EventUpdatePower : IEventArgs {
+
+    }
+
     public struct EventSetupNewGame : IEventArgs {
 
     }

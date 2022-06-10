@@ -6,7 +6,7 @@ using STU;
 
 public class HomeFrame : FrameBase {
     [SerializeField] private Button btn_Play;
-    [SerializeField] private Button btn_Spin,btn_Skin,btn_Daily, btn_Levels, btn_Shop,btn_LinkGame,btn_RemoveAds;
+    [SerializeField] private Button btn_Spin,btn_Skin,btn_Daily, btn_Levels, btn_Shop,btn_LinkGame,btn_RemoveAds,btn_Gifts;
     [SerializeField] private TextMeshProUGUI txt_Level;
     [SerializeField] private AudioClip musicMenu;
     private void Awake() {
@@ -18,6 +18,7 @@ public class HomeFrame : FrameBase {
         btn_Shop.onClick.AddListener(() => { FrameManager.Instance.Push<ShopFrame>(); });
         btn_LinkGame.onClick.AddListener(()=> { Application.OpenURL("https://play.google.com/store/apps/details?id=com.gafu.stickman.red.blue"); });
         btn_RemoveAds.onClick.AddListener(BuyRemoveAds);
+        btn_Gifts.onClick.AddListener(() => { FrameManager.Instance.Push<GiftsFrame>(); });
     }
 
     private void OnEnable() {
