@@ -15,6 +15,12 @@ public class Coin : MonoBehaviour
                 SpawnerTextDame.Instance.Spawner(player.transform.position,$"+{random}");
                 this.Recycle();
             }
+            return;
+        }
+
+        LavaCS lava = collision.gameObject.GetComponent<LavaCS>();
+        if(lava != null) {
+            this.Recycle();
         }
     }
 }

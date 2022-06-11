@@ -601,7 +601,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   display: {fileID: 1590826762617196481}
   curHeart: {fileID: 1590826762496327564}
-  timeBar: 2
 --- !u!1 &1590826763444774800
 GameObject:
   m_ObjectHideFlags: 0
@@ -931,6 +930,14 @@ PrefabInstance:
     - target: {fileID: 5546975234669712382, guid: 42af1c827218fdc40806d5951c1714be, type: 3}
       propertyPath: m_IsActive
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5546975234677727016, guid: 42af1c827218fdc40806d5951c1714be, type: 3}
+      propertyPath: m_SortingLayer
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 5546975234677727016, guid: 42af1c827218fdc40806d5951c1714be, type: 3}
+      propertyPath: m_SortingLayerID
+      value: -1001872171
       objectReference: {fileID: 0}
     - target: {fileID: 5546975234677727016, guid: 42af1c827218fdc40806d5951c1714be, type: 3}
       propertyPath: m_Positions.Array.size

@@ -31,6 +31,10 @@ PrefabInstance:
       propertyPath: InitialModule.startColor.maxColor.r
       value: 0.027450979
       objectReference: {fileID: 0}
+    - target: {fileID: 8604709827626086659, guid: 243465685c64b2a45aebf475c0d64232, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8903853797342765113, guid: 243465685c64b2a45aebf475c0d64232, type: 3}
       propertyPath: m_Size.x
       value: 24.999939
@@ -69,7 +73,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8903853797342765116, guid: 243465685c64b2a45aebf475c0d64232, type: 3}
       propertyPath: m_Name
-      value: Lava
+      value: Lava Variant
       objectReference: {fileID: 0}
     - target: {fileID: 8903853797342765118, guid: 243465685c64b2a45aebf475c0d64232, type: 3}
       propertyPath: m_Size.x
