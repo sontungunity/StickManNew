@@ -256,5 +256,5 @@ MonoBehaviour:
   proCamera: {fileID: 5046352039149026103}
   camRoom: {fileID: 299382996}
   camShake: {fileID: 299383000}
-  minSize: 5
-  maxSize: 7
+  minSize: 6
+  maxSize: 8

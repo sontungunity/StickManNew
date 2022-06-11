@@ -44,7 +44,7 @@ ParticleSystem:
   serializedVersion: 7
   lengthInSec: 1
   simulationSpeed: 1
-  stopAction: 0
+  stopAction: 3
   cullingMode: 3
   ringBufferMode: 0
   ringBufferLoopRange: {x: 0, y: 1}
@@ -4687,7 +4687,7 @@ ParticleSystemRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 1460588035
-  m_SortingLayer: 5
+  m_SortingLayer: 7
   m_SortingOrder: 0
   m_RenderMode: 0
   m_SortMode: 0
@@ -4822,4 +4822,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 178017f9cd29bfb4a9e7cc9629f36a40, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  time: 2
+  source: {fileID: 0}

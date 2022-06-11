@@ -167,7 +167,7 @@ public class EnemyBase : CharacterBase {
         } else {
             rg2D.AddForce(forceDie, ForceMode2D.Impulse);
         }
-        int randomCoin = Random.Range(3,6);
+        int randomCoin = Random.Range(1,3);
         SpawnerCoin.Instance.Spawner(transform.position, randomCoin);
         InGameManager.Instance.AddEnemyDie(this);
         SoundManager.Instance.PlaySound(soundDie);
