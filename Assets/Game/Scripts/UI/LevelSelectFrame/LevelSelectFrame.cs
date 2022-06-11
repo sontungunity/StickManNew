@@ -31,7 +31,7 @@ public class LevelSelectFrame : FrameBase {
 
     private void SelectlevelLeft() {
         int levelCheck = levelStart-amountLevelView;
-        if(levelCheck > 0 ) {
+        if(levelCheck >= 0 ) {
             levelStart -=amountLevelView;
         }
         GenderLevel();
