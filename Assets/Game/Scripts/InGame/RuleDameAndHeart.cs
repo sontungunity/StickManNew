@@ -22,16 +22,14 @@ public static class RuleDameAndHeart
     public static LevelInfo GetHeartDameNormalEnemy(int levelMap) {
         LevelInfo result = new LevelInfo();
         int indexTheme = Mathf.FloorToInt( (levelMap-1)/6);
-        result.Heart = (Heart_Base_Player + indexTheme * 10 * Heart_Up_Level)*2/3;
-        result.Damage = (Dame_Base_Player + indexTheme * 10 * Dame_Up_Level) / 2;
+        result.Heart = (Heart_Base_Player + indexTheme * 2 * Heart_Up_Level)*2/3;
+        result.Damage = (Dame_Base_Player + indexTheme * 2 * Dame_Up_Level) / 2;
         return result;
     }
 
     public static LevelInfo GetHeartDameBoss(int levelMap) {
-        LevelInfo result = new LevelInfo();
-        int indexTheme = Mathf.FloorToInt( (levelMap-1)/6);
-        result.Damage = Dame_Base_Player + indexTheme * 10 * Dame_Up_Level;
-        result.Heart = result.Damage*30;
+        LevelInfo result = GetHeartDameNormalEnemy(levelMap);
+        result.Heart *= 10;
         return result;
     }
 }

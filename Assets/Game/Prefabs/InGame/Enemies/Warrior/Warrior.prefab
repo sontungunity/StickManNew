@@ -95,7 +95,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   amountRaycast: 4
   space: 0.7
-  distance: 30
+  distance: 32
   layer:
     serializedVersion: 2
     m_Bits: 64
@@ -146,7 +146,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   display: {fileID: 1888080124945491848}
   curHeart: {fileID: 1888080125365671877}
-  timeBar: 2
 --- !u!1 &1888080124373040913
 GameObject:
   m_ObjectHideFlags: 0
@@ -192,7 +191,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   amountRaycast: 4
   space: 0.7
-  distance: 30
+  distance: 32
   layer:
     serializedVersion: 2
     m_Bits: 64
@@ -576,7 +575,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   amountRaycast: 4
   space: 0.7
-  distance: 30
+  distance: 32
   layer:
     serializedVersion: 2
     m_Bits: 64
@@ -609,7 +608,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1888080125848745650}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 37.98, y: -8.9, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:

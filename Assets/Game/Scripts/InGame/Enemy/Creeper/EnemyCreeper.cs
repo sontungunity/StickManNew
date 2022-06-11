@@ -36,6 +36,9 @@ public class EnemyCreeper : EnemyBase {
     }
 
     private void DieByExploed() {
+        if(curStatus == EnemyStatus.DIE) {
+            return;
+        }
         Debug.Log("DieByExploed");
         curStatus = EnemyStatus.DIE;
         transform.gameObject.SetActive(false);

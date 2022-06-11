@@ -19165,7 +19165,7 @@ MonoBehaviour:
   rg2D: {fileID: 5765572426616082142}
   forceDie: {x: 5, y: 5}
   particleBlood: {fileID: 3660680878049630982}
-  particleDiePref: {fileID: 0}
+  particleDiePref: {fileID: 19800010, guid: dc260821b59dc7e438e16c19005c9b5a, type: 3}
   soundDie: {fileID: 0}
 --- !u!1 &3857127168030829581
 GameObject:
@@ -19704,7 +19704,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &3857127169372452280
 Transform:
   m_ObjectHideFlags: 0

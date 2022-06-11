@@ -96,7 +96,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   display: {fileID: 8688306981869638500}
   curHeart: {fileID: 8688306981449917225}
-  timeBar: 2
 --- !u!1 &8688306980551801653
 GameObject:
   m_ObjectHideFlags: 0
@@ -634,7 +633,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8688306982031671902}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 21.255348, y: -8.25, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -752,7 +751,7 @@ MonoBehaviour:
   rg2D: {fileID: 5346054203488174623}
   forceDie: {x: 5, y: 5}
   particleBlood: {fileID: 1750574780185191441}
-  particleDiePref: {fileID: 0}
+  particleDiePref: {fileID: 3737363307936394812, guid: a3de35e880dad7e48ad6b5fd34206636, type: 3}
   soundDie: {fileID: 8300000, guid: 66ba9c8a02049cc408eb067d54fba96d, type: 3}
   smallSpiderPref: {fileID: 6509126526263252861, guid: 1b7cc54bc46a8b94b9f152043b0298df, type: 3}
   timeForSpawner: 4

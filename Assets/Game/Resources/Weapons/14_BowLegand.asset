@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: 14_BowLegand
   m_EditorClassIdentifier: 
   id: 14
-  icon: {fileID: 21300000, guid: 9f2d999a4f392cf42ab63fa99d46710d, type: 3}
+  icon: {fileID: 21300000, guid: 3360662877e72ce469ba4d04314a2760, type: 3}
   type: 2
   dame: 40
   nameSkin: weapon/weapon_06

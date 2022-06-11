@@ -16,6 +16,6 @@ MonoBehaviour:
   icon: {fileID: 21300000, guid: 873e0427109094646ab45a25efa9882f, type: 3}
   type: 2
   dame: 10
-  nameSkin: weapon/weapon_08
+  nameSkin: weapon/weapon_07
   arrowPref: {fileID: 3485950250616412604, guid: fe433cc07027f7445a3901d9035a5885, type: 3}
   speed: 12
