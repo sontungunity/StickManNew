@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using DG.Tweening;
+using STU;
 
 public class RoomSetting : MonoBehaviour {
     [SerializeField] private Slider slider;
@@ -17,8 +18,23 @@ public class RoomSetting : MonoBehaviour {
         orginPosition = rectTransform.anchoredPosition;
     }
 
-    private void Start() {
+    private void OnEnable() {
+        EventDispatcher.AddListener<EventKey.EventSetupNewGame>(HalderEventSetupNewGame);
+        EventDispatcher.AddListener<EventKey.BossArea>(HalderEventBossArea);
+    }
+
+    private void OnDisable() {
+        EventDispatcher.RemoveListener<EventKey.EventSetupNewGame>(HalderEventSetupNewGame);
+        EventDispatcher.RemoveListener<EventKey.BossArea>(HalderEventBossArea);
+    }
+
+    private void HalderEventSetupNewGame(EventKey.EventSetupNewGame evt) {
         slider.value = ProcameraController.Instance.ValueSetting;
+        StartActive(true);
+    }
+
+    private void HalderEventBossArea(EventKey.BossArea evt) {
+        StartActive(!evt.Enter);
     }
 
     private void SetUpCamera(float percent) {

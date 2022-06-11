@@ -37,10 +37,6 @@ public static class EventKey {
 
     }
 
-    public struct EnterBossArea : IEventArgs {
-
-    }
-
     public struct BossGetDame : IEventArgs {
 
     }
@@ -76,6 +72,14 @@ public static class EventKey {
 
         public SoundChange(bool enable) {
             this.Enable = enable;
+        }
+    }
+
+    public struct BossArea : IEventArgs {
+        public bool Enter;
+
+        public BossArea(bool enter) {
+            this.Enter = enter;
         }
     }
 }

@@ -30,8 +30,8 @@ public class TriggerBoss : MonoBehaviour {
             if(disabe!=null) {
                 disabe?.SetActive(false);
             }
-            InGameManager.Instance.SetUpBoss(false);
             ProcameraController.Instance.SetUpDefault();
+            EventDispatcher.Dispatch<EventKey.BossArea>(new EventKey.BossArea(false));
         }
     }
     private void OnTriggerExit2D(Collider2D collision) {
@@ -42,9 +42,10 @@ public class TriggerBoss : MonoBehaviour {
                 if(displayBoss!=null) {
                     displayBoss?.SetActive(true);
                 }
-                InGameManager.Instance.SetUpBoss(true);
+                //InGameManager.Instance.SetUpBoss(true);
                 ProcameraController.Instance.SetOrthographic(10f);
                 ProcameraController.Instance.AddRoom(rect);
+                EventDispatcher.Dispatch<EventKey.BossArea>(new EventKey.BossArea(true));
             }
         }
     }

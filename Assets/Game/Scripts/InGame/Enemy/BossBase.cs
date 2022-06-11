@@ -4,6 +4,16 @@ using UnityEngine;
 
 public class BossBase : EnemyBase
 {
+    protected override void Awake() {
+        LevelMap perentMap = transform.GetComponentInParent<LevelMap>();
+        if(perentMap != null) {
+            LevelInfo level = RuleDameAndHeart.GetHeartDameBoss(perentMap.Level);
+            originHeart = level.Heart;
+            originDame = level.Damage;
+        }
+        curHeart = originHeart;
+        curDame = originDame;
+    }
     protected override void Start() {
         SetStatus(EnemyStatus.IDLE);
     }
@@ -29,15 +39,18 @@ public class BossBase : EnemyBase
     protected override void Die(GameObject objMakeDame = null) {
         curStatus = EnemyStatus.DIE;
         enemyAttack.enabled = false;
+        ProcameraController.Instance.SetTarget(transform);
         enemyAnim.SetAnimDie(()=> {
-            transform.gameObject.SetActive(false);
+            gameObject.SetActive(false);
             if(particleDiePref!=null) {
                 var par = particleDiePref.Spawn(InGameManager.Instance.LevelMap.transform);
                 par.transform.position = transform.position;
             }
             ProcameraController.Instance.SheckCamera();
+            SpawnerCoin.Instance.SpawnerII(transform.position + Vector3.up * 2, 15, () => {
+                ProcameraController.Instance.SetTarget(InGameManager.Instance.Player.transform);
+                InGameManager.Instance.AddEnemyDie(this);
+            });
         });
-        SpawnerCoin.Instance.SpawnerII(transform.position + Vector3.up*2, 15);
-        InGameManager.Instance.AddEnemyDie(this);
     }
 }

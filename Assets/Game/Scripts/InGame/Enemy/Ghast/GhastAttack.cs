@@ -44,7 +44,7 @@ public class GhastAttack : EnemyAttack
     }
 
     private void Update() {
-        if(CurAttackStatus != Status.MOVE) {
+        if(CurAttackStatus != Status.MOVE && enemyBase.CurStatus == EnemyStatus.ATTACK) { 
             return;
         }
 

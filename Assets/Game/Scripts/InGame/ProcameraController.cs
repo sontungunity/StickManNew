@@ -52,6 +52,15 @@ public class ProcameraController : Singleton<ProcameraController>
         SetValueSetting(valueSetting);
     }
 
+    public void SetTarget(params Transform[] targets) {
+        proCamera.CameraTargets.Clear();
+
+        foreach(var target in targets) {
+            CameraTarget cameraTarget = new CameraTarget() { TargetTransform = target };
+            proCamera.CameraTargets.Add(cameraTarget);
+        }
+    }
+
     #region Save And Load
     private void SaveData() {
         PlayerPrefs.SetFloat(SETTING_ROOM, valueSetting);

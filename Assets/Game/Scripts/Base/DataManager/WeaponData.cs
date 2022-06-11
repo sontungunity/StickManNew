@@ -31,7 +31,7 @@ public enum WeaponID {
     BOW_NORMAL = 11,
     BOW_GOOD = 12,
     BOW_VIP = 13,
-    BOW_LEGAND =14
+    BOW_LEGAND =14,
 }
 
 public enum TypeWeapon {

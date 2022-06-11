@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 8436211154207298896}
   - component: {fileID: 3882798249205942825}
   - component: {fileID: 7249383096074153490}
-  m_Layer: 0
+  m_Layer: 14
   m_Name: Dust
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4636,7 +4636,7 @@ ParticleSystemRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -166441103
-  m_SortingLayer: 5
+  m_SortingLayer: 6
   m_SortingOrder: 0
   m_RenderMode: 0
   m_SortMode: 0
@@ -4674,7 +4674,7 @@ GameObject:
   - component: {fileID: 5747887977230841974}
   - component: {fileID: 6043380254657262003}
   - component: {fileID: 7103998389985651273}
-  m_Layer: 0
+  m_Layer: 14
   m_Name: HorizontalGlow
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9455,7 +9455,7 @@ GameObject:
   - component: {fileID: 4611722045580598602}
   - component: {fileID: 847936075496363977}
   - component: {fileID: 9039875138804667746}
-  m_Layer: 0
+  m_Layer: 14
   m_Name: BlueFatLaserStart
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -14083,7 +14083,7 @@ ParticleSystemRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -166441103
-  m_SortingLayer: 5
+  m_SortingLayer: 6
   m_SortingOrder: 0
   m_RenderMode: 0
   m_SortMode: 0
@@ -14216,7 +14216,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4850403498749923535}
   - component: {fileID: 4850403498749923534}
-  m_Layer: 0
+  m_Layer: 14
   m_Name: Display
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -14300,7 +14300,7 @@ GameObject:
   - component: {fileID: 4850403498955053868}
   - component: {fileID: 4850403498955053871}
   - component: {fileID: 4850403498955053870}
-  m_Layer: 0
+  m_Layer: 14
   m_Name: Arrowlegend
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -14398,7 +14398,7 @@ GameObject:
   - component: {fileID: 3139777864854263819}
   - component: {fileID: 3808801655855859941}
   - component: {fileID: 3117354081079529958}
-  m_Layer: 0
+  m_Layer: 14
   m_Name: Point light
   m_TagString: Untagged
   m_Icon: {fileID: 0}

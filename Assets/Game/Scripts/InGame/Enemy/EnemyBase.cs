@@ -1,4 +1,4 @@
-using UnityEngine;
+﻿using UnityEngine;
 using DG.Tweening;
 
 public class EnemyBase : CharacterBase {
@@ -36,6 +36,17 @@ public class EnemyBase : CharacterBase {
     }
 
     protected Tween tween;
+
+    protected override void Awake() {
+        LevelMap perentMap = transform.GetComponentInParent<LevelMap>();
+        if(perentMap != null) {
+            LevelInfo level = RuleDameAndHeart.GetHeartDameNormalEnemy(perentMap.Level);
+            originHeart = level.Heart;
+            originDame = level.Damage;
+        }
+        curHeart = originHeart;
+        curDame = originDame;
+    }
 
     protected virtual void Start() {
         SetStatus(EnemyStatus.IDLE);

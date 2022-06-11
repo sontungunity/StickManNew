@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 675967282785995106}
   - component: {fileID: 7490160418791847831}
   - component: {fileID: 7279774036606796785}
-  m_Layer: 0
+  m_Layer: 14
   m_Name: BlueFatLaserStart
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4639,7 +4639,7 @@ ParticleSystemRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -166441103
-  m_SortingLayer: 5
+  m_SortingLayer: 6
   m_SortingOrder: 0
   m_RenderMode: 0
   m_SortMode: 0
@@ -4773,7 +4773,7 @@ GameObject:
   - component: {fileID: 7227102363431474428}
   - component: {fileID: 7513697114321956774}
   - component: {fileID: 7161530874871818503}
-  m_Layer: 0
+  m_Layer: 14
   m_Name: HorizontalGlow
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9552,7 +9552,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7949466946457147722}
   - component: {fileID: 7949466946457147717}
-  m_Layer: 0
+  m_Layer: 14
   m_Name: Display
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9636,7 +9636,7 @@ GameObject:
   - component: {fileID: 7949466946706282657}
   - component: {fileID: 7949466946706282662}
   - component: {fileID: 7949466946706282663}
-  m_Layer: 0
+  m_Layer: 14
   m_Name: ArrowVip
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9734,7 +9734,7 @@ GameObject:
   - component: {fileID: 2142996044587893549}
   - component: {fileID: 6547519774718182491}
   - component: {fileID: 989518381594194120}
-  m_Layer: 0
+  m_Layer: 14
   m_Name: Dust
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -14359,7 +14359,7 @@ ParticleSystemRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -166441103
-  m_SortingLayer: 5
+  m_SortingLayer: 6
   m_SortingOrder: 0
   m_RenderMode: 0
   m_SortMode: 0

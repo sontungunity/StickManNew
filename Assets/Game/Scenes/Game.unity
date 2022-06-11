@@ -255,7 +255,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8291f1e4cc414ce4b8385d87da8ef802, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  force: {x: 10, y: 14}
+  force: {x: 5, y: 14}
   coinPref: {fileID: 1641214059803572719, guid: d71505dde2d63da4482d431318df8a53, type: 3}
   timeDelay: 0.2
 --- !u!114 &322030695

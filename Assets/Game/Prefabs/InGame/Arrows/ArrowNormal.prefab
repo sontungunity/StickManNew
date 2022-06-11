@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7035271852757607446}
   - component: {fileID: 7035271852757607447}
-  m_Layer: 0
+  m_Layer: 14
   m_Name: Display
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -94,7 +94,7 @@ GameObject:
   - component: {fileID: 7035271853751005173}
   - component: {fileID: 7035271853751005174}
   - component: {fileID: 7035271853751005175}
-  m_Layer: 0
+  m_Layer: 14
   m_Name: ArrowNormal
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -179,3 +179,4 @@ MonoBehaviour:
   direction: {x: 0, y: 0}
   speed: 0
   dame: 0
+  particlePref: {fileID: 0}

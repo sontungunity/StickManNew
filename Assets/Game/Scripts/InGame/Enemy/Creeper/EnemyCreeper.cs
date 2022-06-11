@@ -9,9 +9,11 @@ public class EnemyCreeper : EnemyBase {
         if(curHeart <= 0) {
             Die(objMakeDame);
         } else {
-            curStatus = EnemyStatus.GET_DAME;
             rg2D.velocity = Vector2.zero;
-            enemyAttack.Attack(() => { DieByExploed(); });
+            if(curStatus != EnemyStatus.ATTACK) {
+                curStatus = EnemyStatus.ATTACK;
+                enemyAttack.Attack(() => { DieByExploed(); });
+            }
             enemyBar.UpdateHeart(curHeart / (float)originHeart);
             Debug.Log(curHeart);
         }
@@ -34,6 +36,7 @@ public class EnemyCreeper : EnemyBase {
     }
 
     private void DieByExploed() {
+        Debug.Log("DieByExploed");
         curStatus = EnemyStatus.DIE;
         transform.gameObject.SetActive(false);
         int coinRandom = Random.Range(1,6);

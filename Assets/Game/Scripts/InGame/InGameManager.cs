@@ -66,16 +66,4 @@ public class InGameManager : Singleton<InGameManager>
         player.transform.position = PositionRevive;
         player.SetUpPlayer();
     }
-
-    public void SetUpBoss(bool onBossArea = false) {
-        var frameGame = FrameManager.Instance.GetFrame<GameFrame>();
-        if(onBossArea) {
-            frameGame.BossBarHeart.StartActive(true);
-            frameGame.RoomSetting.StartActive(false);
-            //frameGame.RoomSetting.SetUpOrtho(10f);
-        } else {
-            frameGame.BossBarHeart.StartActive(false);
-            frameGame.RoomSetting.StartActive(true);
-        }
-    }
 }

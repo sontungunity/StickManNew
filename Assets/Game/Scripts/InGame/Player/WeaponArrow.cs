@@ -22,11 +22,7 @@ public class WeaponArrow : MonoBehaviour {
         if(collision.transform.parent.GetComponent<Player>()) {
             return;
         }
-        EnemyBase enemy = collision.transform.GetComponent<EnemyBase>();
-        if(enemy == null) {
-            enemy = collision.transform.parent.GetComponent<EnemyBase>();
-        }
-
+        EnemyBase enemy = collision.transform.GetComponentInParent<EnemyBase>();
         if(enemy) {
             enemy.GetDame(dame, gameObject);
         }
@@ -35,6 +31,7 @@ public class WeaponArrow : MonoBehaviour {
             var par = particlePref.Spawn();
             par.transform.position = transform.position;
         }
+
         this.Recycle();
     }
 }

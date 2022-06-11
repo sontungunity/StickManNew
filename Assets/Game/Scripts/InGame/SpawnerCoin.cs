@@ -36,6 +36,7 @@ public class SpawnerCoin : Singleton<SpawnerCoin> {
             coin.transform.GetComponent<Rigidbody2D>().AddForce(newForce, ForceMode2D.Impulse);
             yield return waitDelay;
         }
+        callback?.Invoke();
     }
 
     [ContextMenu("TestSpawnCoin")]

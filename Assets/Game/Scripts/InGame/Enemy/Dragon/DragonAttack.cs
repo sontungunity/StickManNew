@@ -27,15 +27,21 @@ public class DragonAttack : EnemyAttack {
 
     public override void Attack(Action callback = null) {
         CurAttackStatus = Status.SETUPHIGH;
-        enemyAnim.SetAnim(0, animMove, true);
-        if(moveHight == false) {
-            tween = transform.DOMove(transform.position + Vector3.up * highPlus, 1f).SetEase(Ease.Linear).OnComplete(() => {
-                moveHight = true;
-                SetUpAttack();
-            });
-        } else {
+        ProcameraController.Instance.SetTarget(transform);
+        tween = DOVirtual.DelayedCall(2f, () => {
+            ProcameraController.Instance.SetTarget(InGameManager.Instance.Player.transform);
+            enemyAnim.SetAnim(0, animMove, true);
             SetUpAttack();
-        }
+            //if(moveHight == false) {
+            //    tween = transform.DOMove(transform.position + Vector3.up * highPlus, 1f).SetEase(Ease.Linear).OnComplete(() => {
+            //        moveHight = true;
+            //        SetUpAttack();
+            //    });
+            //} else {
+                
+            //}
+        });
+        
     }
 
     private void SetUpAttack() {

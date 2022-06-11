@@ -134,7 +134,7 @@ public class PlayerAttack : MonoBehaviour {
     private void HalderEventAttackLong(WeaponData data) {
         var arrow = data.ArrowPref.Spawn(InGameManager.Instance.LevelMap);
         arrow.transform.position = positionArrow.position;
-        arrow.Action(positionArrow.right,data.Speed,data.Dame);
+        arrow.Action(positionArrow.right,data.Speed,player.curDame);
     }
 }
 

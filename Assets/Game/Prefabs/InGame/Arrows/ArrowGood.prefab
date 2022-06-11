@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 3485950250616412606}
   - component: {fileID: 3485950250616412607}
   - component: {fileID: 3485950250616412604}
-  m_Layer: 0
+  m_Layer: 14
   m_Name: ArrowGood
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -109,7 +109,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3485950251731944262}
   - component: {fileID: 3485950251731944249}
-  m_Layer: 0
+  m_Layer: 14
   m_Name: Display
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -192,7 +192,7 @@ GameObject:
   - component: {fileID: 3332221302014867774}
   - component: {fileID: 8100679651896203497}
   - component: {fileID: 4579557988485138812}
-  m_Layer: 0
+  m_Layer: 14
   m_Name: Point light
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -303,7 +303,7 @@ GameObject:
   - component: {fileID: 1484755901768721626}
   - component: {fileID: 8829068360489729469}
   - component: {fileID: 9166307798105280360}
-  m_Layer: 0
+  m_Layer: 14
   m_Name: Dust
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4928,7 +4928,7 @@ ParticleSystemRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -166441103
-  m_SortingLayer: 5
+  m_SortingLayer: 6
   m_SortingOrder: 0
   m_RenderMode: 0
   m_SortMode: 0
@@ -4966,7 +4966,7 @@ GameObject:
   - component: {fileID: 208844131861035249}
   - component: {fileID: 5143707085703648344}
   - component: {fileID: 2700799710655547561}
-  m_Layer: 0
+  m_Layer: 14
   m_Name: HorizontalGlow
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9747,7 +9747,7 @@ GameObject:
   - component: {fileID: 2673432490610472382}
   - component: {fileID: 1714117137820843730}
   - component: {fileID: 1535275653130407104}
-  m_Layer: 0
+  m_Layer: 14
   m_Name: BlueFatLaserStart
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -14375,7 +14375,7 @@ ParticleSystemRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -166441103
-  m_SortingLayer: 5
+  m_SortingLayer: 6
   m_SortingOrder: 0
   m_RenderMode: 0
   m_SortMode: 0
