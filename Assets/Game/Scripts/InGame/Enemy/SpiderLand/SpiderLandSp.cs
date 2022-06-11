@@ -33,7 +33,7 @@ public class SpiderLandSp : EnemyBase
         } else {
             rg2D.AddForce(forceDie, ForceMode2D.Impulse);
         }
-        SpawnerCoin.Instance.SpawnerII(transform.position, 3);
+        SpawnerCoin.Instance.SpawnerII(transform.position, 1);
         //InGameManager.Instance.AddEnemyDie();
     }
 }

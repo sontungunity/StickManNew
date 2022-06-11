@@ -7,6 +7,9 @@ public class EnemyCreeperAttack : EnemyAttack
     protected override void EventDamege(TrackEntry trackEntry, Spine.Event e) {
         // Play some sound if the event named "footstep" fired.
         if(e.Data.Name == eventATK && circleAttackInfo != null) {
+            if(enemyBase.CurStatus == EnemyStatus.DIE) {
+                return;
+            }
             SoundManager.Instance.PlaySound(soundAttack);
             
             var effectnew = effectPref.Spawn();

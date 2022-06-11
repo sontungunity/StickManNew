@@ -4,9 +4,8 @@ using System.Collections.Generic;
 [System.Serializable]
 public class PlayerData {
     public int LevelPlayer = 0;
-    public int Life = 5;
     public int LevelMap = 0;
-    public List<ItemStack> eventory = new List<ItemStack>(){new ItemStack(ItemID.COIN,10),new ItemStack(ItemID.LUCKYWEEL,5),new ItemStack(ItemID.ITEMBOW,5),new ItemStack(ItemID.ITEMSWORD,5)};
+    public List<ItemStack> eventory = new List<ItemStack>(){new ItemStack(ItemID.COIN,0),new ItemStack(ItemID.LUCKYWEEL,0),new ItemStack(ItemID.ITEMBOW,3),new ItemStack(ItemID.ITEMSWORD,3), new ItemStack(ItemID.LIFE,3)};
     public SpinSave SpinSave = new SpinSave();
     public DailySave DailySave = new DailySave();
     public GiftsSave GiftsSave = new GiftsSave();
@@ -50,20 +49,20 @@ public class PlayerData {
     }
 
     public bool GetLevelPass(int level) {
-        if(LevelMap>= DataManager.Instance.LevelMapMax) {
+        if(LevelMap >= DataManager.Instance.LevelMapMax) {
             LevelMap = DataManager.Instance.LevelMapMax;
             return false;
         }
 
-        if(level+1 > LevelMap) {
-            LevelMap = level+1;
+        if(level + 1 > LevelMap) {
+            LevelMap = level + 1;
             return true;
         }
 
         return false;
     }
 
-    public bool Enought(ItemID itemID,int amout = 1) {
+    public bool Enought(ItemID itemID, int amout = 1) {
         ItemStack item = eventory.Find(x=>x.ItemID == itemID);
         if(item == null) {
             return false;

@@ -8327,7 +8327,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   btn_Player: {fileID: 2115045562191368012}
   skeleton: {fileID: 2115045562191368050}
-  animIdle: idle
+  animIdle: win
   lstAnim:
   - full_attack
   - full_attack_sword

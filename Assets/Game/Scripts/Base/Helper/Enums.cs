@@ -10,6 +10,7 @@ public enum ItemID {
     LUCKYWEEL = 4,
     ITEMSWORD = 5,
     ITEMBOW =6,
+    LIFE =7,
 
     #region skin
     SKIN_00 = 10,

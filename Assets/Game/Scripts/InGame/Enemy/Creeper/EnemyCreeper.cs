@@ -42,8 +42,7 @@ public class EnemyCreeper : EnemyBase {
         Debug.Log("DieByExploed");
         curStatus = EnemyStatus.DIE;
         transform.gameObject.SetActive(false);
-        int coinRandom = Random.Range(1,6);
-        SpawnerCoin.Instance.Spawner(transform.position, coinRandom);
+        SpawnerCoin.Instance.Spawner(transform.position, 3);
         InGameManager.Instance.AddEnemyDie(this);
     }
 }

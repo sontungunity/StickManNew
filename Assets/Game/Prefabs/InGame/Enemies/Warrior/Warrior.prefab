@@ -695,7 +695,7 @@ MonoBehaviour:
   circleAttackInfo: {fileID: 523747219317595672}
   enemyBase: {fileID: 1888080125848745655}
   timeDelayAttack: 3
-  soundAttack: {fileID: 0}
+  soundAttack: {fileID: 8300000, guid: 178d4899acc40d04298381bd68c21a98, type: 3}
   angleStart: 70
   beamFace: {fileID: 1888080123938702461}
   beamDownward: {fileID: 7251560640526511091}

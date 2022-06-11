@@ -194,8 +194,8 @@ MonoBehaviour:
   particleDiePref: {fileID: 0}
   soundDie: {fileID: 0}
   smallSpiderPref: {fileID: 6509126526263252861, guid: 1b7cc54bc46a8b94b9f152043b0298df, type: 3}
-  x: 5
-  y: 8
+  x: 1
+  y: 1
   amount: 4
 --- !u!1 &928500279230268185
 GameObject:
@@ -702,7 +702,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   display: {fileID: 928500279230268185}
   curHeart: {fileID: 928500279616451412}
-  timeBar: 2
 --- !u!1 &928500280615234376
 GameObject:
   m_ObjectHideFlags: 0

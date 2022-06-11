@@ -6,6 +6,14 @@ using UnityEngine;
 public class GhastBoss : BossBase
 {
     private GhastAttack gastAttack => enemyAttack as GhastAttack;
+
+    protected override void Update() {
+        if(curStatus == EnemyStatus.IDLE || curStatus == EnemyStatus.MOVE || curStatus == EnemyStatus.NONE || curStatus == EnemyStatus.DETECH || curStatus == EnemyStatus.GET_DAME) {
+            afterUpdateStatus = EnemyStatus.MOVE;
+            SetupStatus();
+            SetStatus(afterUpdateStatus);
+        }
+    }
     public override void GetDame(int dame, GameObject objMakeDame = null) {
         if(curStatus == EnemyStatus.DIE || curHeart <= 0) {
             return;

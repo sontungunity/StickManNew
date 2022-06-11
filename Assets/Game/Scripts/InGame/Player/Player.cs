@@ -72,7 +72,11 @@ public class Player : CharacterBase {
         curHeart -= dame;
         if(curHeart <= 0) {
             SetPlayerStatus(EnumPlayerStatus.DIE, () => {
-                FrameManager.Instance.Push<ReviveFrame>();
+                if(playerData.RemoveItem(new ItemStack(ItemID.LIFE,1))) {
+                    InGameManager.Instance.Revived();
+                } else {
+                    FrameManager.Instance.Push<ReviveFrame>();
+                }
             });
         } else {
             SetPlayerStatus(EnumPlayerStatus.GETDAME, () => {

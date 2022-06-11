@@ -25770,7 +25770,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   level: 3
-  numberEnemy: 11
+  numberEnemy: 10
 --- !u!1 &4077230018314086018
 GameObject:
   m_ObjectHideFlags: 0
