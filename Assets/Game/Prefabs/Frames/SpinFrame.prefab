@@ -2865,22 +2865,22 @@ MonoBehaviour:
   - {fileID: 1552530702716716701}
   - {fileID: 4006714224544524390}
   lstReward:
-  - itemID: 21
+  - itemID: 5
     amount: 1
   - itemID: 1
     amount: 300
-  - itemID: 1
-    amount: 500
+  - itemID: 7
+    amount: 1
   - itemID: 1
     amount: 250
-  - itemID: 42
+  - itemID: 6
     amount: 1
   - itemID: 1
     amount: 200
-  - itemID: 1
-    amount: 100
-  - itemID: 1
-    amount: 100
+  - itemID: 7
+    amount: 1
+  - itemID: 7
+    amount: 500
   wheel: {fileID: 6019550734510886237}
   lightCell: {fileID: 6019550735850258716}
   spinCurve:
@@ -4438,6 +4438,9 @@ MonoBehaviour:
   - full_attack
   - full_attack_sword
   - get_damage
+  parUpPower: {fileID: 0}
+  animWin: 
+  soundUpdate: {fileID: 0}
 --- !u!1 &7593024426702742847
 GameObject:
   m_ObjectHideFlags: 0

@@ -12,6 +12,7 @@ public class GameManager : Singleton<GameManager> {
     public States State => state;
     //
     [SerializeField]private int curLevel;
+    public bool ShowDaily;
     public int CurLevel {
         get {
             return curLevel;
@@ -28,6 +29,7 @@ public class GameManager : Singleton<GameManager> {
         DontDestroyOnLoad(gameObject);
         Application.targetFrameRate = targetFrameRate;
         Input.multiTouchEnabled = multiTouchEnabled;
+        ShowDaily = false;
     }
 
     public void Start() {

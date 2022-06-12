@@ -40,6 +40,7 @@ public class HomeFrame : FrameBase {
         txt_Level.text = $"LEVEL {DataManager.Instance.PlayerData.LevelMap + 1}";
         SoundManager.Instance.PlayMusic(musicMenu);
         btn_RemoveAds.gameObject.SetActive(ItemID.REMOVEADS.GetSaveByID().Amount < 1);
+        ShowDailyReward();
     }
 
     private void StartGame() {
@@ -53,5 +54,12 @@ public class HomeFrame : FrameBase {
                 DataManager.Instance.PlayerData.AddItem(new ItemStack(ItemID.REMOVEADS,1));
             }
         });
+    }
+
+    private void ShowDailyReward() {
+        if(GameManager.Instance.ShowDaily == false) {
+            GameManager.Instance.ShowDaily = true;
+            FrameManager.Instance.Push<DailyFrame>();
+        }
     }
 }

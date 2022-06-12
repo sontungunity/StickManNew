@@ -28,7 +28,6 @@ public class ProcameraController : Singleton<ProcameraController>
     }
 
     public void SetValueSetting(float value) {
-        Debug.LogError("Set camera");
         valueSetting = Mathf.Clamp(value, 0, 1);
         proCamera.GameCamera.orthographicSize = GetSizCameraByPercent(valueSetting);
     }

@@ -5230,6 +5230,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   percent: 0.25
   itemBoost: {fileID: 4281151121746829275}
+  icon: {fileID: 7827381657506883314}
+  noAds: 0
 --- !u!58 &7827381656874398487
 CircleCollider2D:
   m_ObjectHideFlags: 0

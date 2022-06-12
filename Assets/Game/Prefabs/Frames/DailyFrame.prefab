@@ -2503,7 +2503,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 63d692f99fe55b74f83aef9ede3b33cc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  transitions: []
+  transitions:
+  - {fileID: 6059545397673961496}
 --- !u!114 &6059545397673961496
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4948,16 +4949,16 @@ MonoBehaviour:
   lstReward:
   - itemID: 1
     amount: 300
-  - itemID: 1
-    amount: 500
+  - itemID: 7
+    amount: 3
   - itemID: 1
     amount: 700
   - itemID: 1
     amount: 1000
-  - itemID: 1
-    amount: 1500
-  - itemID: 1
-    amount: 2000
+  - itemID: 5
+    amount: 5
+  - itemID: 6
+    amount: 5
   - itemID: 37
     amount: 1
 --- !u!1 &6059545398769558555
