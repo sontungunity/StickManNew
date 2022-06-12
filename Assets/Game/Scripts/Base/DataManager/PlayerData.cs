@@ -5,7 +5,7 @@ using System.Collections.Generic;
 public class PlayerData {
     public int LevelPlayer = 0;
     public int LevelMap = 0;
-    public List<ItemStack> eventory = new List<ItemStack>(){new ItemStack(ItemID.COIN,0),new ItemStack(ItemID.LUCKYWEEL,0),new ItemStack(ItemID.ITEMBOW,3),new ItemStack(ItemID.ITEMSWORD,3), new ItemStack(ItemID.LIFE,3)};
+    public List<ItemStack> eventory = new List<ItemStack>(){new ItemStack(ItemID.COIN,300),new ItemStack(ItemID.LUCKYWEEL,1),new ItemStack(ItemID.ITEMBOW,1),new ItemStack(ItemID.ITEMSWORD,1), new ItemStack(ItemID.LIFE,5)};
     public SpinSave SpinSave = new SpinSave();
     public DailySave DailySave = new DailySave();
     public GiftsSave GiftsSave = new GiftsSave();

@@ -552,7 +552,7 @@ MonoBehaviour:
   particleBlood: {fileID: 9152954532156666284}
   particleDiePref: {fileID: 0}
   soundDie: {fileID: 0}
-  timeDelay: 2
+  timeDelay: 4
 --- !u!1 &2296141954873910570
 GameObject:
   m_ObjectHideFlags: 0

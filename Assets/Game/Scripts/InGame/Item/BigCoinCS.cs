@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class BigCoinCS : MonoBehaviour
 {
@@ -9,18 +10,12 @@ public class BigCoinCS : MonoBehaviour
     private void OnTriggerEnter2D(Collider2D collision) {
         Player player = collision.transform.parent.GetComponent<Player>();
         if(player != null) {
-            AdsManager.Instance.ShowRewarded((value)=> {
-                if(!value) {
-                    return;
-                }
-                if(DataManager.Instance != null) {
-                    int random = Random.Range(minCoin,maxCoin);
-                    DataManager.Instance.PlayerData.AddItem(new ItemStack(ItemID.COIN, random));
-                    SpawnerTextDame.Instance.Spawner(player.transform.position, $"+{random}");
-                    gameObject.SetActive(false);
-                }
-            });
-            
+            if(DataManager.Instance != null) {
+                int random = Random.Range(minCoin,maxCoin);
+                DataManager.Instance.PlayerData.AddItem(new ItemStack(ItemID.COIN, random));
+                SpawnerTextDame.Instance.Spawner(player.transform.position, $"+{random}");
+                gameObject.SetActive(false);
+            }
         }
     }
 }

@@ -28,6 +28,7 @@ public class ProcameraController : Singleton<ProcameraController>
     }
 
     public void SetValueSetting(float value) {
+        Debug.LogError("Set camera");
         valueSetting = Mathf.Clamp(value, 0, 1);
         proCamera.GameCamera.orthographicSize = GetSizCameraByPercent(valueSetting);
     }
@@ -36,6 +37,7 @@ public class ProcameraController : Singleton<ProcameraController>
         Room room = new Room();
         room.Dimensions = rect;
         camRoom.AddRoom(rect.x,rect.y,rect.width,rect.height);
+        camRoom.enabled = true;
     }
 
     public float GetSizCameraByPercent(float percent) {
@@ -48,6 +50,7 @@ public class ProcameraController : Singleton<ProcameraController>
     }
 
     public void SetUpDefault() {
+        camRoom.enabled = false;
         camRoom.Rooms.Clear();
         SetValueSetting(valueSetting);
     }

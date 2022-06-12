@@ -1,32 +1,36 @@
 using UnityEngine;
 using DG.Tweening;
 
-public class WeaponCS : MonoBehaviour
-{
+public class WeaponCS : MonoBehaviour {
     [SerializeField] private WeaponID weaponID;
     [SerializeField] private SpriteRenderer img;
     [SerializeField] private GameObject iconAds;
     [SerializeField] private Collider2D col2D;
     [SerializeField] private float timeDelay = 2f;
-    [Header("Customer")] 
+    [Header("Customer")]
     [SerializeField] private bool noAds;
     [SerializeField] private bool noDisable;
     private Tween tween;
-    private void Start()
-    {
+    private void Start() {
         WeaponData data = weaponID.GetDataWeaponByID();
         img.sprite = data.Icon;
         iconAds.SetActive(!noAds);
         col2D.enabled = true;
+        if(noDisable) {
+            noAds = true;
+            iconAds.SetActive(false);
+        }
+        
     }
 
     private void OnTriggerEnter2D(Collider2D collision) {
         Player player = collision.transform.parent.GetComponent<Player>();
-        if(player != null) 
-        {
+        if(player != null) {
             if(noAds) {
                 player.SetWeapon(weaponID.GetDataWeaponByID());
                 if(noDisable) {
+                    noAds = false;
+                    iconAds.SetActive(true);
                     col2D.enabled = false;
                     img.gameObject.SetActive(false);
                     tween.CheckKillTween();
@@ -39,7 +43,7 @@ public class WeaponCS : MonoBehaviour
                 }
                 return;
             }
-            AdsManager.Instance.ShowRewarded((value)=> {
+            AdsManager.Instance.ShowRewarded((value) => {
                 if(value) {
                     player.SetWeapon(weaponID.GetDataWeaponByID());
                     if(noDisable) {

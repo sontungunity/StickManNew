@@ -8,6 +8,17 @@ public class SpiderLandSp : EnemyBase
     [SerializeField] private float timeDelay = 2f;
     private Tween tweenDisable;
 
+    protected override void Awake() {
+        LevelMap perentMap = transform.GetComponentInParent<LevelMap>();
+        if(perentMap != null) {
+            LevelInfo level = RuleDameAndHeart.GetHeartDameNormalEnemy(perentMap.Level);
+            originHeart = level.Heart/2;
+            originDame = level.Damage/2;
+        }
+        curHeart = originHeart;
+        curDame = originDame;
+    }
+
     protected override void OnDisable() {
         base.OnDisable();
         tweenDisable.CheckKillTween();

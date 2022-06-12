@@ -10,6 +10,7 @@ public class ChestCS : MonoBehaviour
     [SerializeField,SpineAnimation] private string animIdle,animOpen,animOpenIdle;
     [SerializeField] private Transform point;
     [SerializeField] private AudioClip soundMusic;
+    [SerializeField] private ParticleSystem par;
 
     public bool open;
     private void Start() {
@@ -28,6 +29,7 @@ public class ChestCS : MonoBehaviour
 
             open = true;
             SoundManager.Instance.PlaySound(soundMusic);
+            par.Play();
             spine.SetAnim(0,animOpen,false,()=> {
                 SpawnerCoin.Instance.SpawnerII(point.position,9);
                 spine.SetAnim(0, animOpenIdle, true);

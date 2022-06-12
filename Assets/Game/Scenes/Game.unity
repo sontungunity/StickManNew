@@ -130,6 +130,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 299382996, guid: ded6fa9a3f39bbf4196286421e1a337e, type: 3}
+      propertyPath: Rooms.Array.data[0].Zoom
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 299382996, guid: ded6fa9a3f39bbf4196286421e1a337e, type: 3}
+      propertyPath: Rooms.Array.data[0].ScaleCameraToFit
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5046352039149026100, guid: ded6fa9a3f39bbf4196286421e1a337e, type: 3}
       propertyPath: m_Name
       value: Main Camera
