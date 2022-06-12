@@ -19,6 +19,7 @@ public class Player : CharacterBase {
     [SerializeField] private ParticleSystem par_NewBlood;
     [SerializeField] private ParticleSystem par_GetWeapon;
     [SerializeField] private ParticleSystem par_Heal;
+    [SerializeField] private ParticleSystem parSoundPref;
     [SerializeField] private AudioClip soundGetWeapon,soundHealing;
     [Header("Custom")]
     [SerializeField] private float timeProtect;
@@ -71,6 +72,8 @@ public class Player : CharacterBase {
         }
         curHeart -= dame;
         if(curHeart <= 0) {
+            var par = parSoundPref.Spawn(InGameManager.Instance.LevelMap.transform);
+            par.transform.position = transform.position;
             SetPlayerStatus(EnumPlayerStatus.DIE, () => {
                 if(playerData.RemoveItem(new ItemStack(ItemID.LIFE,1))) {
                     InGameManager.Instance.Revived();
@@ -184,6 +187,7 @@ public class Player : CharacterBase {
         curHeart += heart;
         curHeart = Mathf.Min(curHeart, originHeart);
         par_Heal.Play();
+        SoundManager.Instance.PlaySound(soundHealing);
         EventDispatcher.Dispatch<EventKey.PlayerChange>(new EventKey.PlayerChange());
     }
 

@@ -41,4 +41,8 @@ public class GolemAttack : EnemyAttack
             golemStone.Active(enemyBase.curDame);
         }
     }
+
+    public void GolemDie() {
+        golemStone.gameObject.SetActive(false);
+    }
 }

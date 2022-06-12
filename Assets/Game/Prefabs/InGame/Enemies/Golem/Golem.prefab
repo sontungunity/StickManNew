@@ -59,11 +59,11 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8835648990298674540}
-  - component: {fileID: 8835648990298674544}
+  - component: {fileID: 2241296022479464066}
   - component: {fileID: 8835648990298674545}
   - component: {fileID: 8835648990298674546}
-  - component: {fileID: 2241296022479464066}
   - component: {fileID: 1736778310366875250}
+  - component: {fileID: 8436896804001444198}
   m_Layer: 10
   m_Name: Golem
   m_TagString: Untagged
@@ -87,36 +87,27 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &8835648990298674544
-MonoBehaviour:
+--- !u!50 &2241296022479464066
+Rigidbody2D:
+  serializedVersion: 4
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8835648990298674539}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c317ba5d16213024cb468ff608632bbf, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  originHeart: 225
-  originDame: 30
-  curHeart: 0
-  curDame: 0
-  display: {fileID: 8835648991050150086}
-  enemyAnim: {fileID: 8835648990298674546}
-  eye_Befor: {fileID: 8835648990877518177}
-  eye_After: {fileID: 8835648991774383306}
-  distan_attack: {fileID: 8835648992031796226}
-  curStatus: 0
-  enemyBar: {fileID: 764464420605284202}
-  enemyAttack: {fileID: 1736778310366875250}
-  col2D: {fileID: 8702574482366225653}
-  rg2D: {fileID: 2241296022479464066}
-  forceDie: {x: 20, y: 5}
-  particleBlood: {fileID: 9067041917151867738}
-  particleDiePref: {fileID: 0}
-  soundDie: {fileID: 0}
+  m_BodyType: 0
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 1
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 4
 --- !u!114 &8835648990298674545
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -129,7 +120,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2734f02258b25ad4bb375f22df62bc94, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  enemyBase: {fileID: 8835648990298674544}
+  enemyBase: {fileID: 8436896804001444198}
   rb2D: {fileID: 2241296022479464066}
   speed: 2
   speedTarget: 4
@@ -157,27 +148,6 @@ MonoBehaviour:
   getDame: {fileID: 0}
   die: {fileID: 0}
   packCoinDrop: {fileID: 0}
---- !u!50 &2241296022479464066
-Rigidbody2D:
-  serializedVersion: 4
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8835648990298674539}
-  m_BodyType: 0
-  m_Simulated: 1
-  m_UseFullKinematicContacts: 0
-  m_UseAutoMass: 0
-  m_Mass: 1
-  m_LinearDrag: 0
-  m_AngularDrag: 0.05
-  m_GravityScale: 1
-  m_Material: {fileID: 0}
-  m_Interpolate: 0
-  m_SleepingMode: 1
-  m_CollisionDetection: 0
-  m_Constraints: 4
 --- !u!114 &1736778310366875250
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -193,10 +163,40 @@ MonoBehaviour:
   enemyAnim: {fileID: 8835648990298674546}
   eventATK: dmg
   circleAttackInfo: {fileID: 0}
-  enemyBase: {fileID: 8835648990298674544}
+  enemyBase: {fileID: 8436896804001444198}
   timeDelayAttack: 2
-  soundAttack: {fileID: 0}
+  soundAttack: {fileID: 8300000, guid: 2e9bc90882566554f920011e125acef8, type: 3}
   golemStone: {fileID: 2002710964862152367}
+--- !u!114 &8436896804001444198
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8835648990298674539}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 05c3faf5e0d03984092678666bac89f9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  originHeart: 225
+  originDame: 30
+  curHeart: 0
+  curDame: 0
+  display: {fileID: 8835648991050150086}
+  enemyAnim: {fileID: 8835648990298674546}
+  eye_Befor: {fileID: 8835648990877518177}
+  eye_After: {fileID: 8835648991774383306}
+  distan_attack: {fileID: 8835648992031796226}
+  curStatus: 0
+  enemyBar: {fileID: 764464420605284202}
+  enemyAttack: {fileID: 1736778310366875250}
+  col2D: {fileID: 8702574482366225653}
+  rg2D: {fileID: 2241296022479464066}
+  forceDie: {x: 20, y: 5}
+  particleBlood: {fileID: 9067041917151867738}
+  particleDiePref: {fileID: 0}
+  soundDie: {fileID: 0}
 --- !u!1 &8835648990815958043
 GameObject:
   m_ObjectHideFlags: 0
@@ -874,6 +874,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 8835648991050150086}
     m_Modifications:
+    - target: {fileID: 2418977138940253028, guid: aea82595e79efac449a8730a6b7b4460, type: 3}
+      propertyPath: stone
+      value: 
+      objectReference: {fileID: 1993770340841450347}
     - target: {fileID: 2418977138940253029, guid: aea82595e79efac449a8730a6b7b4460, type: 3}
       propertyPath: m_RootOrder
       value: 7
@@ -942,5 +946,16 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: db4f1175318384e488951baff3cfc777, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &1993770340841450347 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 2445923440580892320, guid: aea82595e79efac449a8730a6b7b4460, type: 3}
+  m_PrefabInstance: {fileID: 4204921585400839627}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6f3cd67e272260141b3244a2e8abb1b3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 

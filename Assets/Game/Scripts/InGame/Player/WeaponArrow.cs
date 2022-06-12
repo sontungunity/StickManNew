@@ -32,7 +32,10 @@ public class WeaponArrow : MonoBehaviour {
             par.transform.position = transform.position;
         }
 
-        this.Recycle();
+
+        if(enemy==null) {
+            this.Recycle();
+        }
     }
 }
 

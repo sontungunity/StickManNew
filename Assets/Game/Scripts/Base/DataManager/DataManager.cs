@@ -41,10 +41,10 @@ public class DataManager : Singleton<DataManager> {
 
     protected override void OnAwake() {
         base.OnAwake();
-        LoadData();
         LoadItemData();
-        LoadLevelMap();
         LoadWeaponData();
+        LoadData();
+        LoadLevelMap();
         playerData.Update();
     }
 
