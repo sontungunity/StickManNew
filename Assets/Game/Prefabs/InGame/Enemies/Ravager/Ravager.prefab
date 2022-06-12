@@ -735,7 +735,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   display: {fileID: 5913883041853754548}
   curHeart: {fileID: 5913883042272443641}
-  timeBar: 2
 --- !u!1 &5913883043219809509
 GameObject:
   m_ObjectHideFlags: 0

@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 216116036}
   - component: {fileID: 231277976}
   - component: {fileID: 232129802}
-  m_Layer: 0
+  m_Layer: 16
   m_Name: RoundFireModular
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4686,7 +4686,7 @@ GameObject:
   - component: {fileID: 216134048}
   - component: {fileID: 231253468}
   - component: {fileID: 232172926}
-  m_Layer: 0
+  m_Layer: 16
   m_Name: Fire
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9358,7 +9358,7 @@ GameObject:
   - component: {fileID: 216125902}
   - component: {fileID: 231214148}
   - component: {fileID: 232169558}
-  m_Layer: 0
+  m_Layer: 16
   m_Name: Smoke
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -14039,7 +14039,7 @@ GameObject:
   - component: {fileID: 216132978}
   - component: {fileID: 231225764}
   - component: {fileID: 232129260}
-  m_Layer: 0
+  m_Layer: 16
   m_Name: ExtraGlow
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -18839,7 +18839,7 @@ GameObject:
   - component: {fileID: 569745363931879193}
   - component: {fileID: 569745363931879192}
   - component: {fileID: 569745363931879175}
-  m_Layer: 12
+  m_Layer: 16
   m_Name: GhastBullet
   m_TagString: Untagged
   m_Icon: {fileID: 0}
