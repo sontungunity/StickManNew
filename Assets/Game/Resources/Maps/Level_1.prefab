@@ -1939,7 +1939,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   skeletonDataAsset: {fileID: 11400000, guid: df885cd86d7fd2540b7e58357529686a, type: 2}
-  initialSkinName: 
+  initialSkinName: skin_full
   fixPrefabOverrideViaMeshFilter: 0
   initialFlipX: 0
   initialFlipY: 0
@@ -1961,7 +1961,7 @@ MonoBehaviour:
     materialsInsideMask: []
     materialsOutsideMask: []
   disableRenderingOnOverride: 1
-  _animationName: 
+  _animationName: animation
   loop: 1
   timeScale: 1
 --- !u!1 &4457376365802954214
