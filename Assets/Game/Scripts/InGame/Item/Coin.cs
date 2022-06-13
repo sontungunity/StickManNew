@@ -10,7 +10,6 @@ public class Coin : MonoBehaviour
             {
                 SoundManager.Instance.PlaySoundGoldCollect();
                 int random = Random.Range(2,10);
-                //DataManager.Instance.PlayerData.AddItem(new ItemStack(ItemID.COIN,1));
                 InGameManager.Instance.CoinInGame += random;
                 SpawnerTextDame.Instance.Spawner(player.transform.position,$"+{random}");
                 this.Recycle();
