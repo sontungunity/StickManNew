@@ -46,7 +46,10 @@ public class ItemListener : MonoBehaviour {
     }
 
     private void OpenShop() {
-        FrameManager.Instance.GetFrameTop().Hide();
+        var frame = FrameManager.Instance.GetFrameTop();
+        if(!(frame is GameFrame) && !(frame is HomeFrame)) {
+            FrameManager.Instance.GetFrameTop().Hide();
+        }                
         FrameManager.Instance.Push<ShopFrame>();
     }
 }
