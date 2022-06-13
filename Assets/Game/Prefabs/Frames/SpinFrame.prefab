@@ -2879,7 +2879,7 @@ MonoBehaviour:
     amount: 200
   - itemID: 7
     amount: 1
-  - itemID: 7
+  - itemID: 1
     amount: 500
   wheel: {fileID: 6019550734510886237}
   lightCell: {fileID: 6019550735850258716}

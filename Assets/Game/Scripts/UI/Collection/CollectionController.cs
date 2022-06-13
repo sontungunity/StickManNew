@@ -19,6 +19,10 @@ public class CollectionController : Singleton<CollectionController> {
     }
 
     public void GetItemStack(ItemStack itemStack, Vector2 startPosition, Action callback) {
+        if(itemStack.Amount == 0) {
+            callback?.Invoke();
+            return;
+        }
         GetItemStack(itemStack, startPosition, defaulTarget.position, callback);
     }
 
