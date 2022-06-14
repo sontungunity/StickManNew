@@ -1,4 +1,3 @@
-
 using STU;
 
 public static class EventKey {

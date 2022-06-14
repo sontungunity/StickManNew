@@ -1,6 +1,4 @@
 using STU;
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class Warrior : BossBase
@@ -21,8 +19,8 @@ public class Warrior : BossBase
                 enemyAnim.SetAnimGetDame(() => {
                     enemyAnim.AnimIdle();
                 });
-            }
-            particleBlood?.Play();
+            }particleBlood?.Play();
+            
         }
     }
 }

@@ -66,8 +66,10 @@ public class WarriorAttack : EnemyAttack {
         }
     }
 
-    IEnumerator SpawnerBullet() {
-        for(int i = 0; i < timeFire; i++ ) {
+    IEnumerator SpawnerBullet() 
+    {
+        for(int i = 0; i < timeFire; i++ ) 
+        {
             BulletCS bullet = bulletPref.Spawn(InGameManager.Instance.LevelMap.transform);
             bullet.transform.position = transform.position;
             bullet.Fire(Vector2.right,speed,enemyBase.curDame);

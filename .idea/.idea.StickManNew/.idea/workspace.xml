@@ -8,98 +8,111 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="HighlightingSettingsPerFile">
-    <setting file="file://$PROJECT_DIR$/Assets/Game/Scripts/UI/SpinFrame/SpinFrame.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Game/Scripts/InGame/Enemy/BossBase.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Game/Scripts/InGame/Enemy/EnemyAttack.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Game/Scripts/InGame/Enemy/EnemyHeartBar.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Game/Scripts/InGame/Enemy/EnemyAnim.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Game/Scripts/InGame/Enemy/EnemyBase.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Game/Scripts/InGame/Item/BigCoinCS.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Game/Scripts/InGame/Enemy/Witch/WitchCS.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Game/Scripts/InGame/Item/Coin.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Game/Scripts/InGame/Item/TriggerBoss.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Game/Scripts/InGame/Item/SignCS.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Game/Scripts/InGame/Enemy/Witch/FireRayCS.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Game/Scripts/InGame/Item/SpikeCS.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.test-framework@1.1.29/UnityEngine.TestRunner/Utils/MonoBehaviourTest/MonoBehaviourTest.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Game/Scripts/InGame/Item/AppleCS.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Game/Scripts/InGame/Enemy/Witch/WitchMove.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Game/Scripts/Base/FrameBase/FrameManager.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Game/Scripts/InGame/Item/ChestCS.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Game/Scripts/InGame/Enemy/Witch/WitchAttack.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Game/Scripts/InGame/BeamRayCast.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Game/Scripts/InGame/Enemy/Creeper/EnemyCreeperAttack.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Game/Scripts/InGame/SpawnerTextDame.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Game/Scripts/InGame/SpawnerCoin.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Game/Scripts/InGame/CharacterBase.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Game/Scripts/InGame/RuleDameAndHeart.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Game/Scripts/InGame/Enemy/Ghast/GhastBoss.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Game/Scripts/Base/EventDispatcher/EventKey.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Game/Scripts/InGame/Enemy/Ghast/GhastAttack.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/AD3EAA08-78D9-4CBE-8E45-F9C494D71647/23/4d17996a/WaitForSeconds.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Game/Scripts/Base/DataManager/ItemStack.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Game/Scripts/Base/DataManager/DataManager.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Game/Scripts/InGame/Enemy/Warrior/Warrior.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Game/Scripts/Base/DataManager/ItemData.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.2d.sprite@1.0.0/Editor/SpriteEditorModule/SpriteFrameModule/SpriteFrameModule.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Game/Scripts/Base/DataManager/SkinItemData.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Game/Scripts/Base/DataManager/WeaponData.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Game/Scripts/Base/FrameBase/FrameBase.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Game/Scripts/Base/FrameBase/UIAnimation.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Game/Scripts/Base/Helper/Extentions.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Game/Scripts/Base/Helper/Enums.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Game/Scripts/Base/SoundManager.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/AD3EAA08-78D9-4CBE-8E45-F9C494D71647/0b/b8faa598/UnityEvent.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Game/Scripts/UI/DailyFrame/DailySave.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Game/Scripts/Base/PoolManager.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Game/Scripts/UI/DailyFrame/DailyViewPlus.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Game/Scripts/UI/DailyFrame/DailyFrame.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Game/Scripts/UI/Collection/CollectionController.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Game/Scripts/UI/DailyFrame/DailyView.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Spine/Runtime/spine-unity/Asset Types/SpineAtlasAsset.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Game/Scripts/UI/SpinFrame/SpinFrame.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Game/Scripts/UI/SkinFrame/SkinFrame.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.ugui@1.0.0/Runtime/EventSystem/InputModules/BaseInput.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Game/Scripts/InGame/Enemy/EnemyHeartBar.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/AD3EAA08-78D9-4CBE-8E45-F9C494D71647/eb/e5279b08/MonoBehaviour.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Game/Scripts/UI/SkinFrame/SkinView.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.2d.path@4.0.2/Editor/IMGUI/GUIFramework/CommandAction.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Game/Scripts/UI/SkinFrame/SkinFloorShow.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Game/Scripts/InGame/Enemy/EnemyAnim.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Game/Scripts/InGame/Player/Shadow.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Game/Scripts/UI/SkinFrame/NarbarManager.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Game/Scripts/InGame/Enemy/EnemyBase.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Game/Scripts/UI/SkinFrame/SkinReview.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.2d.path@4.0.2/Editor/IMGUI/GUIFramework/ClickAction.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Game/Scripts/InGame/Item/SwordCS.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Game/Scripts/InGame/Item/Coin.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Game/Scripts/InGame/Item/SignCS.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Game/Scripts/UI/GameFrame/LifeAndHeart.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Game/Scripts/InGame/Item/SpikeCS.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Game/Scripts/UI/GameFrame/GameFrame.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.test-framework@1.1.29/UnityEngine.TestRunner/Utils/MonoBehaviourTest/MonoBehaviourTest.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Game/Scripts/UI/PlayerSpinUI.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Game/Scripts/InGame/Item/AppleCS.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Game/Scripts/Base/FrameBase/FrameManager.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.test-framework@1.1.29/UnityEditor.TestRunner/NUnitExtension/Attributes/TestPlayerBuildModifierAttribute.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/EnhancedScroller/IEnhancedScrollerDelegate.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Game/Scripts/InGame/Item/ChestCS.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Game/Scripts/UI/ItemStackView.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Game/Scripts/InGame/Enemy/Creeper/EnemyCreeperAttack.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Game/Scripts/UI/SoundButton.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Game/Scripts/InGame/CharacterBase.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Game/Scripts/Base/IAPManager/IAPManager.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Game/Scripts/InGame/Enemy/Ghast/BulletCS.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Game/Scripts/UI/LevelSelectFrame/LevelSelectView.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Game/Scripts/UI/ButtonClose.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Spine/Runtime/spine-unity/Components/SkeletonAnimation.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Game/Scripts/Base/DataManager/ItemStack.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Game/Scripts/UI/LevelSelectFrame/LevelSelectFrame.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Game/Scripts/Base/DataManager/DataManager.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.test-framework@1.1.29/UnityEditor.TestRunner/TestLaunchers/RemotePlayerTestController.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Game/Scripts/Singleton.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Game/Scripts/Base/DataManager/ItemData.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.2d.sprite@1.0.0/Editor/SpriteEditorModule/SpriteFrameModule/SpriteFrameModule.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Game/Scripts/Base/DataManager/SkinItemData.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Game/Scripts/InGame/Enemy/Dragon/Dragon.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Standard Assets/CrossPlatformInput/Scripts/PlatformSpecific/StandaloneInput.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Game/Scripts/InGame/Item/ItemBoost.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Game/Scripts/InGame/Player/OverlapCircleAll.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Game/Scripts/Base/DataManager/WeaponData.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Game/Scripts/InGame/Enemy/Warrior/WarriorAttack.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Game/Scripts/InGame/Item/LavaCS.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Game/Scripts/Base/FrameBase/FrameBase.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.test-framework@1.1.29/UnityEngine.TestRunner/TestRunner/RemoteHelpers/RemoteTestResultDataWithTestData.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Game/Scripts/InGame/Player/PlayerSkin.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.test-framework@1.1.29/UnityEngine.TestRunner/TestRunner/RemoteHelpers/RemoteTestResultDataFactory.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Game/Scripts/InGame/Player/SpineBase.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Game/Scripts/InGame/Player/PlayerMovement.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Game/Scripts/Base/FrameBase/UIAnimation.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Game/Scripts/Base/Helper/Extentions.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Game/Scripts/Base/Helper/Enums.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Game/Scripts/InGame/Player/PlayerVertical.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Game/Scripts/InGame/Player/PlayerAttack.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Game/Scripts/Base/SoundManager.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Game/Scripts/InGame/Player/PlayerHorizontal.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Game/Scripts/InGame/Player/PlayerAnim.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/0B59F3B6-14A0-4547-A8BF-657DE1E23F2C/5f/6bc546cf/JsonUtility.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.test-framework@1.1.29/UnityEngine.TestRunner/TestRunner/Callbacks/PlayModeRunnerCallback.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Game/Scripts/InGame/Player/WeaponArrow.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/AD3EAA08-78D9-4CBE-8E45-F9C494D71647/0b/b8faa598/UnityEvent.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Game/Scripts/InGame/Enemy/SpiderLand/SpiderLandSp.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Game/Scripts/InGame/Player/Player.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Game/Scripts/InGame/Enemy/Skeleton/SkeletonArrow.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Game/Scripts/InGame/Enemy/Skeleton/SkeletonAttack.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Game/Scripts/UI/DailyFrame/DailySave.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Game/Scripts/InGame/Enemy/Ravager/RavagerBoss.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Game/Scripts/Base/PoolManager.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Game/Scripts/UI/DailyFrame/DailyViewPlus.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Game/Scripts/UI/DailyFrame/DailyFrame.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Game/Scripts/InGame/Item/MoveObject.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Game/Scripts/UI/Collection/CollectionController.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/B0E795E4-8CF0-4D7A-9193-EA9447AF406A/71/f9169ec9/Collider2D.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Game/Scripts/InGame/Enemy/EnemyMove.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Game/Scripts/InGame/Item/SpikeDieCS.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Game/Scripts/UI/DailyFrame/DailyView.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Game/Scripts/InGame/Item/SwordDownCS.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Game/Scripts/InGame/Enemy/Creeper/DetechPlayer.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Game/Scripts/InGame/Enemy/Creeper/EnemyCreeper.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Spine/Runtime/spine-unity/Asset Types/SpineAtlasAsset.cs" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/Assets/Game/Scripts/UI/SoundButton.cs" />
-        <option value="$PROJECT_DIR$/Assets/LevelMenu.cs" />
-        <option value="$PROJECT_DIR$/Assets/Game/Scripts/UI/SpinFrame/SpinFrame.cs" />
-        <option value="$PROJECT_DIR$/Assets/Game/Scripts/UI/DailyFrame/DailyView.cs" />
-        <option value="$PROJECT_DIR$/Assets/Game/Scripts/UI/ItemStackView.cs" />
         <option value="$PROJECT_DIR$/Assets/Game/Scripts/UI/LevelSelectFrame/LevelFrame.cs" />
         <option value="$PROJECT_DIR$/Assets/Game/Scripts/UI/DailyFrame/DailyFrame.cs" />
         <option value="$PROJECT_DIR$/Assets/Game/Scripts/UI/LevelSelectFrame/LevelSelectFrame.cs" />
@@ -115,15 +128,12 @@
         <option value="$PROJECT_DIR$/Assets/Game/Scripts/UI/SkinFrame/SkinFrame.cs" />
         <option value="$PROJECT_DIR$/Assets/Game/Scripts/UI/GameFrame/GameFrame.cs" />
         <option value="$PROJECT_DIR$/Assets/Game/Scripts/Base/DataManager/DataManager.cs" />
-        <option value="$PROJECT_DIR$/Assets/Game/Scripts/InGame/Enemy/BossBase.cs" />
         <option value="$PROJECT_DIR$/Assets/Game/Scripts/InGame/Enemy/EnemyAnim.cs" />
-        <option value="$PROJECT_DIR$/Assets/Game/Scripts/InGame/Enemy/EnemyBase.cs" />
         <option value="$PROJECT_DIR$/Assets/Game/Scripts/InGame/Enemy/Ravager/RavagerBoss.cs" />
         <option value="$PROJECT_DIR$/Assets/Standard Assets/CrossPlatformInput/Scripts/PlatformSpecific/StandaloneInput.cs" />
         <option value="$PROJECT_DIR$/Assets/Game/Scripts/Base/SoundManager.cs" />
         <option value="$PROJECT_DIR$/Assets/Game/Scripts/InGame/Player/PlayerAnim.cs" />
         <option value="$PROJECT_DIR$/Assets/Game/Scripts/InGame/Player/WeaponArrow.cs" />
-        <option value="$PROJECT_DIR$/Assets/Game/Scripts/InGame/Item/Coin.cs" />
         <option value="$PROJECT_DIR$/Assets/Game/Scripts/InGame/Player/Shadow.cs" />
         <option value="$PROJECT_DIR$/Assets/Game/Scripts/InGame/Enemy/EnemyHeartBar.cs" />
         <option value="$PROJECT_DIR$/Assets/Game/Scripts/InGame/CharacterBase.cs" />
@@ -138,6 +148,22 @@
         <option value="$PROJECT_DIR$/Assets/Game/Scripts/InGame/Player/Player.cs" />
         <option value="$PROJECT_DIR$/Assets/Game/Scripts/InGame/Item/SpikeDieCS.cs" />
         <option value="$PROJECT_DIR$/Assets/Game/Scripts/InGame/Item/ChestCS.cs" />
+        <option value="$PROJECT_DIR$/Assets/Game/Scripts/InGame/Player/PlayerAttack.cs" />
+        <option value="$PROJECT_DIR$/Assets/Game/Scripts/InGame/Item/Coin.cs" />
+        <option value="$PROJECT_DIR$/Assets/Game/Scripts/InGame/Item/BigCoinCS.cs" />
+        <option value="$PROJECT_DIR$/Assets/Game/Scripts/InGame/Enemy/Witch/WitchMove.cs" />
+        <option value="$PROJECT_DIR$/Assets/Game/Scripts/Base/EventDispatcher/EventKey.cs" />
+        <option value="$PROJECT_DIR$/Assets/Game/Scripts/InGame/BeamRayCast.cs" />
+        <option value="$PROJECT_DIR$/Assets/Game/Scripts/InGame/Enemy/Warrior/Warrior.cs" />
+        <option value="$PROJECT_DIR$/Assets/Game/Scripts/InGame/Enemy/BossBase.cs" />
+        <option value="$PROJECT_DIR$/Assets/Game/Scripts/InGame/Enemy/EnemyBase.cs" />
+        <option value="$PROJECT_DIR$/Assets/Game/Scripts/InGame/Enemy/EnemyMove.cs" />
+        <option value="$PROJECT_DIR$/Assets/Game/Scripts/InGame/Enemy/Ghast/GhastBoss.cs" />
+        <option value="$PROJECT_DIR$/Assets/Game/Scripts/InGame/Enemy/Witch/WitchCS.cs" />
+        <option value="$PROJECT_DIR$/Assets/Game/Scripts/InGame/Enemy/Warrior/WarriorAttack.cs" />
+        <option value="$PROJECT_DIR$/Assets/Game/Scripts/InGame/Enemy/Witch/FireRayCS.cs" />
+        <option value="$PROJECT_DIR$/Assets/Game/Scripts/InGame/Enemy/EnemyAttack.cs" />
+        <option value="$PROJECT_DIR$/Assets/Game/Scripts/InGame/Enemy/Witch/WitchAttack.cs" />
       </list>
     </option>
   </component>
@@ -174,105 +200,124 @@
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
   </component>
   <component name="WindowStateProjectService">
-    <state width="1877" height="299" key="GridCell.Tab.0.bottom" timestamp="1654682777520">
+    <state width="1877" height="299" key="GridCell.Tab.0.bottom" timestamp="1655095253393">
       <screen x="1920" y="0" width="1920" height="1040" />
     </state>
     <state width="1493" height="229" key="GridCell.Tab.0.bottom/0.0.1536.824/1920.0.1920.1040@0.0.1536.824" timestamp="1654596562735" />
-    <state width="1877" height="299" key="GridCell.Tab.0.bottom/0.0.1536.824/1920.0.1920.1040@1920.0.1920.1040" timestamp="1654682777520" />
+    <state width="1877" height="299" key="GridCell.Tab.0.bottom/0.0.1536.824/1920.0.1920.1040@1920.0.1920.1040" timestamp="1655095253393" />
     <state width="1493" height="176" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1653555390903" />
-    <state width="1877" height="299" key="GridCell.Tab.0.center" timestamp="1654682777520">
+    <state width="1877" height="299" key="GridCell.Tab.0.center" timestamp="1655095253392">
       <screen x="1920" y="0" width="1920" height="1040" />
     </state>
     <state width="1493" height="229" key="GridCell.Tab.0.center/0.0.1536.824/1920.0.1920.1040@0.0.1536.824" timestamp="1654596562735" />
-    <state width="1877" height="299" key="GridCell.Tab.0.center/0.0.1536.824/1920.0.1920.1040@1920.0.1920.1040" timestamp="1654682777520" />
+    <state width="1877" height="299" key="GridCell.Tab.0.center/0.0.1536.824/1920.0.1920.1040@1920.0.1920.1040" timestamp="1655095253392" />
     <state width="1493" height="176" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1653555390902" />
-    <state width="1877" height="299" key="GridCell.Tab.0.left" timestamp="1654682777520">
+    <state width="1877" height="299" key="GridCell.Tab.0.left" timestamp="1655095253392">
       <screen x="1920" y="0" width="1920" height="1040" />
     </state>
     <state width="1493" height="229" key="GridCell.Tab.0.left/0.0.1536.824/1920.0.1920.1040@0.0.1536.824" timestamp="1654596562735" />
-    <state width="1877" height="299" key="GridCell.Tab.0.left/0.0.1536.824/1920.0.1920.1040@1920.0.1920.1040" timestamp="1654682777520" />
+    <state width="1877" height="299" key="GridCell.Tab.0.left/0.0.1536.824/1920.0.1920.1040@1920.0.1920.1040" timestamp="1655095253392" />
     <state width="1493" height="176" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1653555390902" />
-    <state width="1877" height="299" key="GridCell.Tab.0.right" timestamp="1654682777520">
+    <state width="1877" height="299" key="GridCell.Tab.0.right" timestamp="1655095253393">
       <screen x="1920" y="0" width="1920" height="1040" />
     </state>
     <state width="1493" height="229" key="GridCell.Tab.0.right/0.0.1536.824/1920.0.1920.1040@0.0.1536.824" timestamp="1654596562735" />
-    <state width="1877" height="299" key="GridCell.Tab.0.right/0.0.1536.824/1920.0.1920.1040@1920.0.1920.1040" timestamp="1654682777520" />
+    <state width="1877" height="299" key="GridCell.Tab.0.right/0.0.1536.824/1920.0.1920.1040@1920.0.1920.1040" timestamp="1655095253393" />
     <state width="1493" height="176" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1653555390903" />
-    <state width="1877" height="299" key="GridCell.Tab.1.bottom" timestamp="1654682777521">
+    <state width="1877" height="299" key="GridCell.Tab.1.bottom" timestamp="1655095253393">
       <screen x="1920" y="0" width="1920" height="1040" />
     </state>
     <state width="1493" height="229" key="GridCell.Tab.1.bottom/0.0.1536.824/1920.0.1920.1040@0.0.1536.824" timestamp="1654596562735" />
-    <state width="1877" height="299" key="GridCell.Tab.1.bottom/0.0.1536.824/1920.0.1920.1040@1920.0.1920.1040" timestamp="1654682777521" />
+    <state width="1877" height="299" key="GridCell.Tab.1.bottom/0.0.1536.824/1920.0.1920.1040@1920.0.1920.1040" timestamp="1655095253393" />
     <state width="1493" height="176" key="GridCell.Tab.1.bottom/0.0.1536.824@0.0.1536.824" timestamp="1653555390903" />
-    <state width="1877" height="299" key="GridCell.Tab.1.center" timestamp="1654682777521">
+    <state width="1877" height="299" key="GridCell.Tab.1.center" timestamp="1655095253393">
       <screen x="1920" y="0" width="1920" height="1040" />
     </state>
     <state width="1493" height="229" key="GridCell.Tab.1.center/0.0.1536.824/1920.0.1920.1040@0.0.1536.824" timestamp="1654596562735" />
-    <state width="1877" height="299" key="GridCell.Tab.1.center/0.0.1536.824/1920.0.1920.1040@1920.0.1920.1040" timestamp="1654682777521" />
+    <state width="1877" height="299" key="GridCell.Tab.1.center/0.0.1536.824/1920.0.1920.1040@1920.0.1920.1040" timestamp="1655095253393" />
     <state width="1493" height="176" key="GridCell.Tab.1.center/0.0.1536.824@0.0.1536.824" timestamp="1653555390903" />
-    <state width="1877" height="299" key="GridCell.Tab.1.left" timestamp="1654682777521">
+    <state width="1877" height="299" key="GridCell.Tab.1.left" timestamp="1655095253393">
       <screen x="1920" y="0" width="1920" height="1040" />
     </state>
     <state width="1493" height="229" key="GridCell.Tab.1.left/0.0.1536.824/1920.0.1920.1040@0.0.1536.824" timestamp="1654596562735" />
-    <state width="1877" height="299" key="GridCell.Tab.1.left/0.0.1536.824/1920.0.1920.1040@1920.0.1920.1040" timestamp="1654682777521" />
+    <state width="1877" height="299" key="GridCell.Tab.1.left/0.0.1536.824/1920.0.1920.1040@1920.0.1920.1040" timestamp="1655095253393" />
     <state width="1493" height="176" key="GridCell.Tab.1.left/0.0.1536.824@0.0.1536.824" timestamp="1653555390903" />
-    <state width="1877" height="299" key="GridCell.Tab.1.right" timestamp="1654682777521">
+    <state width="1877" height="299" key="GridCell.Tab.1.right" timestamp="1655095253393">
       <screen x="1920" y="0" width="1920" height="1040" />
     </state>
     <state width="1493" height="229" key="GridCell.Tab.1.right/0.0.1536.824/1920.0.1920.1040@0.0.1536.824" timestamp="1654596562735" />
-    <state width="1877" height="299" key="GridCell.Tab.1.right/0.0.1536.824/1920.0.1920.1040@1920.0.1920.1040" timestamp="1654682777521" />
+    <state width="1877" height="299" key="GridCell.Tab.1.right/0.0.1536.824/1920.0.1920.1040@1920.0.1920.1040" timestamp="1655095253393" />
     <state width="1493" height="176" key="GridCell.Tab.1.right/0.0.1536.824@0.0.1536.824" timestamp="1653555390903" />
-    <state width="1877" height="299" key="GridCell.Tab.2.bottom" timestamp="1654682777521">
+    <state width="1877" height="299" key="GridCell.Tab.2.bottom" timestamp="1655095253393">
       <screen x="1920" y="0" width="1920" height="1040" />
     </state>
     <state width="1493" height="229" key="GridCell.Tab.2.bottom/0.0.1536.824/1920.0.1920.1040@0.0.1536.824" timestamp="1654596562735" />
-    <state width="1877" height="299" key="GridCell.Tab.2.bottom/0.0.1536.824/1920.0.1920.1040@1920.0.1920.1040" timestamp="1654682777521" />
+    <state width="1877" height="299" key="GridCell.Tab.2.bottom/0.0.1536.824/1920.0.1920.1040@1920.0.1920.1040" timestamp="1655095253393" />
     <state width="1493" height="176" key="GridCell.Tab.2.bottom/0.0.1536.824@0.0.1536.824" timestamp="1653555390904" />
-    <state width="1877" height="299" key="GridCell.Tab.2.center" timestamp="1654682777521">
+    <state width="1877" height="299" key="GridCell.Tab.2.center" timestamp="1655095253393">
       <screen x="1920" y="0" width="1920" height="1040" />
     </state>
     <state width="1493" height="229" key="GridCell.Tab.2.center/0.0.1536.824/1920.0.1920.1040@0.0.1536.824" timestamp="1654596562735" />
-    <state width="1877" height="299" key="GridCell.Tab.2.center/0.0.1536.824/1920.0.1920.1040@1920.0.1920.1040" timestamp="1654682777521" />
+    <state width="1877" height="299" key="GridCell.Tab.2.center/0.0.1536.824/1920.0.1920.1040@1920.0.1920.1040" timestamp="1655095253393" />
     <state width="1493" height="176" key="GridCell.Tab.2.center/0.0.1536.824@0.0.1536.824" timestamp="1653555390903" />
-    <state width="1877" height="299" key="GridCell.Tab.2.left" timestamp="1654682777521">
+    <state width="1877" height="299" key="GridCell.Tab.2.left" timestamp="1655095253393">
       <screen x="1920" y="0" width="1920" height="1040" />
     </state>
     <state width="1493" height="229" key="GridCell.Tab.2.left/0.0.1536.824/1920.0.1920.1040@0.0.1536.824" timestamp="1654596562735" />
-    <state width="1877" height="299" key="GridCell.Tab.2.left/0.0.1536.824/1920.0.1920.1040@1920.0.1920.1040" timestamp="1654682777521" />
+    <state width="1877" height="299" key="GridCell.Tab.2.left/0.0.1536.824/1920.0.1920.1040@1920.0.1920.1040" timestamp="1655095253393" />
     <state width="1493" height="176" key="GridCell.Tab.2.left/0.0.1536.824@0.0.1536.824" timestamp="1653555390903" />
-    <state width="1877" height="299" key="GridCell.Tab.2.right" timestamp="1654682777521">
+    <state width="1877" height="299" key="GridCell.Tab.2.right" timestamp="1655095253393">
       <screen x="1920" y="0" width="1920" height="1040" />
     </state>
     <state width="1493" height="229" key="GridCell.Tab.2.right/0.0.1536.824/1920.0.1920.1040@0.0.1536.824" timestamp="1654596562735" />
-    <state width="1877" height="299" key="GridCell.Tab.2.right/0.0.1536.824/1920.0.1920.1040@1920.0.1920.1040" timestamp="1654682777521" />
+    <state width="1877" height="299" key="GridCell.Tab.2.right/0.0.1536.824/1920.0.1920.1040@1920.0.1920.1040" timestamp="1655095253393" />
     <state width="1493" height="176" key="GridCell.Tab.2.right/0.0.1536.824@0.0.1536.824" timestamp="1653555390904" />
-    <state width="1877" height="299" key="GridCell.Tab.3.bottom" timestamp="1654682777521">
+    <state width="1877" height="299" key="GridCell.Tab.3.bottom" timestamp="1655095253394">
       <screen x="1920" y="0" width="1920" height="1040" />
     </state>
     <state width="1493" height="229" key="GridCell.Tab.3.bottom/0.0.1536.824/1920.0.1920.1040@0.0.1536.824" timestamp="1654596562735" />
-    <state width="1877" height="299" key="GridCell.Tab.3.bottom/0.0.1536.824/1920.0.1920.1040@1920.0.1920.1040" timestamp="1654682777521" />
+    <state width="1877" height="299" key="GridCell.Tab.3.bottom/0.0.1536.824/1920.0.1920.1040@1920.0.1920.1040" timestamp="1655095253394" />
     <state width="1493" height="176" key="GridCell.Tab.3.bottom/0.0.1536.824@0.0.1536.824" timestamp="1653555390904" />
-    <state width="1877" height="299" key="GridCell.Tab.3.center" timestamp="1654682777521">
+    <state width="1877" height="299" key="GridCell.Tab.3.center" timestamp="1655095253394">
       <screen x="1920" y="0" width="1920" height="1040" />
     </state>
     <state width="1493" height="229" key="GridCell.Tab.3.center/0.0.1536.824/1920.0.1920.1040@0.0.1536.824" timestamp="1654596562735" />
-    <state width="1877" height="299" key="GridCell.Tab.3.center/0.0.1536.824/1920.0.1920.1040@1920.0.1920.1040" timestamp="1654682777521" />
+    <state width="1877" height="299" key="GridCell.Tab.3.center/0.0.1536.824/1920.0.1920.1040@1920.0.1920.1040" timestamp="1655095253394" />
     <state width="1493" height="176" key="GridCell.Tab.3.center/0.0.1536.824@0.0.1536.824" timestamp="1653555390904" />
-    <state width="1877" height="299" key="GridCell.Tab.3.left" timestamp="1654682777521">
+    <state width="1877" height="299" key="GridCell.Tab.3.left" timestamp="1655095253394">
       <screen x="1920" y="0" width="1920" height="1040" />
     </state>
     <state width="1493" height="229" key="GridCell.Tab.3.left/0.0.1536.824/1920.0.1920.1040@0.0.1536.824" timestamp="1654596562735" />
-    <state width="1877" height="299" key="GridCell.Tab.3.left/0.0.1536.824/1920.0.1920.1040@1920.0.1920.1040" timestamp="1654682777521" />
+    <state width="1877" height="299" key="GridCell.Tab.3.left/0.0.1536.824/1920.0.1920.1040@1920.0.1920.1040" timestamp="1655095253394" />
     <state width="1493" height="176" key="GridCell.Tab.3.left/0.0.1536.824@0.0.1536.824" timestamp="1653555390904" />
-    <state width="1877" height="299" key="GridCell.Tab.3.right" timestamp="1654682777521">
+    <state width="1877" height="299" key="GridCell.Tab.3.right" timestamp="1655095253394">
       <screen x="1920" y="0" width="1920" height="1040" />
     </state>
     <state width="1493" height="229" key="GridCell.Tab.3.right/0.0.1536.824/1920.0.1920.1040@0.0.1536.824" timestamp="1654596562735" />
-    <state width="1877" height="299" key="GridCell.Tab.3.right/0.0.1536.824/1920.0.1920.1040@1920.0.1920.1040" timestamp="1654682777521" />
+    <state width="1877" height="299" key="GridCell.Tab.3.right/0.0.1536.824/1920.0.1920.1040@1920.0.1920.1040" timestamp="1655095253394" />
     <state width="1493" height="176" key="GridCell.Tab.3.right/0.0.1536.824@0.0.1536.824" timestamp="1653555390904" />
     <state x="374" y="24" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser" timestamp="1653560633675">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="374" y="24" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser/0.0.1536.824@0.0.1536.824" timestamp="1653560633675" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/Assets/Game/Scripts/InGame/Item/ChestCS.cs</url>
+          <line>31</line>
+          <properties documentPath="$PROJECT_DIR$/Assets/Game/Scripts/InGame/Item/ChestCS.cs" initialLine="31">
+            <startOffsets>
+              <option value="927" />
+            </startOffsets>
+            <endOffsets>
+              <option value="938" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="3" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>

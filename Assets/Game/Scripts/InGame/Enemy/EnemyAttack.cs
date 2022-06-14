@@ -1,8 +1,6 @@
 using Spine;
 using Spine.Unity;
 using System;
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using DG.Tweening;
 
@@ -17,18 +15,22 @@ public class EnemyAttack : MonoBehaviour
     protected Tween tween;
     protected bool canAttack;
     public bool CanAttack => canAttack;
-    protected virtual void Awake() {
+    protected virtual void Awake() 
+    { 
         enemyAnim.Anim.AnimationState.Event += EventDamege;
         canAttack = true;
     }
 
-    public virtual void Attack(Action callback = null ) {
-        if(canAttack) {
+    public virtual void Attack(Action callback = null) 
+    {
+        if(canAttack) 
+        {
             canAttack = false;
             enemyBase.Rg2D.velocity = Vector2.zero;
             enemyAnim.SetAnimAttack(callback);
             tween.CheckKillTween();
-            tween = DOVirtual.DelayedCall(timeDelayAttack, () => {
+            tween = DOVirtual.DelayedCall(timeDelayAttack, () => 
+            {
                 canAttack = true;
             });
         }
@@ -38,13 +40,17 @@ public class EnemyAttack : MonoBehaviour
         }
     }
 
-    protected virtual void EventDamege(TrackEntry trackEntry, Spine.Event e) {
-        if(e.Data.Name == eventATK && circleAttackInfo != null) {
+    protected virtual void EventDamege(TrackEntry trackEntry, Spine.Event e) 
+    {
+        if(e.Data.Name == eventATK && circleAttackInfo != null) 
+        {
             SoundManager.Instance.PlaySound(soundAttack);
             Collider2D[] listCol = Physics2D.OverlapCircleAll(circleAttackInfo.transform.position, circleAttackInfo.lookRadius, circleAttackInfo.layerMask);
-            foreach(var col in listCol) {
+            foreach(var col in listCol) 
+            {
                 Player player = col.transform.parent.GetComponent<Player>();
-                if(player != null) {
+                if(player != null) 
+                {
                     Debug.Log("Detech player");
                     player.GetDame(enemyBase.curDame);
                 }

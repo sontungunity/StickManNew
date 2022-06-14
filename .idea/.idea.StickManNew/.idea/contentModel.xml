@@ -50,6 +50,47 @@
           <e p="IEnhancedScrollerDelegate.cs" t="Include" />
           <e p="SmallList.cs" t="Include" />
         </e>
+        <e p="Epic Toon FX" t="Include">
+          <e p="Changelog.txt" t="Include" />
+          <e p="Demo" t="Include">
+            <e p="Scripts" t="Include">
+              <e p="ETFXButtonScript.cs" t="Include" />
+              <e p="ETFXEffectController.cs" t="Include" />
+              <e p="ETFXEffectControllerPooled.cs" t="Include" />
+              <e p="ETFXEffectCycler.cs" t="Include" />
+              <e p="ETFXFireProjectile.cs" t="Include" />
+              <e p="ETFXLoopScript.cs" t="Include" />
+              <e p="ETFXMouseOrbit.cs" t="Include" />
+              <e p="ETFXProjectileScript.cs" t="Include" />
+              <e p="ETFXSceneManager.cs" t="Include" />
+              <e p="ETFXTarget.cs" t="Include" />
+              <e p="VFX Library" t="Include">
+                <e p="ParticleEffectsLibrary.cs" t="Include" />
+                <e p="PEButtonScript.cs" t="Include" />
+                <e p="UICanvasManager.cs" t="Include" />
+              </e>
+            </e>
+          </e>
+          <e p="Prefabs" t="Include">
+            <e p="Combat" t="Include">
+              <e p="Combat FX.txt" t="Include" />
+            </e>
+            <e p="Environment" t="Include">
+              <e p="Environment FX.txt" t="Include" />
+            </e>
+            <e p="Interactive" t="Include">
+              <e p="Interactive FX.txt" t="Include" />
+            </e>
+          </e>
+          <e p="Scripts" t="Include">
+            <e p="ETFXLightFade.cs" t="Include" />
+            <e p="ETFXPitchRandomizer.cs" t="Include" />
+            <e p="ETFXRotation.cs" t="Include" />
+          </e>
+          <e p="Upgrade" t="Include">
+            <e p="URP Compatibility.txt" t="Include" />
+          </e>
+        </e>
         <e p="Game" t="Include">
           <e p="Console" t="Include">
             <e p="Scripts" t="Include">
@@ -72,6 +113,7 @@
               <e p="AdsManager.cs" t="Include" />
               <e p="DataManager" t="Include">
                 <e p="DataManager.cs" t="Include" />
+                <e p="GiftsSave.cs" t="Include" />
                 <e p="ItemData.cs" t="Include" />
                 <e p="ItemStack.cs" t="Include" />
                 <e p="PlayerData.cs" t="Include" />
@@ -141,6 +183,7 @@
                 </e>
                 <e p="Golem" t="Include">
                   <e p="GolemAttack.cs" t="Include" />
+                  <e p="GolemEnemy.cs" t="Include" />
                   <e p="GolemStone.cs" t="Include" />
                 </e>
                 <e p="Ravager" t="Include">
@@ -164,6 +207,12 @@
                   <e p="Warrior.cs" t="Include" />
                   <e p="WarriorAttack.cs" t="Include" />
                 </e>
+                <e p="Witch" t="Include">
+                  <e p="FireRayCS.cs" t="Include" />
+                  <e p="WitchAttack.cs" t="Include" />
+                  <e p="WitchCS.cs" t="Include" />
+                  <e p="WitchMove.cs" t="Include" />
+                </e>
               </e>
               <e p="Golem.cs" t="Include" />
               <e p="InGameManager.cs" t="Include" />
@@ -174,19 +223,22 @@
                 <e p="ChestCS.cs" t="Include" />
                 <e p="Coin.cs" t="Include" />
                 <e p="DoorCS.cs" t="Include" />
-                <e p="ItemBoost.cs" t="Include" />
                 <e p="LaserCS.cs" t="Include" />
                 <e p="LavaCS.cs" t="Include" />
-                <e p="MoveObject.cs" t="Include" />
+                <e p="MoveObject" t="Include">
+                  <e p="MoveObject.cs" t="Include" />
+                  <e p="MoveObjectPaint.cs" t="Include" />
+                </e>
                 <e p="ObjectMakeDame.cs" t="Include" />
                 <e p="SignCS.cs" t="Include" />
                 <e p="SimplePlatform.cs" t="Include" />
                 <e p="SpikeCS.cs" t="Include" />
                 <e p="SpikeDieCS.cs" t="Include" />
-                <e p="SwordCS.cs" t="Include" />
                 <e p="SwordDownCS.cs" t="Include" />
                 <e p="TriggerBoss.cs" t="Include" />
+                <e p="WeaponCS.cs" t="Include" />
               </e>
+              <e p="LavaMove.cs" t="Include" />
               <e p="LevelMap.cs" t="Include" />
               <e p="Player" t="Include">
                 <e p="OverlapBoxInfo.cs" t="Include" />
@@ -198,11 +250,11 @@
                 <e p="PlayerMovement.cs" t="Include" />
                 <e p="PlayerSkin.cs" t="Include" />
                 <e p="PlayerVertical.cs" t="Include" />
-                <e p="Shadow.cs" t="Include" />
                 <e p="SpineBase.cs" t="Include" />
                 <e p="SpineBaseUI.cs" t="Include" />
                 <e p="WeaponArrow.cs" t="Include" />
               </e>
+              <e p="ProcameraController.cs" t="Include" />
               <e p="RuleDameAndHeart.cs" t="Include" />
               <e p="ShackParticle.cs" t="Include" />
               <e p="SoundObject.cs" t="Include" />
@@ -228,6 +280,7 @@
                 <e p="DailyViewPlus.cs" t="Include" />
               </e>
               <e p="DisplayObjects.cs" t="Include" />
+              <e p="FireworkManager.cs" t="Include" />
               <e p="GameFrame" t="Include">
                 <e p="BossBarHeart.cs" t="Include" />
                 <e p="GameFrame.cs" t="Include" />
@@ -238,6 +291,10 @@
                 <e p="SettingFrame.cs" t="Include" />
                 <e p="WeaponArea.cs" t="Include" />
                 <e p="WinFrame.cs" t="Include" />
+              </e>
+              <e p="Gifts" t="Include">
+                <e p="GiftsFrame.cs" t="Include" />
+                <e p="GiftsView.cs" t="Include" />
               </e>
               <e p="HomeFrame" t="Include">
                 <e p="HomeFrame.cs" t="Include" />
@@ -321,6 +378,9 @@
               <e p="Warrrior" t="Include">
                 <e p="boss_warrior.atlas.txt" t="Include" />
               </e>
+              <e p="Witch" t="Include">
+                <e p="boss_witch.atlas.txt" t="Include" />
+              </e>
               <e p="Zombie" t="Include">
                 <e p="zombie.atlas.txt" t="Include" />
               </e>
@@ -380,6 +440,14 @@
             </e>
             <e p="Player" t="Include">
               <e p="stickman.atlas.txt" t="Include" />
+            </e>
+            <e p="Tutorial" t="Include">
+              <e p="Clim" t="Include">
+                <e p="tutorial.atlas.txt" t="Include" />
+              </e>
+              <e p="Dash" t="Include">
+                <e p="stickman.atlas.txt" t="Include" />
+              </e>
             </e>
             <e p="UI" t="Include">
               <e p="IconDaily" t="Include">
