@@ -16,8 +16,26 @@ public class HomeUpdate : MonoBehaviour
         btn_UpByAds.onClick.AddListener(HalderUpdateByAds);
     }
 
+    private void OnEnable() {
+        GenderInfoPlayer();
+        GenderInfoButton();
+        EventDispatcher.AddListener<EventKey.IteamChange>(HalderItemChanger);
+    }
+
+    private void OnDisable() {
+        EventDispatcher.RemoveListener<EventKey.IteamChange>(HalderItemChanger);
+    }
+
+    private void HalderItemChanger(EventKey.IteamChange evt) {
+        if(evt.itemID == ItemID.COIN) {
+            GenderInfoButton();
+        }
+    }
+
+
     private void Start() {
         GenderInfoPlayer();
+        GenderInfoButton();
     }
 
     private void GenderInfoPlayer() {
@@ -25,6 +43,10 @@ public class HomeUpdate : MonoBehaviour
         var levelPlayerInfo = RuleDameAndHeart.GetTotalDameHeartCoinByLevel(playerData.LevelPlayer);
         txt_Hp.text = levelPlayerInfo.Heart.ToString();
         txt_Damage.text = levelPlayerInfo.Damage.ToString();
+       
+    }
+
+    private void GenderInfoButton() {
         bool enoughCoin = playerData.Enought(ItemID.COIN,RuleDameAndHeart.Coin_UP_Level);
         btn_UpByCoin.gameObject.SetActive(enoughCoin);
         btn_UpByAds.gameObject.SetActive(!enoughCoin);

@@ -14298,7 +14298,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 178017f9cd29bfb4a9e7cc9629f36a40, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  source: {fileID: 0}
+  source: {fileID: 8262666}
 --- !u!1 &141512
 GameObject:
   m_ObjectHideFlags: 0
@@ -28704,6 +28704,7 @@ GameObject:
   - component: {fileID: 19802676}
   - component: {fileID: 19975582}
   - component: {fileID: 8208998}
+  - component: {fileID: 8689500270024382929}
   m_Layer: 0
   m_Name: ClusterExplosion
   m_TagString: Untagged
@@ -33519,3 +33520,16 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 0
+--- !u!114 &8689500270024382929
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 189102}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fcb75e5b3427e224e8aa5485202fddae, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  audioSource: {fileID: 8208998}

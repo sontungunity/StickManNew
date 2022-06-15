@@ -54,85 +54,61 @@ public class EnemyBase : CharacterBase {
     }
 
     protected virtual void Update() {
-        if(curStatus == EnemyStatus.IDLE || curStatus == EnemyStatus.MOVE || curStatus == EnemyStatus.NONE || curStatus == EnemyStatus.DETECH) 
-        {
+        if(curStatus == EnemyStatus.IDLE || curStatus == EnemyStatus.MOVE || curStatus == EnemyStatus.NONE || curStatus == EnemyStatus.DETECH) {
             afterUpdateStatus = EnemyStatus.MOVE;
             SetupStatus();
             SetStatus(afterUpdateStatus);
         }
+        //if(Input.GetKeyDown(KeyCode.D)) {
+        //    Die(InGameManager.Instance.Player.gameObject);
+        //}
     }
 
-    public override void GetDame(int dame, GameObject objMakeDame = null) 
-    {
-        if(curStatus == EnemyStatus.DIE || curHeart <= 0)
-        {
+    public override void GetDame(int dame, GameObject objMakeDame = null) {
+        if(curStatus == EnemyStatus.DIE || curHeart <= 0) {
             return;
         }
         curHeart -= dame;
         Vector3 randomPos = new Vector3(Random.Range(-0.5f,0.5f),Random.Range(-0.5f,0.5f),0);
         SpawnerTextDame.Instance.Spawner(transform.position + randomPos, dame.ToString());
-        // print damage by text
-        
-        if(curHeart <= 0) 
-        {
+        if(curHeart <= 0) {
             Die(objMakeDame);
-        } 
-        else 
-        {
+        } else {
             curStatus = EnemyStatus.GET_DAME;
             rg2D.velocity = Vector2.zero;
-            enemyAnim.SetAnimGetDame(() => 
-            {
+            enemyAnim.SetAnimGetDame(() => {
                 SetStatus(EnemyStatus.IDLE);
             });
             enemyBar.UpdateHeart(PercentHeart);
-            var point = transform.position;
-            try 
-            {
-                point = Physics2D.ClosestPoint(objMakeDame.transform.position, col2D);
-            } 
-            catch 
-            {
-                Debug.Log("ClosestPoint is null");
-            }
-            if(particleBlood != null) 
-            {
+            var point = Physics2D.ClosestPoint(objMakeDame.transform.position, col2D);
+            if(particleBlood != null) {
                 particleBlood.transform.position = point;
                 particleBlood?.Play();
+                particleBlood.GetComponent<AudioSource>().Play();
             }
         }
     }
-    
-    protected virtual void SetupStatus()
-    {
-        foreach(var col in distan_attack.ArrayCollider2D) 
-        {
-            if(col != null && col.transform.parent.GetComponent<Player>() != null)
-            {
+    protected virtual void SetupStatus() {
+        foreach(var col in distan_attack.ArrayCollider2D) {
+            if(col != null && col.transform.parent.GetComponent<Player>() != null) {
                 afterUpdateStatus = EnemyStatus.ATTACK;
-                if(!enemyAttack.CanAttack) 
-                {
+                if(!enemyAttack.CanAttack) {
                     afterUpdateStatus = EnemyStatus.IDLE;
                 }
                 return;
             }
         }
 
-        foreach(var col in eye_Befor.ArrayCollider2D)
-        {
-            if(col != null && col.transform.parent.GetComponent<Player>() != null)
-            {
+        foreach(var col in eye_Befor.ArrayCollider2D) {
+            if(col != null && col.transform.parent.GetComponent<Player>() != null) {
                 afterUpdateStatus = EnemyStatus.DETECH;
                 break;
             }
         }
-        
-        if(afterUpdateStatus != EnemyStatus.DETECH)
-        {
-            foreach(var col in eye_After.ArrayCollider2D)
-            {
-                if(col != null && col.transform.parent.GetComponent<Player>() != null)
-                {
+
+        if(afterUpdateStatus != EnemyStatus.DETECH) {
+            foreach(var col in eye_After.ArrayCollider2D) {
+                if(col != null && col.transform.parent.GetComponent<Player>() != null) {
                     afterUpdateStatus = EnemyStatus.DETECH;
                     Flip();
                     break;
@@ -141,70 +117,50 @@ public class EnemyBase : CharacterBase {
         }
     }
 
-    public void Flip() 
-    {
-        if(dirFace == DirHorizontal.RIGHT) 
-        {
+    public void Flip() {
+        if(dirFace == DirHorizontal.RIGHT) {
             display.localEulerAngles = new Vector3(0, 180, 0);
-        } 
-        else if(dirFace == DirHorizontal.LEFT) 
-        {
+        } else if(dirFace == DirHorizontal.LEFT) {
             display.localEulerAngles = new Vector3(0, 0, 0);
         }
     }
 
-    public void Flip(DirHorizontal dir) 
-    {
-        if(dir == DirHorizontal.RIGHT) 
-        {
+    public void Flip(DirHorizontal dir) {
+        if(dir == DirHorizontal.RIGHT) {
             display.localEulerAngles = new Vector3(0, 0, 0);
-        } else if(dir == DirHorizontal.LEFT) 
-        {
+        } else if(dir == DirHorizontal.LEFT) {
             display.localEulerAngles = new Vector3(0, -180, 0);
         }
     }
 
-    protected virtual bool SetStatus(EnemyStatus status) 
-    {
-        if(curStatus == status) 
-        {
+    protected virtual bool SetStatus(EnemyStatus status) {
+        if(curStatus == status) {
             return true;
         }
         curStatus = status;
-        if(curStatus == EnemyStatus.ATTACK) 
-        {
-            enemyAttack.Attack(() => 
-            {
+        if(curStatus == EnemyStatus.ATTACK) {
+            enemyAttack.Attack(() => {
                 SetStatus(EnemyStatus.IDLE);
             });
-        } 
-        else if(curStatus == EnemyStatus.DETECH || curStatus == EnemyStatus.MOVE) 
-        {
+        } else if(curStatus == EnemyStatus.DETECH || curStatus == EnemyStatus.MOVE) {
             enemyAnim.SetAnimWalk();
-        } 
-        else 
-        {
+        } else {
             enemyAnim.AnimIdle();
             return false;
         }
         return true;
     }
 
-    protected virtual void Die(GameObject objMakeDame = null) 
-    {
+    protected virtual void Die(GameObject objMakeDame = null) {
         curStatus = EnemyStatus.DIE;
         enemyAnim.SetAnimDie();
-        tween = DOVirtual.DelayedCall(2f, () =>
-        {
+        tween = DOVirtual.DelayedCall(2f, () => {
             transform.gameObject.SetActive(false);
         });
         col2D.isTrigger = true;
-        if(objMakeDame != null && objMakeDame.transform.position.x > transform.position.x)
-        {
+        if(objMakeDame != null && objMakeDame.transform.position.x > transform.position.x) {
             rg2D.AddForce(new Vector2(-forceDie.x, forceDie.y), ForceMode2D.Impulse);
-        }
-        else
-        {
+        } else {
             rg2D.AddForce(forceDie, ForceMode2D.Impulse);
         }
         int randomCoin = Random.Range(1,3);
@@ -213,8 +169,7 @@ public class EnemyBase : CharacterBase {
         SoundManager.Instance.PlaySound(soundDie);
     }
 
-    protected virtual void OnDisable() 
-    {
+    protected virtual void OnDisable() {
         tween.CheckKillTween();
     }
 }

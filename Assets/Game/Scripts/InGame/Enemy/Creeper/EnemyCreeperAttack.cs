@@ -20,7 +20,7 @@ public class EnemyCreeperAttack : EnemyAttack
             foreach(var col in listCol) {
                 Player player = col.transform.parent.GetComponent<Player>();
                 if(player != null) {
-                    Debug.Log("Detech player");
+                    //Debug.Log("Detech player");
                     player.GetDameStun(enemyBase.curDame);
                     //SoundManager.Instance.Vibrate();
                 }

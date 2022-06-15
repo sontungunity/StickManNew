@@ -11,7 +11,6 @@ public class RavagerMakeDame : MonoBehaviour
             Player player = collision.transform.parent.GetComponent<Player>();
             if(player != null) {
                 player.GetDameStun(ranvagerBoss.curDame);
-                Debug.Log("Make Dame");
             }
         }
     }

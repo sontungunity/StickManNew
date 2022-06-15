@@ -7,6 +7,7 @@ public class SpikeCS : MonoBehaviour {
     [SerializeField] private BoxCollider2D  boxCollider;
     [SerializeField] private float timeUp = 0.5f,timeDown = 1f,timeDelay = 2f;
     [SerializeField] private int dame = 20;
+    [SerializeField] private bool showStart;
     private Sequence mySequence;
     private void Start() {
         float yStart = -boxCollider.size.y;
@@ -34,5 +35,14 @@ public class SpikeCS : MonoBehaviour {
 
     private void OnDisable() {
         mySequence.Kill();
+    }
+
+    private void OnValidate() {
+        if(showStart) {
+            float yStart = -boxCollider.size.y;
+            transform.localPosition = new Vector3(0, yStart, 0);
+        } else {
+            transform.localPosition = Vector3.zero;
+        }
     }
 }

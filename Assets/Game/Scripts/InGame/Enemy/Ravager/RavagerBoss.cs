@@ -18,11 +18,11 @@ public class RavagerBoss : BossBase
             //    SetStatus(EnemyStatus.MOVE);
             //});
 
-            var point = Physics2D.ClosestPoint(objMakeDame.transform.position,col2D);
-            //SpawnerEffect.Instance.SpawnerEffectDame(point);
+            var point = Physics2D.ClosestPoint(objMakeDame.transform.position, col2D);
             if(particleBlood != null) {
                 particleBlood.transform.position = point;
                 particleBlood?.Play();
+                particleBlood.GetComponent<AudioSource>().Play();
             }
         }
 

@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 675967282785995106}
   - component: {fileID: 7490160418791847831}
   - component: {fileID: 7279774036606796785}
+  - component: {fileID: 5544697832827967568}
   m_Layer: 14
   m_Name: BlueFatLaserStart
   m_TagString: Untagged
@@ -4762,6 +4763,19 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 0
+--- !u!114 &5544697832827967568
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1847392959551191271}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fcb75e5b3427e224e8aa5485202fddae, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  audioSource: {fileID: 7279774036606796785}
 --- !u!1 &7863379757403008966
 GameObject:
   m_ObjectHideFlags: 0

@@ -35,7 +35,12 @@ public class GhastBoss : BossBase
             {
                 enemyAnim.SetAnimGetDame();
             }
-            particleBlood?.Play();
+            var point = Physics2D.ClosestPoint(objMakeDame.transform.position, col2D);
+            if(particleBlood != null) {
+                particleBlood.transform.position = point;
+                particleBlood?.Play();
+                particleBlood.GetComponent<AudioSource>().Play();
+            }
         }
     }
 }
