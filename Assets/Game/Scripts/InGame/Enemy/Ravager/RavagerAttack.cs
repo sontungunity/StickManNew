@@ -1,4 +1,5 @@
 using DG.Tweening;
+using Spine;
 using Spine.Unity;
 using System;
 using System.Collections;
@@ -9,6 +10,8 @@ public class RavagerAttack : EnemyAttack {
     [SerializeField] private Rigidbody2D rb2D;
     [SerializeField] private BeamRayCast beamFace;
     [SerializeField, SpineAnimation] private string animMove,animAttack,animShock,animMoveBefor;
+    [SerializeField, SpineEvent] private string evtStep;
+    [SerializeField] private AudioClip audioBefor, audioStep;
     [Header("Customer")]
     [SerializeField] private float speedTarget;
     [SerializeField] private int turnMove;
@@ -19,13 +22,30 @@ public class RavagerAttack : EnemyAttack {
     public RavagerAttackType AttackType => attackType;
     private Action callback;
     private Tween tweenCur;
+    private int step;
+    protected override void Awake() {
+        base.Awake();
+        enemyAnim.Anim.AnimationState.Event += EventStep;
+    }
+
+    private void EventStep(TrackEntry trackEntry, Spine.Event e) {
+        if(e.Data.Name == evtStep) {
+            step++;
+            if(step%4==0) {
+                SoundManager.Instance.PlaySound(audioStep);
+            }
+        }
+    }
+
     public override void Attack(Action callback = null) {
         this.callback = callback;
         curTurnMove = turnMove;
+        SoundManager.Instance.PlaySound(audioBefor);
         enemyAnim.SetAnim(0, animMoveBefor, false, () => {
             attackType = RavagerAttackType.MOVE;
             enemyAnim.SetAnim(0, animMove, true, null);
         });
+        step = 0;
     }
 
     private void Update() {

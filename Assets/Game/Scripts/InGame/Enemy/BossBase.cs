@@ -32,7 +32,12 @@ public class BossBase : EnemyBase
             enemyAnim.SetAnimGetDame(()=> {
                 enemyAnim.AnimIdle();
             });
-            particleBlood?.Play();
+            var point = Physics2D.ClosestPoint(objMakeDame.transform.position, col2D);
+            if(particleBlood != null) {
+                particleBlood.transform.position = point;
+                particleBlood?.Play();
+                particleBlood.GetComponent<AudioSource>().Play();
+            }
         }
     }
 

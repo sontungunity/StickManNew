@@ -15,7 +15,12 @@ public class EnemyCreeper : EnemyBase {
                 enemyAttack.Attack(() => { DieByExploed(); });
             }
             enemyBar.UpdateHeart(curHeart / (float)originHeart);
-            Debug.Log(curHeart);
+            var point = Physics2D.ClosestPoint(objMakeDame.transform.position, col2D);
+            if(particleBlood != null) {
+                particleBlood.transform.position = point;
+                particleBlood?.Play();
+                particleBlood.GetComponent<AudioSource>().Play();
+            }
         }
     }
 
@@ -39,7 +44,7 @@ public class EnemyCreeper : EnemyBase {
         if(curStatus == EnemyStatus.DIE) {
             return;
         }
-        Debug.Log("DieByExploed");
+        //Debug.Log("DieByExploed");
         curStatus = EnemyStatus.DIE;
         transform.gameObject.SetActive(false);
         SpawnerCoin.Instance.Spawner(transform.position, 3);

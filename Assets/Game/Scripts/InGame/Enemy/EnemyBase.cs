@@ -80,15 +80,11 @@ public class EnemyBase : CharacterBase {
                 SetStatus(EnemyStatus.IDLE);
             });
             enemyBar.UpdateHeart(PercentHeart);
-            var point = transform.position;
-            try {
-                point = Physics2D.ClosestPoint(objMakeDame.transform.position, col2D);
-            } catch {
-                Debug.Log("ClosestPoint is null");
-            }
+            var point = Physics2D.ClosestPoint(objMakeDame.transform.position, col2D);
             if(particleBlood != null) {
                 particleBlood.transform.position = point;
                 particleBlood?.Play();
+                particleBlood.GetComponent<AudioSource>().Play();
             }
         }
     }

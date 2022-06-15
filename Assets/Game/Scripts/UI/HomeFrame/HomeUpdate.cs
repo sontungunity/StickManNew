@@ -17,12 +17,12 @@ public class HomeUpdate : MonoBehaviour
     }
 
     private void OnEnable() {
+        GenderInfoPlayer();
+        GenderInfoButton();
         EventDispatcher.AddListener<EventKey.IteamChange>(HalderItemChanger);
     }
 
     private void OnDisable() {
-        GenderInfoPlayer();
-        GenderInfoButton();
         EventDispatcher.RemoveListener<EventKey.IteamChange>(HalderItemChanger);
     }
 

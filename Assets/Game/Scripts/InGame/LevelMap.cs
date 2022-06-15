@@ -13,4 +13,20 @@ public class LevelMap : MonoBehaviour
     public void SetUpInFoMap() {
         numberEnemy = transform.GetComponentsInChildren<EnemyBase>().Length;
     }
+
+    [ContextMenu("SetupZeroz")]
+    public void SetupZeroz() {
+        foreach(Transform chil in transform) {
+            chil.position = new Vector3(chil.position.x, chil.position.y, 0);
+            SetUpAll(chil);
+        }
+    }
+
+    private void SetUpAll(Transform transform) {
+        foreach(Transform chil in transform) {
+            chil.position = new Vector3(chil.position.x, chil.position.y, 0);
+            SetUpAll(chil);
+        }
+    }
+
 }

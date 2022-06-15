@@ -194,6 +194,9 @@ MonoBehaviour:
   animAttack: attack
   animShock: stun
   animMoveBefor: move_before
+  evtStep: step
+  audioBefor: {fileID: 8300000, guid: 1ceb9f40872a338429ab93dacd3083c9, type: 3}
+  audioStep: {fileID: 8300000, guid: 1ceb9f40872a338429ab93dacd3083c9, type: 3}
   speedTarget: 8
   turnMove: 3
   timeStun: 5

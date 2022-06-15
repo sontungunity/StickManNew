@@ -65,4 +65,8 @@ public class WeaponCS : MonoBehaviour {
     private void OnDisable() {
         tween.CheckKillTween();
     }
+
+    private void OnValidate() {
+
+    }
 }

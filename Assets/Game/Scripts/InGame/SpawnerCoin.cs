@@ -6,8 +6,9 @@ using UnityEngine;
 
 public class SpawnerCoin : Singleton<SpawnerCoin> {
     [SerializeField] private Vector2 force;
-    [SerializeField] private Coin coinPref;
+    [SerializeField] private GameObject coinPref;
     [SerializeField] private float timeDelay = 0.2f;
+    [SerializeField] private AudioClip soundSpawner;
     private WaitForSeconds waitDelay;
     public void Start() {
         waitDelay = new WaitForSeconds(timeDelay);
@@ -34,6 +35,7 @@ public class SpawnerCoin : Singleton<SpawnerCoin> {
             float x = UnityEngine.Random.Range(-force.x,force.x);
             Vector2 newForce = new Vector2(x,force.y);
             coin.transform.GetComponent<Rigidbody2D>().AddForce(newForce, ForceMode2D.Impulse);
+            SoundManager.Instance.PlaySound(soundSpawner);
             yield return waitDelay;
         }
         callback?.Invoke();

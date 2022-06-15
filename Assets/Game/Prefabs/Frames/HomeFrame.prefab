@@ -17474,8 +17474,6 @@ MonoBehaviour:
   skeleton: {fileID: 3388879665728323319}
   animIdle: idle
   lstAnim:
-  - full_attack
-  - full_attack_sword
   - get_damage
   - win
   parUpPower: {fileID: 1533819996175927347}

@@ -28,7 +28,12 @@ public class GhastBoss : BossBase
             if(gastAttack.CurAttackStatus != GhastAttack.Status.MOVE && gastAttack.CurAttackStatus != GhastAttack.Status.ATTACK) {
                 enemyAnim.SetAnimGetDame();
             }
-            particleBlood?.Play();
+            var point = Physics2D.ClosestPoint(objMakeDame.transform.position, col2D);
+            if(particleBlood != null) {
+                particleBlood.transform.position = point;
+                particleBlood?.Play();
+                particleBlood.GetComponent<AudioSource>().Play();
+            }
         }
     }
 }

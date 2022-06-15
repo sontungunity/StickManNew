@@ -264,8 +264,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   force: {x: 5, y: 14}
-  coinPref: {fileID: 1641214059803572719, guid: d71505dde2d63da4482d431318df8a53, type: 3}
+  coinPref: {fileID: 5396501450911690429, guid: d71505dde2d63da4482d431318df8a53, type: 3}
   timeDelay: 0.2
+  soundSpawner: {fileID: 8300000, guid: 37e55d46890b5174e9cf1f97c3cb3e58, type: 3}
 --- !u!114 &322030695
 MonoBehaviour:
   m_ObjectHideFlags: 0
