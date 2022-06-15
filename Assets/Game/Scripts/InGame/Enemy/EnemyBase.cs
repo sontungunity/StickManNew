@@ -141,19 +141,25 @@ public class EnemyBase : CharacterBase {
         }
     }
 
-    public void Flip() {
-        if(dirFace == DirHorizontal.RIGHT) {
+    public void Flip() 
+    {
+        if(dirFace == DirHorizontal.RIGHT) 
+        {
             display.localEulerAngles = new Vector3(0, 180, 0);
-        } else if(dirFace == DirHorizontal.LEFT) {
+        } 
+        else if(dirFace == DirHorizontal.LEFT) 
+        {
             display.localEulerAngles = new Vector3(0, 0, 0);
         }
     }
 
     public void Flip(DirHorizontal dir) 
     {
-        if(dir == DirHorizontal.RIGHT) {
+        if(dir == DirHorizontal.RIGHT) 
+        {
             display.localEulerAngles = new Vector3(0, 0, 0);
-        } else if(dir == DirHorizontal.LEFT) {
+        } else if(dir == DirHorizontal.LEFT) 
+        {
             display.localEulerAngles = new Vector3(0, -180, 0);
         }
     }

@@ -1,19 +1,21 @@
 using DG.Tweening;
-using Spine;
 using System;
 using System.Collections;
 using UnityEngine;
 
-public class WitchAttack : EnemyAttack {
+public class WitchAttack : EnemyAttack 
+{
     [SerializeField] private BeamRayCast beamFace;
+    
     [Header("CustomerFire")]
     [SerializeField] private int timeFire;
     [SerializeField] private float timeDelay;
     [SerializeField] private GameObject fireRay;
 
+    public bool Attacking => attacking;
+
     private Action callback;
     private bool attacking = false;
-    public bool Attacking => attacking;
     private WaitForSeconds waitTimeDelay;
     private Coroutine coroutine;
     
@@ -23,9 +25,9 @@ public class WitchAttack : EnemyAttack {
         waitTimeDelay = new WaitForSeconds(timeDelay);
     }
 
-    private void Update() 
+    private void Update()
     {
-        if(!CheckFaceCanMove()) 
+        if(!CheckFaceCanMove())
         {
             Vector2 curVelocity = enemyBase.Rg2D.velocity;
             curVelocity.y = 0;
@@ -46,6 +48,7 @@ public class WitchAttack : EnemyAttack {
         }
         return collider2D == null;
     }
+    
     public override void Attack(Action callback = null)
     {
         if(canAttack)
@@ -56,7 +59,7 @@ public class WitchAttack : EnemyAttack {
             enemyAnim.SetAnimAttack();
             attacking = true;
         } 
-        else 
+        else
         {
             callback?.Invoke();
         }
@@ -80,8 +83,6 @@ public class WitchAttack : EnemyAttack {
         {
             // turn on fire effect
             enemyAnim.SetAnim(0, enemyAnim.name = "attack", false, callback);
-
-            
             FireRayCS fireray = GetComponent<FireRayCS>();
             fireRay.GetComponent<BoxCollider2D>().enabled = true;
             fireray.transform.position = transform.position;
@@ -90,12 +91,12 @@ public class WitchAttack : EnemyAttack {
             yield return waitTimeDelay;
         }
         fireRay.GetComponent<SpriteRenderer>().enabled = false;
-        fireRay.GetComponent<BoxCollider2D>().enabled = false;        
+        fireRay.GetComponent<BoxCollider2D>().enabled = false;
         
         attacking = false;
         callback?.Invoke();
         tween.CheckKillTween();
-        tween = DOVirtual.DelayedCall(timeDelayAttack, () => 
+        tween = DOVirtual.DelayedCall(timeDelayAttack, () =>
         {
             canAttack = true;
         });
@@ -107,6 +108,4 @@ public class WitchAttack : EnemyAttack {
             StopCoroutine(coroutine);
         }
     }
-    
-    protected override 
 }
