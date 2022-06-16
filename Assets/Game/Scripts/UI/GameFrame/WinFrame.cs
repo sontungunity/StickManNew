@@ -26,7 +26,7 @@ public class WinFrame : FrameBase
         ItemStack rewardInGame = new ItemStack(ItemID.COIN, InGameManager.Instance.CoinInGame);
         itemCoinView.Show(rewardInGame);
         btn_Chest.gameObject.SetActive(true);
-        spineChest.SetAnim(0, Idle, true);
+        spineChest.SetAnim(0, Idle, true); 
     }
 
     private void HalderOpenChest() {

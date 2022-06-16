@@ -12,6 +12,10 @@ public class WeaponData : ScriptableObject {
     [Header("CustomBow")]
     [SerializeField] private WeaponArrow arrowPref;
     [SerializeField] private float speed;
+
+    [Header("Customsword")] 
+    [SerializeField] private SwordCus swordCus;
+    
     public WeaponID ID => id;
     public Sprite Icon => icon;
     public TypeWeapon TypeWeapon => type;

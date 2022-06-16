@@ -48,8 +48,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e8d0f05e41acc504fbc03cec08820200, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  minCoin: 300
-  maxCoin: 450
+  minCoin: 150
+  maxCoin: 225
   par: {fileID: 481124154895124702, guid: cb196e614d45eca45935b039f62244bb, type: 3}
   point: {fileID: 8679832911283318193}
 --- !u!58 &6292701155242893299

@@ -3715,7 +3715,9 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Spine
+  m_text: 'SPIN
+
+'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 5512ab0404ad92c47972c1d2ebdafcfe, type: 2}
   m_sharedMaterial: {fileID: -6397026571345441866, guid: 5512ab0404ad92c47972c1d2ebdafcfe, type: 2}

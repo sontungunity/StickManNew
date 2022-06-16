@@ -328,7 +328,7 @@ public static class PoolExtension {
         return PoolManager.Spawn(prefab, autoPool);
     }
 
-    public static T Spawn<T>(this T prefab,Transform parent ,bool autoPool = true) where T : Component {
+    public static T Spawn<T>(this T prefab, Transform parent ,bool autoPool = true) where T : Component {
         var result = PoolManager.Spawn(prefab, autoPool);
         result.transform.parent = parent;
         return result;
@@ -337,6 +337,14 @@ public static class PoolExtension {
     public static GameObject Spawn(this GameObject prefab, bool autoPool = true) {
         return PoolManager.Spawned(prefab, autoPool);
     }
+    
+    
+    public static GameObject Spawn(this GameObject prefab, Transform parent , bool autoPool = true) {
+        var result = PoolManager.Spawned(prefab, autoPool);
+        result.transform.parent = parent;
+        return result;
+    }
+
 
     public static void Recycle<T>(this T target) where T : Component {
         PoolManager.Recycle(target);

@@ -856,7 +856,7 @@ MonoBehaviour:
   m_fontSize: 72
   m_fontSizeBase: 72
   m_fontWeight: 400
-  m_enableAutoSizing: 0
+  m_enableAutoSizing: 1
   m_fontSizeMin: 18
   m_fontSizeMax: 72
   m_fontStyle: 1
@@ -18254,6 +18254,7 @@ MonoBehaviour:
   txt_Level: {fileID: 3781489583803139677}
   txt_Hp: {fileID: 6441464997704446576}
   txt_Damage: {fileID: 5266419041600898123}
+  txt_UpByCoin: {fileID: 6101069122966315023}
   btn_UpByCoin: {fileID: 5674561480682497630}
   btn_UpByAds: {fileID: 3438626397235853201}
 --- !u!1 &6842307125334276670

@@ -165,6 +165,7 @@ public class EnemyBase : CharacterBase {
         }
         int randomCoin = Random.Range(1,3);
         SpawnerCoin.Instance.Spawner(transform.position, randomCoin);
+        // SpawnerCoin.Instance.Spawner(InGameManager.Instance.LevelMap .transform.position, randomCoin);
         InGameManager.Instance.AddEnemyDie(this);
         SoundManager.Instance.PlaySound(soundDie);
     }

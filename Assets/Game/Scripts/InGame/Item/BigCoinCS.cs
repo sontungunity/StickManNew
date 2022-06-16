@@ -2,7 +2,7 @@ using UnityEngine;
 
 public class BigCoinCS : MonoBehaviour
 {
-    [SerializeField] private int minCoin = 300,maxCoin = 451;
+    [SerializeField] private int minCoin = 150,maxCoin = 225;
     [SerializeField] private ParticleSystem par;
     [SerializeField] private Transform point;
 

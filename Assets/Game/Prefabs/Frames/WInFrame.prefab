@@ -5490,7 +5490,7 @@ GameObject:
   - component: {fileID: 2023147774581993860}
   - component: {fileID: 2115045561999795658}
   m_Layer: 5
-  m_Name: WinFrame
+  m_Name: WInFrame
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -5937,6 +5937,7 @@ MonoBehaviour:
   txt_Level: {fileID: 2115045562059275935}
   txt_Hp: {fileID: 2023147774681699636}
   txt_Damage: {fileID: 2023147774422547549}
+  txt_UpByCoin: {fileID: 2023147775045172998}
   btn_UpByCoin: {fileID: 2023147775110914598}
   btn_UpByAds: {fileID: 2023147775036167519}
 --- !u!1 &2023147775036167514
@@ -6141,7 +6142,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 300
+  m_text: 
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 5512ab0404ad92c47972c1d2ebdafcfe, type: 2}
   m_sharedMaterial: {fileID: -6397026571345441866, guid: 5512ab0404ad92c47972c1d2ebdafcfe, type: 2}
@@ -6171,7 +6172,7 @@ MonoBehaviour:
   m_fontSize: 72
   m_fontSizeBase: 72
   m_fontWeight: 400
-  m_enableAutoSizing: 0
+  m_enableAutoSizing: 1
   m_fontSizeMin: 18
   m_fontSizeMax: 72
   m_fontStyle: 1

@@ -9,12 +9,17 @@ public static class RuleDameAndHeart
     public const int Coin_UP_Level = 300;
     public const int Heart_Up_Level = 15;
     public const int Dame_Up_Level = 2;
+    public const float Percent_Coin = 1.2f;    
+
     #region Rule Dame - Heart - Coin player;
+    
     public static LevelInfo GetTotalDameHeartCoinByLevel(int level) {
         LevelInfo result = new LevelInfo();
-        result.Heart = Heart_Base_Player + level * Heart_Up_Level;
-        result.Damage = Dame_Base_Player + level * Dame_Up_Level;
-        result.Coin = Coin_UP_Level * level;
+        result.Heart = Heart_Base_Player + (level * Heart_Up_Level);
+        result.Damage = Dame_Base_Player + (level * Dame_Up_Level);
+        result.Coin = Coin_UP_Level;
+        // result.Coin = Mathf.RoundToInt(Coin_UP_Level * Percent_Coin);
+
         return result;
     }
     #endregion
@@ -22,8 +27,8 @@ public static class RuleDameAndHeart
     public static LevelInfo GetHeartDameNormalEnemy(int levelMap) {
         LevelInfo result = new LevelInfo();
         int indexTheme = Mathf.FloorToInt( (levelMap-1)/6);
-        result.Heart = (Heart_Base_Player + indexTheme * 2 * Heart_Up_Level)*2/3;
-        result.Damage = (Dame_Base_Player + indexTheme * 2 * Dame_Up_Level) / 2;
+        result.Heart = (Heart_Base_Player + indexTheme * 2 * Heart_Up_Level)* 2/3;
+        result.Damage = (Dame_Base_Player + indexTheme * 2 * Dame_Up_Level);// * 3/2;
         return result;
     }
 

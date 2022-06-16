@@ -16,8 +16,8 @@ public class SpawnerCoin : Singleton<SpawnerCoin> {
 
     public void Spawner(Vector2 postion, int amount) {
         for(int i = 0; i < amount; i++) {
-            var coin = coinPref.Spawn(InGameManager.Instance.LevelMap.transform);
-            float x = UnityEngine.Random.Range(-force.x,force.x);
+            var coin = coinPref.Spawn(InGameManager.Instance.LevelMap.transform,true);
+             float x = UnityEngine.Random.Range(-force.x,force.x);
             coin.transform.position = postion + Vector2.right*x*0.5f;
             Vector2 newForce = new Vector2(x,force.y);
             coin.transform.GetComponent<Rigidbody2D>().AddForce(newForce, ForceMode2D.Impulse);

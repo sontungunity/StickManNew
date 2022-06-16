@@ -19,31 +19,50 @@ public class SkinBtnBuy : MonoBehaviour {
         SetUpShow();
     }
 
-    private void SetUpShow() {
-        if(player.SkinID == dataSkin.ItemID) {
+    private void SetUpShow() 
+    {
+        if(player.SkinID == dataSkin.ItemID) 
+        {
             disPlayBtn.ActiveAll(false);
-        } else if(player.Enought(dataSkin.ItemID)) {
+        } 
+        else if(player.Enought(dataSkin.ItemID)) 
+        {
             disPlayBtn.Active(0);
-        } else {
-            if(dataSkin.WayGetItem.Type == WayGetItem.PriceType.ITEMSTACK) {
+        } 
+        else 
+        {
+            if(dataSkin.WayGetItem.Type == WayGetItem.PriceType.ITEMSTACK) 
+            {
                 disPlayBtn.Active(1);
                 itemStackView.Show(dataSkin.WayGetItem.ItemStackDetail);
-            } else {
+            } 
+            else 
+            {
                 SetUpLock();
-                if(dataSkin.WayGetItem.Type == WayGetItem.PriceType.LEVEL) {
-                    if(player.LevelMap > dataSkin.WayGetItem.LevelDetail) {
+                if(dataSkin.WayGetItem.Type == WayGetItem.PriceType.LEVEL) 
+                {
+                    if(player.LevelMap > dataSkin.WayGetItem.LevelDetail) 
+                    {
                         player.AddItem(new ItemStack(dataSkin.ItemID, 1));
                         SetUpHave();
                         return;
-                    } else {
-                        txtDetailLock.text = $"UnLock Level {dataSkin.WayGetItem.LevelDetail}";
+                    } 
+                    else 
+                    {
+                        txtDetailLock.text = $"UnLock at Level {dataSkin.WayGetItem.LevelDetail}";
                     }
-                } else if(dataSkin.WayGetItem.Type == WayGetItem.PriceType.SPECIAL) {
-                    txtDetailLock.text = $"SPECIAL";
-                } else if(dataSkin.WayGetItem.Type == WayGetItem.PriceType.PRESTIGE) {
+                } 
+                else if(dataSkin.WayGetItem.Type == WayGetItem.PriceType.SPECIAL) 
+                {
+                    txtDetailLock.text = $"Get at Daily, Gifts & Shop";
+                } 
+                else if(dataSkin.WayGetItem.Type == WayGetItem.PriceType.PRESTIGE) 
+                {
                     txtDetailLock.text = $"PRESTIGE";
-                } else {
-                    txtDetailLock.text = $"LOCk";
+                } 
+                else 
+                {
+                    txtDetailLock.text = $"LOCK";
                 }
             }
         }
@@ -72,9 +91,10 @@ public class SkinBtnBuy : MonoBehaviour {
     private void BtnBuySkin() {
         if(player.RemoveItem(dataSkin.WayGetItem.ItemStackDetail)) {
             player.AddItem(new ItemStack(dataSkin.ItemID, 1));
+            disPlayBtn.Active(1);
             SetupUsed();
         } else {
-            TextNotify.Instance.Show("Don't Enought");
+            TextNotify.Instance.Show("Not Enough");
         }
     }
 

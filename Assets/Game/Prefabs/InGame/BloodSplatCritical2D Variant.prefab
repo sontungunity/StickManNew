@@ -9,7 +9,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 171432, guid: 0ebcd60dd020022408e53f535d12f313, type: 3}
       propertyPath: m_Name
-      value: BloodSplatCritical2D
+      value: BloodSplatCritical2D Variant
       objectReference: {fileID: 0}
     - target: {fileID: 444412, guid: 0ebcd60dd020022408e53f535d12f313, type: 3}
       propertyPath: m_RootOrder
@@ -66,6 +66,22 @@ PrefabInstance:
     - target: {fileID: 19881554, guid: 0ebcd60dd020022408e53f535d12f313, type: 3}
       propertyPath: autoRandomSeed
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 19881554, guid: 0ebcd60dd020022408e53f535d12f313, type: 3}
+      propertyPath: InitialModule.startSizeY.minMaxState
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 19881554, guid: 0ebcd60dd020022408e53f535d12f313, type: 3}
+      propertyPath: InitialModule.startSizeZ.minMaxState
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 19881554, guid: 0ebcd60dd020022408e53f535d12f313, type: 3}
+      propertyPath: InitialModule.startRotationX.minMaxState
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 19881554, guid: 0ebcd60dd020022408e53f535d12f313, type: 3}
+      propertyPath: InitialModule.startRotationY.minMaxState
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 19892748, guid: 0ebcd60dd020022408e53f535d12f313, type: 3}
       propertyPath: playOnAwake

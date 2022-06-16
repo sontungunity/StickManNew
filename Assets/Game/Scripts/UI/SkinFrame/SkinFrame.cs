@@ -1,11 +1,8 @@
 using EnhancedUI.EnhancedScroller;
 using System;
-using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using System.Linq;
-using Spine.Unity;
-using UnityEngine.UI;
 
 public class SkinFrame : FrameBase, IEnhancedScrollerDelegate {
     [Header("Scroller")]
@@ -89,9 +86,9 @@ public class SkinFrame : FrameBase, IEnhancedScrollerDelegate {
             case 2:
                 type = WayGetItem.PriceType.SPECIAL;
                 break;
-            case 3:
-                type = WayGetItem.PriceType.PRESTIGE;
-                break;
+            // case 3:
+            //     type = WayGetItem.PriceType.PRESTIGE;
+            //     break;
             default:
                 type = WayGetItem.PriceType.NONE;
                 break;

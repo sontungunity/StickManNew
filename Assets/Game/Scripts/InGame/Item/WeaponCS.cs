@@ -11,7 +11,8 @@ public class WeaponCS : MonoBehaviour {
     [SerializeField] private bool noAds;
     [SerializeField] private bool noDisable;
     private Tween tween;
-    private void Start() {
+    private void Start() 
+    {
         WeaponData data = weaponID.GetDataWeaponByID();
         img.sprite = data.Icon;
         iconAds.SetActive(!noAds);
@@ -20,7 +21,6 @@ public class WeaponCS : MonoBehaviour {
             noAds = true;
             iconAds.SetActive(false);
         }
-        
     }
 
     private void OnTriggerEnter2D(Collider2D collision) {
