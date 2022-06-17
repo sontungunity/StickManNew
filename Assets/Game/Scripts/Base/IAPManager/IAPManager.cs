@@ -9,6 +9,8 @@ public partial class IAPManager : Singleton<IAPManager>, IStoreListener {
     private IStoreController m_StoreController;
     private IExtensionProvider m_StoreExtensionProvider;
     private Action<bool> onCompleted;
+    private bool isPurchasing;
+    public bool IsPurchasing => isPurchasing;
     public void OnInitialized(IStoreController controller, IExtensionProvider extensions) {
         //Purchasing has succeeded initializing. Collect our Purchasing references.
         Debug.Log("OnInitialized: PASS");
@@ -39,10 +41,6 @@ public partial class IAPManager : Singleton<IAPManager>, IStoreListener {
     public void OnPurchaseFailed(Product product, PurchaseFailureReason failureReason) {
         Debug.Log(string.Format("OnPurchaseFailed: FAIL. Product: '{0}', PurchaseFailureReason: {1}", product.definition.storeSpecificId, failureReason));
         OnPurchaseFailure(product.definition.storeSpecificId);
-        if(onCompleted != null) {
-            onCompleted(false);
-            onCompleted = null;
-        }
     }
 
 
@@ -66,6 +64,7 @@ public partial class IAPManager : Singleton<IAPManager>, IStoreListener {
             onCompleted(false);
             onCompleted = null;
         }
+        isPurchasing = false;
 #if FIREBASE
         //FirebaseManager.Instance.LogEventWithString(productID + "_FAIL");
 #endif
@@ -77,6 +76,7 @@ public partial class IAPManager : Singleton<IAPManager>, IStoreListener {
             onCompleted(true);
             onCompleted = null;
         }
+        isPurchasing = false;
 #if FIREBASE
         //FirebaseManager.Instance.LogEventWithString(productID + "_SUCC");
 #endif
@@ -118,7 +118,9 @@ public partial class IAPManager : Singleton<IAPManager>, IStoreListener {
     public void BuyItem(string key, Action<bool> onCompele) {
         Debug.LogWarning("KEY_INAPP:" + key);
         this.onCompleted = onCompele;
-#if IAP
+#if !IAP
+    onCompele(true);
+#else
 #if UNITY_EDITOR
         onCompele(true);
         return;
@@ -128,13 +130,12 @@ public partial class IAPManager : Singleton<IAPManager>, IStoreListener {
             if(product != null && product.availableToPurchase) {
                 Debug.Log(string.Format("Purchasing product asychronously: '{0}'", product.definition.id));
                 m_StoreController.InitiatePurchase(product);
+                isPurchasing = true;
             } else {
                 onCompele(false);
                 Debug.Log("BuyProductID: FAIL. Not purchasing product, either is not found or is not available for purchase");
             }
         }
-#else
-    onCompele(true);
 #endif
     }
 

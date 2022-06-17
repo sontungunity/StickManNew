@@ -17,6 +17,7 @@ public class SettingFrame : FrameBase
         toggleVibrate.onValueChanged.AddListener(HalderValueVibrateChange);
         btn_Home.onClick.AddListener(()=> {
             Hide();
+            AdsManager.Instance.ShowInterstitial();
             SceneManagerLoad.Instance.LoadSceneAsyn(SceneManagerLoad.SCENE_HOME);
         });
         btn_Replay.onClick.AddListener(()=> {

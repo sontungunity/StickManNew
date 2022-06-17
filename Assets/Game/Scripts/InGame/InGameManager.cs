@@ -34,6 +34,7 @@ public class InGameManager : Singleton<InGameManager>
         }
         SetUpMap();
         EventDispatcher.Dispatch<EventKey.EventSetupNewGame>(new EventKey.EventSetupNewGame());
+        AdsManager.Instance.ShowInterstitial();
     }
 
     private void SetUpMap() {
@@ -57,6 +58,7 @@ public class InGameManager : Singleton<InGameManager>
             ItemStack rewardInGame = new ItemStack(ItemID.COIN, InGameManager.Instance.CoinInGame);
             CollectionController.Instance.GetItemStack(rewardInGame, new Vector2(Screen.width/2,Screen.height/2), () => {
                 DataManager.Instance.PlayerData.AddItem(rewardInGame);
+                AdsManager.Instance.ShowInterstitial();
             });
         });
         

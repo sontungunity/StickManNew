@@ -160,7 +160,7 @@ PlayerSettings:
     tvOS: 0
   overrideDefaultApplicationIdentifier: 1
   AndroidBundleVersionCode: 101
-  AndroidMinSdkVersion: 21
+  AndroidMinSdkVersion: 22
   AndroidTargetSdkVersion: 30
   AndroidPreferredInstallLocation: 1
   aotOptions: 
@@ -246,15 +246,15 @@ PlayerSettings:
   AndroidTargetDevices: 0
   AndroidSplashScreenScale: 0
   androidSplashScreen: {fileID: 0}
-  AndroidKeystoreName: 
-  AndroidKeyaliasName: 
+  AndroidKeystoreName: '{inproject}: user.keystore'
+  AndroidKeyaliasName: stickmanfight
   AndroidBuildApkPerCpuArchitecture: 0
   AndroidTVCompatibility: 0
   AndroidIsGame: 1
   AndroidEnableTango: 0
   androidEnableBanner: 1
   androidUseLowAccuracyLocation: 0
-  androidUseCustomKeystore: 0
+  androidUseCustomKeystore: 1
   m_AndroidBanners:
   - width: 320
     height: 180
@@ -653,10 +653,21 @@ PlayerSettings:
   webGLThreadsSupport: 0
   webGLDecompressionFallback: 0
   scriptingDefineSymbols:
-    1: CROSS_PLATFORM_INPUT
-    4: CROSS_PLATFORM_INPUT;MOBILE_INPUT
-    7: CROSS_PLATFORM_INPUT;MOBILE_INPUT;GM_FIREBASE;GM_FIREBASE_REMOTE_CONFIG;GM_FIREBASE_ANALYTICS
-    14: MOBILE_INPUT
+    1: CROSS_PLATFORM_INPUT;EASY_MOBILE;EASY_MOBILE_PRO;EM_APPLOVIN
+    4: CROSS_PLATFORM_INPUT;MOBILE_INPUT;EASY_MOBILE;EASY_MOBILE_PRO;EM_APPLOVIN
+    7: CROSS_PLATFORM_INPUT;MOBILE_INPUT;GM_FIREBASE;GM_FIREBASE_REMOTE_CONFIG;GM_FIREBASE_ANALYTICS;EASY_MOBILE;EASY_MOBILE_PRO;EM_APPLOVIN;IAP
+    13: EASY_MOBILE;EASY_MOBILE_PRO;EM_APPLOVIN
+    14: MOBILE_INPUT;EASY_MOBILE;EASY_MOBILE_PRO;EM_APPLOVIN
+    19: EASY_MOBILE;EASY_MOBILE_PRO;EM_APPLOVIN
+    21: EASY_MOBILE;EASY_MOBILE_PRO;EM_APPLOVIN
+    25: EASY_MOBILE;EASY_MOBILE_PRO;EM_APPLOVIN
+    27: EASY_MOBILE;EASY_MOBILE_PRO;EM_APPLOVIN
+    28: EASY_MOBILE;EASY_MOBILE_PRO;EM_APPLOVIN
+    29: EASY_MOBILE;EASY_MOBILE_PRO;EM_APPLOVIN
+    30: EASY_MOBILE;EASY_MOBILE_PRO;EM_APPLOVIN
+    31: EASY_MOBILE;EASY_MOBILE_PRO;EM_APPLOVIN
+    32: EASY_MOBILE;EASY_MOBILE_PRO;EM_APPLOVIN
+    33: EASY_MOBILE;EASY_MOBILE_PRO;EM_APPLOVIN
   additionalCompilerArguments: {}
   platformArchitecture: {}
   scriptingBackend:

@@ -32,7 +32,7 @@ public class AppOpenAdManager {
     public static bool ConfigOpenApp = true;
     public static bool ConfigResumeApp = true;
 
-    public static bool ResumeFromAds = false;
+    public static bool ResumeFromAdsIAP = AdsManager.Instance.IsShowingInterAndReward || IAPManager.Instance.IsPurchasing;
 
     public static AppOpenAdManager Instance {
         get {

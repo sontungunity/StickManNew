@@ -59,7 +59,7 @@ public class AppOpenAdLauncher : Singleton<AppOpenAdLauncher> {
     }
 
     private void OnApplicationPause(bool pause) {
-        if(!pause && AppOpenAdManager.ConfigResumeApp && !AppOpenAdManager.ResumeFromAds) {
+        if(!pause && AppOpenAdManager.ConfigResumeApp && !AppOpenAdManager.ResumeFromAdsIAP) {
             AppOpenAdManager.Instance.ShowAdIfAvailable();
         }
     }

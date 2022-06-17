@@ -41,9 +41,16 @@ public class HomeFrame : FrameBase {
         SoundManager.Instance.PlayMusic(musicMenu);
         btn_RemoveAds.gameObject.SetActive(ItemID.REMOVEADS.GetSaveByID().Amount < 1);
         ShowDailyReward();
+        AdsManager.Instance.ShowBanner(AdsManager.BannerAdPosition.Top);
     }
 
     private void StartGame() {
+#if !UNITY_EDITOR
+        if(Application.internetReachability == NetworkReachability.NotReachable) {
+            TextNotify.Instance.Show("Please connect to the internet to download the map");
+            return;
+        }
+#endif
         GameManager.Instance.CurLevel = DataManager.Instance.PlayerData.LevelMap;
         SceneManagerLoad.Instance.LoadSceneAsyn(SceneManagerLoad.SCENE_GAME);
     }

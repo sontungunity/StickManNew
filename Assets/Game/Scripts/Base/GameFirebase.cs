@@ -142,48 +142,7 @@ public class GameFirebase : Singleton<GameFirebase> {
 
     #region Analytics
 
-    public class GameEvent {
-        private string name;
-        private Dictionary<string, string> eventParamaters;
-
-        public string Name => name;
-
-        private GameEvent(string name) {
-            this.name = name;
-            eventParamaters = new Dictionary<string, string>(4);
-        }
-
-        public static GameEvent Create(string name) {
-            return new GameEvent(name);
-        }
-
-        public GameEvent Add(string parameterName, object parameterValue) {
-            eventParamaters[parameterName] = parameterValue.ToString();
-            return this;
-        }
-
-#if GM_FIREBASE_ANALYTICS
-        public Parameter[] BuildFirebase() {
-            Parameter[] paramaters = new Parameter[eventParamaters.Count];
-
-            int index = 0;
-            foreach (var item in eventParamaters) {
-                paramaters[index] = new Parameter(item.Key, item.Value);
-                index++;
-            }
-
-            return paramaters;
-        }
-#endif
-
-        public override string ToString() {
-            System.Text.StringBuilder sb = new System.Text.StringBuilder(Name);
-            foreach (var item in eventParamaters) {
-                sb.Append($"\n{item.Key}: {item.Value}");
-            }
-            return sb.ToString();
-        }
-    }
+   
 
 #if GM_FIREBASE_ANALYTICS
     private void InitializeAnalytics() {
@@ -211,4 +170,48 @@ public class GameFirebase : Singleton<GameFirebase> {
     }
 
     #endregion
+}
+
+[System.Serializable]
+public class GameEvent {
+    private string name;
+    private Dictionary<string, string> eventParamaters;
+
+    public string Name => name;
+
+    private GameEvent(string name) {
+        this.name = name;
+        eventParamaters = new Dictionary<string, string>(4);
+    }
+
+    public static GameEvent Create(string name) {
+        return new GameEvent(name);
+    }
+
+    public GameEvent Add(string parameterName, object parameterValue) {
+        eventParamaters[parameterName] = parameterValue.ToString();
+        return this;
+    }
+
+#if GM_FIREBASE_ANALYTICS
+    public Parameter[] BuildFirebase() {
+        Parameter[] paramaters = new Parameter[eventParamaters.Count];
+
+        int index = 0;
+        foreach(var item in eventParamaters) {
+            paramaters[index] = new Parameter(item.Key, item.Value);
+            index++;
+        }
+
+        return paramaters;
+    }
+#endif
+
+    public override string ToString() {
+        System.Text.StringBuilder sb = new System.Text.StringBuilder(Name);
+        foreach(var item in eventParamaters) {
+            sb.Append($"\n{item.Key}: {item.Value}");
+        }
+        return sb.ToString();
+    }
 }
