@@ -188,3 +188,5 @@ MonoBehaviour:
   timeUp: 0.5
   timeDown: 1
   timeDelay: 2
+  showStart: 0
+  player: {fileID: 5886882179965856173, guid: bf6ec8ca3725b85468c55d2318f6d928, type: 3}

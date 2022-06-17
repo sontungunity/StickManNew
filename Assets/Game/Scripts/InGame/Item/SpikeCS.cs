@@ -1,14 +1,12 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using DG.Tweening;
 public class SpikeCS : MonoBehaviour {
-    //[SerializeField] private Transform display;
     [SerializeField] private BoxCollider2D  boxCollider;
     [SerializeField] private float timeUp = 0.5f,timeDown = 1f,timeDelay = 2f;
-    [SerializeField] private int dame = 20;
     [SerializeField] private bool showStart;
     private Sequence mySequence;
+    private int dame;
+
     private void Start() {
         float yStart = -boxCollider.size.y;
         transform.localPosition = new Vector3(0, yStart, 0);
@@ -21,15 +19,17 @@ public class SpikeCS : MonoBehaviour {
 
     private void OnTriggerEnter2D(Collider2D collision) {
         Player player = collision.transform.parent.GetComponent<Player>();
+        dame = Mathf.RoundToInt(player.OriginHeart * 0.2f);
         if(player != null) {
-            player.GetDameStun(dame,fall:false);
+            player.GetDameStun( dame, fall:false);
         }
     }
 
     private void OnCollisionEnter2D(Collision2D collision) {
         Player player = collision.transform.parent.GetComponent<Player>();
+        dame = Mathf.RoundToInt(player.OriginHeart * 0.2f);
         if(player != null) {
-            player.GetDameStun(dame, fall:false);
+            player.GetDameStun( dame, fall:false);
         }
     }
 

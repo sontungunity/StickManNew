@@ -2,8 +2,6 @@ using UnityEngine;
 
 public class MoveObjDame : MonoBehaviour
 {
-    [SerializeField] private int damage;
-    
     private void OnTriggerEnter2D(Collider2D collision) {
         Player player = collision.transform.parent.GetComponentInParent<Player>();
         if(player != null) {

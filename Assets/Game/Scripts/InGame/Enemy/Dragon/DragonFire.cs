@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class DragonFire : MonoBehaviour
@@ -20,6 +18,7 @@ public class DragonFire : MonoBehaviour
 
     private void OnParticleCollision(GameObject other) {
         Player player = other.transform.GetComponent<Player>();
+        dame = Mathf.RoundToInt(player.OriginHeart * 0.2f);
         if(player) {
             player.GetDameStun(dame,fall:false);
         }

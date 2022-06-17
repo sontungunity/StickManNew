@@ -1,8 +1,6 @@
 using DG.Tweening;
 using Spine.Unity;
 using System;
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class DragonAttack : EnemyAttack {
@@ -16,9 +14,6 @@ public class DragonAttack : EnemyAttack {
     [SerializeField] private float speedMove;
     [SerializeField] private float timeStun;
     private bool moveHight = false;
-    protected override void Awake() {
-        base.Awake();
-    }
 
     private void Start() {
         particleFire.Init(enemyBase.curDame);
@@ -32,16 +27,7 @@ public class DragonAttack : EnemyAttack {
             ProcameraController.Instance.SetTarget(InGameManager.Instance.Player.transform);
             enemyAnim.SetAnim(0, animMove, true);
             SetUpAttack();
-            //if(moveHight == false) {
-            //    tween = transform.DOMove(transform.position + Vector3.up * highPlus, 1f).SetEase(Ease.Linear).OnComplete(() => {
-            //        moveHight = true;
-            //        SetUpAttack();
-            //    });
-            //} else {
-                
-            //}
         });
-        
     }
 
     private void SetUpAttack() {

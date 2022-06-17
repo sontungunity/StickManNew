@@ -30,7 +30,9 @@ public class BulletCS : MonoBehaviour
         }
 
         Player player = collision.transform.parent.GetComponent<Player>();
-        if(player!=null) {
+        if(player!=null)
+        {
+            dame = Mathf.RoundToInt(player.OriginHeart * 0.15f);
             player.GetDame(dame);
         }
         this.Recycle();

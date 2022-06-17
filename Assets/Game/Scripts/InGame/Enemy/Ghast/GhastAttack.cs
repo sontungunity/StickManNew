@@ -22,6 +22,7 @@ public class GhastAttack : EnemyAttack
     private int curTimeAttack;
     private Action callback;
     private bool moveHight = false;
+    
     public override void Attack(Action callback = null) {
         this.callback = callback;
         CurAttackStatus = Status.SETUPHIGH;

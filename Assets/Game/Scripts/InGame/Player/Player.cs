@@ -8,6 +8,7 @@ using DG.Tweening;
 [RequireComponent(typeof(PlayerVertical))]
 [RequireComponent(typeof(PlayerAnim))]
 [RequireComponent(typeof(PlayerAttack))]
+
 public class Player : CharacterBase {
     [SerializeField] private List<SortStatus> lstSortStatus;
     [SerializeField] private PlayerAnim playerAnim;
