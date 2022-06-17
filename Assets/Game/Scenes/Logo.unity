@@ -123,49 +123,6 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
---- !u!1 &53896474
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 53896475}
-  - component: {fileID: 53896476}
-  m_Layer: 0
-  m_Name: IAPManager
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &53896475
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 53896474}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 1088164824}
-  m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &53896476
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 53896474}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3da21e24678d0d140beb5f7c6c91f896, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &424109451
 GameObject:
   m_ObjectHideFlags: 0
@@ -467,7 +424,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 42a64f67676d85c46a8b698974af58a4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  time: 2
+  time: 7
 --- !u!114 &948415425
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -533,8 +490,7 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children:
-  - {fileID: 53896475}
+  m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -559,8 +515,11 @@ MonoBehaviour:
   - {fileID: 960387233396715562, guid: a73fc9a27ac7c1242a79378ec0b45dce, type: 3}
   - {fileID: 3047957495795817658, guid: 74e9136ede2ddc341b95fdedb7dbcabb, type: 3}
   - {fileID: 5180982447984370536, guid: 93fc6bbad01fa434cba94d1c4a8445f8, type: 3}
+  - {fileID: 7775232714334499215, guid: 2d734dd570894d944ae4a47d89342012, type: 3}
+  - {fileID: 3995643443776251691, guid: 08bbf3d958f57f84d958de58fa75ff07, type: 3}
   state: 0
   curLevel: 0
+  ShowDaily: 0
 --- !u!1 &1171162131
 GameObject:
   m_ObjectHideFlags: 0

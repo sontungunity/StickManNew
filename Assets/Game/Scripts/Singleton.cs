@@ -21,7 +21,7 @@ namespace STU {
 
         public void Preload() { }
 
-        private void Awake() {
+        protected virtual void Awake() {
             if(instance == null) {
                 instance = this as T;
                 OnAwake();
