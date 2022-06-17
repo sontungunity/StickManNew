@@ -1,0 +1,97 @@
+{
+  "project_info": {
+    "project_number": "364165141860",
+    "project_id": "gafu---publishing",
+    "storage_bucket": "gafu---publishing.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:364165141860:android:953a7ff1c154728c3ed671",
+        "android_client_info": {
+          "package_name": "com.gafu.stickman.red.blue"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "364165141860-vc5b7c0mpqu14uu6nq8cslirl7sb6rb0.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCOUMyuChlMoLBwCZMUSF9IFrVAJeVi3uo"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "364165141860-vc5b7c0mpqu14uu6nq8cslirl7sb6rb0.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:364165141860:android:0475b916b23fc5bc3ed671",
+        "android_client_info": {
+          "package_name": "com.metagame.stickman.fight"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "364165141860-vc5b7c0mpqu14uu6nq8cslirl7sb6rb0.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCOUMyuChlMoLBwCZMUSF9IFrVAJeVi3uo"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "364165141860-vc5b7c0mpqu14uu6nq8cslirl7sb6rb0.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:364165141860:android:910c3aab8b268aff3ed671",
+        "android_client_info": {
+          "package_name": "com.tower.stickman.craftman"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "364165141860-vc5b7c0mpqu14uu6nq8cslirl7sb6rb0.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCOUMyuChlMoLBwCZMUSF9IFrVAJeVi3uo"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "364165141860-vc5b7c0mpqu14uu6nq8cslirl7sb6rb0.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -517,6 +517,7 @@ MonoBehaviour:
   - {fileID: 5180982447984370536, guid: 93fc6bbad01fa434cba94d1c4a8445f8, type: 3}
   - {fileID: 7775232714334499215, guid: 2d734dd570894d944ae4a47d89342012, type: 3}
   - {fileID: 3995643443776251691, guid: 08bbf3d958f57f84d958de58fa75ff07, type: 3}
+  - {fileID: 5092237185418229593, guid: ad3d3faf62b663a4283609c3b91a4b7f, type: 3}
   state: 0
   curLevel: 0
   ShowDaily: 0

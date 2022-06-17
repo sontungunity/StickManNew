@@ -1,0 +1,10 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources xmlns:tools="http://schemas.android.com/tools" tools:keep="@string/gcm_defaultSenderId,@string/google_storage_bucket,@string/project_id,@string/google_api_key,@string/google_crash_reporting_api_key,@string/google_app_id,@string/default_web_client_id">
+  <string name="gcm_defaultSenderId" translatable="false">364165141860</string>
+  <string name="google_storage_bucket" translatable="false">gafu---publishing.appspot.com</string>
+  <string name="project_id" translatable="false">gafu---publishing</string>
+  <string name="google_api_key" translatable="false">AIzaSyCOUMyuChlMoLBwCZMUSF9IFrVAJeVi3uo</string>
+  <string name="google_crash_reporting_api_key" translatable="false">AIzaSyCOUMyuChlMoLBwCZMUSF9IFrVAJeVi3uo</string>
+  <string name="google_app_id" translatable="false">1:364165141860:android:0475b916b23fc5bc3ed671</string>
+  <string name="default_web_client_id" translatable="false">364165141860-vc5b7c0mpqu14uu6nq8cslirl7sb6rb0.apps.googleusercontent.com</string>
+</resources>
